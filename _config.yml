@@ -25,7 +25,7 @@ name: "Ubuntu Korea Community"
 url: "https://blog.ubuntu-kr.org" # the base hostname & protocol for your site
 baseurl: ""
 
-disqus: youngbinhan
+disqus: ubuntu-kr-blog
 
 google_analytics: UA-46663268-3
 

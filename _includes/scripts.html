@@ -1,16 +1,25 @@
 <script>
-        function toggleMenu(el){
-          // Get toggle aria-control target
-        let target = document.querySelector(
-          el.getAttribute('aria-controls'));
-        // If target hidden is already true set to false and toggle
-        // control expanded to be true / false
-        if (target.getAttributeNode('aria-hidden').value == 'true') {
-          el.setAttribute('aria-expanded', true);
-          target.setAttribute('aria-hidden', false);
-        } else {
-          el.setAttribute('aria-expanded', false);
-          target.setAttribute('aria-hidden', true);
-        }
-        }
-      </script>
+function toggleMenu(el){
+  // Get toggle aria-control target
+  let target = document.querySelector(
+    el.getAttribute('aria-controls'));
+  // If target hidden is already true set to false and toggle
+  // control expanded to be true / false
+  if (target.getAttributeNode('aria-hidden').value == 'true') {
+    el.setAttribute('aria-expanded', true);
+    target.setAttribute('aria-hidden', false);
+  } else {
+    el.setAttribute('aria-expanded', false);
+    target.setAttribute('aria-hidden', true);
+  }
+}
+
+function showModal(target) {
+  var modal = document.getElementById(target);
+  if (modal.style.display === 'none') {
+      modal.style.display = 'flex';
+  } else {
+      modal.style.display = 'none';
+  }
+}
+</script>
