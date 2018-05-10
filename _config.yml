@@ -22,8 +22,8 @@ description: |
 email: korea.ubuntu@gmail.com
 name: "Ubuntu Korea Community"
 
-url: "http://ubuntu-kr.github.io" # the base hostname & protocol for your site
-baseurl: "/blog"
+url: "http://blog.ubuntu-kr.org" # the base hostname & protocol for your site
+baseurl: ""
 
 disqus: youngbinhan
 
