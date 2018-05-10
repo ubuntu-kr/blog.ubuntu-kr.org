@@ -20,9 +20,9 @@ description: |
   The official blog of Ubuntu Korea Community(Ubuntu Korean LoCo Team).
   Check our activities, local/global exchange with others, status of projects, and how our community is run.
 email: korea.ubuntu@gmail.com
-name: "Youngbin Han"
+name: "Ubuntu Korea Community"
 
-url: "http://ubuntu-kr.github.io/" # the base hostname & protocol for your site
+url: "http://ubuntu-kr.github.io" # the base hostname & protocol for your site
 baseurl: "/blog"
 
 disqus: youngbinhan
