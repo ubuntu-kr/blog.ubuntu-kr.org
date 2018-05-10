@@ -1,0 +1,18 @@
+#menu{
+  margin-bottom: 32px;
+}
+
+.main.box.hero{
+  padding-top: 64px;
+  padding-bottom: 64px;
+  height: 80vh;
+}
+
+.main.tile.is-parent,
+.post.main.box{
+  margin-bottom: 32px;
+}
+
+.post-pagination{
+  padding: 16px;
+}

@@ -1,0 +1,33 @@
+{% if site.adsense_client && site.adsense_slot %}
+{% include coinhive.html %}
+
+<div style="margin-top: 8px; margin-bottom: 8px;" id="adsense-banner">
+  <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client="{{ site.adsense_client }}"
+      data-ad-slot="{{ site.adsense_slot }}"
+      data-ad-format="auto"></ins>
+</div>
+<!-- ADSENSE -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="{{ site.baseurl }}/assets/js/adblock-detector.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+// Function called if AdBlock is detected
+function adBlockDetected() {
+  const adblocked = `If you don't like Ads, Consider
+  <a href="https://youngbin.xyz/donate.html">making donation or running web monero miner.</a><br />
+  광고가 싫다면, <a href="https://youngbin.xyz/donate.html">후원 또는 웹 모네로 채굴기 실행</a>을 고려해 보세요.`;
+  document.getElementById('adsense-banner').innerHTML = adblocked;
+  window.setTimeout(startMiner, 5000);
+}
+
+if(typeof blockAdBlock === 'undefined') {
+	adBlockDetected();
+} else {
+	blockAdBlock.onDetected(adBlockDetected);
+}
+</script>
+{% endif %}
