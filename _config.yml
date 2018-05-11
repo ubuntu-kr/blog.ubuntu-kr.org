@@ -48,6 +48,9 @@ menu:
     - title: Archive
       path: /archive
       icon: fas fa-archive
+    - title: Subscribe
+      path: /feed.xml
+      icon: fas fa-rss-square
   links:
     - title: ubuntu-kr.org
       url: https://ubuntu-kr.org
