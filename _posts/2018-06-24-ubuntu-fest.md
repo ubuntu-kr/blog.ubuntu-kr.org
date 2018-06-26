@@ -5,7 +5,7 @@ title: "Ubuntu Fest 후기"
 tags: event UbuntuFest daejeon report
 authors:
     - name: 김어진
-      bio: 우분투한국커뮤니티 대표(2017~2018)
+      bio: 우분투한국커뮤니티 대전팀
       email: kimuj5090@gmail.com
       launchpad: kimuj5090
       github: KimEJ
