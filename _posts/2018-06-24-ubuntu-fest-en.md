@@ -25,19 +25,19 @@ Ubuntu Fest proceeded in the following order:
 
 Time | Schedule 
 --- | ---
-13:00 ~ 13:10 (10분) | Registration 
-13:10 ~ 13:20 (10분) | Intro 
-13:20 ~ 13:40 (20분) | Introducing the Community 
-13:40 ~ 14:20 (40분) | Mijeong's - 「Plant Deep-Learning in Mobile」 
-14:20 ~ 14:30 (10분) | break time 
-14:30 ~ 15:10 (40분) | Keunsu Shin's - 「Social Media for Machines, MQTT」 
-15:10 ~ 15:20 (10분) | break time 
+13:00 ~ 13:10 (10min) | Registration 
+13:10 ~ 13:20 (10min) | Intro 
+13:20 ~ 13:40 (20min) | Introducing the Community 
+13:40 ~ 14:20 (40min) | Mijeong's - 「Plant Deep-Learning in Mobile」 
+14:20 ~ 14:30 (10min) | break time 
+14:30 ~ 15:10 (40min) | Keunsu Shin's - 「Social Media for Machines, MQTT」 
+15:10 ~ 15:20 (10min) | break time 
 15:20 ~ 16:00 (40분) | Haryun Shin's - 「The Introduction of Hardware Development Process in a Startup」 
-16:00 ~ 16:10 (10분) | break time 
-16:10 ~ 16:50 (40분) | Hanwook Kim's - 「Code-based design vs Model-based design」 
-16:50 ~ 17:00 (10분) | break time 
-17:00 ~ 17:20 (20분) | Lightning Talk 
-17:20 ~ 17:40 (20분) | Advertising and Draw lots 
+16:00 ~ 16:10 (10min) | break time 
+16:10 ~ 16:50 (40min) | Hanwook Kim's - 「Code-based design vs Model-based design」 
+16:50 ~ 17:00 (10min) | break time 
+17:00 ~ 17:20 (20min) | Lightning Talk 
+17:20 ~ 17:40 (20min) | Advertising and Draw lots 
 
 ## Mijeong's 「Plant Deep-Learning in Mobile」
 The first session was Mijeong's 「Plant Deep-Learning in Mobile」
