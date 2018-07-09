@@ -14,7 +14,7 @@ image: https://lh3.googleusercontent.com/bGH1cvZr8JsPDMLd8s3Y2cy3IdJ6sROyutcYK7J
 ---
 
 
-Ubuntu Fest was held on June 23 in Daejeon. The event, featuring Ubuntu and embedded themes, a variety of sessions including the latest trends in embedded and embedded deep learning were provided.
+Ubuntu Fest was held on June 23 in Daejeon. The event was organized under the theme of "Ubuntu and Embedded" and sessions were held on various topics, from the latest trends in the embedded field to embedded deep-running.
 
 It was also the first seminar since the Daejeon team was founded.
 
@@ -23,21 +23,21 @@ It was also the first seminar since the Daejeon team was founded.
 
 Ubuntu Fest proceeded in the following order:
 
-Time | Schedule 
+Time | Schedule
 --- | ---
-13:00 ~ 13:10 (10min) | Registration 
-13:10 ~ 13:20 (10min) | Intro 
-13:20 ~ 13:40 (20min) | Introducing the Community 
-13:40 ~ 14:20 (40min) | Mijeong's - 「Plant Deep-Learning in Mobile」 
-14:20 ~ 14:30 (10min) | break time 
-14:30 ~ 15:10 (40min) | Keunsu Shin's - 「Social Media for Machines, MQTT」 
-15:10 ~ 15:20 (10min) | break time 
-15:20 ~ 16:00 (40분) | Haryun Shin's - 「The Introduction of Hardware Development Process in a Startup」 
-16:00 ~ 16:10 (10min) | break time 
-16:10 ~ 16:50 (40min) | Hanwook Kim's - 「Code-based design vs Model-based design」 
-16:50 ~ 17:00 (10min) | break time 
-17:00 ~ 17:20 (20min) | Lightning Talk 
-17:20 ~ 17:40 (20min) | Advertising and Draw lots 
+13:00 ~ 13:10 (10min) | Registration
+13:10 ~ 13:20 (10min) | Intro
+13:20 ~ 13:40 (20min) | Introducing the Community
+13:40 ~ 14:20 (40min) | Mijeong's - 「Plant Deep-Learning in Mobile」
+14:20 ~ 14:30 (10min) | break time
+14:30 ~ 15:10 (40min) | Keunsu Shin's - 「Social Media for Machines, MQTT」
+15:10 ~ 15:20 (10min) | break time
+15:20 ~ 16:00 (40분) | Haryun Shin's - 「The Introduction of Hardware Development Process in a Startup」
+16:00 ~ 16:10 (10min) | break time
+16:10 ~ 16:50 (40min) | Hanwook Kim's - 「Code-based design vs Model-based design」
+16:50 ~ 17:00 (10min) | break time
+17:00 ~ 17:20 (20min) | Lightning Talk
+17:20 ~ 17:40 (20min) | Advertising and Draw lots
 
 ## Mijeong's 「Plant Deep-Learning in Mobile」
 The first session was Mijeong's 「Plant Deep-Learning in Mobile」
@@ -45,9 +45,7 @@ Mijeong, who came from Seoul to present to us at Ubuntu Fest, told us about the 
 ![IMG](https://lh3.googleusercontent.com/GGeHTTI41Ojj9OHf4xQEH6xEIBlzeIKQdQdWymoGfXjkVnOKrVjX1tYvIY6C8K1NnepFL5SVZewwo14J5uFpSU6nM1RdJz44Vxam_63fO31GJSHMZ6yFnp1uNJwjnNswXEUkqr86H59J1dOvHU31TSZ2tMunhl-N-SIifNg62N7Nm0jLKbU4zqQopTgHqpDGvJiAQ9t_Hp6ErNvZeZwyNpif0vobL-PKOdFnte69OXA21_DfTDA_phtChEoE1_Jx-g3sZjW510E9Ntv7JT6zSLl6sxniPwrONKJPi7fApOykgqqV8bZERDmV-_iT6iZXhG3I8gUEKfF9u2fKeIviGFwKNjNd1CHDgWKMgTPPznh_nQUBpL_83pYNmn6gVgQUpJ2tE4G5H32F_eKz3BEwR_ja9lKdSitt7632jhtAcliZ8aI3bZHiH0nuxbMeYrPMnDo0CJPNmmqSuZpl7UtxLjHpZnM0nT5P8gAcOSizHZtmEh8weYlZ40us7t946lIZk36Nc6D4bKTCDDkcHkLvGfbH9gTaT_l_4X22hHlqRLdjc1iuEM1fLzeCSlWpunEuadle3XsMDKN5WdZrXlfEGplBQuzKONd-3MHSxnxUjx0vPFERJU496tWqmT9Wn-RFWi8tdHTqPV3fuV4WUdHSe9I_03rwhsRbeQ=w2980-h1678-no)
 ![IMG](https://lh3.googleusercontent.com/_0QO56v-MMEYU91JMtCi_Swl8eTMCh6A32JSyOEutEsBaG5ms3_qcJOn1NJiyMUPdyRhRkX9Fj97WQPZh99NeYhdjIzWG329IgBj5ZV3jHKpbrrzTSZZ-SPbsq9p-kMbEy_YAbBQIHpT1MS_xGI05zjXm-lQow2ntpBRMh7McOduqtEzmz1ghbuDR_htFa0wbspQZmB7dzXwSLQgGdFaDCplpT-PiZmFRZzasZ9PeouQdZPSslgw6fL6BKzW8rI1pNwPR_w6g_c07SctrP3YliD-r1784yiKMtztUftQlmyLH6qZlQgMsrcTQAqi9IkYpqBQjMUqPdFx8MrYUMupTXICUMUqmC39szVK6ex_NX1WOUyaHlpbDs_LmyrqvqFpYoaUg5jQLcKuRyfIk4X-wCKkb0kO6A5ST9Tyw7zvRQ9_6XB9EuzWE79j3xI55pHPq-bAOcQTKeiPjhHfcCcroCKaPnOtI7Onw7AKl2hLvwPdFFGwTmmyftPAsUCiwX6QI1cBymcftciltR7NDymKv5LazgRHd78A9ZEruywjeUmlP_UubgsNuM9gcQA98CKywL4gHiDPl28OtMexHgIovBRB6-jIc3N2WlKlq7lzEGg20iNbG0QZwb-9kLmU-gK9YJRaZcdelk3PX69nA9qHyopuvRdO3RyWKQ=w2518-h1888-no)
 
-She presented the the iOS application project that applying to Keras model written in Python using CoreML, one of the development tools in iOS.
-
-She kept us taught from start to finish so we could easily follow her.
+She presented about applying Keras model, which is written in Python language, to the on-going project. She kept us taught from start to finish so we could easily follow her.
 
 In particular, it was easier to understand the presentation because it was presented in accordance with the sequence of projects.
 ![IMG](https://lh3.googleusercontent.com/8U2jqTt-elgOKJg-fS2MdK1N8RXoyEiNaV15JL714gy7coodOewiF6mAQGsPDMqnw_J1Nn8lkCGhpvNLcVoycEsASDxzlWEvmmTytNd585pUPbHg77SvlNsy45gLyz9XWCmCM_2wFF8HoUCovmbCQUt45kHm52hIHJOvbP21BCcXoYjhEgrvfxxGD4JI9tY_zxUnW1cXQZpzaBudObpoG282XhIhyJuCTZPJ2Hyry4EJMO8JqpDYRC3fZwo3DTia6uqrhjMztg0tWnmbPsvXjmIj19Wr-yt-clCLtKUFFqjapqqOAWJn6wlLBBVjzbl995gQLRdjouzNFzCxolDNmsd4lwZgtvr4sidudPlZ6x_eOQWV_VmX4KQUm8rC88oq6gfxpV9zFBoSeOWrFFN96SgBUE3GHIr_OU2M9v2ox0-f1WQ_kQQoNGIdjSKJADQGQzOBGeHlBThkpBwKODRrXCz8TO5siw1QyN1_AiXfYoS4JLwJQ_CB4wEHJhMyS73zPW9qr9JFoGcvDPQF72rdXZNEu3qrfymRBNC7FaGlQTruqEeBghluuWW5N-wpnXWb_nI6jaLazGOF7Mnjux0yOjLuiSu1LwwHBlHkVpMVGdhIDGjhB6jEOaO9FrpVdmBOuA1YrBfoLpT21CG9nzCP7n2tIjghmoEDzA=w2980-h1678-no)
@@ -70,8 +68,7 @@ You can get the presentation [here](https://www.slideshare.net/UbuntuKorea/mqtt-
 The third session was Haryun Shin's 「The Introduction of Hardware Development Process in a Startup」
 ![IMG](https://lh3.googleusercontent.com/rOVfHPxI9y-h3zLF_5QLRnKtV1NplhQ0DjPybtxwhkuDsZczQBGgfSJfoF1m6MsPGVnqigkc4WL6r7eX3tF6TiWjtK7IBTaWUvGCsuSNQNNNgSq3avNJPknKwMWKVosmLOLYH_mtAW0qmXKkNW2Wdr3_5fcqRHVaZA17D75So7CUXKP7XfifqN6SoNEp5MLdKhzhQOosoIIp-TK4L1yjpcf4ncOIRtUZsIP1qUhqSBBqOAcweeQ8Uh8DZlmGNRWCrokp4WEGZYd0JMoCKxIZdKrmlJjh_5NKs2WODL4D2j9GMC7T0Rfp2bmsTomhvzizIkmkTMnQ2TwSnO7OvN9ZuJxKxfsrlxnSql9LDwCyvRhRjl8aXoPQhQfFL6IPso4-j-t_YLP38ESDZaJzzmmRTDcWdJ1NQ_kxqmA_gjHqWNM-U-kao9ARh8MkcK19Btymtx13hsV_lyjOT8SlLTzSCMngDddwM50tMT6jcjAAA3TU0DH49qVTw3HQ012sIr3sSxiGxLeXn6-sZgGkU85V1FgPhnkncGAMaw7ZxDM1eCEFfCyWjPuHtqn1xKSeL95KFCvDxXy3ppdlNoCj2rU4NOwZakiiy4uN_2Ef7Q782UUnIEAoDxQ_Es_G6AOWGH-h9jtX3w7IlWpQ2Ed8xYJxqe6pB7EWJJBg3w=w2518-h1888-no)
 
-He talked about the problems he experienced while running SweetFab, the this event sponsor, and how to solve them through the introduction of the hardware development process.
-It was a realistic session that he present experience and solution by reality.
+He talked about the problems he experienced, and how to solve them through as applying the hardware development process in his company, SweetFab, this event's sponsor. It was a realistic session that he present experience and solution by reality.
 
 You can get the presentation [here](https://www.slideshare.net/UbuntuKorea/ss-102922171).
 
@@ -81,7 +78,7 @@ The last session was Hanwook Kim's 「Code-based design vs Model-based design」
 
 He gave us a presentation that how to work model-based designs with MatLab and their strengths.
 
-He gave candy to his listeners by coming out of the stage to increase their participation in the presentation. 
+He gave candy to his listeners by coming out of the stage to increase their participation in the presentation.
 This was a difficult subject for many people to listen to. However, this behavior has improved understanding.
 ![IMG](https://lh3.googleusercontent.com/QuMVFvLyYpkCr9DUtzuqAsztrunaRnvAJJ0HjlrA9gcW_CO4WQ7QfvGKV_e9kUfqzPQreFMFIqtdB-0IbTBovdtL_BMT6Lu6eEfjpE5P3BK0Av-PBKdblEFszm8W0DZhz8bNtjvrCjqIbaoWrPHdQEmChIASNBbXbUwYXiA1IJdaCyDN99_2B6XuDtg9FIBFLmHyrytWX4ExIyN7pCnKoebuO44vPlj6fsJ2UBM187cm-Ov2kY4fDmdm6GGkyoEZEPyFN_0CjpNoI1_BOmubiOolxWIQq909xbGMdPrLJbGYVb37Ug8w70hg_B4u928KvmvRAZ2auR94qLVzBkuVYsWldVfWL7nWJlPTzCf9AdMqXMvgQWJO0_n_amQXTPgFi4E2hMexEIvqO4bjxjU-oU0b9hVwkj7H_DlvjtWSZSTXsBdjod7TZXYFKNO4OpV9tgJyXzX5IF5QRAK0MdJd8qpCBwTjR1cJEM36p8aFD4X4eYLxeFRNnNxzqotBbayQWYUcI-8r5u1VdXBm7SUHfXlL6ts6UJD6YdeKrx4Y9D2p5TwR7ZFTiD7Y4WoHiANZ2MvauZ9EWcQhF0qCGKueUW-1cy1FepKpNSpOu4aq78kdtL1yeQ1S_EQtt2hguOBWy7MGs44QQYuETFOQv9tu2a-U-OkdEMJr6w=w478-h358-no)
 
@@ -90,11 +87,11 @@ You can get the presentation [here]().
 ## Lightning Talk
 The following topics will be used for Lighting Talk.
 
-presenter | topics 
+presenter | topics
 --- | ---
-Eojin Kim | That's one small step for a man, one giant leap for developers. 
-Soyeong Choi | I introduce my school. 
-Songsu Yun | Participation Certification System 
+Eojin Kim | That's one small step for a man, one giant leap for developers.
+Soyeong Choi | I introduce my school.
+Songsu Yun | Participation Certification System
 Haryun Shin | GRC 2 the fraking moon! (GRC TTEOKSANG GAZUA~!)
 Yungbin Han | How MeltingCon Banners Are Made
 
