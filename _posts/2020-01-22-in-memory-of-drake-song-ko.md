@@ -10,7 +10,7 @@ authors:
       launchpad: sukso96100
       github: sukso96100
       profile: https://avatars2.githubusercontent.com/u/1916739?s=460&v=4
-    - namr: 윤건영
+    - name: 윤건영
       bio: 우분투한국커뮤니티 대표(2018~)
       email: me@dry8r3ad.com
       launchpad: dry8r3ad
