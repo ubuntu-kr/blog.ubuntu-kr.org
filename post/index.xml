@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 우분투 한국 커뮤니티 블로그</title>
+    <link>https://blog.ubuntu-kr.org/post/</link>
+    <description>Recent content in Posts on 우분투 한국 커뮤니티 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 22 Jan 2020 07:49:00 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>별세하신 송현도님을 추모하며</title>
+      <link>https://blog.ubuntu-kr.org/2020/01/22/in-memory-of-drake-song-ko/</link>
+      <pubDate>Wed, 22 Jan 2020 07:49:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2020/01/22/in-memory-of-drake-song-ko/</guid>
+      <description>우분투한국커뮤니티에서 긴 시간 동안 활동하시며 커뮤니티에 많은 공헌을 하신 송현도님께서 2020년 1월 20일 오전에 별세하셨으며, 1월 22일 오전 6시에 발인하였습니다.
+커뮤니티 활동 초기와 대표 활동 시절 송현도님은 우분투한국커뮤니티가 만들어졌을 때부터 꾸준히 활동해 오셨습니다. 2014년 4월 커뮤니티 대표로 선출되셨고, 1년 동안 우분투한국커뮤니티와 오픈소스 생태계의 발전을 위해서 기여해주셨습니다.
+커뮤니티 대표로 활동하시는 동안 당시 프로그래밍이나 리눅스에 관심이 많은 10~20대분들이 커뮤니티에 많이 참여할 수 있도록 도움을 주셨고, 이는 커뮤니티 핵심 구성원에 변화를 주어 커뮤니티가 활성화되는 데 큰 영향을 주셨습니다.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu Fest review</title>
+      <link>https://blog.ubuntu-kr.org/2018/06/25/ubuntu-fest-en/</link>
+      <pubDate>Mon, 25 Jun 2018 21:49:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2018/06/25/ubuntu-fest-en/</guid>
+      <description>Ubuntu Fest was held on June 23 in Daejeon. The event was organized under the theme of &amp;ldquo;Ubuntu and Embedded&amp;rdquo; and sessions were held on various topics, from the latest trends in the embedded software field to embedded deep-running.
+It was also the first seminar since the Daejeon team was organized.
+Ubuntu Fest proceeded in the following order:
+   Time Schedule     13:00 ~ 13:10 (10min) Registration   13:10 ~ 13:20 (10min) Schedule of the day   13:20 ~ 13:40 (20min) Introducing the Community   13:40 ~ 14:20 (40min) Mijeong&amp;rsquo;s - 「Plant Deep-Learning in Mobile」   14:20 ~ 14:30 (10min) break time   14:30 ~ 15:10 (40min) Keunsu Shin&amp;rsquo;s - 「Social Media for Machines, MQTT」   15:10 ~ 15:20 (10min) break time   15:20 ~ 16:00 (40분) Haryun Shin&amp;rsquo;s - 「The Introduction of Hardware Development Process in a Startup」   16:00 ~ 16:10 (10min) break time   16:10 ~ 16:50 (40min) Hanwook Kim&amp;rsquo;s - 「Code-based design vs Model-based design」   16:50 ~ 17:00 (10min) break time   17:00 ~ 17:20 (20min) Lightning Talk   17:20 ~ 17:40 (20min) Advertising and Drawing Lots    Mijeong&amp;rsquo;s 「Plant Deep-Learning in Mobile」 The first session was 「Plant Deep-Learning in Mobile」 Addressed by Mijeong who came from Seoul to present to us at Ubuntu Fest.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu Fest 후기</title>
+      <link>https://blog.ubuntu-kr.org/2018/06/25/ubuntu-fest-ko/</link>
+      <pubDate>Mon, 25 Jun 2018 21:49:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2018/06/25/ubuntu-fest-ko/</guid>
+      <description>6월 23일 대전에서 Ubuntu Fest가 진행되었습니다. 우분투와 임베디드를 주제로한 이번 행사는 임베디드의 최신동향에서부터 임베디드속 딥러닝까지 다양한 세션이 진행되었습니다. 또한 대전팀이 생긴 이후 첫 세미나였던 만큼 뜻깊은 행사였습니다.
+Ubuntu Fest는 다음과 같은 순서로 진행이 되었습니다.
+   시간 일정     13:00 ~ 13:10 (10분) 등록   13:10 ~ 13:20 (10분) 일정안내   13:20 ~ 13:40 (20분) 커뮤니티 소개   13:40 ~ 14:20 (40분) 미정 - 모바일에 딥러닝 심기   14:20 ~ 14:30 (10분) 휴식   14:30 ~ 15:10 (40분) 신근수 - 기계들의 소셜 미디어, MQTT   15:10 ~ 15:20 (10분) 휴식   15:20 ~ 16:00 (40분) 신하륜 - 스타트업에서 하드웨어 개발 프로세스 도입하기   16:00 ~ 16:10 (10분) 휴식   16:10 ~ 16:50 (40분) 김한욱 - Code-based design vs Model-based design   16:50 ~ 17:00 (10분) 휴식   17:00 ~ 17:20 (20분) 라이트닝 토크   17:20 ~ 17:40 (20분) 광고 및 경품 추첨    미정님 &amp;lsquo;모바일에 딥러닝 심기&amp;rsquo; 첫번째 세션은 미정님의 &amp;lsquo;모바일에 딥러닝 심기&amp;rsquo;였습니다.</description>
+    </item>
+    
+    <item>
+      <title>[Hanjp-IM 프로젝트] GNOME Korea 와의 조인트 모임 후기</title>
+      <link>https://blog.ubuntu-kr.org/2018/05/19/hanjp-im-gnome-kr-joint-meetup/</link>
+      <pubDate>Sat, 19 May 2018 13:27:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2018/05/19/hanjp-im-gnome-kr-joint-meetup/</guid>
+      <description>오늘(2018.05.19) 우분투한국커뮤니티의 Hanjp-IM 프로젝트 팀은, GNOME Korea 와 함께 공동으로 조인트 모임을 진행 하였습니다. 이번 조인트 모임은, 지난 4월 26일 서울에서 열린 우분투 18.04 릴리스 파티에 참석하셨던 GNOME Korea 의 조성호님의 제안으로 마련되었습니다. 당시 Hanjp-IM 프로젝트를 이끄시는 김광연님의 프로젝트 중간 발표를 보시고 프로젝트가 잘 진행되도록 돕고 싶으셔서 제안 하셨습니다. 아무래도 구성원 모두가 입력기 개발을 처음 해 보는 상황이라 프로젝트 진행에 어려움을 많이 겪는 시점에서, iBus 쪽에 기여를 해 보신 분들이 GNOME Korea에 계신다 하셔서 조인트 모임을 하면 큰 도움을 받을 수 있을 것 같아 제안을 수락하게 되었습니다.</description>
+    </item>
+    
+    <item>
+      <title>[Hanjp-IM Project] Joint meetup with GNOME Korea</title>
+      <link>https://blog.ubuntu-kr.org/2018/05/19/hanjp-im-gnome-kr-joint-meetup-en/</link>
+      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2018/05/19/hanjp-im-gnome-kr-joint-meetup-en/</guid>
+      <description>Today(May 19, 2018), Our Hanjp-IM Team from Ubuntu Korea Community, opened a joint meetup with GNOME Korea. This joint meetup was organized with the suggestion from Seong-Ho Cho, from GNOME Korea. who attended Ubuntu 18.04 LTS Release Party @ Seoul. After he watched the presentation about status of Hanjp-IM Project, he suggested us a joint meetup because he wanted to help our project. Since we have many difficulties with developing input method because all of us are begineer in input method field, We have accepted the suggestion wo that we can get some help with our project from the people knows manh things about iBus and input method.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 18.04 Release Party 후기</title>
+      <link>https://blog.ubuntu-kr.org/2018/05/11/ubuntu-bionic-beaver-party-korea-ko-kr/</link>
+      <pubDate>Fri, 11 May 2018 01:34:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2018/05/11/ubuntu-bionic-beaver-party-korea-ko-kr/</guid>
+      <description>4.28 토요일 부터, 4.29 일요일 까지. 우분투 18.04 릴리즈 파티를 준비하여 진행 하였습니다. 이번 LTS 버전 출시기념 릴리즈 파티 행사는, 서울 뿐만이 아닌 다른 지역에서도 공식적으로 진행되어 이전에 진행되었던 릴리즈 파티 행사와는 또 다른 의미를 가지게 되었습니다. 서울 외에, 대전과 부산에서 진행 되었으며. 세 행사 모두 성공적으로 마무리 되었습니다.
+서울 선릉역 근처에 위치한 D.CAMP에서 행사가 진행되었습니다. &amp;ldquo;코딩이랑 무관합니다만,&amp;quot;이라는 페이스북 기반의 커뮤니티화 함께 행사를 준비하였습니다. 다른 세미나 행사와는 또 달리, LTS 출시 기념을 위한 행사이다 보니 60~70명 정도의 평소와 비교하면 정말 많은분들께서 참석해 주셨습니다.</description>
+    </item>
+    
+    <item>
+      <title>Report for hosting Ubuntu 18.04 LTS Release Party in Korea</title>
+      <link>https://blog.ubuntu-kr.org/2018/05/01/ubuntu-bionic-beaver-party-korea/</link>
+      <pubDate>Tue, 01 May 2018 01:34:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2018/05/01/ubuntu-bionic-beaver-party-korea/</guid>
+      <description>Last weekend, We hosted Ubuntu 18.04 LTS Release Party in 3 different cities. We hosted event on Saturday at Seoul and Busan, and on Sunday at Daejeon. All event were ended successfully.
+Seoul At Seoul, It was held at D.CAMP near Seolleung station. The event was co-hosted with &amp;ldquo;Well, It&amp;rsquo;s not related to coding&amp;rdquo; About 60~70 people attended to celebrate the release of new LTS version. We talked about changes in the new LTS release and also other topics such as:</description>
+    </item>
+    
+  </channel>
+</rss>

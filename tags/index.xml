@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 우분투 한국 커뮤니티 블로그</title>
+    <link>https://blog.ubuntu-kr.org/tags/</link>
+    <description>Recent content in Tags on 우분투 한국 커뮤니티 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 22 Jan 2020 07:49:00 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>memorial</title>
+      <link>https://blog.ubuntu-kr.org/tags/memorial/</link>
+      <pubDate>Wed, 22 Jan 2020 07:49:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/memorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>daejeon</title>
+      <link>https://blog.ubuntu-kr.org/tags/daejeon/</link>
+      <pubDate>Mon, 25 Jun 2018 21:49:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/daejeon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>event</title>
+      <link>https://blog.ubuntu-kr.org/tags/event/</link>
+      <pubDate>Mon, 25 Jun 2018 21:49:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/event/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>report</title>
+      <link>https://blog.ubuntu-kr.org/tags/report/</link>
+      <pubDate>Mon, 25 Jun 2018 21:49:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/report/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UbuntuFest</title>
+      <link>https://blog.ubuntu-kr.org/tags/ubuntufest/</link>
+      <pubDate>Mon, 25 Jun 2018 21:49:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/ubuntufest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gnome-kr</title>
+      <link>https://blog.ubuntu-kr.org/tags/gnome-kr/</link>
+      <pubDate>Sat, 19 May 2018 13:27:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/gnome-kr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hanjp</title>
+      <link>https://blog.ubuntu-kr.org/tags/hanjp/</link>
+      <pubDate>Sat, 19 May 2018 13:27:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/hanjp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>input-method</title>
+      <link>https://blog.ubuntu-kr.org/tags/input-method/</link>
+      <pubDate>Sat, 19 May 2018 13:27:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/input-method/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>project</title>
+      <link>https://blog.ubuntu-kr.org/tags/project/</link>
+      <pubDate>Sat, 19 May 2018 13:27:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>busan</title>
+      <link>https://blog.ubuntu-kr.org/tags/busan/</link>
+      <pubDate>Fri, 11 May 2018 01:34:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/busan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>seoul</title>
+      <link>https://blog.ubuntu-kr.org/tags/seoul/</link>
+      <pubDate>Fri, 11 May 2018 01:34:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/seoul/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
