@@ -1,0 +1,31 @@
+{{ $allPages := .Site.Pages }}
+{{ range .Site.Home.Translations }}
+{{ $allPages = $allPages | lang.Merge .Site.Pages }}
+{{ end }}
+
+{{ $regularPages := .Site.RegularPages }}
+{{ range .Site.Home.Translations }}
+{{ $regularPages = $regularPages | lang.Merge .Site.RegularPages }}
+{{ end }}
+
+<section class="p-strip">
+    <div class="row">
+      <div class="col-12">
+        <h1>후원사</h1>
+        <p>
+          다양한 회사, 기관, 단체에서 우분투 한국 커뮤니티를 여러 방법으로 후원하여, 더 활발한 활동을 할 수 있도록 돕고 있습니다.
+        </p>
+        <a href="{{ "sponsors" | relLangURL }}"><button class="p-button has-icon"><i class="p-icon--information"></i><span>후원사 목록 보기</span></button></a>
+        <div class="p-logo-section">
+          <div class="p-logo-section__items">
+          {{ $sponsors := (where $regularPages "Section" "sponsors") }}
+          {{ range $sponsors }}
+            <div class="p-logo-section__item"><a href="{{ .RelPermalink }}">
+            <img class="p-logo-section__logo" src="{{ .RelPermalink }}{{.Params.image }}" alt="{{.Title}}">
+            </a></div>
+          {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

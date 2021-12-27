@@ -1,0 +1,19 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href='{{ "/img/favicon/apple-touch-icon.png" | relURL }}'>
+    <link rel="icon" type="image/png" sizes="32x32" href='{{ "/img/favicon/favicon-32x32.png" | relURL }}'>
+    <link rel="icon" type="image/png" sizes="16x16" href='{{ "/img/favicon/favicon-16x16.png" | relURL }}'>
+
+
+    {{- $options := (dict "includePaths" (slice "node_modules")) -}}
+    {{ $style := resources.Get "sass/theme.scss" | resources.ToCSS $options | resources.Minify | resources.Fingerprint }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <!--  Open Graph Protocol -->
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:title" content="{{ .Title }}" />
+
+    <!--   SASS Stylesheets -->
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>

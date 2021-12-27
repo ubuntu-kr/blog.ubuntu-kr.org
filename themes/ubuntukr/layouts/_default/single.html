@@ -1,0 +1,92 @@
+{{ define "main" }}
+
+
+<main>
+  <section class="p-strip--{{if .Params.image}}image{{else}}suru{{end}} main-strip"
+    {{if .Params.image}}}
+    style="background-image:url('{{.Params.image}}'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+    {{end}}>
+      <div class="row">
+        {{if .Params.image}}
+        <div class="col-6">
+          <div class="p-card--overlay">
+            <h2>{{.Title}}</h2>
+            <ul class="p-card__content p-inline-list--middot">
+              {{range .Params.authors}}
+              <li class="p-inline-list__item">
+                {{.name}}
+              </li>
+              {{end}}
+            </ul>
+            <p><u class=" timedisplay" style="text-decoration-style: dotted;">{{.Date.Format "2006-01-02T15:04:05-07:00"}}</u></p>
+            <p class="p-card__content">{{.Params.description}}</p>
+            {{range .Params.tags}}
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">
+              <div class="p-chip">
+                <span class="p-chip__value">{{.}}</span>
+              </div>
+            </a>
+            {{end}}
+          </div>
+        </div>
+        {{else}}
+        <div class="col-8 left-section">
+          <h1>{{.Title}}</h1>
+          <ul class="p-card__content p-inline-list--middot">
+            {{range .Params.authors}}
+            <li class=" p-inline-list__item">
+              {{.name}}
+            </li>
+            {{end}}
+          </ul>
+          <p><u class="timedisplay" style="text-decoration-style: dotted;">{{.Date.Format "2006-01-02T15:04:05-07:00"}}</u></p>
+          <p>{{.Params.description}}</p>
+        </div>
+        {{end}}
+      </div>
+  </section>
+  <section class="p-strip">
+  <div class="row">
+  {{ .Content }}
+  </div>
+  </section>
+  <section class="p-strip--light">
+    <div class="row">
+      {{range .Params.authors}}
+      <div class="col-12">
+        <div class="p-media-object">
+          <img src="{{.profile}}" class="p-media-object__image is-round" alt="">
+          <div class="p-media-object__details">
+            <h3 class="p-media-object__title">
+              <a href="#">{{.name}}</a>
+            </h3>
+            <p class="p-media-object__content">{{.bio}}</p>
+          </div>
+        </div>
+      {{end}}
+      <div class="col-12">
+        {{ partial "disqus.html" . }}
+      </div>
+   
+    </div>
+  </section>
+  <section class="p-strip">
+    <div class="row">
+      <footer class="p-article-pagination">
+        {{with .Site.RegularPages.Prev . }}
+        <a class="p-article-pagination__link--previous" href="{{.RelPermalink}}">
+          <span class="p-article-pagination__label">{{i18n "prev"}}</span>
+          <span class="p-article-pagination__title">{{.Title}}</span>
+        </a>
+        {{end}}
+        {{with .Site.RegularPages.Next . }}
+        <a class="p-article-pagination__link--next" href="{{.RelPermalink}}">
+          <span class="p-article-pagination__label">{{i18n "next"}}</span>
+          <span class="p-article-pagination__title">{{.Title}}</span>
+        </a>
+        {{end}}
+      </footer>
+    </div>
+  </section>
+</main>
+{{ end }}

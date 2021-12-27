@@ -1,0 +1,11 @@
+{
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {}
+  },
+  "dependencies": {
+    "vanilla-framework": "^2.37.0"
+  },
+  "name": "ubuntukr",
+  "version": "0.1.0"
+}

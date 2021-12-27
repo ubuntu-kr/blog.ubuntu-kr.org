@@ -1,0 +1,26 @@
+[next]
+other = "다음"
+[prev]
+other = "이전"
+
+[forums]
+other = "포럼"
+[fb_groups]
+other = "페이스북 그룹"
+[wiki]
+other = "위키"
+[tutorials]
+other = "튜토리얼"
+[chat]
+other = "채팅"
+[mailing_list]
+other = "메일링 리스트"
+[group_studies_projects]
+other = "스터디/프로젝트"
+[translate_ubuntu]
+other = "우분투 번역"
+
+[footer_contact]
+other = "운영진과 연락하기(이메일)"
+[footer_src_repo]
+other = "GitHub에서 소스코드 보기"

@@ -1,0 +1,55 @@
+name: Deploy Website
+
+on:
+  push:
+    branches: [ main ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Check out latest commit 
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        name: Checkout src repo
+        with:
+          path: src
+          ref: main
+      
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '^1.17.1' # The Go version to download (if necessary) and use.
+      
+      - name: Build website with hugo
+        working-directory: src
+        run: |
+          go install --tags extended github.com/gohugoio/hugo@latest
+          hugo mod get
+          cd themes/ubuntukr && npm i && cd ../../
+          hugo
+      # Checkout destination branch
+      - uses: actions/checkout@v2
+        name: Checkout dest repo
+        with:
+          path: dest
+          fetch-depth: 0
+          ref: gh-pages
+            
+      # Commit and push changes
+      - name: Copy website built from src/public
+        working-directory: dest
+        run: |
+          rm -rf *
+          yes | cp -rf ../src/public/* .
+      # Commit and push changes
+      - name: Commit website updates
+        working-directory: dest
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Deploy website updates with GitHub Actions: ${GITHUB_SHA}"
+          git push origin gh-pages

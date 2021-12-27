@@ -1,0 +1,10 @@
+<a href="{{.Get "href"}}">
+    <button class="p-button {{if .Get "icon"}}has-icon{{end}}">
+    {{if .Get "icon"}}
+    <i class="p-icon--{{.Get "icon"}}"></i>
+    {{end}}
+    <span>
+    {{.Get "text"}}
+    </span>
+    </button>
+</a>

@@ -1,0 +1,57 @@
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 -}}
+<ol class="p-pagination">
+  {{ with $pag.First -}}
+  <li class="p-pagination__item">
+    <a class="p-pagination__link--previous" 
+        href="{{ .URL }}" title="Previous page">
+        <i class="p-icon--contextual-menu">First page</i>
+    </a>
+  </li>
+  {{ end -}}
+  <li class="p-pagination__item">
+    <a class="p-pagination__link--previous {{ if not $pag.HasPrev }} is-disabled{{ end }}" 
+        {{ if $pag.HasPrev }}href="{{ $pag.Prev.URL }}"{{ end }} title="Previous page">
+        <i class="p-icon--contextual-menu">Previous page</i>
+    </a>
+  </li>
+  {{- $ellipsed := false -}}
+  {{- $shouldEllipse := false -}}
+  {{- range $pag.Pagers -}}
+  {{- $right := sub .TotalPages .PageNumber -}}
+  {{- $showNumber := or (le .PageNumber 3) (eq $right 0) -}}
+  {{- $showNumber := or $showNumber (le .TotalPages 5) -}}{{/* Issue #7523 */}}
+  {{- $showNumber := or $showNumber (and (gt .PageNumber (sub $pag.PageNumber 2)) (lt .PageNumber (add $pag.PageNumber 2))) -}}
+  {{- if $showNumber -}}
+    {{- $ellipsed = false -}}
+    {{- $shouldEllipse = false -}}
+  {{- else -}}
+    {{- $shouldEllipse = not $ellipsed -}}
+    {{- $ellipsed = true -}}
+  {{- end -}}
+  {{- if $showNumber }}
+  <li class="p-pagination__item">
+    <a class="p-pagination__link {{ if eq . $pag }} is-active{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
+  </li>
+  {{- else if $shouldEllipse }}
+  <li class="p-pagination__item p-pagination__item--truncation">
+    …
+  </li>
+  {{- end -}}
+  {{- end }}
+  <li class="p-pagination__item">
+    <a class="p-pagination__link--next {{ if not $pag.HasNext }} is-disabled{{ end }}"
+        {{ if $pag.HasNext }}href="{{ $pag.Next.URL }}"{{ end }} title="Next page">
+        <i class="p-icon--contextual-menu">Next page</i>
+    </a>
+  </li>
+  {{- with $pag.Last }}
+  <li class="p-pagination__item">
+    <a class="p-pagination__link--next"
+        href="{{ .URL }}" title="Last page">
+        <i class="p-icon--contextual-menu">Next page</i>
+    </a>
+  </li>
+  {{- end }}
+</ol>
+{{ end }}

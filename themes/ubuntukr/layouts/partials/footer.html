@@ -1,0 +1,28 @@
+<section class="p-strip--accent">
+  <div class="row">
+    <div class="col-12">
+      <h2>{{.Site.Title}}</h2>
+      <ul class="p-inline-list--middot is-dark">
+        <li class="p-inline-list__item">
+          <a href="mailto:{{.Site.Params.contact}}">{{ i18n "footer_contact" }}</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://fb.com/{{.Site.Params.facebook}}">Facebook</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://twitter.com/{{.Site.Params.twitter}}">Twitter</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="{{.Site.Params.youtube}}">YouTube</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://github.com/{{.Site.Params.github}}">GitHub</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://launchpad.net/~{{.Site.Params.launchpad}}">Launchpad</a>
+        </li>
+      </ul>
+      <p>{{.Site.Params.copyright}}</p>
+      <a href="{{.Site.Params.source_repo}}">{{ i18n "footer_src_repo" }}</a>
+    </div>
+  </div>

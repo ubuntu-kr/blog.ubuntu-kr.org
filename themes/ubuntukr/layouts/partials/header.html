@@ -1,0 +1,77 @@
+<header id="navigation" class="p-navigation is-dark">
+  <div class="p-navigation__row">
+    <div class="p-navigation__banner">
+      <div class="p-navigation__logo">
+        <a class="p-navigation__item" href="{{ .Site.LanguagePrefix | relURL }}">
+          <img class="p-navigation__image" src="{{ "/img/logo.svg" | relURL }}" alt="{{.Site.Title}}">
+        </a>
+      </div>
+      <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+      <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+    </div>
+    <nav class="p-navigation__nav" aria-label="Example sub navigation">
+      <ul class="p-navigation__items">
+        {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+          <li class="p-navigation__item--dropdown-toggle" id="link-{{ .Identifier }}">
+            <a class="p-navigation__link" aria-controls="{{ .Identifier }}-menu">
+              {{ .Name }}
+            </a>
+            <ul class="p-navigation__dropdown--right" id="{{ .Identifier }}-menu" aria-hidden="true">
+              {{ range .Children }}
+              <li>
+                <a href="{{ .URL | relLangURL }}" class="p-navigation__dropdown-item">{{ .Name }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </li>
+          {{ else }}
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+     
+     <ul class="p-navigation__items">
+        <li class="p-navigation__item--dropdown-toggle" id="link-4">
+          <a class="p-navigation__link" aria-controls="account-menu">
+            🌏
+          </a>
+          <ul class="p-navigation__dropdown--right" id="account-menu" aria-hidden="true">
+            {{ if eq (len .AllTranslations) (len $.Site.Home.AllTranslations) }}
+            {{ range .AllTranslations }}
+            <li>
+              <a href="{{ .Permalink }}" class="p-navigation__dropdown-item">{{ .Language.LanguageName }}</a>
+            </li>
+            {{ end }}
+            {{ else }}
+            {{ range .AllTranslations }}
+            <li>
+              <a href="{{ .Permalink }}" class="p-navigation__dropdown-item">📄 {{ .Language.LanguageName }}</a>
+            </li>
+            {{ end }}
+            {{ range $.Site.Home.AllTranslations }}
+            <li>
+              <a href="{{ .Permalink }}" class="p-navigation__dropdown-item">🏠 {{ .Language.LanguageName }}</a>
+            </li>
+            {{ end }}
+            {{ end }}
+          </ul>
+        </li>
+        <li class="p-navigation__item--dropdown-toggle" id="link-4">
+          <a class="p-navigation__link" aria-controls="account-menu">
+            🔗
+          </a>
+          <ul class="p-navigation__dropdown--right" id="account-menu" aria-hidden="true">
+            {{ range .Site.Menus.link }}
+            <li>
+              <a href="{{ .URL | relLangURL }}" class="p-navigation__dropdown-item">{{ .Name }}</a>
+            </li>
+            {{ end }}
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

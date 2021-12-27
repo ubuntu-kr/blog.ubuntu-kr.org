@@ -1,0 +1,26 @@
+[next]
+other = "Next"
+[prev]
+other = "Previous"
+
+[forums]
+other = "Forums"
+[fb_groups]
+other = "Facebook Groups"
+[wiki]
+other = "Wiki"
+[tutorials]
+other = "Tutorials"
+[chat]
+other = "Chat"
+[mailing_list]
+other = "Mailing List"
+[group_studies_projects]
+other = "Group studies/Projects"
+[translate_ubuntu]
+other = "Translate Ubuntu"
+
+[footer_contact]
+other = "Contact with Organizers (Email)"
+[footer_src_repo]
+other = "Source code on GitHub"

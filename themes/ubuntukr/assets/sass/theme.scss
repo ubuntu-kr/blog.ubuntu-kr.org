@@ -1,0 +1,62 @@
+// Import the framework
+@import 'vanilla-framework/scss/vanilla';
+
+// Include all of Vanilla Framework
+@include vanilla;
+
+// Icons
+@include vf-p-icon-begin-downloading;
+@include vf-p-icon-machines;
+@include vf-p-icon-switcher-dashboard;
+@include vf-p-icon-exposed;
+@include vf-p-icon-user-group;
+@include vf-p-icon-topic;
+@include vf-p-icon-comments;
+@include vf-p-icon-highlight-off;
+
+
+.p-navigation__dropdown-item {
+    color: white !important;
+}
+
+section {
+    padding-left : 1em;
+    padding-right: 1em;
+}
+
+.main-strip .right-section {
+    animation-duration: 1s;
+    animation-name    : slidein-rtl;
+}
+
+
+
+.main-strip .left-section {
+    animation-duration: 1s;
+    animation-name    : slidein-ltr;
+}
+
+
+@keyframes slidein-rtl {
+    from {
+        transform: translateX(50px);
+        opacity  : 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity  : 1;
+    }
+}
+
+@keyframes slidein-ltr {
+    from {
+        transform: translateX(-50px);
+        opacity  : 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity  : 1;
+    }
+}

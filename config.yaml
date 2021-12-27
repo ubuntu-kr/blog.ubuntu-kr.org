@@ -1,0 +1,126 @@
+baseURL: 'https://blog.ubuntu-kr.org'
+languageCode: ko-kr
+title: 'Ubuntu Korea Community'
+theme: "ubuntukr"
+buildFuture: true
+googleAnalytics: "UA-65961752-8"
+disqusShortname: ubuntu-kr-blog
+paginate: 5
+permalinks: 
+  post: /:2006/:01/:02/:filename
+params:
+  contact: contact@ubuntu-kr.org
+  facebook: ubuntukorea
+  twitter: UbuntuKrOrg
+  github: ubuntu-kr
+  launchpad: ubuntu-ko
+  youtube: https://www.youtube.com/user/UbuntuKorea
+  source_repo: https://github.com/ubuntu-kr/blog
+defaultContentLanguage: ko
+languages:
+  ko:
+    languageName: 한국어
+    title: 우분투 한국 커뮤니티 블로그
+    weight: 1
+    params:
+      description: >-
+        우분투 한국 커뮤니티 공식 블로그 입니다. 커뮤니티 활동, 국내/해외 커뮤니티와의 교류, 내부적으로 진행하는 프로젝트 상황, 운영 현황 등을 공유합니다.
+      copyright: >-
+        © 2021 우분투 한국 커뮤니티 (우분투 한국 로컬 커뮤니티 팀).
+        별도 고지가 있는 경우를 제외하고, 웹 사이트 소스코드는 MIT, 웹 사이트의 컨텐츠는 CC BY-SA 4.0 라이선스로 이용 가능합니다.
+        Ubuntu 및 Canonical 은 Canonical Ltd. 의 등록 상표입니다.
+      main_slide:
+        label: 커뮤니티 소개
+        link: about
+    menu:
+      main:
+      - identifier: blog
+        name: 블로그
+        weight: 1
+        url: /
+      - identifier: tags
+        name: 태그
+        weight: 2
+        url: /tags
+      - identifier: subscribe
+        name: 구독(RSS)
+        weight: 3
+        url: /index.xml
+      link:
+      - identifier: home
+        name: 홈페이지
+        weight: 1
+        url: https://ubuntu-kr.org
+      - identifier: forum
+        name: 포럼
+        weight: 2
+        url: https://forum.ubuntu-kr.org
+      - identifier: wiki
+        name: 위키
+        weight: 3
+        url: https://wiki.ubuntu-kr.org
+      - identifier: tutorials
+        name: 튜토리얼
+        weight: 4
+        url: https://ubuntu-kr.github.io/workshops/
+      - identifier: event
+        name: 행사
+        weight: 5
+        url: https://event.ubuntu-kr.org
+      - identifier: ask
+        name: Ask Ubuntu KR 
+        weight: 6
+        url: https://ask.ubuntu-kr.org
+  en:
+    languageName: English
+    title: Ubuntu Korea Community Blog
+    weight: 2
+    params:
+      description: >-
+        The official blog of Ubuntu Korea Community (Ubuntu Korean LoCo Team). Check our latest activities, local/global exchange with others, status of projects, and how we organize our community.
+      copyright: >-
+        © 2021 Ubuntu Korea Community (Ubuntu Korean LoCo Team).
+        Except where otherwise noted, Website source code licensed under MIT, Contents licensed under CC BY-SA 4.0. 
+        Ubuntu and Canonical are registered trademarks of Canonical Ltd.
+      main_slide:
+        label: About the community
+        link: about
+    menu:
+      main:
+      - identifier: blog
+        name: Blog
+        weight: 1
+        url: /
+      - identifier: tags
+        name: Tags
+        weight: 2
+        url: /tags
+      - identifier: subscribe
+        name: Subscribe(RSS)
+        weight: 3
+        url: /index.xml
+      link:
+      - identifier: home
+        name: Homepage
+        weight: 1
+        url: https://ubuntu-kr.org
+      - identifier: forum
+        name: Forum
+        weight: 2
+        url: https://forum.ubuntu-kr.org
+      - identifier: wiki
+        name: Wiki
+        weight: 3
+        url: https://wiki.ubuntu-kr.org
+      - identifier: tutorials
+        name: Tutorials
+        weight: 4
+        url: https://ubuntu-kr.github.io/workshops/
+      - identifier: event
+        name: Events
+        weight: 5
+        url: https://event.ubuntu-kr.org
+      - identifier: ask
+        name: Ask Ubuntu KR 
+        weight: 6
+        url: https://ask.ubuntu-kr.org
