@@ -1,3 +1,4 @@
+[![Deploy Website](https://github.com/ubuntu-kr/blog/actions/workflows/deploy.yml/badge.svg)](https://github.com/ubuntu-kr/blog/actions/workflows/deploy.yml)
 # blog.ubuntu-kr.org
 
 The new Blog of Ubuntu Korea Community. Built with [Hugo](https://gohugo.io) and vanillaframework.io
