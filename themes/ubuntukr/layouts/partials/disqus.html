@@ -2,7 +2,7 @@
 <script type="text/javascript">
 var disqus_config = function () {
     this.page.url = {{ .Permalink }};  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = {{ .RelPermalink }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.identifier = {{ printf "%s.html" (substr .RelPermalink 0 -1) }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 (function() {
     // Don't ever inject Disqus on localhost--it creates unwanted
