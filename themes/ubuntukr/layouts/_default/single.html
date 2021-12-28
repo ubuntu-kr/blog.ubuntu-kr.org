@@ -61,6 +61,11 @@
               <a href="#">{{.name}}</a>
             </h3>
             <p class="p-media-object__content">{{.bio}}</p>
+            <ul class="p-inline-list--middot">
+              {{with .email}}<li class="p-inline-list__item"><a href="mailto:{{.}}">Email</a></li>{{end}}
+              {{with .launchpad}}<li class="p-inline-list__item"><a href="https://launchpad.net/~{{.}}">Launchpad</a></li>{{end}}
+              {{with .github}}<li class="p-inline-list__item"><a href="https://github.com/{{.}}">GitHub</a></li>{{end}}
+            </ul>
           </div>
         </div>
       {{end}}
