@@ -6,7 +6,17 @@
     <description>Recent content in Posts on 우분투 한국 커뮤니티 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 22 Jan 2020 07:49:00 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Dec 2021 11:27:04 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021년 회고</title>
+      <link>https://blog.ubuntu-kr.org/2021/12/28/2021-year-in-review/</link>
+      <pubDate>Tue, 28 Dec 2021 11:27:04 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2021/12/28/2021-year-in-review/</guid>
+      <description>안녕하세요, 원래는 연말이 되면 송년회 행사를 하면서 한 해를 돌아보거나, 작년 같은 경우는 온라인으로 연말 행사를 진행 했었는데요. 올해는 따로 연말 행사를 하기엔 시간적 여유가 부족해서, 간단히 글로 대신 돌아 보고, 내년 초 신년회 행사때 2021년에 한 활동을 다시 한번 돌아보는 시간을 가져 보고자 합니다.
+우분투한국커뮤니티에서는 올 한 해도 다양한 활동을 진행 힜습니다. 올해 처음 열린 우부콘 아시아 2021 (UbuCon Asia 2021) 부터, 오픈소스 컨트리뷰션 아카데미 등 다양한 활동을 했는데요, 각각 어떤 활동이였는지 간단히 알아보겠습니다.</description>
+    </item>
+    
     <item>
       <title>별세하신 송현도님을 추모하며</title>
       <link>https://blog.ubuntu-kr.org/2020/01/22/in-memory-of-drake-song-ko/</link>
