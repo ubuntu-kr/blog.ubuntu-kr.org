@@ -58,7 +58,7 @@ Canonical, Ubuntu Desktop Team 의 Engineering Manager 이신 Ken VanDine 님의
 - [컨트리뷰션 아카데이 웹사이트에 올라간 Hanjp 프로젝트 소개](https://www.oss.kr/contribution_academy_project/show/6cb955f0-7f19-4e10-80f3-c41c8601b91b)
 
 ## 웹사이트 개편과 새 운영진 합류
-올해는 우부콘 아시아와 컨트리뷰션 아카데미 이외에는 사람이 부족하기도 했고, 운영진 분들이 본업으로 바쁘기도 해서, 그룹 스터디나 세미나 같은 기존에 해 오던 활동을 많이 하지 못했습니다. 그래서 운영진 분들 맡은 일을 조금이라도 분산하고자 새 운영진을 모집했고, [한상곤]()님, [김광연]()님, [조채연]()님이 운영진으로 새로 합류 하셨습니다.
+올해는 우부콘 아시아와 컨트리뷰션 아카데미 이외에는 사람이 부족하기도 했고, 운영진 분들이 본업으로 바쁘기도 해서, 그룹 스터디나 세미나 같은 기존에 해 오던 활동을 많이 하지 못했습니다. 그래서 운영진 분들 맡은 일을 조금이라도 분산하고자 새 운영진을 모집했고, [한상곤](https://launchpad.net/~sigmadream)님, [김광연](https://launchpad.net/~horary)님, [조채연](https://launchpad.net/~stoutcho21)님이 운영진으로 새로 합류 하셨습니다.
 
 또한 [홈페이지](https://ubuntu-kr.org)와 [블로그](https://blog.ubuntu-kr.org)를 Hugo 및 Vanilla Framework 기반으로 새로 개편하여, 우분투 및 커뮤니티 관련 필요한 정보를 더 쉽게 찾을 수 있도록 바꿨습니다. 
 
