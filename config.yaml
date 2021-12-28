@@ -15,7 +15,7 @@ params:
   github: ubuntu-kr
   launchpad: ubuntu-ko
   youtube: https://www.youtube.com/user/UbuntuKorea
-  source_repo: https://github.com/ubuntu-kr/blog
+  source_repo: https://github.com/ubuntu-kr/blog.ubuntu-kr.org
 defaultContentLanguage: ko
 languages:
   ko:
