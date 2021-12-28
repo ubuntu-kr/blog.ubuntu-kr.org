@@ -10,9 +10,9 @@ tags:
  - report
 authors:
     - name: Youngbin Han
-      bio: 우분투한국커뮤니티 대표(2017~2018)
+      bio: Ubuntu Korea Community - Leader (2017~2018)
       email: sukso96100@gmail.com
-      launchpad: sukso96100
+      launchpad: ybhan
       github: sukso96100
       profile: https://avatars2.githubusercontent.com/u/1916739?s=460&v=4
 image: IMG_5356.jpg

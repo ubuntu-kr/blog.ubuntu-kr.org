@@ -12,7 +12,7 @@ authors:
     - name: Youngbin Han
       bio: Leader of the Ubuntu Korea Community(Ubuntu Korea LoCo Team)(2017~2018) / Hanjp-IM Project Member
       email: sukso96100@gmail.com
-      launchpad: sukso96100
+      launchpad: ybhan
       github: sukso96100
       profile: https://avatars2.githubusercontent.com/u/1916739?s=460&v=4
 image: cover.jpg
