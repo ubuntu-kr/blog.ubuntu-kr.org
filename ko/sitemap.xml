@@ -102,5 +102,17 @@
                 hreflang="ko"
                 href="https://blog.ubuntu-kr.org/categories/"
                 />
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/contribute/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/contribute/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/contribute/"
+                />
   </url>
 </urlset>

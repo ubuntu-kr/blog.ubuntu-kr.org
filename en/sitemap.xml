@@ -14,6 +14,18 @@
                 href="https://blog.ubuntu-kr.org/en/categories/"
                 />
   </url><url>
+    <loc>https://blog.ubuntu-kr.org/en/contribute/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/contribute/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/contribute/"
+                />
+  </url><url>
     <loc>https://blog.ubuntu-kr.org/en/tags/</loc>
     <xhtml:link
                 rel="alternate"

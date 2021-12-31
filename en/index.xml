@@ -6,5 +6,16 @@
     <description>Recent content on Ubuntu Korea Community Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language><atom:link href="https://blog.ubuntu-kr.org/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contributing to this blog</title>
+      <link>https://blog.ubuntu-kr.org/en/contribute/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/en/contribute/</guid>
+      <description>If you are organizer or person who participates Ubuntu Korea Community, You can contribute your own posting to this blog.
+For organizers First, You must be a member of ubuntu-kr organization on GitHub. You will also need read and write acccess to ubuntu-kr/blog.ubuntu-kr.org repository. If you don&amp;rsquo;t have yet, Ask may other organizers for that.
+After gaining all access you need, Clone ubuntu-kr/blog.ubuntu-kr.org repository to your machine, And get started with writting post with steps that can be found on this README.</description>
+    </item>
+    
   </channel>
 </rss>
