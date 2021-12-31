@@ -46,6 +46,10 @@ languages:
         name: 구독(RSS)
         weight: 3
         url: /index.xml
+      - identifier: contribute
+        name: 블로그에 기고하기
+        weight: 4
+        url: /contribute
       link:
       - identifier: home
         name: 홈페이지
@@ -99,6 +103,10 @@ languages:
         name: Subscribe(RSS)
         weight: 3
         url: /index.xml
+      - identifier: contribute
+        name: Contributing to this blog
+        weight: 4
+        url: /contribute
       link:
       - identifier: home
         name: Homepage

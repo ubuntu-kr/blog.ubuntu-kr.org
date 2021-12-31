@@ -18,3 +18,5 @@ hugo new --kind post post/<session-name>/index.md
 hugo new --kind post post/ubucon-asia-2021-review/index.md
 
 ```
+
+게시물에 대한 영문 번역을 추가하려면, `index.md` 가 있는 디렉터리에 `index.en.md` 파일을 생성하고, 생성된 파일에 번역된 내용을 작성하면 됩니다.
