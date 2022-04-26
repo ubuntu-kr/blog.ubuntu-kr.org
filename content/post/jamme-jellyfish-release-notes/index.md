@@ -1,7 +1,7 @@
 
 ---
 layout: post
-date: 2020-01-22 07:49:00 +0900
+date: 2022-04-22 02:00:00 +0900
 title: "Ubuntu 22.04 LTS Jammy Jellyfish Release Notes"
 tags:
  - release-notes
@@ -11,7 +11,7 @@ authors:
       email: ubuntu-l10n-ko@lists.ubuntu.com
       launchpad: ubuntu-l10n-ko
       github: ubuntu-kr
-      profile: .
+      profile: https://launchpad.net/@@/team-logo
 ---
 # Jammy Jellyfish Release Notes
 
