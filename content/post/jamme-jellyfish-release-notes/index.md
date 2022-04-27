@@ -17,29 +17,29 @@ authors:
 
 # 서문
 
-이 **Ubuntu 22.04 LTS** (Jammy Jellyfish)에 대한 릴리즈 노트에서는 해당 릴리즈에 대한 개요와 Ubuntu와 flavour에서의 알려진 문제들의 문서를 제공합니다.
+이 **우분투 22.04 LTS** (Jammy Jellyfish)에 대한 릴리즈 노트에서는 해당 릴리즈에 대한 개요와 우분투와 flavour에서의 알려진 문제들의 문서를 제공합니다.
 
 ## 지원 기간
 
-Ubuntu Desktop, Ubuntu Server, Ubuntu Cloud, Ubuntu Core의 유지보수 업데이트는 [2027 4월](https://wiki.ubuntu.com/Releases)까지 5년 동안 제공되고, 나머지 모든 flavour에 대해서는 3년간 지원됩니다. 추가적 보안 업데이트는 [ESM (Extended Security Maintenance).](https://ubuntu.com/security/esm)를 통해 지원됩니다.
+우분투 데스크톱, 우분투 서버, 우분투 Cloud, 우분투 Core의 유지보수 업데이트는 [2027 4월](https://wiki.ubuntu.com/Releases)까지 5년 동안 제공되고, 나머지 모든 flavour에 대해서는 3년간 지원됩니다. 추가적 보안 업데이트는 [ESM (Extended Security Maintenance).](https://ubuntu.com/security/esm)를 통해 지원됩니다.
 
-# Ubuntu 22.04 LTS 사용하기
+# Ubuntu 22.04 LTS 받기
 
 ## Ubuntu 22.04 다운로드
 
 가까운 지역에서 이미지를 다운로드 할 수 있습니다.
 
-ISO나 쓰기 가능한 이미지 다운로드:
+ISO나 플래시 가능한 이미지 다운로드:
 
-  * [64 비트 x86 (AMD64) Ubuntu Desktop 및 Server](http://releases.ubuntu.com/22.04/)
-  * [종종 다운로드 되는 Ubuntu 이미지](http://cdimage.ubuntu.com/ubuntu/releases/22.04/release/)
-  * [Ubuntu Cloud 이미지](http://cloud-images.ubuntu.com/daily/server/jammy/current/)
+  * [64 비트 x86 (AMD64) 우분투 데스크톱 및 서버](http://releases.ubuntu.com/22.04/)
+  * [종종 다운로드 되는 우분투 이미지](http://cdimage.ubuntu.com/ubuntu/releases/22.04/release/)
+  * [우분투 Cloud 이미지](http://cloud-images.ubuntu.com/daily/server/jammy/current/)
   * [Lubuntu](http://cdimage.ubuntu.com/lubuntu/releases/22.04/release/)
   * [Kubuntu](http://cdimage.ubuntu.com/kubuntu/releases/22.04/release/)
-  * [Ubuntu Budgie](http://cdimage.ubuntu.com/ubuntu-budgie/releases/22.04/release/)
-  * [Ubuntu Kylin](http://cdimage.ubuntu.com/ubuntukylin/releases/22.04/release/)
-  * [Ubuntu MATE](http://cdimage.ubuntu.com/ubuntu-mate/releases/22.04/release/)
-  * [Ubuntu Studio](http://cdimage.ubuntu.com/ubuntustudio/releases/22.04/release/)
+  * [우분투 Budgie](http://cdimage.ubuntu.com/ubuntu-budgie/releases/22.04/release/)
+  * [우분투 Kylin](http://cdimage.ubuntu.com/ubuntukylin/releases/22.04/release/)
+  * [우분투 MATE](http://cdimage.ubuntu.com/ubuntu-mate/releases/22.04/release/)
+  * [우분투 Studio](http://cdimage.ubuntu.com/ubuntustudio/releases/22.04/release/)
   * [Xubuntu](http://cdimage.ubuntu.com/xubuntu/releases/22.04/release/)
 
 # Ubuntu 21.10에서 업그레이드
@@ -62,9 +62,9 @@ ISO나 쓰기 가능한 이미지 다운로드:
   * 업그레이드 도구를 `sudo do-release-upgrade` 명령어로 실행하시오.
   * 화면의 지시를 따르시오. 
 
-서버 업그레이드에서는 GNU 스크린을 사용하고 연결이 끊겼을 때 자동적으로 다시 콘솔에 붙게 된다는 점에 유의 바랍니다.
+서버 업그레이드에서는 GNU Screen을 사용하고 연결이 끊겼을 때 자동적으로 다시 콘솔에 붙게 된다는 점에 유의 바랍니다.
 
-Ubuntu Desktop 및 Ubuntu Server의 오프라인 업그레이드 선택지는 없습니다. 공식 미러, 혹은 로컬에서 접근 가능한 미러와 연결 가능한지 미리 확인하고 위의 지시들을 따르길 바랍니다.
+우분투 데스크톱 및 우분투 서버의 오프라인 업그레이드 선택지는 없습니다. 공식 미러, 혹은 로컬에서 접근 가능한 미러와 연결 가능한지 미리 확인하고 위의 지시들을 따르길 바랍니다.
 
 # New features in 22.04 LTS
 
