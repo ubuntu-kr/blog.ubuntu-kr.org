@@ -171,10 +171,10 @@ nftables is now the default backend for the firewall. All applications on the sy
 
 - 실행중(runtime)인 상태에서 암호화(crypto)와 관련된 설정을 변경 할 수 있습니다. 해당 변경사항에서 암호화 적용 또는 해제, *crypto_cipher* 및 *crypto_hash* 변경, 암호화 키 변경이 포함됩니다.
 - 기본 토큰(token)의 시간 제한이 1초에서 3초로 변경되었습니다.
-- *corosync -v* 명령어를 사용하여 지원되는 암호화 및 압축 모델 목록을 corosync.conf에서 가져올 수 있습니다.
+- *corosync -v* 명령어를 사용하여 coresync.conf에서 사용할 있는 암호화 및 압축 모델의 목록을 가져올 수 있습니다.
 - Cgroup v2를 지원합니다.
 
-변경 사항과 관련된 전체 목록은 [업스트림(upstream) 릴리스 노트](https://github.com/corosync/corosync/releases)를 참조하세요.
+변경 사항과 관련된 전체 목록은 [업스트림 릴리스 노트](https://github.com/corosync/corosync/releases)를 참고하십시오.
 
 ##### Pacemaker
 
@@ -185,13 +185,13 @@ nftables is now the default backend for the firewall. All applications on the sy
 - OCF Resource Agent API 1.1 표준을 지원합니다.
 - *crm_mon* 및 *crm_resource*가 많은 개선이 되었습니다.
 
-전체 변경 사항 목록은 [upstream release notes](https://github.com/ClusterLabs/pacemaker/releases)를 참조하세요.
+전체 변경 사항 목록은 [업스트림 릴리스 노트](https://github.com/ClusterLabs/pacemaker/releases)를 참고하십시오.
 
 Ubuntu Focal 20.04 버전과 비교해서 주목할만한 차이점은 기본 구성 파일이 노드 이름을 node1로 정의하지 않고 uname -n의 출력을 기본 노드 이름으로 사용합니다.
 
 ##### Resource agents
 
-4.7.0 버전으로 업데이트 되었습니다. Ubuntu Focal 20.04 이후 변경 사항 목록은 [여기](https://github.com/ClusterLabs/resource-agents/blob/main/ChangeLog#L95-L219)에서 확인하세요.
+4.7.0 버전으로 업데이트 되었습니다. Ubuntu Focal 20.04 이후 변경 사항 목록은 [여기](https://github.com/ClusterLabs/resource-agents/blob/main/ChangeLog#L95-L219)에서 참고하십시오.
 
 에이전트(agents)는 이제 resource-agents-base 및 resource-agents-extra의 두 패키지로 분리됩니다. resource-agents-base 패키지는 Ubuntu Server 팀에서 선별한 에이전트가 포함되어 있습니다. 지속적 통합 시스템에서 자동화된 테스트가 진행되어 해당 에이전트의 품질을 보장합니다. resource-agents 패키지는 이제 resource-agents-base와 resource-agents-extra에 관련된 메타패키지입니다. resource-agents 패키지는 향후 릴리스에서 제거될 예정입니다. resource-agents에 의존하지 않는 것이 좋습니다.
 
@@ -201,7 +201,7 @@ Ubuntu Focal 20.04 버전과 비교해서 주목할만한 차이점은 기본 �
 
 에이전트는 이제 두 개의 패키지(fence-agents-base 및 fence-agents-extra)로 분리됩니다. fence-agents-base 패키지에는 Ubuntu Server 팀에서 선별한 에이전트가 포함되어 있습니다. 지속적인 통합 시스템에서 자동화된 테스트가 진행되어 해당 에이전트의 품질을 보장합니다. fence-agents 패키지는 이제 fence-agents-base 및 fence-agents-extra에 관련된 메타 패키지 입니다. fence-agents는 제거될 예정입니다. fence-agents에 의존하지 않는 것이 좋습니다.
 
-#### Containers runtime
+#### 컨테이너 런타임
 
 ##### containerd
 
@@ -212,11 +212,11 @@ Ubuntu Focal 20.04 버전과 비교해서 주목할만한 차이점은 기본 �
 * *clone3* syscall에 대한 지원을 추가하여 seccomp가 활성화된 경우 발생하는 특정 이미지의 문제를 수정하였습니다.
 * CRI 컨테이너 생성에 이미지 구성 레이블 추가하였습니다.
 
-전체 변경 사항 목록은 [upstream release page](https://github.com/containerd/containerd/releases)를 참조하세요.
+전체 변경 사항 목록은 [업스트림 릴리스 페이지](https://github.com/containerd/containerd/releases)를 참고하십시오.
 
 ##### runc
 
-1.1.0 버전으로 업데이트 되었습니다. [upstream release page](https://github.com/opencontainers/runc/releases)에서 찾을 수 있는 많은 개선 사항 및 버그 수정 사항이 있습니다. 업그레이드에 영향을 줄 수 있는 일부 지원 중단 및 제거는 다음과 같습니다.
+1.1.0 버전으로 업데이트 되었습니다. [업스트림 릴리스 페이지](https://github.com/opencontainers/runc/releases)에서 찾을 수 있는 많은 개선 사항 및 버그 수정 사항이 있습니다. 업그레이드에 영향을 줄 수 있는 일부 지원 중단 및 제거는 다음과 같습니다.
 
 지원 중단
 
@@ -229,7 +229,7 @@ Ubuntu Focal 20.04 버전과 비교해서 주목할만한 차이점은 기본 �
 
 #### Ruby 3.0
 
-기본 Ruby 인터프리터는 3.0이며 성능, 동시성 및 타입 관련 기능이 업데이트 되었습니다. 멋진 기능과 개선 사항에 대한 광범위한 소개를 보려면 [Ruby 3.0 Release Announcement](https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/).
+기본 Ruby 인터프리터는 3.0이며 성능, 동시성 및 타입 관련 기능이 업데이트 되었습니다. 멋진 기능과 개선 사항에 대한 광범위한 소개를 보려면 [Ruby 3.0 Release Announcement](https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/)를 참조하십시오.
 
 * 이전 Ubuntu 릴리스(Ubuntu Focal 20.04 이상)를 사용했던 사용자는 Ruby 2.7에서 3.0으로 변경됩니다. 이 경우 [Ruby 2.7 Release Announcement](https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/)도 유용할 수 있습니다. 명심해야 할 중요한 점은 다음 라이브러리가 Ruby에서 더 이상 번들로 제공되지 않는다는 것입니다.
 
@@ -240,9 +240,9 @@ Ubuntu Focal 20.04 버전과 비교해서 주목할만한 차이점은 기본 �
 
 이러한 라이브러리가 필요한 경우 별도로 설치하십시오.
 
-애플리케이션을 Ruby 3.0으로 마이그레이션할 때 Ruby 3.0 릴리스 발표(Ruby 3.0 Release Announcement)의 2.7 이후 주요 변경 사항(Other notable changes since 2.7) 부분을 주의해서 참고하세요.
+애플리케이션을 Ruby 3.0으로 마이그레이션할 때 Ruby 3.0 Release Announcement의 2.7 이후 주요 변경 사항(Other notable changes since 2.7) 부분을 주의해서 참고하십시오.
 
-#### PHP now defaults to version 8.1.2
+#### PHP는 8.1.2 버전으로 기본 설정됩니다.
 
 PHP 8.1에는 새로운 기능이 포함되어 있습니다. 열거형을 사용하면 const 사용과 같이 특정 집합으로 제한된 사용자 정의 타입을 정의할 수 있고 더 나은 타입 검사가 가능합니다. 읽기 전용 속성은 초기화 후에 값이 변경되는 것을 방지합니다. 일급 호출 가능 구문(first-class callable syntax)을 사용하면 PHP 코드에서 정적 분석을 더 쉽게 수행할 수 있으며 클로저와 같은 익명 함수를 생성할 수 있습니다. Intersection 타입을 사용하면 여러 타입 제약 조건을 충족해야 하는 함수 매개변수를 지정할 수 있습니다. Union 타입이 A|B 타입 관계를 표현하는 것처럼 Intersection 타입은 A&B 타입을 표현할 수 있습니다. fibers, final class constraints, never return values, 명시적 8진수 표기법, 새로운 inside initializers 사용 등과 같은 다양한 새로운 기능을 통해 더 강력하고 표현력 있는 PHP 코드를 작성할 수 있습니다.
 
@@ -254,11 +254,11 @@ PHP 7.4 사용자는 버전 PHP 8에서 [사용되지 않는 여러 기능(numbe
 
 Ubuntu Focal 20.04에서 Ubuntu Jammy 22.04으로 업그레이드 하는 경우 새로운 OpenLDAP 2.5.11 버전을 사용하게 됩니다. 해당 버전에선 몇 가지 변경 사항, 새로운 기능의 추가 그리고 지원 중단/제거된 기능 등이 있습니다. 업그레이드 프로세스 중에 알아야 할 사항의 목록은 다음과 같습니다.
 
-* The shell (`slapd-shell`), BDB 및 HDB backends가 모두 제거되었습니다.
+* The shell (`slapd-shell`), BDB 및 HDB 백엔드가 모두 제거되었습니다.
 * `ppolicy` 모듈은 자체 내장 스키마를 제공합니다. 외부 `ppolicy` 스키마는 제거되었습니다.
 * `nssov` 모듈이 제거되었습니다.
 
-특정 상황에서, 설치 후 스크립트가 현재 설치를 새 형식으로 성공적으로 마이그레이션하지 **못할** 수도 있습니다(예: BDB/HDB와 같은 이전 백엔드를 사용하는 경우). 이런 일이 발생하면 실패에 대한 알림이 표시되고 `slapd` 서버가 (재)시작되지 **않습니다**. 데이터를 마이그레이션하고 서비스를 시작하기 위해 수동 조치를 취해야 합니다. [README.Debian ](https://git.launchpad.net/ubuntu/+source/openldap/tree/debian/slapd.README.Debian?h=ubuntu/impish-devel) 파일(`/usr/share/doc/slapd/` 아래)를 참조하세요.
+특정 상황에서, 설치 후 스크립트가 현재 설치를 새 형식으로 성공적으로 마이그레이션하지 **못할** 수도 있습니다(예: BDB/HDB와 같은 이전 백엔드를 사용하는 경우). 이런 일이 발생하면 실패에 대한 알림이 표시되고 `slapd` 서버가 (재)시작되지 **않습니다**. 데이터를 마이그레이션하고 서비스를 시작하기 위해 수동 조치를 취해야 합니다. [README.Debian ](https://git.launchpad.net/ubuntu/+source/openldap/tree/debian/slapd.README.Debian?h=ubuntu/impish-devel) 파일(`/usr/share/doc/slapd/` 아래)를 참조하십시오.
 
 #### BIND 9.18
 
