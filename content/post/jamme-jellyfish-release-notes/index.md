@@ -126,7 +126,7 @@ nftables is now the default backend for the firewall. All applications on the sy
 
 * 이제 우분투에서 [10가지의 색상 선택지를](https://discourse.ubuntu.com/t/yaru-accent-colors-are-coming-to-jammy/27200) 다크 모드와 라이트 모드로 제공합니다.
 * 이제 Firefox 는 우분투에서 Snap으로만 제공됩니다. 아래와 같은 장점이 있습니다
-  * 모질라에서 직접 유지보수 
+  * Mozilla에서 직접 유지보수 
   * 전체 우분투 LTS 수명주기 동안 유지보수 용이성 향상
   * … 이는 최신 버전의 Firefox에 더 빠르게 접근할 수 있음을 의미합니다
   * `esr/stable`, `latest/candidate`, `latest/beta`및 `latest/edge`를 포함한 다른 종류의 Firefox 로 쉽게 변경
@@ -137,11 +137,11 @@ nftables is now the default backend for the firewall. All applications on the sy
 
 ### GNOME :footprints:
 
-* GNOME을 [GNOME 41](https://release.gnome.org/41/)및 [GNOME 42](https://release.gnome.org/42/)의 새로운 기능과 수정사항을 포함하도록 업데이트 하였습니다
+* GNOME을 [GNOME 41](https://release.gnome.org/41/)및 [GNOME 42](https://release.gnome.org/42/)의 새로운 기능과 수정사항을 포함하도록 업데이트했습니다
 * 여러 프로그램은 대부분 libadwaita를 피하여 LTS 데스크톱에 대해 더 검증된 경험을 제공하기 위해 여전히 41 버전대로 유지됩니다.
 * 데스크톱 전반에 걸친 [다크 스타일](https://discourse.ubuntu.com/t/ubuntu-22-04-lts-dark-style-changes/27206) 설정을 새로 지원합니다.
 * GNOME 셸과 Mutter에 트리플 버퍼링 패치를 비롯한 수많은 성능 개선이 있습니다.
-* 이제 Nvidia 그래픽 카드를 쓰지 않는 대부분의 시스템의 기본 세션은 웨일랜드 세션입니다. 비-웨일랜드 세션이 필요하신 경우, 로그인 화면에서 이름을 선택한 후 우측 하단의 톱니바퀴 아이콘을 클릭하여 *우분투 (Xorg)* 를 선택하실 수 있습니다.
+* 이제 Nvidia 그래픽 카드를 쓰지 않는 대부분의 시스템의 기본 세션은 Wayland 세션입니다. 비-Wayland 세션이 필요하신 경우, 로그인 화면에서 이름을 선택한 후 우측 하단의 톱니바퀴 아이콘을 클릭하여 *우분투 (Xorg)* 를 선택하실 수 있습니다.
 * 이제 사생활 보호 화면 지원이 있는 하드웨어를 지원합니다
 * 데스크톱 원격 공유에 RDP를 사용하실 수 있습니다. 기존의 VNC도 여전히 있으나, 더 나은 보안, 사생활 보호 및 성능을 위해 RDP를 사용 하시는 것을 강력히 권장합니다. 기존에 VNC를 사용해 오셨다면, 설정 앱 에서 데스크톱 공유를 수동으로 다시 켜고 새로 로그인 정보를 얻으셔야 할 겁니다. 
 
