@@ -99,7 +99,7 @@ mount.nfs: an incorrect mount option was specified
 
 GCC가 11.2.0로, binutils가 2.38로, glibc가 2.35로 업데이트 됐습니다. Python :snake:은 이제 3.10.4에서, Perl :camel:은 5.34.0에서 제공됩니다. 이제 LLVM은 기본적으로 14 버전에 맞춰집니다. golang은 기본적으로 1.18.x 버전에 맞춰집니다. rustc는 기본적으로 1.58 버전에 맞춰집니다.
 
-OpenJDK 11과 더불어 이제 OpenJDK도 제공됩니다 (그러나 패키지 빌드에는 사용되지 않습니다).
+OpenJDK 11과 더불어 이제 OpenJDK 18도 제공됩니다 (그러나 패키지 빌드에는 사용되지 않습니다).
 
 Ruby :gem:가 v2.7.4에서 v3.0로 업데이트 됐습니다.
 
