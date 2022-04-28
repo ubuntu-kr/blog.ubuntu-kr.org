@@ -537,32 +537,32 @@ Make sure you read the [OpenStack Charm Release Notes](https://docs.openstack.or
 
 By default, needrestart will prompt after upgrading packages if restarts are determined to be required. To suppress this behaviour, you can set `DEBIAN_FRONTEND=noninteractive` as usual. needrestart will then fall back to "list only mode". It will be necessary to restart services afterwards, for example by rebooting or invoking `needrestart -ra`.
 
-## Platforms
+## 플랫폼
 
-### Cloud Images :cloud:
+### 클라우드 이미지 :cloud:
 
 #### AWS
-* AWS amd64 images use now a GPT partition table and setup a ESP partition to make it possible to use UEFI as boot mode.
+* 이제 AWS의 amd64 이미지는 UEFI를 부팅 모드로 사용하기 위해서 GPT 파티션 테이블과 ESP 파티션 설정을 사용합니다.
 
 #### Oracle
-* Jammy Minimal images are available for ARM64 servers on Oracle Cloud Infrastructure. Note that OCI releases images on a fixed cadence, and Jammy release to OCI will be slightly delayed.
+* Oracle Cloud Infrastructure에서 ARM64 서버를 위한 Jammy의 최소 이미지가 이용가능합니다. OCI가 이미지를 경직된 속도로 릴리즈 하기 때문에 OCI로의 Jammy 릴리즈가 살짝 늦어짐을 알아두길 바랍니다.
 
 ### Raspberry Pi :strawberry:
 
-* The first long-term service (LTS) release of the Ubuntu Desktop for Raspberry Pi
-* Support for several Pi-specific boards and tools have been added to the archive:
-  * All variants of the popular Pimoroni [Unicorn HAT](https://shop.pimoroni.com/products/unicorn-hat?variant=932565325) are now supported with packaging
-  * The official DSI touchscreen is now supported (however, see known issues below for a workaround regarding the desktop image)
-  * The [rpiboot](https://launchpad.net/ubuntu/+source/rpiboot) package contains the [rpiboot](https://github.com/raspberrypi/usbboot) utility for working with Raspberry Pi Compute Modules (and other Pi boot facilities)
-  * The [pyboard-rshell](https://launchpad.net/ubuntu/+source/pyboard-rshell) package contains the [rshell](https://pypi.org/project/rshell/) utility for working with micro-controller boards supporting MicroPython, including the Raspberry Pi Pico
-  * The [rpi-imager](https://launchpad.net/ubuntu/+source/rpi-imager) package contains the Raspberry Pi imager utility. The equivalent [snap package](https://snapcraft.io/rpi-imager) has also been updated to operate on all architectures (and bumped to the current version)
+* Raspberry Pi를 위한 우분투 데스크톱의 첫번째 장기 지원(LTS) 릴리즈
+* 여러 종류의 Pi 전용 보드 지원과 도구들이 아카이브에 추가 되었습니다:
+  * 인기있는 Pimoroni [Unicorn HAT](https://shop.pimoroni.com/products/unicorn-hat?variant=932565325)가 패키징과 함께 제공됩니다
+  * 이제 공식 DSI 터치스크린이 지원됩니다 (그러나 데스크톱 이미지에 대한 해결책을 위해 밑의 알려진 문제 부분을 보시오)
+  * [rpiboot](https://launchpad.net/ubuntu/+source/rpiboot) 패키지가 Raspberry Pi 컴퓨트 모듈(그리고 Pi 부팅 기반)을 위한 [rpiboot](https://github.com/raspberrypi/usbboot) 유틸리티를 포함하게 됩니다
+  * [pyboard-rshell](https://launchpad.net/ubuntu/+source/pyboard-rshell) 패키지가 Raspberry Pi Pico를 비롯한 MicroPython을 지원하는 마이크로컨트롤러에서의 작업을 위해 [rshell](https://pypi.org/project/rshell/) 유틸리티를 포함하게 됩니다
+  * [rpi-imager](https://launchpad.net/ubuntu/+source/rpi-imager) 패키지가 Raspberry Pi imager를 포함합니다. 동일한 [snap 패키지](https://snapcraft.io/rpi-imager)가 모든 아키텍쳐에서 동작하도록 업데이트 되었습니다 (또한 현재 버전으로 판올림 되었습니다)
 
 ### ppc64el
 
-Starting with 22.04 LTS, Ubuntu Server for IBM POWER (ppc64el) is now compiled for Power9 processors using '--with-cpu=power9' ([bug 1930086](https://bugs.launchpad.net/bugs/1930086)).
-Thus Ubuntu Server 22.04 LTS will not run, install or even boot on Power8 systems anymore, due to the different instruction set requirements.
-Ubuntu Server 20.04 LTS can still be used for Power8 systems for several years - at least until end of base support in April 2025. Users running Ubuntu Server on Power8 today will be prevented from being upgraded to 22.04 LTS using ‘do-release-upgrade’, as this will obviously break such systems ([bug 1960255](https://bugs.launchpad.net/bugs/1960255)).
-In addition, Ubuntu Server 22.04 LTS is the first Ubuntu release that comes with official support for IBM Power10 systems.
+22.04 LTS에서 부터, 이제 IBM POWER (ppc64el)를 위한 우분투 서버 이미지는 Power9 프로세서에 맞춰서 '--with-cpu=power9'을 사용해서 컴파일 됩니다 ([bug 1930086](https://bugs.launchpad.net/bugs/1930086)).
+때문에 상이한 명령어 셋 요구로 인해, 우분투 서버 22.04 LTS는 더이상 Power8 시스템에서 실행, 설치, 나아가 부팅까지도 불가능하게 됩니다. 
+우분투 서버 20.04 LTS는 여전히 Power8 시스템에서 몇년동안은 사용 될수는 있습니다 - 최소한 기본 지원의 끝인 2025년 4월까지는 말입니다. Power8에서 우분투 서버를 돌리고 있는 사용자는 'do-release-upgrade'를 이용해서 22.04 LTS 업그레이드 하는 방법이 끊기게 되고, 고로 이는 몇몇 시스템을 고장낼 것이 분명합니다 ([bug 1960255](https://bugs.launchpad.net/bugs/1960255)).
+추가로, 우분투 서버 22.04 LTS는 IBM Power10 시스템에 대한 공식 지원이 도입된 첫번째 우분투 릴리즈입니다.
 
 ### s390x
 
@@ -570,7 +570,6 @@ Starting with Ubuntu Server 20.04 LTS (for IBM Z and LinuxONE), the minimal arch
 Ubuntu Server 22.04 LTS can be installed in an LPAR (classic or DPM mode), as IBM z/VM guest, as KVM virtual machine and in different container environments, such as LXD, docker or kubernetes.
 
 IBM Z and LinuxONE / s390x-specific enhancements since 21.10 (partially not limited to s390x):
-
   * Like mentioned above, 22.04 LTS is the first release that picked up OpenSSL 3, to be precise v3.0.2 ([bug 1905022](https://bugs.launchpad.net/bugs/1905022)), this transition triggered for compatibility reasons ([bug 1959736](https://bugs.launchpad.net/bugs/1959736)) further updates, that largely ended up in the renewal of the entire s390x crypto stack, including:
     * libica update to finally v4.0.1 ([bug 1959421](https://bugs.launchpad.net/bugs/1959421)), including extend statistics to reflect security measures ([bug 1959553](https://bugs.launchpad.net/bugs/1959553))
     * openssl-ibmca update ([bug 1958419](https://bugs.launchpad.net/bugs/1958419)) to finally 2.2.2 to ensure compatibility with libica4 ([bug 1960004](https://bugs.launchpad.net/bugs/1960004)).
