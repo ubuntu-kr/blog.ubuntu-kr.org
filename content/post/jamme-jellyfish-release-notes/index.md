@@ -58,7 +58,7 @@ ISO나 플래시 가능한 이미지 다운로드:
 
 서버 시스템에서 업그레이드 하려면:
 
-  * `/etc/update-manager/release-upgrades`에서 Prompt에 해당하는 줄이 normal으로 설정 되어있는지 확인 하십시오.
+  * `/etc/update-manager/release-upgrades`에서 `Prompt`에 해당하는 줄이 normal으로 설정 되어있는지 확인 하십시오.
   * 업그레이드 도구를 `sudo do-release-upgrade` 명령어로 실행하시오.
   * 화면의 지시를 따르십시오. 
 
