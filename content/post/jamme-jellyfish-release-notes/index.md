@@ -167,112 +167,112 @@ nftables is now the default backend for the firewall. All applications on the sy
 
 ##### Corosync
 
-It was updated to version 3.16 which includes some new features:
+3.16 버전으로 업데이트 되면서 포함된 몇 가지 새로운 기능:
 
-* Support for changing crypto configuration during runtime. This includes turning cryptography on or off, changing *crypto_cipher* and *crypto_hash* and also changing of crypto key.
-* Default token timeout was changed from 1 seconds to 3 seconds.
-* Run *corosync -v* to get the list of supported crypto and compression models which can be used in corosync.conf
-* Cgroup v2 support.
+- 실행중(runtime)인 상태에서 암호화(crypto)와 관련된 설정을 변경 할 수 있습니다. 해당 변경사항에서 암호화 적용 또는 해제, *crypto_cipher* 및 *crypto_hash* 변경, 암호화 키 변경이 포함됩니다.
+- 기본 토큰(token)의 시간 제한이 1초에서 3초로 변경되었습니다.
+- *corosync -v* 명령어를 사용하여 coresync.conf에서 사용할 있는 암호화 및 압축 모델의 목록을 가져올 수 있습니다.
+- Cgroup v2를 지원합니다.
 
-For the complete list of changes please refer to the [upstream release notes](https://github.com/corosync/corosync/releases).
+변경 사항과 관련된 전체 목록은 [업스트림 릴리스 노트](https://github.com/corosync/corosync/releases)를 참고하십시오.
 
 ##### Pacemaker
 
-It was updated to version 2.1.2 which includes some new features:
+2.1.2 버전으로 업데이트 되면서 포함된 몇 가지 새로운 기능:
 
-* Add a new feature *priority-fencing-delay*. Optionally derive the priority of a node from the resource-priorities of the resources it is running.
-* Add *on-fail=demot*e and *no-quorum-policy=demote* recovery policies for promoted resources.
-* support for OCF Resource Agent API 1.1 standard.
-* Many improvements in *crm_mon* and *crm_resource*.
+- *priority-fencing-delay*가 새롭게 추가되었습니다. 실행 중인 상태의 리소스의 우선 순위에서 선택적으로 노드의 우선 순위를 도출 할 수 있습니다.
+- 승격된 자원(promoted resources)에 대한 *on-fail=demot*e 및 *no-quorum-policy=demote* 복구 정책을 추가하였습니다.
+- OCF Resource Agent API 1.1 표준을 지원합니다.
+- *crm_mon* 및 *crm_resource*가 많은 개선이 되었습니다.
 
-For the complete list of changes please refer to the [upstream release notes](https://github.com/ClusterLabs/pacemaker/releases).
+전체 변경 사항 목록은 [업스트림 릴리스 노트](https://github.com/ClusterLabs/pacemaker/releases)를 참고하십시오.
 
-A notable difference from the version in Ubuntu Focal 20.04 is that the default configuration file does not define the node name as node1 anymore, now the output of uname -n is used as the default node name.
+Ubuntu Focal 20.04 버전과 비교해서 주목할만한 차이점은 기본 구성 파일이 노드 이름을 node1로 정의하지 않고 uname -n의 출력을 기본 노드 이름으로 사용합니다.
 
 ##### Resource agents
 
-It was updated to version 4.7.0. Check the list of changes since Ubuntu Focal 20.04 [here](https://github.com/ClusterLabs/resource-agents/blob/main/ChangeLog#L95-L219).
+4.7.0 버전으로 업데이트 되었습니다. Ubuntu Focal 20.04 이후 변경 사항 목록은 [여기](https://github.com/ClusterLabs/resource-agents/blob/main/ChangeLog#L95-L219)에서 참고하십시오.
 
-The agents are now separated in two packages: resource-agents-base and resource-agents-extra. The resource-agents-base package contains the agents which are curated by the Ubuntu Server team, which means that automated tests are running in a continuous integration system to guarantee the quality of those agents. The resource-agents package is now a metapackage which depends on both resource-agents-base and resource-agents-extra. Please note that the resource-agents package will be removed in future releases; we recommend that you do not rely on its existence.
+에이전트(agents)는 이제 resource-agents-base 및 resource-agents-extra의 두 패키지로 분리됩니다. resource-agents-base 패키지는 Ubuntu Server 팀에서 선별한 에이전트가 포함되어 있습니다. 지속적 통합 시스템에서 자동화된 테스트가 진행되어 해당 에이전트의 품질을 보장합니다. resource-agents 패키지는 이제 resource-agents-base와 resource-agents-extra에 관련된 메타패키지입니다. resource-agents 패키지는 향후 릴리스에서 제거될 예정입니다. resource-agents에 의존하지 않는 것이 좋습니다.
 
 ##### Fence agents
 
-It was updated to version 4.7.1.
+4.7.1 버전으로 업데이트 되었습니다.
 
-The agents are now separated in two packages: fence-agents-base and fence-agents-extra. The fence-agents-base package contains the agents which are curated by the Ubuntu Server team, which means that automated tests are running in a continuous integration system to guarantee the quality of those agents. The fence-agents package is now a metapackage which depends on both fence-agents-base and fence-agents-extra. Please note that fence-agents will be removed in releases; we recommend that you do not rely on its existence.
+에이전트는 이제 두 개의 패키지(fence-agents-base 및 fence-agents-extra)로 분리됩니다. fence-agents-base 패키지에는 Ubuntu Server 팀에서 선별한 에이전트가 포함되어 있습니다. 지속적인 통합 시스템에서 자동화된 테스트가 진행되어 해당 에이전트의 품질을 보장합니다. fence-agents 패키지는 이제 fence-agents-base 및 fence-agents-extra에 관련된 메타 패키지 입니다. fence-agents는 제거될 예정입니다. fence-agents에 의존하지 않는 것이 좋습니다.
 
-#### Containers runtime
+#### 컨테이너 런타임
 
 ##### containerd
 
-It was updated to version 1.5.9. Some interesting changes are:
+1.5.9 버전으로 업데이트 되었습니다. 몇 가지 흥미로운 변경 사항은 다음과 같습니다.
 
-* Update pull to handle of non-https urls in descriptors
-* Install apparmor parser for arm64 and update seccomp to 2.5.1
-* Add support for *clone3* syscall to fix issue with certain images when seccomp is enabled
-* Add image config labels in CRI container creation
+* descriptors에서 non-https가 아닌 url을 처리하도록 pull을 업데이트를 하였습니다.
+* arm64용 apparmor 파서를 설치하고 seccomp를 2.5.1로 업데이트 하였습니다.
+* *clone3* syscall에 대한 지원을 추가하여 seccomp가 활성화된 경우 발생하는 특정 이미지의 문제를 수정하였습니다.
+* CRI 컨테이너 생성에 이미지 구성 레이블 추가하였습니다.
 
-For the complete list of changes please refer to the [upstream release page](https://github.com/containerd/containerd/releases).
+전체 변경 사항 목록은 [업스트림 릴리스 페이지](https://github.com/containerd/containerd/releases)를 참고하십시오.
 
 ##### runc
 
-It was updated to version 1.1.0. There are many improvements and bug fixes which can be found in the [upstream release page](https://github.com/opencontainers/runc/releases). Some deprecations and removals which might impact the upgrade are presented below:
+1.1.0 버전으로 업데이트 되었습니다. [업스트림 릴리스 페이지](https://github.com/opencontainers/runc/releases)에서 찾을 수 있는 많은 개선 사항 및 버그 수정 사항이 있습니다. 업그레이드에 영향을 줄 수 있는 일부 지원 중단 및 제거는 다음과 같습니다.
 
-Deprecation
+지원 중단
 
-* runc run/start now warns if a new container cgroup is non-empty or frozen; this warning will become an error in runc 1.2
+* runc run/start는 새 컨테이너 cgroup이 비어 있지 않거나 고정된 경우 경고합니다. 이 경고는 runc 1.2에서 오류가 됩니다.
 
-Removals
+제거
 
-* cgroup.GetHugePageSizes has been removed entirely, and been replaced with cgroup.HugePageSizes which is more efficient
-* intelrdt.GetIntelRdtPath has been removed. Users who were using this function to get the intelrdt root should use the new intelrdt.Root instead.
+* cgroup.GetHugePageSizes는 완전히 제거되었으며 더 효율적인 cgroup.HugePageSizes로 대체되었습니다.
+* intelrdt.GetIntelRdtPath가 제거되었습니다. intelrdt 루트를 얻기 위해 이 기능을 사용하던 사용자는 대신 새로운 intelrdt.Root를 사용해야 합니다.
 
 #### Ruby 3.0
 
-The default Ruby interpreter was updated to version 3.0, whose goal is performance, concurrency, and Typing. To have a broad overview about the cool features and improvements check out the [Ruby 3.0 Release Announcement](https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/).
+기본 Ruby 인터프리터는 3.0이며 성능, 동시성 및 타입 관련 기능이 업데이트 되었습니다. 멋진 기능과 개선 사항에 대한 광범위한 소개를 보려면 [Ruby 3.0 Release Announcement](https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/)를 참조하십시오.
 
-Users coming from previous Ubuntu releases ( Ubuntu Focal 20.04 onward) will be moving from Ruby 2.7 to 3.0. In this case the [Ruby 2.7 Release Announcement](https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/) might be useful as well. An important thing to keep in mind is that the following libraries are not bundled anymore in Ruby:
+* 이전 Ubuntu 릴리스(Ubuntu Focal 20.04 이상)를 사용했던 사용자는 Ruby 2.7에서 3.0으로 변경됩니다. 이 경우 [Ruby 2.7 Release Announcement](https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/)도 유용할 수 있습니다. 명심해야 할 중요한 점은 다음 라이브러리가 Ruby에서 더 이상 번들로 제공되지 않는다는 것입니다.
 
 * sdbm
 * webrick
 * net-telnet
 * xmlrpc
 
-If you need these libraries, please install them separately.
+이러한 라이브러리가 필요한 경우 별도로 설치하십시오.
 
-Please pay attention to the Other Notable Changes since 2.7 section in the Ruby 3.0 Release announcement when migrating your application to Ruby 3.0.
+애플리케이션을 Ruby 3.0으로 마이그레이션할 때 Ruby 3.0 Release Announcement의 2.7 이후 주요 변경 사항(Other notable changes since 2.7) 부분을 주의해서 참고하십시오.
 
-#### PHP now defaults to version 8.1.2
+#### PHP는 8.1.2 버전으로 기본 설정됩니다.
 
-PHP 8.1 contains many new features:  Enumerations allow defining custom types limited to a specific set of possible values, like using consts but with better type checking. Readonly properties prevent their value to be changed after initialization.  With first-class callable syntax, static analysis is easier to perform on PHP code, and allows creating anonymous functions such as Closures.  Intersection types allow specifying function parameters that must satisfy multiple type constraints; much like a union type expresses an A|B type relationship, intersection types allow expressing A&B types.  Many other new features, such as fibers, final class constraints, never return values, explicit octal numeral notation, use of new inside initializers, and more will allow writing tighter, more expressive PHP code.
+PHP 8.1에는 새로운 기능이 포함되어 있습니다. 열거형을 사용하면 const 사용과 같이 특정 집합으로 제한된 사용자 정의 타입을 정의할 수 있고 더 나은 타입 검사가 가능합니다. 읽기 전용 속성은 초기화 후에 값이 변경되는 것을 방지합니다. 일급 호출 가능 구문(first-class callable syntax)을 사용하면 PHP 코드에서 정적 분석을 더 쉽게 수행할 수 있으며 클로저와 같은 익명 함수를 생성할 수 있습니다. Intersection 타입을 사용하면 여러 타입 제약 조건을 충족해야 하는 함수 매개변수를 지정할 수 있습니다. Union 타입이 A|B 타입 관계를 표현하는 것처럼 Intersection 타입은 A&B 타입을 표현할 수 있습니다. fibers, final class constraints, never return values, 명시적 8진수 표기법, 새로운 inside initializers 사용 등과 같은 다양한 새로운 기능을 통해 더 강력하고 표현력 있는 PHP 코드를 작성할 수 있습니다.
 
-PHP 8.1 also received significant attention to performance, with a 23% speedup for the Symfony Demo test, and a 3.5% speedup for WordPress, as compared with PHP 8.0.  A few of the performance-related features included in PHP 8.1 include an inheritance cache, fast class name resolution, and various optimizations to timelib, ext/date, SPL file-system interators, serialize/unserialize, and several heavily used internal functions.
+PHP 8.1은 PHP 8.0과 비교하여 Symfony 데모 테스트에서 23%, WordPress에서 3.5% 속도 향상으로 성능에 상당한 관심을 받았습니다. PHP 8.1에 포함된 성능 관련 기능 중 inheritance cache, fast class name resolution, timelib, ext/date, SPL file-system interators, serialize/unserialize 및 많이 사용되는 여러 내부 기능에 대한 다양한 최적화가 포함됩니다.
 
-Users of PHP 7.4 should note that version 8 removes a [number of deprecated functionalities](https://wiki.php.net/rfc/deprecations_php_7_4) and when upgrading should be prepared to make the appropriate changes to their applications.
+PHP 7.4 사용자는 버전 PHP 8에서 [사용되지 않는 여러 기능(number of deprecated functionalities)](https://wiki.php.net/rfc/deprecations_php_7_4)을 참고하여 업그레이드할 때 응용 프로그램을 적절하게 변경할 수 있도록 준비해야 합니다.
 
 #### OpenLDAP 2.5.x series
 
-If you are updating from Ubuntu Focal 20.04, you will encounter a new major OpenLDAP release on Ubuntu Jammy 22.04: version 2.5.11.  This release brings several changes, new features and deprecations/removals. A non-exhaustive list of things to be aware of during the upgrade process is:
+Ubuntu Focal 20.04에서 Ubuntu Jammy 22.04으로 업그레이드 하는 경우 새로운 OpenLDAP 2.5.11 버전을 사용하게 됩니다. 해당 버전에선 몇 가지 변경 사항, 새로운 기능의 추가 그리고 지원 중단/제거된 기능 등이 있습니다. 업그레이드 프로세스 중에 알아야 할 사항의 목록은 다음과 같습니다.
 
-* The shell (`slapd-shell`), the BDB and the HDB backends have all been removed.
-* The `ppolicy` module now provides its own built-in schema. The external `ppolicy` schema has been removed.
-* The `nssov` module has been removed.
+* The shell (`slapd-shell`), BDB 및 HDB 백엔드가 모두 제거되었습니다.
+* `ppolicy` 모듈은 자체 내장 스키마를 제공합니다. 외부 `ppolicy` 스키마는 제거되었습니다.
+* `nssov` 모듈이 제거되었습니다.
 
-In certain situations, it is possible that the post-installation scripts will **not** be able to successfully migrate your current installation to new formats (e.g., when you are using an old backend like BDB/HDB). If this happens, you will be notified about the failure and the `slapd` server will **not** be (re)started; you will then have to take manual action in order to migrate your data and start the service. Please look at the [README.Debian ](https://git.launchpad.net/ubuntu/+source/openldap/tree/debian/slapd.README.Debian?h=ubuntu/impish-devel) file (under `/usr/share/doc/slapd/`) for more information.
+특정 상황에서, 설치 후 스크립트가 현재 설치를 새 형식으로 성공적으로 마이그레이션하지 **못할** 수도 있습니다(예: BDB/HDB와 같은 이전 백엔드를 사용하는 경우). 이런 일이 발생하면 실패에 대한 알림이 표시되고 `slapd` 서버가 (재)시작되지 **않습니다**. 데이터를 마이그레이션하고 서비스를 시작하기 위해 수동 조치를 취해야 합니다. [README.Debian ](https://git.launchpad.net/ubuntu/+source/openldap/tree/debian/slapd.README.Debian?h=ubuntu/impish-devel) 파일(`/usr/share/doc/slapd/` 아래)를 참조하십시오.
 
 #### BIND 9.18
 
-BIND 9 has been updated to [version 9.18.1](https://bind9.readthedocs.io/en/v9_18_1/notes.html). This new version includes
+BIND 9가 [version 9.18.1](https://bind9.readthedocs.io/en/v9_18_1/notes.html)로 업데이트되었습니다. 새 버전에는 다음이 포함됩니다.
 
-- Support for DNS over TLS (DoT) and DNS over HTTPS (DoH).
-- `named` now supports zone transfers over TLS (XFR-over-TLS, XoT) for both incoming and outgoing zone transfers.
-- `dig` is now able to send DoT queries.
+- DNS over TLS(DoT) 및 DNS over HTTPS(DoH)를 지원합니다.
+- `named`는 수신 및 발신 영역 전송(zone transfers)에 대해 TLS(XFR-over-TLS, XoT)를 통한 영역 전송을 지원합니다.
+- `dig`는 이제 DoT 쿼리를 보낼 수 있습니다.
 
-Users upgrading from previous versions should be aware of the following changes:
+이전 버전에서 업그레이드하는 사용자는 다음 변경 사항을 알고 있어야 합니다.
 
-- The binary files which are neither daemons nor administrative programs have been moved from `/usr/sbin` to `/usr/bin`.
-- Support for the map zone file format has been removed. Users relying on such zone file format should convert their zones to use the raw format and change configurations accordingly before upgrading.
-- Several obsolete, non-working configuration options have been removed and are now treated as configuration failures when present. A complete list of such configurations is available in the [upstream release notes](https://bind9.readthedocs.io/en/v9_18_1/notes.html#removed-features).
+- 데몬(daemon) 및 관리 프로그램이 아닌 바이너리 파일은 `/usr/sbin`에서 `/usr/bin`으로 이동되었습니다.
+- map zone 파일 형식에 대한 지원이 제거되었습니다. 이러한 zone 파일 형식은 업그레이드 전에 원시 형식(raw format)을 사용하도록 zone 파일을 변환하고 그에 따라 구성을 수정해야 합니다.
+- 사용되지 않고 작동하지 않는 여러 설정 옵션이 제거되었으며, 해당 설정 옵션이 존재할 때 설정 오류로 처리됩니다. 이러한 설정의 전체 목록은 [upstream release notes](https://bind9.readthedocs.io/en/v9_18_1/notes.html#removed-features)에서 확인할 수 있습니다.
 
 #### Apache has been updated to 2.4.52 from 2.4.48.
 
