@@ -13,58 +13,58 @@ authors:
       github: ubuntu-kr
       profile: https://launchpad.net/@@/team-logo
 ---
-# Jammy Jellyfish Release Notes
+# Jammy Jellyfish 릴리즈 노트
 
-# Introduction
+# 서문
 
-These release notes for **Ubuntu 22.04 LTS** (Jammy Jellyfish) provide an overview of the release and document the known issues with Ubuntu and its flavours.
+이 **우분투 22.04 LTS** (Jammy Jellyfish)에 대한 릴리즈 노트에서는 해당 릴리즈에 대한 개요와 우분투와 flavour에서의 알려진 문제들의 문서를 제공합니다.
 
-## Support lifespan
+## 지원 기간
 
-Maintenance updates will be provided for 5 years until [April 2027](https://wiki.ubuntu.com/Releases) for Ubuntu Desktop, Ubuntu Server, Ubuntu Cloud, and Ubuntu Core. All the remaining flavours will be supported for 3 years. Additional security support is available with [ESM (Extended Security Maintenance).](https://ubuntu.com/security/esm)
+우분투 데스크톱, 우분투 서버, 우분투 Cloud, 우분투 Core의 유지보수 업데이트는 [2027 4월](https://wiki.ubuntu.com/Releases)까지 5년 동안 제공되고, 나머지 모든 flavour에 대해서는 3년간 지원됩니다. 추가적 보안 업데이트는 [ESM (Extended Security Maintenance).](https://ubuntu.com/security/esm)를 통해 지원됩니다.
 
-# Get Ubuntu 22.04 LTS
+# Ubuntu 22.04 LTS 받기
 
-## Download Ubuntu 22.04
+## Ubuntu 22.04 다운로드
 
-Images can be downloaded from a location near you.
+가까운 지역에서 이미지를 다운로드 할 수 있습니다.
 
-You can download ISOs and flashable images from:
+ISO나 플래시 가능한 이미지 다운로드:
 
-  * [Ubuntu Desktop and Server for 64-bit x86 (AMD64) ](http://releases.ubuntu.com/22.04/)
-  * [Less Frequently Downloaded Ubuntu Images](http://cdimage.ubuntu.com/ubuntu/releases/22.04/release/)
-  * [Ubuntu Cloud Images](http://cloud-images.ubuntu.com/daily/server/jammy/current/)
+  * [64 비트 x86 (AMD64) 우분투 데스크톱 및 서버](http://releases.ubuntu.com/22.04/)
+  * [종종 다운로드 되는 우분투 이미지](http://cdimage.ubuntu.com/ubuntu/releases/22.04/release/)
+  * [우분투 Cloud 이미지](http://cloud-images.ubuntu.com/daily/server/jammy/current/)
   * [Lubuntu](http://cdimage.ubuntu.com/lubuntu/releases/22.04/release/)
   * [Kubuntu](http://cdimage.ubuntu.com/kubuntu/releases/22.04/release/)
-  * [Ubuntu Budgie](http://cdimage.ubuntu.com/ubuntu-budgie/releases/22.04/release/)
-  * [Ubuntu Kylin](http://cdimage.ubuntu.com/ubuntukylin/releases/22.04/release/)
-  * [Ubuntu MATE](http://cdimage.ubuntu.com/ubuntu-mate/releases/22.04/release/)
-  * [Ubuntu Studio](http://cdimage.ubuntu.com/ubuntustudio/releases/22.04/release/)
+  * [우분투 Budgie](http://cdimage.ubuntu.com/ubuntu-budgie/releases/22.04/release/)
+  * [우분투 Kylin](http://cdimage.ubuntu.com/ubuntukylin/releases/22.04/release/)
+  * [우분투 MATE](http://cdimage.ubuntu.com/ubuntu-mate/releases/22.04/release/)
+  * [우분투 Studio](http://cdimage.ubuntu.com/ubuntustudio/releases/22.04/release/)
   * [Xubuntu](http://cdimage.ubuntu.com/xubuntu/releases/22.04/release/)
 
-# Upgrading from Ubuntu 21.10
+# Ubuntu 21.10에서 업그레이드
 
-**Upgrades to 22.04 LTS are currently not enabled (due a bug with snapd and update-notifier) but will be in the next couple of days.**
+**현재 22.04 LTS로의 업그레이드는 활성화 되어 있지 않지만 (snap, update-notifier의 버그로 인함) 수일 이내에 활성화 될 예정입니다.**
 
-To upgrade on a desktop system:
+데스크톱 시스템에서 업그레이드 하려면:
 
-  * Open the "Software & Updates" Setting in System Settings.
-  * Select the 3rd Tab called "Updates".
-  * Set the "Notify me of a new Ubuntu version" dropdown menu to "For any new version".
-  * Press <kbd>Alt</kbd>+ <kbd>F2</kbd> and type in `update-manager -c` into the command box.
-    * Update Manager should open up and tell you: **"New distribution release '22.04' is available."**
-  * If not you can also use `/usr/lib/ubuntu-release-upgrader/check-new-release-gtk`
-  * Click Upgrade and follow the on-screen instructions. 
+  * 시스템 설정에서 "소프트웨어 & 업데이트"를 여십시오.
+  * 세번째 탭인 "업데이트" 탭을 선택하시오.
+  * "새 우분투 버전 알려주기" 드롭다운 메뉴를 "모든 새 버전"으로 바꾸십시오.
+  * <kbd>Alt</kbd>+ <kbd>F2</kbd> 키를 누르고 명령 실행에 `update-manager -c`를 입력하십시오.
+    * 업데이트 관리자가 열리고 다음과 같이 말할 겁니다: **새 버전의 우분투를 사용할 수 있습니다. 업그레이드 하시겠습니까?"**
+  * 만약 되지 않으면 `/usr/lib/ubuntu-release-upgrader/check-new-release-gtk`로도 할 수 있습니다.
+  * 업그레이드를 클릭하고 화면의 지시를 따르십시오. 
 
-To upgrade on a server system:
+서버 시스템에서 업그레이드 하려면:
 
-  * Make sure the Prompt line in `/etc/update-manager/release-upgrades` is set to normal.
-  * Launch the upgrade tool with the command `sudo do-release-upgrade`.
-  * Follow the on-screen instructions. 
+  * `/etc/update-manager/release-upgrades`에서 `Prompt`에 해당하는 줄이 normal으로 설정 되어있는지 확인 하십시오.
+  * 업그레이드 도구를 `sudo do-release-upgrade` 명령어로 실행하시오.
+  * 화면의 지시를 따르십시오. 
 
-Note that the server upgrade will use GNU screen and automatically re-attach in case of dropped connection problems.
+서버 업그레이드에서는 GNU Screen을 사용하고 연결이 끊겼을 때 자동적으로 다시 콘솔에 붙게 된다는 점에 유의 바랍니다.
 
-There are no offline upgrade options for Ubuntu Desktop and Ubuntu Server. Please ensure you have network connectivity to one of the official mirrors or to a locally accessible mirror and follow the instructions above.
+우분투 데스크톱 및 우분투 서버의 오프라인 업그레이드 선택지는 없습니다. 공식 미러, 혹은 로컬에서 접근 가능한 미러와 연결 가능한지 미리 확인하고 위의 지시들을 따르길 바랍니다.
 
 # New features in 22.04 LTS
 
