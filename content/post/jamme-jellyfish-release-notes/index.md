@@ -83,10 +83,10 @@ ISO나 플래시 가능한 이미지 다운로드:
 
 ### NVIDIA 드라이버
 
-우분투 22.04 LTS에 ARM64 NVIDIA 드라이버의 linux-restricted-modules가 현존 x86_64와 더불어 추가 되었습니다. 이제 ARM64 사용자는 NVIDIA 드라이버의 설치 및 설정을 위해서 `ubuntu-drivers` 도구를 우분투 아카이브에서 사용 가능합니다.
+우분투 22.04 LTS에 ARM64 NVIDIA 드라이버의 linux-restricted-modules가 현존 x86_64에 대해 추가 되었습니다. 이제 ARM64 사용자는 NVIDIA 드라이버의 설치 및 설정을 위해서 `ubuntu-drivers` 도구를 우분투 아카이브에서 사용 가능합니다.
 
 ### UDP로의 NFS 마운트 비활성화
-우분투 20.10 ("Groovy Gorilla")부터 커널 옵션 `CONFIG_NFS_DISABLE_UDP_SUPPORT=y`가 설정 됐고 이는 NFS 버전에 상관없이 UDP를 NFS 마운트의 전송 프로토콜로 사용하는 것을 비활성화 합니다.
+우분투 20.10 ("Groovy Gorilla")부터 커널 옵션 `CONFIG_NFS_DISABLE_UDP_SUPPORT=y`가 설정 됐고 이는 NFS 버전에 상관없이 UDP가 NFS 마운트의 전송 프로토콜로 사용되는 것을 비활성화 합니다.
 
 실제로 `udp`를 사용하려고 하면 다음과 같은 오류를 얻을 겁니다:
 ```
@@ -99,7 +99,7 @@ mount.nfs: an incorrect mount option was specified
 
 GCC가 11.2.0로, binutils가 2.38로, glibc가 2.35로 업데이트 됐습니다. Python :snake:은 이제 3.10.4에서, Perl :camel:은 5.34.0에서 제공됩니다. 이제 LLVM은 기본적으로 14 버전에 맞춰집니다. golang은 기본적으로 1.18.x 버전에 맞춰집니다. rustc는 기본적으로 1.58 버전에 맞춰집니다.
 
-OpenJDK 11과 더불어 이제 OpenJDK 18도 제공됩니다 (그러나 패키지 빌드에는 사용되지 않습니다).
+OpenJDK 11에 더해 이제 OpenJDK 18도 제공됩니다 (그러나 패키지 빌드에는 사용되지 않습니다).
 
 Ruby :gem:가 v2.7.4에서 v3.0로 업데이트 됐습니다.
 
@@ -108,9 +108,8 @@ init 시스템이 systemd v249로 업데이트 되었고 LTS를 위해 견고한
 
 ## OpenSSL 3.0
 
-OpenSSL 라이브러리를 새로운 3.0 버전으로 업그레이드 했고 이것은 [migration guide](https://www.openssl.org/docs/manmaster/man7/migration_guide.html) 명시 되었듯 많은 레거시 알고리즘을 비활성화 합니다. 
+OpenSSL 라이브러리를 새로운 3.0 버전으로 업그레이드 했고 이는 라이브러리의 [마이그레이션 가이드](https://www.openssl.org/docs/manmaster/man7/migration_guide.html)에 명시 되었듯 많은 레거시 알고리즘을 비활성화 합니다. 
 특히, SHA1이나 MD5를 해쉬 알고리즘을 이용한 인증들은 이제 기본 보안 수준에서 유효하지 않습니다.
-
 
 업스크림 지원중단과 더불어 우분투 20.04(Focal Fossa)부터 보안 수준 2(기본값)이 1.2(포함) 이하의 (D)TLS 프로토콜을 비활성화합니다.
 
