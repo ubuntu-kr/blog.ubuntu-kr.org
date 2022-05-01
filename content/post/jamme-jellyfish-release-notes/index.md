@@ -552,14 +552,15 @@ By default, needrestart will prompt after upgrading packages if restarts are det
 * Raspberry Pi를 위한 우분투 데스크톱의 첫번째 장기 지원(LTS) 릴리즈
 * 여러 종류의 Pi 전용 보드 지원과 도구들이 아카이브에 추가 되었습니다:
   * 인기있는 Pimoroni [Unicorn HAT](https://shop.pimoroni.com/products/unicorn-hat?variant=932565325)가 패키징과 함께 제공됩니다
-  * 이제 공식 DSI 터치스크린이 지원됩니다 (그러나 데스크톱 이미지에 대한 해결책을 위해 밑의 알려진 문제 부분을 보시오)
+  * 이제 공식 DSI 터치스크린이 지원됩니다 (그러나 데스크톱 이미지에 대한 해결책을 위해 밑의 알려진 문제 부분을 보십시오)
+
   * [rpiboot](https://launchpad.net/ubuntu/+source/rpiboot) 패키지가 Raspberry Pi 컴퓨트 모듈(그리고 Pi 부팅 기반)을 위한 [rpiboot](https://github.com/raspberrypi/usbboot) 유틸리티를 포함하게 됩니다
   * [pyboard-rshell](https://launchpad.net/ubuntu/+source/pyboard-rshell) 패키지가 Raspberry Pi Pico를 비롯한 MicroPython을 지원하는 마이크로컨트롤러에서의 작업을 위해 [rshell](https://pypi.org/project/rshell/) 유틸리티를 포함하게 됩니다
   * [rpi-imager](https://launchpad.net/ubuntu/+source/rpi-imager) 패키지가 Raspberry Pi imager를 포함합니다. 동일한 [snap 패키지](https://snapcraft.io/rpi-imager)가 모든 아키텍쳐에서 동작하도록 업데이트 되었습니다 (또한 현재 버전으로 판올림 되었습니다)
 
 ### ppc64el
 
-22.04 LTS에서 부터, 이제 IBM POWER (ppc64el)를 위한 우분투 서버 이미지는 Power9 프로세서에 맞춰서 '--with-cpu=power9'을 사용해서 컴파일 됩니다 ([bug 1930086](https://bugs.launchpad.net/bugs/1930086)).
+22.04 LTS부터, 이제 IBM POWER (ppc64el)를 위한 우분투 서버 이미지는 Power9 프로세서에 맞춰서 '--with-cpu=power9'을 사용해서 컴파일 됩니다 ([bug 1930086](https://bugs.launchpad.net/bugs/1930086)).
 때문에 상이한 명령어 셋 요구로 인해, 우분투 서버 22.04 LTS는 더이상 Power8 시스템에서 실행, 설치, 나아가 부팅까지도 불가능하게 됩니다. 
 우분투 서버 20.04 LTS는 여전히 Power8 시스템에서 몇년동안은 사용 될 수는 있습니다 - 최소한 기본 지원의 끝인 2025년 4월까지는 말입니다. Power8에서 우분투 서버를 돌리고 있는 사용자는 'do-release-upgrade'를 이용해서 22.04 LTS 업그레이드 하는 방법이 끊기게 되고, 이는 이런 시스템들을 망가뜨릴 것이 분명하기 때문입니다 ([bug 1960255](https://bugs.launchpad.net/bugs/1960255)).
 추가로, 우분투 서버 22.04 LTS는 IBM Power10 시스템에 대한 공식 지원이 도입된 첫번째 우분투 릴리즈입니다.
