@@ -74,7 +74,7 @@ ISO나 플래시 가능한 이미지 다운로드:
 
 우분투 22.04 LTS는 제품에 따른 다수의 최적화된 커널을 제공합니다:
 
-* 우분투 데스크톱가 인증된 최신 세대 장치 (`linux-oem-22.04`)에 대해서 자동적으로 [v5.17](https://kernelnewbies.org/Linux_5.17) 커널로 최적화 되게 됩니다.
+* 우분투 데스크톱가 인증된 최신 세대 장치 (`linux-oem-22.04`)에 대해서 자동적으로 [v5.17](https://kernelnewbies.org/Linux_5.17) 커널이 선택 됩니다.
 * 우분투 데스크톱이 다른 세대의 하드웨어에서 롤링 HWE 커널 (`linux-hwe-22.04`)을 사용합니다. 롤링 HWE 커널은 22.04와 22.04.1 포인트 릴리즈의 [v5.15](https://kernelnewbies.org/Linux_5.15) 커널에 기반합니다
 * 우분투 서버는 기본적으로 비롤링 LTS 커널인 v5.15 (`linux-generic`)에 맞춰집니다.
 * 우분투 Cloud와 Devices는 파트너사의 협력으로 최적화된 커널을 사용합니다 (추가 백포트와 기능과 더불은 v5.15+)
@@ -83,7 +83,7 @@ ISO나 플래시 가능한 이미지 다운로드:
 
 ### NVIDIA 드라이버
 
-우분투 22.04 LTS에 ARM64 NVIDIA 드라이버의 리눅스 제한 모듈이 현존 x86_64와 더불어 추가 되었습니다. 이제 ARM64 사용자는 NVIDIA 드라이버의 설치 및 설정을 위해서 `ubuntu-drivers` 도구를 우분투 아카이브에서 사용 가능합니다.
+우분투 22.04 LTS에 ARM64 NVIDIA 드라이버의 linux-restricted-modules가 현존 x86_64와 더불어 추가 되었습니다. 이제 ARM64 사용자는 NVIDIA 드라이버의 설치 및 설정을 위해서 `ubuntu-drivers` 도구를 우분투 아카이브에서 사용 가능합니다.
 
 ### UDP로의 NFS 마운트 비활성화
 우분투 20.10 ("Groovy Gorilla")부터 커널 옵션 `CONFIG_NFS_DISABLE_UDP_SUPPORT=y`가 설정 됐고 이는 NFS 버전에 상관없이 UDP를 NFS 마운트의 전송 프로토콜로 사용하는 것을 비활성화 합니다.
@@ -104,15 +104,15 @@ OpenJDK 11과 더불어 이제 OpenJDK 18도 제공됩니다 (그러나 패키�
 Ruby :gem:가 v2.7.4에서 v3.0로 업데이트 됐습니다.
 
 ## systemd v249.11
-init 시스템이 systemd v249로 업데이트 되었고 LTS를 위해 견고한 .11 패치 레벨이 사용됩니다. 각각 개별 기능에 대한 정보는 업스트림 [변경 로그](https://github.com/systemd/systemd/releases/tag/v249)를 참고 하길 바랍니다.
+init 시스템이 systemd v249로 업데이트 되었고 LTS를 위해 견고한 .11 패치 레벨이 사용됩니다. 각각 개별 기능에 대한 정보는 업스트림 [변경 로그](https://github.com/systemd/systemd/releases/tag/v249)를 참고 하길 바랍니다. 유저 스페이스 OODM 서비스를 활성화 했고 이는 "우분투 데스크톱" flavour에서 기본적으로 `systemd-oodm` 패키지를 제공하며, 이는 시스템 과부하와 자리 확보를 위한 커널의 OOM  killer의 요구를 피하기 위함입니다. OOMD 상태는 `oomctl`을 통해서 확인될 수 있습니다.
 
 ## OpenSSL 3.0
 
 OpenSSL 라이브러리를 새로운 3.0 버전으로 업그레이드 했고 이것은 [migration guide](https://www.openssl.org/docs/manmaster/man7/migration_guide.html) 명시 되었듯 많은 레거시 알고리즘을 비활성화 합니다. 
-일부분으로 SHA1이나 MD5를 해쉬 알고리즘을 이용한 인증들은 이제 기본 보안 수준에서 유효하지 않습니다.
+특히, SHA1이나 MD5를 해쉬 알고리즘을 이용한 인증들은 이제 기본 보안 수준에서 유효하지 않습니다.
 
 
-업스크림 지원중단과 더불어 우분투 20.04(Focal Fossa)부터 보안 수준 2(기본값)이 1.2(포함) 아래의 (D)TLS 프로토콜을 비활성화합니다.
+업스크림 지원중단과 더불어 우분투 20.04(Focal Fossa)부터 보안 수준 2(기본값)이 1.2(포함) 이하의 (D)TLS 프로토콜을 비활성화합니다.
 
 새로운 버전이 API를 판올림하기 때문에 libssl1.1에 의존하는 서드파티 패키지는 오래된 ABI가 더이상 제공되지 않기 때문에 그대신 libssl3에 의존하도록 다시 빌드 돼야 합니다.
 
@@ -122,7 +122,7 @@ OpenSSL 라이브러리를 새로운 3.0 버전으로 업그레이드 했고 이
 
 이제 `ssh-rsa`가 [OpenSSH에서 기본적으로 비활성화 되었습니다](https://www.openssh.com/txt/release-8.8). 필요에 의해 선택적으로 다시 활성화 하는 방법을 알기 위해서는 [버그 1961833](https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/1961833)을 보십시오. 만약 SSH를 통해 원격으로 업그레이드 할 계획이라면 업그레이드 후의 접근 유지를 보장하기 위해서 이에 의존하지 않음을 확인하길 바랍니다.
 
-`scp`가 원격 파일 이름을 다룰 때 [scp 모드가 아닌 sftp를 사용](https://www.openssh.com/txt/release-8.9)하기 위해서 [`-s` 명령줄 옵션](http://manpages.ubuntu.com/manpages/jammy/en/man1/scp.1.html)을 제공합니다. 이 새롭고 안전한 동작은 결국 기본 설정이 될 겁니다.
+`scp`가 원격 파일 이름을 다룰 때 [scp 모드 보다는 sftp를 사용](https://www.openssh.com/txt/release-8.9)하기 위해서 [`-s` 명령줄 옵션](http://manpages.ubuntu.com/manpages/jammy/en/man1/scp.1.html)을 제공합니다. 이 새롭고 더 안전한 동작은 결국 기본 설정이 될 겁니다.
 
 ## 우분투 데스크톱
 
