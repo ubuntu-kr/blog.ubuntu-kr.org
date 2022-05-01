@@ -432,7 +432,7 @@ The new version 2.17.0 of openvswitch is in Ubuntu 22.04 and provides a general 
 
 The `swtpm` as well as `libtpms` package is now available and supported in Ubuntu 22.04.
 
-`swtpm` provides TPM emulators with different front-end interfaces to libtpms. TPM emulators provide socket interfaces (TCP/IP and unix) and the Linux CUSE interface for the creation of multiple native /dev/vtpm* devices..
+`swtpm` provides TPM emulators with different front-end interfaces to libtpms. TPM emulators provide socket interfaces (TCP/IP and unix) and the Linux CUSE interface for the creation of multiple native /dev/vtpm* devices.
 
 A common use case for `swtpm` is to use it as virtual TPM for virtual machine and container use cases.
 This is particular important for guest operating systems that consider TPM support mandatory.
@@ -476,32 +476,34 @@ Notable improvements introduced in this cycle:
      * Enable Desktop installer to validate and attach Ubuntu Advantage tokens
      * Support machine-readable output JSON/YAML format for most commands
      * Configurable auto attach behavior via `ua attach --attach-config`
-### Ubuntu Server Main Promotions
-For Ubuntu Server 22.04 LTS, the following source packages were promoted to main:
- * [wireguard](https://www.wireguard.com): fast, modern, secure kernel VPN tunnel
- * [glusterfs](https://www.gluster.org/): cluster file-system capable of scaling to several peta-bytes
- * [frr](https://www.frrouting.org/): suite of internet routing protocols (BGP, OSPF, IS-IS, ...)
 
-### LXD was updated to the new 5.0 LTS version
+### 우분투 서버 메인 패키지 승격
 
-5.0 LTS significantly steps up LXD’s abilities, especially when operating in clustered environments. In comparison to LXD 4.0, virtual machines are now effectively at feature parity with containers, and a lot of networking options, clustering, and project features were added.
+우분투 서버 22.04 LTS에서 다음 소스 패키지가 메인 페키지로 승격되었습니다:
+ * [wireguard](https://www.wireguard.com): 빠르고, 최신의 보안 커널 VPN 터널 패키지
+ * [glusterfs](https://www.gluster.org/): 페타 바이트로 확장 가능한 클러스터 파일 시스템
+ * [frr](https://www.frrouting.org/): 인터넷 라우팅 프로토콜 모음 (BGP, OSPF, IS-IS, ...)
 
-Some of the key changes include:
+### LXD가 새로운 5.0 LTS 버전으로 업데이트
 
-* **LXD virtual machines** now come with vTPM support as well as arbitrary PCI passthrough support. VMs can now be live-migrated and support some device hotplug and additional storage options.
-* **Networking** now includes OVN support combined with BGP, DNS, floating IP and hardware acceleration support.
-* **Projects** have grown a number of additional limits and restrictions, making it easy to safely grant access to various teams and limit their resource usage.
-* **LXD-migrate** has been reworked with support for both containers and VMs
-* **Cluster** users can now perform easy maintenance through cluster evacuation, group servers into target groups and get detailed instance metrics across entire clusters.
+5.0 LTS는 특히 클러스터 환경에서 작동할 때 LXD의 기능을 크게 향상시켰습니다. LXD 4.0과 비교하여 가상 머신은 이제 컨테이너와 동일한 기능을 제공하며, 많은 네트워킹 옵션, 클러스터링, 프로젝트 기능이 추가되었습니다.
 
-Additional details and a complete changelog can be found [here](https://discuss.linuxcontainers.org/t/lxd-5-0-lts-has-been-released/13723).
+주요 변경 사항은 다음과 같습니다:
+
+* **LXD 가상 머신**은 이제 vTPM 지원과 임의 PCI 패스스루(passthrough) 지원과 함께 제공합니다. 이제 VM은 라이브 마이그레이션을 할 수 있으며, 일부 장치의 핫플러그와 추가 스토리지 옵션을 지원합니다.
+* **네트워킹**에는 이제 BGP, DNS, 유동 IP, 하드웨어 가송 지원과 결합된 OVN을 지원합니다.
+* **프로젝트**에 추가할 수 있는 제한을 늘렸습니다. 그리고 다양한 팀에 안전하게 접근 권한을 부여하고 리소스 사용을 제안합니다.
+* **LXD-migrate**는 컨테이너와 VM 모두를 지원하도록 재작업 되었습니다.
+* **클러스터** 사용자는 클러스터 철수(evacuation)을 통해 손쉽게 유지 관리를 수행하고, 서버를 타켓 그룹으로 그룹화하고 전체 클러스터에서 자세한 인스턴스 메트릭을 얻을 수 있습니다.
+
+추가 세부 정부와 전체 변경 로그는 [여기](https://discuss.linuxcontainers.org/t/lxd-5-0-lts-has-been-released/13723)에서 찾을 수 있습니다.
 
 
 ### Ceph
 
-Ubuntu 22.04 includes the latest release candidate of the Ceph Quincy release.
+우분투 22.04에는 Ceph Quincy 릴리즈의 최신 릴리즈 후보가 포함되어있습니다.
 
-Ceph packages will be updated as a [stable release update](https://bugs.launchpad.net/ubuntu/+source/ceph/+bug/1968318) once Quincy is released by the Ceph community.
+Ceph 커뮤니티에서 Quincy를 출시하면 Ceph 패키지가 [안정 릴리즈 업데이트](https://bugs.launchpad.net/ubuntu/+source/ceph/+bug/1968318)로 업데이트됩니다.
 
 ### OpenStack
 
