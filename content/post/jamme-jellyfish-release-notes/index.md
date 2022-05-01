@@ -561,7 +561,7 @@ By default, needrestart will prompt after upgrading packages if restarts are det
 
 22.04 LTS에서 부터, 이제 IBM POWER (ppc64el)를 위한 우분투 서버 이미지는 Power9 프로세서에 맞춰서 '--with-cpu=power9'을 사용해서 컴파일 됩니다 ([bug 1930086](https://bugs.launchpad.net/bugs/1930086)).
 때문에 상이한 명령어 셋 요구로 인해, 우분투 서버 22.04 LTS는 더이상 Power8 시스템에서 실행, 설치, 나아가 부팅까지도 불가능하게 됩니다. 
-우분투 서버 20.04 LTS는 여전히 Power8 시스템에서 몇년동안은 사용 될수는 있습니다 - 최소한 기본 지원의 끝인 2025년 4월까지는 말입니다. Power8에서 우분투 서버를 돌리고 있는 사용자는 'do-release-upgrade'를 이용해서 22.04 LTS 업그레이드 하는 방법이 끊기게 되고, 고로 이는 몇몇 시스템을 고장낼 것이 분명합니다 ([bug 1960255](https://bugs.launchpad.net/bugs/1960255)).
+우분투 서버 20.04 LTS는 여전히 Power8 시스템에서 몇년동안은 사용 될 수는 있습니다 - 최소한 기본 지원의 끝인 2025년 4월까지는 말입니다. Power8에서 우분투 서버를 돌리고 있는 사용자는 'do-release-upgrade'를 이용해서 22.04 LTS 업그레이드 하는 방법이 끊기게 되고, 이는 이런 시스템들을 망가뜨릴 것이 분명하기 때문입니다 ([bug 1960255](https://bugs.launchpad.net/bugs/1960255)).
 추가로, 우분투 서버 22.04 LTS는 IBM Power10 시스템에 대한 공식 지원이 도입된 첫번째 우분투 릴리즈입니다.
 
 ### s390x
