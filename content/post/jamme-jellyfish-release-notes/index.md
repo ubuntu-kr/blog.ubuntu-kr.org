@@ -357,19 +357,19 @@ Samba was updated to 4.15.5, which brings some noteworthy changes. Please see th
 * `findsmb(1)` was removed
 * [glusterfs support enabled](https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1894618) in the Ubuntu packaging. This was possible because [glusterfs was promoted to Main](https://bugs.launchpad.net/ubuntu/+source/glusterfs/+bug/1950321) during the 22.04 LTS development cycle, which allowed us to enable the glusterfs vfs module. This module is now present in the `samba-vfs-modules` package.
 
-#### Quagga 는 frr 로 변경되었어요.
+#### Quagga 는 frr 로 대체됨
 'quagga'는 Ubuntu 22.04에서 삭제 되었으며 FRRouting 으로 대체되었습니다. ('frr', https://frrouting.org/).
 
 #### Chrony 시간 동기화
 
-Chrony는 버전 4.2로 업데이트 되었으며 다음을 포함합니다.
+Chrony는 버전 4.2로 업데이트 되었으며 다음을 포함합니다
 
- * GnuTLS에서 AES-CMAC 해쉬 기능 지원을 추가하였습니다.
- * 서버의 인터리브 모드가 조금 더 안정적으로 향상되었으며 NAT 뒤에 다중 클라이언트를 지원합니다.
- * 인터리브 모드의 Serverstats 보고에 대한 상태 기능이 추가 되었습니다.
- * Chrony 서비스에는 Hardening 옵션이 추가 되었습니다.
- * 설정에서 생성한 타임마스터의 시간을 읽는 기능이 허용되었습니다.
- * 더 자세한 내용은 업스트림을 읽으십시오. [release notes](https://chrony.tuxfamily.org/news.html)
+ * GnuTLS에서 AES-CMAC 해쉬 함수 지원을 추가하였습니다
+ * 서버의 인터리브 모드가 조금 더 안정적으로 향상되었으며 NAT 뒤에 다중 클라이언트를 지원합니다
+ * Serverstats 보고서에 인터리브 모드에 대한 통계를 추가하였습니다
+ * Chrony 서비스에 추가적인 하드닝(Hardening) 옵션을 추가하고 활성화 하였습니다
+ * timemaster에서 생성한 구성을 읽는 것을 허용했습니다
+ * 더 자세한 내용은 업스트림 [릴리스 노트](https://chrony.tuxfamily.org/news.html)를 읽으십시오
 
 #### Virtualization
 
