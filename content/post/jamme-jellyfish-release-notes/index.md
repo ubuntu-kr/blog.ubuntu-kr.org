@@ -357,7 +357,8 @@ Samba was updated to 4.15.5, which brings some noteworthy changes. Please see th
 * `findsmb(1)` was removed
 * [glusterfs support enabled](https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1894618) in the Ubuntu packaging. This was possible because [glusterfs was promoted to Main](https://bugs.launchpad.net/ubuntu/+source/glusterfs/+bug/1950321) during the 22.04 LTS development cycle, which allowed us to enable the glusterfs vfs module. This module is now present in the `samba-vfs-modules` package.
 
-#### Quagga 는 frr 로 대체됨
+#### Quagga가 frr 로 대체됨
+
 'quagga'는 Ubuntu 22.04에서 삭제 되었으며 FRRouting 으로 대체되었습니다. ('frr', https://frrouting.org/).
 
 #### Chrony 시간 동기화
