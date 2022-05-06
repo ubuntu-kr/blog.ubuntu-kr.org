@@ -274,12 +274,11 @@ BIND 9가 [version 9.18.1](https://bind9.readthedocs.io/en/v9_18_1/notes.html)�
 - map zone 파일 형식에 대한 지원이 제거되었습니다. 이러한 zone 파일 형식은 업그레이드 전에 원시 형식(raw format)을 사용하도록 zone 파일을 변환하고 그에 따라 구성을 수정해야 합니다.
 - 사용되지 않고 작동하지 않는 여러 설정 옵션이 제거되었으며, 해당 설정 옵션이 존재할 때 설정 오류로 처리됩니다. 이러한 설정의 전체 목록은 [upstream release notes](https://bind9.readthedocs.io/en/v9_18_1/notes.html#removed-features)에서 확인할 수 있습니다.
 
-#### Apache has been updated to 2.4.52 from 2.4.48.
+#### Apache 2.4.48 버전에서 2.4.52 버전으로 업데이트
 
- - OpenSSL support is improved to support OpenSSL v3.  mod_ssl also received various refinements for outgoing connection behaviors, backwards compatibility, and wireshark logging.
- - mod_md adds support for ACME External Account Binding (EAB) along with a host of other enhancements and fixes.
- - Numerous fixes, including better hostname and UDS URI checking and handling, status code responses, and so on.
-
+ - OpenSSL에선 OpenSSL v3를 지원하도록 개선되었으며, mod_ssl 또한 외부 커넥션 (outgoing connection) 동작, 이전 버전과의 호환성, 그리고 wireshark 로깅에 대한 다양한 개선 사항이 지원되었습니다.
+ - mod_md는 기타 여러 개선 및 수정사항과 함께 ACME 외부 계정 바인딩(EAB)에 대한 지원을 추가합니다.
+ - 개선된 hostname과 UDS URI 검사 및 처리, 상태코드 응답 등을 포함한 수많은 수정사항이 있습니다.
 
 #### PostgreSQL 14
 
