@@ -282,21 +282,22 @@ BIND 9가 [version 9.18.1](https://bind9.readthedocs.io/en/v9_18_1/notes.html)�
 
 #### PostgreSQL 14
 
-PostgreSQL has been updated to version 14.2.
+PostgreSQL이 버전 14.2로 업데이트되었습니다.
 
-This update contains many new features and enhancements, including:
+이 업데이트는 다음과 같이 많은 새로운 기능과 개선사항이 포함되어 있습니다.
 
-- Stored procedures can now return data via OUT parameters.
-- The SQL-standard SEARCH and CYCLE options for common table expressions have been implemented.
-- Subscripting can now be applied to any data type for which it is a useful notation, not only arrays. In this release, the jsonb and hstore types have gained subscripting operators.
-- Range types have been extended by adding multiranges, allowing representation of noncontiguous data ranges.
-- Numerous performance improvements have been made for parallel queries, heavily-concurrent workloads, partitioned tables, logical replication, and vacuuming.
-- B-tree index updates are managed more efficiently, reducing index bloat.
-- VACUUM automatically becomes more aggressive, and skips inessential cleanup, if the database starts to approach a transaction ID wraparound condition.
-- Extended statistics can now be collected on expressions, allowing better planning results for complex queries.
-- libpq now has the ability to pipeline multiple queries, which can boost throughput over high-latency connections.
+- 저장 프로시저는 OUT 파라미터들을 통해 데이터를 반환할 수 있습니다.
+- 공통 테이블 표현식에 대한 SQL 표준 SEARCH 및 CYCLE 옵션이 구현되었습니다.
+- 첨자는 배열 뿐 아니라 유용한 표기법이 되는 모든 데이터 유형에 적용될 수 있습니다. 이번 릴리즈에서는 jsonb 및 hstore 유형에 첨자 연산자가 추가되었습니다.
+- 다중 범위를 추가함으로써 범위 유형이 확장되었으므로 비연속 데이터 범위를 표현을 할 수 있습니다.
+- 병렬 쿼리, 동시 작업이 많은 워크로드, 분할된 테이블, 논리적 복제 및 베큠(Vacuum)에 대한 다양한 성능이 향상되었습니다.
+- B-트리 인덱스 업데이트는 보다 효율적으로 관리하여 인덱스 팽창(index bloating)을 줄입니다.
+- 베큠(VACUUM)은 데이터베이스가 트랜잭션 ID 랩어라운드 조건에 도달하기 시작할 때, 자동적으로 더욱 활성화되며 불필요한 정리를 건너뜁니다.
+- 표현식에 대해 확장된 통계를 수집할 수 있으므로 복잡한 쿼리에 대해 더 나은 쿼리 플랜 결과를 얻을 수 있습니다.
+- libpq는 다수의 쿼리와 결과를 보내고 받을 때, 대기시간이 긴 연결에서도 처리량을 높일 수 있는 파이프라인 모드를 지원합니다.
 
-These and a long list of further enhancements as well as bug fixes can be found in the release notes of [v14](https://www.postgresql.org/docs/14/release-14.html), [v14.1](https://www.postgresql.org/docs/release/14.1/), and [v14.2](https://www.postgresql.org/docs/release/14.2/).
+이러한 추가 개선사항 및 버그수정에 대한 목록은 릴리즈 노트 [v14](https://www.postgresql.org/docs/14/release-14.html),
+[v14.1](https://www.postgresql.org/docs/release/14.1/), 그리고 [v14.2](https://www.postgresql.org/docs/release/14.2/)에서 찾을 수 있습니다.
 
 #### Django 3.2.12
 
