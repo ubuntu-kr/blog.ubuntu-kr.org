@@ -278,7 +278,7 @@ BIND 9가 [version 9.18.1](https://bind9.readthedocs.io/en/v9_18_1/notes.html)�
 
  - OpenSSL에선 OpenSSL v3를 지원하도록 개선되었으며, mod_ssl 또한 외부 커넥션 (outgoing connection) 동작, 이전 버전과의 호환성, 그리고 wireshark 로깅에 대한 다양한 개선 사항이 지원되었습니다.
  - mod_md는 기타 여러 개선 및 수정사항과 함께 ACME 외부 계정 바인딩(EAB)에 대한 지원을 추가합니다.
- - 개선된 hostname 그리고 UDS URI 검사 및 처리, 상태코드 응답 등을 포함한 수많은 수정사항이 있습니다.
+ - 개선된 hostname과 UDS URI 검사 및 처리, 상태코드 응답 등을 포함한 수많은 수정사항이 있습니다.
 
 #### PostgreSQL 14
 
