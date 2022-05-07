@@ -66,61 +66,65 @@ ISO나 플래시 가능한 이미지 다운로드:
 
 우분투 데스크톱 및 우분투 서버의 오프라인 업그레이드 선택지는 없습니다. 공식 미러, 혹은 로컬에서 접근 가능한 미러와 연결 가능한지 미리 확인하고 위의 지시들을 따르길 바랍니다.
 
-# New features in 22.04 LTS
+# 22.04 LTS의 새로운 기능
 
-## Updated Packages
+## 업데이트 된 페키지
 
-## Linux kernel :penguin:
+## 리눅스 커널 :penguin:
 
-Ubuntu 22.04 LTS ships multiple optimized kernels on per-product basis:
+우분투 22.04 LTS는 제품에 따른 다수의 최적화된 커널을 제공합니다:
 
-* Ubuntu Desktop will automatically opt-into [v5.17](https://kernelnewbies.org/Linux_5.17) kernel on the latest generations of certified devices (`linux-oem-22.04`)
-* Ubuntu Desktop uses a rolling HWE kernel (`linux-hwe-22.04`) on all other generations of hardware. The rolling HWE kernel is based on the [v5.15](https://kernelnewbies.org/Linux_5.15) kernel for 22.04.0 and 22.04.1 point releases
-* Ubuntu Server defaults to a non-rolling LTS kernel v5.15 (`linux-generic`)
-* Ubuntu Cloud and Devices use optimized kernels in collaboration with partners (v5.15+ with additional backports and features)
+* 우분투 데스크톱에서 인증된 최신 세대 장치 (`linux-oem-22.04`)에 대해서 자동으로 [v5.17](https://kernelnewbies.org/Linux_5.17) 커널이 선택 됩니다.
 
-Additional optimized and certified kernel flavours will become available in Ubuntu 22.04 LTS in due course.
+* 우분투 데스크톱이 다른 세대의 하드웨어에서 롤링 HWE 커널 (`linux-hwe-22.04`)을 사용합니다. 22.04와 22.04.1 포인트 릴리즈에 대한 롤링 HWE 커널은  [v5.15](https://kernelnewbies.org/Linux_5.15) 커널에 기반합니다
+* 우분투 서버는 기본적으로 비롤링 LTS 커널인 v5.15 (`linux-generic`)에 맞춰집니다.
+* 우분투 Cloud와 Devices는 파트너사의 협력으로 최적화된 커널을 사용합니다 (추가 백포트와 기능이 있는 v5.15+)
 
-### NVIDIA drivers
 
-Ubuntu 22.04 LTS adds linux-restricted-modules of NVIDIA drivers on ARM64, in addition to the existing x86_64. Users on ARM64 can now use `ubuntu-drivers` tool to install and configure NVIDIA drivers from the Ubuntu Archive.
+추가적 최적화와 인증된 커널 flavour는 적기에 우분투 22.04 LTS에서 이용 가능할 예정입니다.
 
-### UDP disabled for NFS mounts
-Since Ubuntu 20.10 ("Groovy Gorilla"), the kernel option `CONFIG_NFS_DISABLE_UDP_SUPPORT=y` is set and this disables using UDP as the transport for NFS mounts, regardless of NFS version.
+### NVIDIA 드라이버
 
-In practice, if you try to use `udp`, you will get this error:
+우분투 22.04 LTS에 ARM64 NVIDIA 드라이버의 linux-restricted-modules가 현존 x86_64에 대해 추가 되었습니다. 이제 ARM64 사용자는 NVIDIA 드라이버의 설치 및 설정을 위해서 `ubuntu-drivers` 도구를 우분투 아카이브에서 사용 가능합니다.
+
+### UDP로의 NFS 마운트 비활성화
+우분투 20.10 ("Groovy Gorilla")부터 커널 옵션 `CONFIG_NFS_DISABLE_UDP_SUPPORT=y`가 설정 됐고 이는 NFS 버전에 상관없이 UDP가 NFS 마운트의 전송 프로토콜로 사용되는 것을 비활성화 합니다.
+
+실제로 `udp`를 사용하려고 하면 다음과 같은 오류를 얻을 겁니다:
 ```
 $ sudo mount f1:/storage /mnt -o udp
 mount.nfs: an incorrect mount option was specified
 ```
 
 
-## Toolchain Upgrades :hammer_and_wrench:
+## 툴체인 업그레이드 :hammer_and_wrench:
 
-GCC was updated to the 11.2.0 release, binutils to 2.38, and glibc to 2.35. Python :snake: now ships at version 3.10.4, Perl :camel: at version 5.34.0. LLVM now defaults to version 14. golang defaults to version 1.18.x. rustc defaults to version 1.58.
+GCC가 11.2.0로, binutils가 2.38로, glibc가 2.35로 업데이트 됐습니다. Python :snake:은 이제 3.10.4에서, Perl :camel:은 5.34.0에서 제공됩니다. 이제 LLVM은 기본적으로 14 버전에 맞춰집니다. golang은 기본적으로 1.18.x 버전에 맞춰집니다. rustc는 기본적으로 1.58 버전에 맞춰집니다.
 
-In addition to OpenJDK 11, OpenJDK 18 is now provided (but not used for package builds).
+OpenJDK 11에 더해 이제 OpenJDK 18도 제공됩니다 (그러나 패키지 빌드에는 사용되지 않습니다).
 
-Ruby :gem: was updated from v2.7.4 to v3.0.
+Ruby :gem:가 v2.7.4에서 v3.0로 업데이트 됐습니다.
 
 ## systemd v249.11
-The init system was updated to systemd v249, using a solid .11 patchlevel for the LTS. Please refer to the upstream [changelog](https://github.com/systemd/systemd/releases/tag/v249) for more information about the individual features. We've enabled the userspace OOMD service and are shipping the `systemd-oomd` package by default on the "Ubuntu Desktop" flavour, to avoid overloaded systems and the need of the kernel's OOM killer to kick in. The OOMD status can be checked using `oomctl`.
+init 시스템이 systemd v249로 업데이트 되었고 LTS를 위해 견고한 .11 패치 레벨이 사용됩니다. 각각 개별 기능에 대한 정보는 업스트림 [변경 로그](https://github.com/systemd/systemd/releases/tag/v249)를 참고 하길 바랍니다. 유저 스페이스 OODM 서비스를 활성화 했고 이는 "우분투 데스크톱" flavour에서 기본적으로 `systemd-oodm` 패키지를 제공하며, 이는 시스템 과부하와 자리 확보를 위한 커널의 OOM  killer의 요구를 피하기 위함입니다. OOMD 상태는 `oomctl`을 통해서 확인될 수 있습니다.
 
 ## OpenSSL 3.0
 
-We've upgraded the OpenSSL library to the new 3.0 version, which disables a lot of legacy algorithms by default, as detailed in their [migration guide](https://www.openssl.org/docs/manmaster/man7/migration_guide.html). In particular, certificates using SHA1 or MD5 as hash algorithms are now invalid under the default security level.
+OpenSSL 라이브러리를 새로운 3.0 버전으로 업그레이드 했고 이는 라이브러리의 [마이그레이션 가이드](https://www.openssl.org/docs/manmaster/man7/migration_guide.html)에 명시 되었듯 많은 레거시 알고리즘을 비활성화 합니다. 
+특히, SHA1이나 MD5를 해쉬 알고리즘을 이용한 인증들은 이제 기본 보안 수준에서 유효하지 않습니다.
 
-In addition to the upstream deprecations, please note that since Ubuntu 20.04 (Focal Fossa), the security level 2 (which is the default) disables the (D)TLS protocols below 1.2 (included).
+업스크림 지원중단과 더불어 우분투 20.04(Focal Fossa)부터 보안 수준 2(기본값)이 1.2(포함) 미만의 (D)TLS 프로토콜을 비활성화합니다.
 
-Since the new version has an API bump, third-party packages that depend on libssl1.1 will need to be rebuilt to instead depend on libssl3, as the older ABI isn't provided anymore.
 
-## Security Improvements :lock:
+새로운 버전에 API 판올림이 있기 때문에 libssl1.1에 의존하는 서드파티 패키지는 오래된 ABI가 더이상 제공되지 않음으로 그대신 libssl3에 의존하도록 다시 빌드 돼야 합니다.
 
-nftables is now the default backend for the firewall. All applications on the system must agree on whether they will use the legacy `xtables` backend or the newer `nftables` backend. [Bug 1968608](https://bugs.launchpad.net/bugs/1968608) provides some context that may be helpful. [Docker may not be ready for the new `nftables` backend](https://github.com/docker-snap/docker-snap/issues/68).
+## 보안 향상점 :lock:
 
-`ssh-rsa` is now [disabled by default in OpenSSH](https://www.openssh.com/txt/release-8.8). See [bug 1961833](https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/1961833) to learn how to selectively re-enable it if necessary.  If you are upgrading a system remotely over SSH, you should check that you are not relying on this to ensure that you will retain access after the upgrade. 
+이제 nftable가 방화벽을 위한 기본 백엔드입니다. 시스템의 모든 애플리케이션은 반드시 레거시 `xtables` 혹은 새로운 `nftables` 백엔드를 사용할 건지 합의해야 합니다. [버그 1968608](https://bugs.launchpad.net/bugs/1968608)가 유용할만한 몇몇 맥락을 제공합니다. [Docker는 새로운 `nftables` 백엔드를 위해 준비 되어있지 않을 수 있습니다](https://github.com/docker-snap/docker-snap/issues/68).
 
-`scp` offers a [`-s` command line option](http://manpages.ubuntu.com/manpages/jammy/en/man1/scp.1.html) to use [sftp mode rather than scp mode](https://www.openssh.com/txt/release-8.9) when handling remote filenames. This new, safer, behaviour will eventually become the default.
+이제 `ssh-rsa`가 [OpenSSH에서 기본적으로 비활성화 되었습니다](https://www.openssh.com/txt/release-8.8). 필요에 의해 선택적으로 다시 활성화 하는 방법을 알기 위해서는 [버그 1961833](https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/1961833)을 보십시오. 만약 SSH를 통해 원격으로 업그레이드 할 계획이라면 업그레이드 후의 접근 유지를 보장하기 위해서 이에 의존하지 않음을 확인하길 바랍니다.
+
+`scp`가 원격 파일 이름을 다룰 때 [scp 모드 보다는 sftp를 사용](https://www.openssh.com/txt/release-8.9)하기 위해서 [`-s` 명령줄 옵션](http://manpages.ubuntu.com/manpages/jammy/en/man1/scp.1.html)을 제공합니다. 이 새롭고 더 안전한 동작은 결국 기본 설정이 될 겁니다.
 
 ## 우분투 데스크톱
 
