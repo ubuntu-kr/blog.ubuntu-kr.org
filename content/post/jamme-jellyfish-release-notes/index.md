@@ -716,7 +716,7 @@ No known issues yet.
 
 ## 우분투에 참여하기
 
-만약 우분투를 만드는 데 도움을 주고 싶다면, 참여하는 방법 목록을 다음에서 확인하세요:
+만약 우분투를 만드는 데 도움을 주고 싶다면, 참여하는 방법 목록을 다음에서 확인하십시오:
 
 -   https://community.ubuntu.com/contribute
 
@@ -724,6 +724,6 @@ No known issues yet.
 
 [우분투 웹사이트](https://www.ubuntu.com)에서 우분투에 관한 더 많은 정보를 찾을 수 있습니다.
 
-향후 우분투 개발 소식을 보고 싶다면, 우분투의 개발 소식 목록을 다음에서 구독해주세요:
+향후 우분투 개발 소식을 보고 싶다면, 우분투의 개발 소식 목록을 다음에서 구독하십시오:
 
 -   https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce
