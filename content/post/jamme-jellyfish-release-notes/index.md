@@ -441,17 +441,17 @@ See the [upstream wiki](https://github.com/stefanberger/swtpm/wiki) for more det
 
 #### Squid
  
-* `squid` 패키지는 GnuTLS 라이브러리에 연결됩니다. OpenSSL을 사용하길 원하신다면, 새로운 quid-openssl 패키지를 설치 할 수 있습니다.
+* `squid` 패키지는 GnuTLS 라이브러리에 연결됩니다. OpenSSL을 사용하길 원하신다면, 새로운 'quid-openssl' 패키지를 설치 할 수 있습니다.
 
 #### cloud-init
 
-cloud-init의 22.1 버전은 22.04, 21.10, 22.04 및 18.04에 배포되었습니다.
+cloud-init의 22.1 버전은 22.04, 21.10, 22.04 및 18.04에 릴리즈 되었습니다.
                                                                                 
-마지막으로 배포된 LTS 이후 주목할만한 기능 소개:  
+마지막 LTS 이후 도입된 주목할만한 기능 소개:  
                                                                                 
  * Clouds 와 datasources
-   * Jammy에는 LXD datasource가 추가되어 LXD 소켓에 활성화된 임시 데이터를 읽고 재부팅 시에 설정 변경 사항을 적용함
-   * native VMWare의 datasource를 추가함
+   * LXD 소켓에 활성화된 임시 데이터를 읽고 재부팅 시에 설정 변경 사항을 적용하는 LXD datasource가 Jammy에 추가됨 
+   * 네이티브 VMWare datasource를 추가함
    * 오픈스텍과 ConfigDrive는 현재 vendor_data2를 지원하며 설정을 덮어씀 
    * Azure의 부팅 속도 개선, 네트워크 구성 유효성 검사 및 SSH 키 처리
    * GCE는 부팅 초기에 감지됨
@@ -467,14 +467,13 @@ Jammy와 함께 Ubuntu-advantage-tools 버전 27.8 이 배포됨.
 
 이번에 주목된 개선사항 소개:
  * 서비스 제공:
-     * Ubuntu Pro와 Ubuntu Pro FIPS 이미지는 이미 Azure, GCP 그리고 AWS 있음
-     * GCP는 기존 VMs의 Ubuntu Advantage 라이센스를 추가하는 것을 지원함
+     * Ubuntu Pro와 Ubuntu Pro FIPS 이미지는 Azure, GCP 그리고 AWS에 있음
+     * GCP에서 기존 VM에 Ubuntu Advantage 라이센스를 추가하는 것을 지원
      * AWS는 IPv6 IMDS를 지원함
-     * CIS 벤치마크는 Ubuntu Security Guide (USG)의 부분으로 패키지됨
+     * CIS 벤치마크는 Ubuntu Security Guide (USG)의 일부로 패키지됨
  * 사용성
-     * 'ua security-status'는 Ubuntu proper와 Extended Security Maintenance 채널을 통해 사용 가능하고 적용 가능한 제공된 업데이트의 상세 보기를 제공함 
+     * 'ua security-status'는 Ubuntu proper와 Extended Security Maintenance 채널에서 제공하는 사용 가능하고 적용 가능한 패키지 업데이트의 상세 보기를 제공
      * Ubuntu Advantage 토큰을 확인하고 첨부하려면 데스크탑 설치 프로그램을 활성화하십시오.
-     * Support machine-readable output JSON/YAML format for most commands
      * 대부분의 명령에 대해 기계 판독 가능한 출력 JSON/YAML 형식 지원
      * `ua attach --attach-config`를 통해 구성 가능한 자동 연결 동작
 
