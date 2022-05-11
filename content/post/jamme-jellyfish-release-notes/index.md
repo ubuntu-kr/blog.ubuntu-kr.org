@@ -444,42 +444,44 @@ This is particular important for guest operating systems that consider TPM suppo
 See the [upstream wiki](https://github.com/stefanberger/swtpm/wiki) for more details.
 
 #### Squid
-
-* The `squid` package links against the GnuTLS library.  If you would like to use OpenSSL, you can install the new `squid-openssl` package.
+ 
+* `squid` 패키지는 GnuTLS 라이브러리에 연결됩니다. OpenSSL을 사용하길 원하신다면, 새로운 `squid-openssl` 패키지를 설치 할 수 있습니다.
 
 #### cloud-init
-                                                                                
-Version 22.1 of cloud-init has been released to 22.04, 21.10, 20.04 and 18.04.
-                                                                                
-Notable features introduced since the last LTS release:
-                                                                                
- * Clouds and datasources
-   * Add LXD datasource in Jammy which reads dynamic instance data from LXD socket and applies config changes across reboot
-   * Added a native VMWare datasource
-   * OpenStack and ConfigDrive now support vendor_data2 config overrides
-   * Azure boot speed improvements, network config validation and SSH key handling
-   * GCE detected earlier in boot
- * Config Modules
-   * Add [opt-in hotplug network support via user-data](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#install-hotplug) for OpenStack and ConfigDrive
-   * Add deferred write_files config to emit files later in boot
- * Usability
-   * Schema validation of `#cloud-config` userdata to annotate specific errors in user-provided configuration
+
+cloud-init의 22.1 버전은 22.04, 21.10, 22.04 및 18.04에 릴리즈 되었습니다.
+
+마지막 LTS 릴리즈 이후 도입된 주목할만한 기능:
+
+ * Clouds 와 datasources
+   * LXD 소켓에서 동적 인스턴스 데이터를 읽어 재부팅 시에 구성 변경 사항을 적용하는 LXD datasource가 Jammy에 추가됨 
+
+   * 네이티브 VMWare datasource를 추가함
+   * 이제 오픈스택과 ConfigDrive에서 vendor_data2 구성 재정의를 지원함 
+   * Azure의 부팅 속도 개선, 네트워크 구성 유효성 검사 및 SSH 키 처리
+   * GCE는 부팅 초기에 감지됨
+ * Config 모듈
+   * 오픈스택과 ConfigDrive용 [사용자 데이터에 의한 옵트인 핫플러그 네트워크 지원](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#install-hotplug)이 추가됨
+
+   * 나중에 부팅할 때 파일을 내보내기 위해 지연된 write_files 구성 추가
+ * 사용성
+   * 사용자 제공 구성의 특정 오류에 주석을 달기 위한 `#cloud-config` 사용자 데이터의 스키마 유효성 검사
 
 #### ubuntu-advantage-tools
 
-Ubuntu-advantage-tools version 27.8 is released with Jammy.
+Jammy와 함께 Ubuntu-advantage-tools 버전 27.8 이 릴리즈됨.
 
-Notable improvements introduced in this cycle:
- * Service offerings:
-     * Ubuntu Pro and Ubuntu Pro FIPS images on Azure, GCP and AWS
-     * GCP support to add Ubuntu Advantage licenses to existing VMs
-     * AWS support for IPv6 IMDS
-     * CIS benchmarks packaged as part of Ubuntu Security Guide (USG)
- * Usability
-     * `ua security-status` provides a detailed view of available and applicable package updates provided by Ubuntu proper and Extended Security Maintenance channels
-     * Enable Desktop installer to validate and attach Ubuntu Advantage tokens
-     * Support machine-readable output JSON/YAML format for most commands
-     * Configurable auto attach behavior via `ua attach --attach-config`
+이번 사이클에 도입된 주목할 개선사항:
+ * 서비스 제공:
+     * Ubuntu Pro와 Ubuntu Pro FIPS 이미지는 Azure, GCP 그리고 AWS에 있음
+     * GCP에서 기존 VM에 Ubuntu Advantage 라이센스를 추가하는 것을 지원
+     * AWS는 IPv6 IMDS를 지원함
+     * CIS 벤치마크는 Ubuntu Security Guide (USG)의 일부로 패키지됨
+ * 사용성
+     * 'ua security-status'는 Ubuntu proper와 Extended Security Maintenance 채널에서 제공하는 사용 가능하고 적용 가능한 패키지 업데이트의 상세 보기를 제공
+     * Ubuntu Advantage 토큰을 확인하고 첨부하려면 데스크탑 설치 프로그램을 활성화하십시오.
+     * 대부분의 명령에 대해 기계 판독 가능한 출력 JSON/YAML 형식 지원
+     * `ua attach --attach-config`를 통해 구성 가능한 자동 연결 동작
 
 ### 우분투 서버 메인 패키지 승격
 
