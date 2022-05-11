@@ -456,7 +456,8 @@ cloud-init의 22.1 버전은 22.04, 21.10, 22.04 및 18.04에 릴리즈 되었�
    * Azure의 부팅 속도 개선, 네트워크 구성 유효성 검사 및 SSH 키 처리
    * GCE는 부팅 초기에 감지됨
  * Config 모듈
-   * 오픈스택과 ConfigDrive용 [사용자 데이타에 의한 옵트인 핫플러그 네트워크 지원](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#install-hotplug) 추가됨
+   * 오픈스택과 ConfigDrive용 [사용자 데이터에 의한 옵트인 핫플러그 네트워크 지원](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#install-hotplug)이 추가됨
+
    * 나중에 부팅할 때 파일을 내보내기 위해 지연된 write_files 구성 추가
  * 사용성
    * 사용자 제공 구성의 특정 오류에 주석을 달기 위한 `#cloud-config` 사용자 데이터의 스키마 유효성 검사
