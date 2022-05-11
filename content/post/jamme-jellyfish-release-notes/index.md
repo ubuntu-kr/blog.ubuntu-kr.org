@@ -450,7 +450,8 @@ cloud-init의 22.1 버전은 22.04, 21.10, 22.04 및 18.04에 릴리즈 되었�
 마지막 LTS 릴리즈 이후 도입된 주목할만한 기능:
 
  * Clouds 와 datasources
-   * LXD 소켓에서 동작 인스턴스 데이터를 읽어 재부팅 시에 구성 변경 사항을 적용하는 LXD datasource가 Jammy에 추가됨 
+   * LXD 소켓에서 동적 인스턴스 데이터를 읽어 재부팅 시에 구성 변경 사항을 적용하는 LXD datasource가 Jammy에 추가됨 
+
    * 네이티브 VMWare datasource를 추가함
    * 이제 오픈스택과 ConfigDrive에서 vendor_data2 구성 재정의를 지원함 
    * Azure의 부팅 속도 개선, 네트워크 구성 유효성 검사 및 SSH 키 처리
