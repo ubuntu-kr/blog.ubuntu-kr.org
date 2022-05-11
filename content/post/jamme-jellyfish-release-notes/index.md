@@ -441,29 +441,29 @@ See the [upstream wiki](https://github.com/stefanberger/swtpm/wiki) for more det
 
 #### Squid
  
-* `squid` 패키지는 GnuTLS 라이브러리에 연결됩니다. OpenSSL을 사용하길 원하신다면, 새로운 `quid-openssl` 패키지를 설치 할 수 있습니다.
+* `squid` 패키지는 GnuTLS 라이브러리에 연결됩니다. OpenSSL을 사용하길 원하신다면, 새로운 `squid-openssl` 패키지를 설치 할 수 있습니다.
 
 #### cloud-init
 
 cloud-init의 22.1 버전은 22.04, 21.10, 22.04 및 18.04에 릴리즈 되었습니다.
-                                                                                
-마지막 LTS 이후 도입된 주목할만한 기능 소개:  
-                                                                                
+
+마지막 LTS 릴리즈 이후 도입된 주목할만한 기능:
+
  * Clouds 와 datasources
-   * LXD 소켓에 활성화된 임시 데이터를 읽고 재부팅 시에 설정 변경 사항을 적용하는 LXD datasource가 Jammy에 추가됨 
+   * LXD 소켓에서 동작 인스턴스 데이터를 읽어 재부팅 시에 구성 변경 사항을 적용하는 LXD datasource가 Jammy에 추가됨 
    * 네이티브 VMWare datasource를 추가함
    * 이제 오픈스택과 ConfigDrive에서 vendor_data2 구성 재정의를 지원함 
    * Azure의 부팅 속도 개선, 네트워크 구성 유효성 검사 및 SSH 키 처리
    * GCE는 부팅 초기에 감지됨
  * Config 모듈
-   * 오픈스택과 ConfigDrive 에는 [사용자 데이타에 의한 옵트인 핫플러그 네트워크 지원](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#install-hotplug) 추가됨
+   * 오픈스택과 ConfigDrive용 [사용자 데이타에 의한 옵트인 핫플러그 네트워크 지원](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#install-hotplug) 추가됨
    * 나중에 부팅할 때 파일을 내보내기 위해 지연된 write_files 구성 추가
  * 사용성
    * 사용자 제공 구성의 특정 오류에 주석을 달기 위한 `#cloud-config` 사용자 데이터의 스키마 유효성 검사
 
 #### ubuntu-advantage-tools
 
-Jammy와 함께 Ubuntu-advantage-tools 버전 27.8 이 배포됨.
+Jammy와 함께 Ubuntu-advantage-tools 버전 27.8 이 릴리즈됨.
 
 이번 사이클에 도입된 주목할 개선사항:
  * 서비스 제공:
