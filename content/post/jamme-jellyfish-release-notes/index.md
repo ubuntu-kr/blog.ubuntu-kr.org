@@ -325,7 +325,7 @@ For additional information, especially since an upgrade would be from the former
 
 #### MySQL 8.0
 
-MyMySQL은 Forcal Fossa와 Impish Indri와 같이 Jammy Jellyfish에서 8.0.28 버전으로 업데이트 되었습니다. 
+MySQL은 Forcal Fossa와 Impish Indri와 같이 Jammy Jellyfish에서 8.0.28 버전으로 업데이트 되었습니다. 
 다음과 같은 새로운 기능이 포함되어 있습니다 :
 
 - audit_log_disable 시스템
@@ -342,7 +342,7 @@ NFS 서버 및 클라이언트 패키지가 마침내 최신 업스트림 버전
 
 업그레이드 중에 /etc/default/nfs-* 파일이 변경되었음을 패키지가 감지하면 변환 스크립트가 실행됩니다.  이 스크립트는 /usr/share/sshare-common/nfsconvert.py이며 /etc/sshare-*에서 옵션을 읽고 /etc/sshare.conf.d/local.conf를 생성합니다. 여기서 /etc/sshare.conf의 기본값은 무시됩니다.
 
-어떤 이유로든 변환 스크립트가 실패하면 패키지 설치 또는 업그레이드가 실패하고 이 문제를 해결해야 합니다. 이러한 상황이 발생하면 Launchpad에서 nfs-utils에 대한 버그를 제출하십시오.
+어떤 이유로든 변환 스크립트가 실패하면 패키지 설치 또는 업그레이드가 실패하고 이 문제를 해결해야 합니다. 이러한 상황이 발생하면, 부탁입니다.[Launchpad의 `nfs-utils`에 버그를 제출하십시오.]
 
 `nfsconf(8)`라는 새 도구를 사용하여 /etc/nfs.conf 및 /etc/nfs.conf.d/*conf의 구성 설정을 쿼리할 수 있습니다.
 
