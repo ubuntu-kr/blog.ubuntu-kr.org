@@ -687,34 +687,34 @@ Carried over from interim releases (these are changes are applicable from LTS->L
 
 No known issues yet.
 
-# Official flavours
+# 공식 flavour
 
-The release notes for the official flavours can be found at the following links:
+공식 flavour를 위한 릴리즈 노트는 아래 링크를 통해 찾아볼 수 있습니다:
 
-* [Kubuntu Release Notes](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/Kubuntu)
-* [Lubuntu Release Notes](https://discourse.lubuntu.me/t/lubuntu-22-04-lts-jammy-jellyfish-release-notes/3179)
-* [Ubuntu Budgie Release Notes for 21.10 upgraders](https://ubuntubudgie.org/2022/03/ubuntu-budgie-22-04-lts-release-notes/) & [Ubuntu Budgie Release Notes for 20.04 upgraders](https://ubuntubudgie.org/2022/04/ubuntu-22-04-release-notes-for-20-04-upgraders/)
-* [Ubuntu Kylin Release Notes](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/UbuntuKylin)
-* [Ubuntu MATE Release Notes](https://ubuntu-mate.org/blog/ubuntu-mate-jammy-jellyfish-release-notes/)
-* [Ubuntu Studio Release Notes](https://ubuntustudio.org/ubuntu-studio-22-04-lts-release-notes/)
-* [Xubuntu Release Notes](https://wiki.xubuntu.org/releases/22.04/release-notes)
+* [Kubuntu 릴리즈 노트](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/Kubuntu)
+* [Lubuntu 릴리즈 노트](https://discourse.lubuntu.me/t/lubuntu-22-04-lts-jammy-jellyfish-release-notes/3179)
+* [21.10에서 업그레이드하는 사용자를 위한 우분투 Budgie 릴리즈 노트](https://ubuntubudgie.org/2022/03/ubuntu-budgie-22-04-lts-release-notes/) & [20.04에서 업그레이드하는 사용자를 위한 우분투 Budgie 릴리즈 노트](https://ubuntubudgie.org/2022/04/ubuntu-22-04-release-notes-for-20-04-upgraders/)
+* [우분투 Kylin 릴리즈 노트](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/UbuntuKylin)
+* [우분투 MATE 릴리즈 노트](https://ubuntu-mate.org/blog/ubuntu-mate-jammy-jellyfish-release-notes/)
+* [우분투 Studio 릴리즈 노트](https://ubuntustudio.org/ubuntu-studio-22-04-lts-release-notes/)
+* [Xubuntu 릴리즈 노트](https://wiki.xubuntu.org/releases/22.04/release-notes)
 
-# More information
+# 더 알아보기
 
-## Reporting bugs
+## 버그 리포트
 
-Your comments, bug reports, patches and suggestions will help fix bugs and improve the quality of future releases. Please [report bugs using the tools provided](http://help.ubuntu.com/community/ReportingBugs). If you want to help out with bugs, the [Bug Squad](http://wiki.ubuntu.com/BugSquad) is always looking for help.
+여러분의 댓글, 버그 리포트, 패치 그리고 제안은 버그를 수정하고 추후 릴리즈의 질을 향상하는 것에 도움이 됩니다. [제공된 도구를 이용해서 버그 리포트](http://help.ubuntu.com/community/ReportingBugs)하는 것을 부탁드립니다. 만약 버그 수정에 참여하고 싶다면, [Bug Squad](http://wiki.ubuntu.com/BugSquad)은 항상 도움을 기다리고 있습니다.
 
-## Participate in Ubuntu
+## 우분투에 참여하기
 
-If you would like to help shape Ubuntu, take a look at the list of ways you can participate at:
+만약 우분투를 만드는 데 도움을 주고 싶다면, 참여하는 방법 목록을 다음에서 확인하십시오:
 
 * https://community.ubuntu.com/contribute
 
-## More about Ubuntu
+## 우분투 더 알아보기
 
-You can find out more about Ubuntu on the [Ubuntu website](https://www.ubuntu.com).
+[우분투 웹사이트](https://www.ubuntu.com)에서 우분투에 관한 더 많은 정보를 찾을 수 있습니다.
 
-To sign up for future Ubuntu development announcements, please subscribe to Ubuntu’s development announcement list at:
+향후 우분투 개발 소식을 보고 싶다면, 우분투의 개발 소식 목록을 다음에서 구독하십시오:
 
 * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce
