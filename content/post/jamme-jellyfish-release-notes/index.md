@@ -511,39 +511,39 @@ Jammy와 함께 Ubuntu-advantage-tools 버전 27.8 이 릴리즈됨.
 
 Ceph 커뮤니티에서 Quincy를 출시하면 Ceph 패키지가 [안정 릴리즈 업데이트](https://bugs.launchpad.net/ubuntu/+source/ceph/+bug/1968318)로 업데이트됩니다.
 
-### OpenStack
+### 오픈스택
 
-Ubuntu 22.04 includes the latest OpenStack release, Yoga, including the following components:
+우분투 22.04에는 오픈스택 최신 릴리즈인 Yoga가 추가되어있으며, 다음 컴포넌트가 추가되어있습니다:
 
-* OpenStack Identity - Keystone
-* OpenStack Imaging - Glance
-* OpenStack Block Storage - Cinder
-* OpenStack Compute - Nova
-* OpenStack Networking - Neutron
-* OpenStack Telemetry - Ceilometer, Aodh, Gnocchi
-* OpenStack Orchestration - Heat
-* OpenStack Dashboard - Horizon
-* OpenStack Object Storage - Swift
-* OpenStack DNS - Designate
-* OpenStack Bare-metal - Ironic
-* OpenStack Filesystem - Manila
-* OpenStack Key Manager - Barbican
-* OpenStack Load Balancer - Octavia
-* OpenStack Instance HA - Masakari
+* 오픈스택 Identity - Keystone
+* 오픈스택 Imaging - Glance
+* 오픈스택 Block Storage - Cinder
+* 오픈스택 Compute - Nova
+* 오픈스택 Networking - Neutron
+* 오픈스택 Telemetry - Ceilometer, Aodh, Gnocchi
+* 오픈스택 Orchestration - Heat
+* 오픈스택 Dashboard - Horizon
+* 오픈스택 Object Storage - Swift
+* 오픈스택 DNS - Designate
+* 오픈스택 Bare-metal - Ironic
+* 오픈스택 Filesystem - Manila
+* 오픈스택 Key Manager - Barbican
+* 오픈스택 Load Balancer - Octavia
+* 오픈스택 Instance HA - Masakari
 
-Please refer to the [OpenStack Yoga release notes](https://releases.openstack.org/yoga/) for full details of this release of OpenStack.
+오픈스택 릴리즈에 대한 자세한 내용은 [오픈스택 Yoga 릴리즈 노트](https://releases.openstack.org/yoga/)를 참고하십시오.
 
-OpenStack Yoga is also provided via the [Ubuntu Cloud Archive](https://wiki.ubuntu.com/OpenStack/CloudArchive) for OpenStack Yoga for Ubuntu 20.04 LTS users.
+오픈스택 Yoga는 우분투 20.04 LTS 버전 사용자를 위해 [우분투 클라우드 아카이브](https://wiki.ubuntu.com/OpenStack/CloudArchive)를 통해서도 제공됩니다.
 
-WARNING: Upgrading an OpenStack deployment is a non-trivial process and care should be taken to plan and test upgrade procedures which will be specific to each OpenStack deployment.
+주의: 오픈스택 배포 업그레이드는 간단한 프로세스이나, 각 오픈소스 컨포넌트에 대한 업그레이드 절차를 계획하고 테스트를 하여 업그레이드시 문제점을 대비해야합니다.
 
-Make sure you read the [OpenStack Charm Release Notes](https://docs.openstack.org/charm-guide/latest) for more information about how to deploy and operate Ubuntu OpenStack using Juju.
+Juju를 사용하여 우분투 오픈스택을 배포하고 운영하는 방법에 대한 자세한 내용은 [오픈스택 Charm 릴리즈 노트](https://docs.openstack.org/charm-guide/latest)를 참고하십시오.
 
-### needrestart and unattended operations
+### needrestart와 사용자 간섭없이 작업
 
-[needrestart](https://discourse.ubuntu.com/t/needrestart-for-servers/21552) was first installed by default in Ubuntu 21.04 and continues to feature in Ubuntu 22.04. It helps ensure that services are correctly restarted when their dependencies receive security updates.
+[needrestart](https://discourse.ubuntu.com/t/needrestart-for-servers/21552)는 우분투 21.04에서 기본으로 처음 설치되었으며, 우분투 22.04에서 계속 사용이 가능합니다. 관련된 항목이 보안 업데이트가 필요할 때 서비스가 정상적으로 재시작하도록 도와줍니다.
 
-By default, needrestart will prompt after upgrading packages if restarts are determined to be required. To suppress this behaviour, you can set `DEBIAN_FRONTEND=noninteractive` as usual. needrestart will then fall back to "list only mode". It will be necessary to restart services afterwards, for example by rebooting or invoking `needrestart -ra`.
+기본 값은 다시 시작이 필요하다고 판단되면 패키지 업그레이드한 이후 필요에 따라 needrestart 화면이 표시됩니다. 이 동작을 피하려면 `DEBIAN_FRONTEND=nointeractive`로 설정할 수 있습니다. 설정 이후에는 needrestart "목록 전용 모드"로 대체됩니다. 재부팅 하거나 `needrestart -ra`를 호출하여 나중에 서비스를 다시 시작해야 합니다.
 
 ## 플랫폼
 
