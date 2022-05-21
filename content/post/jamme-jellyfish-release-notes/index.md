@@ -625,41 +625,39 @@ Starting with 22.04 LTS, besides the standard device-specific preinstalled image
 
 Other operating systems are not displayed in the boot menu anymore, unless Ubuntu has been installed alongside another operating system. Once all other operating systems are removed from the machine, detection of other operating systems is disabled, and to re-enable if after installing another OS, you will have to delete `/boot/grub/grub.cfg` and immediately run `update-grub` again.
 
-# Known Issues
+# 알려진 이슈
 
-As is to be expected, with any release, there are some significant known bugs that users may run into with this release of Ubuntu. The ones we know about at this point (and some of the workarounds), are documented here so you don’t need to spend time reporting these bugs again:
+예상대로 모든 릴리즈에서도 발생하듯, 우분투 릴리즈에서 발생할 수 있는 몇가지 알려진 버그가 존재합니다. 이 시점에서 우리가 알고 있는 것(과 일부 해결 방법)이 문서화하였으며 여기에 적혀있는 버그에 많은 시간을 할애하지 않길 바랍니다.
+## 리눅스 커널
 
-## Linux kernel
+아직 없음.
 
-Nothing yet.
-
-## Security
-* OpenSSL 3.0.2 doesn't work with the [Turkish locale](https://launchpad.net/bugs/1968997).  To work around this issue until a fix is available, affected users are advised to set LC_CTYPE=C.UTF-8 in their environment for processes that use openssl (at a shell: `export LC_CTYPE=C.UTF-8`).  This will break capitalization of strings according to rules for the Turkish language, so is not recommended to be overridden at the system level.
-
-## System
-* systemd / journald now defaults to `zstd` compression and uses the “keyed hash” feature (upstream default as of v246). Therefore, journal files written on Ubuntu 22.04 (using systemd v249) cannot be opened using an older version of journal (i.e. from a 18.04/20.04/Core20 installation). This will fail with an error ([LP: #1953744](https://bugs.launchpad.net/subiquity/+bug/1953744), [forum.snapcraft.io](https://forum.snapcraft.io/t/accessing-journal-logs-from-22-04-hosts-when-using-older-base-snap/29627)):
+## 보안
+* OpenSSL 3.0.2 버전은 [터키 로케일](https://launchpad.net/bugs/1968997)에서 동작하지 않습니다. 수정 사항이 제공될 때까지 이 문제를 해결하려면 `LC_CTYPE=C.UTF-8`을 설정하여 openssl을 사용하는 것을 권해드립니다(셸: `export LC_CTYPE=C.UTF-8`). 하지만, 이렇게 설정하면 터키어 규칙에 따라 문자열의 대문자 사용이 중단되므로 시스템 수준에서 재정의하지 않는 것이 좋습니다.
+## 시스템
+* systemd / journald 에서는 이제 `zstd` 를 이용하여 압축하고, "keyed hash" 기능(v246 업스트림 기본값)을 사용합니다. 우분투 22.04 (systemd v249 사용)에서 작성된 저널 파일을 (18.04/20.04/Core20에 설치된) 오래된 버전에서는 열어 확인할 수 없습니다. 이 오류는 다음 메시지를 보여주고 실패합니다. ([LP: #1953744](https://bugs.launchpad.net/subiquity/+bug/1953744), [forum.snapcraft.io](https://forum.snapcraft.io/t/accessing-journal-logs-from-22-04-hosts-when-using-older-base-snap/29627)):
     ```
     Journal file xxx.journal has unknown incompatible flags 0xc
     Failed to open journal file xxx.journal: Protocol not supported
     ```
-* Users of grub-customizer could hit [a bug](https://pad.lv/1969353) in the late stage of the upgrade process leading to the final stage of the upgrade to fail (autoremoval of packages). A workaround is available [in the bug's comments](https://bugs.launchpad.net/ubuntu/+source/ubuntu-release-upgrader/+bug/1969353/comments/6).
+* grub-customizer 사용자는 업그레이드 프로세스의 마지막 단계에서 [해당 버그](https://pad.lv/1969353)에 도달하여 업그레이드 마지막 단계가 실패할 수 있습니다. (패키지 자동 제거됨) [버그 댓글](https://bugs.launchpad.net/ubuntu/+source/ubuntu-release-upgrader/+bug/1969353/comments/6)에 해결 방법이 있습니다.
 
-## Ubuntu Desktop
+## 우분투 데스크탑
 
-* The Ubuntu Desktop images can be slow to boot (taking up to 10 minutes) when booted from a USB drive on a BIOS system. The issue is being [investigated](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1922342), however once the system is installed this is not an issue.
-* The Ubuntu Desktop images can be very slow to boot (taking up to 30 minutes) when booted from optical media (DVD) on a a BIOS or UEFI system. This is due to an integrity checker being run against the installation media. A workaround (setting "fsck.mode=skip") is documented in [the relevant bug](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1930880).
-* A hang of the Ubuntu Desktop installer, Ubiquity, [has been observed](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1946828),  where it is scanning NTFS partitions to determine if they can be resized.  The symptom of this is a spinning ball cursor when attempting to continue past the installer 'Updates and other software' screen.  If this occurs, please reboot and try again.
-* The Firefox snap does not support the [NativeMessaging protocol](https://launchpad.net/bugs/1741074) yet but this feature is planned to be added soon. This means for instance that installing GNOME Shell extensions from Firefox won't work. As a workaround, you can try the `gnome-shell-extension-manager` app.
- * Brazilians (and others that need PKCS#11 smartcard support in Firefox) **should not upgrade to Jammy** until [pkcs#11 support is added to the firefox snap](https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1967632)
-* The GNOME Tweaks app no longer manages GNOME Shell extensions. You can install `gnome-shell-extension-manager` instead.
-* There isn't an option to use Wayland for systems with [Nvidia graphics drivers](https://launchpad.net/bugs/1968929).
-* To use AppImages, you'll first [need to run](https://launchpad.net/bugs/1965636) `sudo apt install libfuse2`
-* RDP (Remote Desktop) Sharing [appears on](https://launchpad.net/bugs/1969619) by default but it is not on and needs to be turned off and then turned on to enable.
-* An upgrade to Ubuntu 22.04 LTS can cause [a bad interaction between snapd and update-notifier](https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1969162) which can cause the upgrade to hang. The fix is currently in flight and upgrades will be enabled shortly.
+* 우분투 데스크탑 이미지에서 BIOS 시스템에서 USB 드라이브로 부팅할때 부팅 속도가 느려질 수 있습니다 (최대 10분 소요). 문제는 [조사중](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1922342)이지만 시스템이 설치되면 문제가 되지 않습니다.
+* 우분투 데스크탑 이미지에서 BIOS 또는 UEFI 시스템에서 DVD를 이용하여 부팅할때 부팅 속도가 느릴 수 있습니다 (최대 30분 소요). 이는 설치 미디어에 대한 무결성 검사를 하고 있기 때문입니다. 해결 방법("fsck.mode=skip" 설정)은 [관련 버그](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1930880)에 설명되어 있습니다.
+* 우분투 데스크탑 설치 프로그램인 Ubiquity가 멈추는 현상이 [확인되었습니다](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1946828). 이때는 NTFS 파티션의 크기가 재조정할 수 있는지 확인하기위해 스캔 중으로 보여집니다. 이 증상은 설치 프로그램 '업데이트 및 기타 소프트웨어' 화면을 지나 계속하려고 할때 회전하는 모양의 커서가 움직이는 것으로 확인할 수 있습니다. 해당 문제가 발생하면 재부팅하고 다시 시도하면 됩니다.
+* Firefox snap 에서는 아직 [NativeMessaging protocol](https://launchpad.net/bugs/1741074)을 지원하지 않지만 이 기능은 곧 추가될 예정입니다. Firefox를 통해 GNOME Shell 확장을 설치가 안된다는 것을 의미합니다. 해결 방법으로 `gnome-shell-extension-manager` 앱을 이용하면 됩니다.
+  * 브라질어 사용자(와 Firefox에서 PKCS#11 스마트 카드 지원이 필요한) 사용자는 **Jammy로 업그레이드하면 안됩니다**. [pkcs#11 support is added to the firefox snap](https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1967632)
+* GNOME Tweaks 앱에서 더이상 GNOME Shell 확장을 관리하지 않습니다. 대신 `gnome-shell-extension-manager` 를 통해서 설치할 수 있습니다.
+* [Nvidia graphics drivers](https://launchpad.net/bugs/1968929) 를 사용하는 시스템에는 Wayland를 사용하는 옵션이 없습니다.
+* AppImages를 사용하려면 먼저 `sudo apt install libfuse2` 를 [실행해야 합니다](https://launchpad.net/bugs/1965636).
+* RDP (Remote Desktop) 공유는 기본으로 [활성화되어 있는 것으로 표시](https://launchpad.net/bugs/1969619) 되지만 활성화 되어있지 않으니 비활성화한 다음 다시 활성화 해야합니다.
+* 우분투 22.04 LTS로 업그레이드 하면 [snapd와 update notifier 간 잘못된 상호 작용](https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1969162)이 발생하여 업그레이드가 무기한 대기할 수 있습니다. 수정 사항은 현재 진행중이며 곧 업그레이드를 진행할 예정입니다.
 
-## Ubuntu Server
+## 우분투 서버
 
-* Due to a [current issue with fallocate on zfs](https://bugs.launchpad.net/ubuntu/+source/zfs-linux/+bug/1969247), mysql fails to install on Jammy zfs systems 
+* [zfs의 fallocated 관련 문제](https://bugs.launchpad.net/ubuntu/+source/zfs-linux/+bug/1969247)로 인해 mysql이 Jammy zfs 시스템에서 설치되지 않습니다.
 
 ## Platforms
 
