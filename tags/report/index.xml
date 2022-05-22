@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>report on 우분투 한국 커뮤니티 블로그</title>
+    <title>report on 우분투한국커뮤니티 블로그</title>
     <link>https://blog.ubuntu-kr.org/tags/report/</link>
-    <description>Recent content in report on 우분투 한국 커뮤니티 블로그</description>
+    <description>Recent content in report on 우분투한국커뮤니티 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Mon, 25 Jun 2018 21:49:00 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/tags/report/index.xml" rel="self" type="application/rss+xml" />
@@ -55,7 +55,7 @@ Ubuntu Fest는 다음과 같은 순서로 진행이 되었습니다.
       
       <guid>https://blog.ubuntu-kr.org/2018/05/11/ubuntu-bionic-beaver-party-korea-ko-kr/</guid>
       <description>4.28 토요일 부터, 4.29 일요일 까지. 우분투 18.04 릴리즈 파티를 준비하여 진행 하였습니다. 이번 LTS 버전 출시기념 릴리즈 파티 행사는, 서울 뿐만이 아닌 다른 지역에서도 공식적으로 진행되어 이전에 진행되었던 릴리즈 파티 행사와는 또 다른 의미를 가지게 되었습니다. 서울 외에, 대전과 부산에서 진행 되었으며. 세 행사 모두 성공적으로 마무리 되었습니다.
-서울 선릉역 근처에 위치한 D.CAMP에서 행사가 진행되었습니다. &amp;ldquo;코딩이랑 무관합니다만,&amp;quot;이라는 페이스북 기반의 커뮤니티화 함께 행사를 준비하였습니다. 다른 세미나 행사와는 또 달리, LTS 출시 기념을 위한 행사이다 보니 60~70명 정도의 평소와 비교하면 정말 많은분들께서 참석해 주셨습니다.</description>
+서울 선릉역 근처에 위치한 D.CAMP에서 행사가 진행되었습니다. &amp;ldquo;코딩이랑 무관합니다만,&amp;rdquo;이라는 페이스북 기반의 커뮤니티화 함께 행사를 준비하였습니다. 다른 세미나 행사와는 또 달리, LTS 출시 기념을 위한 행사이다 보니 60~70명 정도의 평소와 비교하면 정말 많은분들께서 참석해 주셨습니다.</description>
     </item>
     
     <item>
