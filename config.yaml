@@ -1,6 +1,6 @@
 baseURL: 'https://blog.ubuntu-kr.org'
 languageCode: ko-kr
-title: 'Ubuntu Korea Community'
+title: 'Ubuntu Korea Community Blog'
 theme: "ubuntukr"
 buildFuture: true
 googleAnalytics: "UA-65961752-8"
@@ -9,6 +9,7 @@ paginate: 5
 permalinks: 
   post: /:2006/:01/:02/:filename
 params:
+  shortTitle: Blog
   contact: contact@ubuntu-kr.org
   facebook: ubuntukorea
   twitter: UbuntuKrOrg
@@ -20,9 +21,10 @@ defaultContentLanguage: ko
 languages:
   ko:
     languageName: 한국어
-    title: 우분투 한국 커뮤니티 블로그
+    title: 우분투한국커뮤니티 블로그
     weight: 1
     params:
+      shortTitle: 블로그
       description: >-
         우분투 한국 커뮤니티 공식 블로그 입니다. 커뮤니티 활동, 국내/해외 커뮤니티와의 교류, 내부적으로 진행하는 프로젝트 상황, 운영 현황 등을 공유합니다.
       copyright: >-
@@ -80,6 +82,7 @@ languages:
     title: Ubuntu Korea Community Blog
     weight: 2
     params:
+      shortTitle: Blog
       description: >-
         The official blog of Ubuntu Korea Community (Ubuntu Korean LoCo Team). Check our latest activities, local/global exchange with others, status of projects, and how we organize our community.
       copyright: >-

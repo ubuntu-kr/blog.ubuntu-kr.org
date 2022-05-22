@@ -4,7 +4,7 @@
     "devDependencies": {}
   },
   "dependencies": {
-    "vanilla-framework": "^2.37.0"
+    "vanilla-framework": "^3.4.0"
   },
   "name": "ubuntukr",
   "version": "0.1.0"

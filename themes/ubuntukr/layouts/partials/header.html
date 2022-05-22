@@ -1,9 +1,12 @@
 <header id="navigation" class="p-navigation is-dark">
   <div class="p-navigation__row">
     <div class="p-navigation__banner">
-      <div class="p-navigation__logo">
-        <a class="p-navigation__item" href="{{ .Site.LanguagePrefix | relURL }}">
-          <img class="p-navigation__image" src="{{ "/img/logo.svg" | relURL }}" alt="{{.Site.Title}}">
+      <div class="p-navigation__tagged-logo" style="min-width: 6rem;">
+        <a class="p-navigation__link" href="{{ .Site.LanguagePrefix | relURL }}">
+          <div class="p-navigation__logo-tag">
+            <img class="p-navigation__logo-icon" src="{{ "/img/UbuntuKrCircleWhite.svg" | relURL }}" alt="">
+          </div>
+          <span class="p-navigation__logo-title">{{.Site.Params.shortTitle}}</span>
         </a>
       </div>
       <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
