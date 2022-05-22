@@ -36,10 +36,6 @@ languages:
         link: about
     menu:
       main:
-      - identifier: blog
-        name: 블로그
-        weight: 1
-        url: /
       - identifier: tags
         name: 태그
         weight: 2
@@ -94,10 +90,6 @@ languages:
         link: about
     menu:
       main:
-      - identifier: blog
-        name: Blog
-        weight: 1
-        url: /
       - identifier: tags
         name: Tags
         weight: 2
