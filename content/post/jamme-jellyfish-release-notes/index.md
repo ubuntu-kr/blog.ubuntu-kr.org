@@ -301,27 +301,29 @@ PostgreSQL이 버전 14.2로 업데이트되었습니다.
 
 #### Django 3.2.12
 
-Django was updated from the previous LTS version 2.2 to the new LTS version 3.2.
+Django는 이전 LTS 2.2 버전에서 새로운 LTS 3.2 버전으로 업데이트되었습니다.
 
-The update contains many new features and bug fixes such as:
+해당 업데이트는 다음과 같이 새로운 기능들과 버그 수정이 포함되어 있습니다.
 
-- Automatic AppConfig discovery
-- Type customization of auto-created primary keys
-- Functional indexes
-- Asynchronous views and middleware support
-- JSONField for all supported database backends
-- And various further major and minor features, see the see the [release notes](https://docs.djangoproject.com/en/4.0/releases/3.2/) for more
+- 자동 AppConfig 검색
+- 자동 생성된 기본 키의 맞춤형 타입
+- 기능 인덱스
+- 비동기식 뷰 및 미들웨어 지원
+- 지원되는 모든 데이터베이스 백엔드에 대한 JSON 필드
+- 그 외 다양한 주요 기능과 부가 기능에 대한 자세한 내용은 [릴리즈 노트](https://docs.djangoproject.com/en/4.0/releases/3.2/)를 참조하세요
 
-Users upgrading from previous versions should be aware of the following backwards incompatibilities:
+이전 버전에서 업그레이드하는 사용자는 다음과 같이 이전 버전과의 비호환성을 인지하고 있어야합니다.
 
-Changes have been made to:
-- The Database backend API
+변경 사항:
+- 데이터베이스 백엔드 API
 - django.contrib.admin
-- AbstractUser.first_name max_length - changed to 150
-- Model.save() when providing a default for the primary key
-- Along with various minor module changes 
+- AbstractUser.first_name max_length - 150으로 변경
+- 기본 키에 대한 기본값을 제공할 때 Model.save()
+- 다양한 부가 모듈 변경을 포함
 
-For additional information, especially since an upgrade would be from the former v2.2 LTS to v3.2 LTS do not only check the Django project release notes of [3.2](https://docs.djangoproject.com/en/4.0/releases/3.2/) but also [3.1](https://docs.djangoproject.com/en/4.0/releases/3.1) and [3.0](https://docs.djangoproject.com/en/4.0/releases/3.0) as well as the various minor releases included up to 3.2.12 that is in Ubuntu 22.04.
+
+추가적인 정보로, 이전 v2.2 LTS에서 Ubuntu 22.04의 v3.2 LTS로 업데이트 된 시점부터는 [3.2](https://docs.djangoproject.com/en/4.0/)의 Django 프로젝트 릴리즈 노트뿐 아니라, [3.1](https://docs.djangoproject.com/en/4.0/releases/3.1) 및 [3.0](https://docs.djangoproject.com/en/4.0/releases/3.0)과 3.2.12까지 포함된 다양한 부가 릴리즈까지 포함된 내용을 확인하세요.
+
 
 #### MySQL 8.0
 
