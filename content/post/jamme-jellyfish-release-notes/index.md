@@ -664,26 +664,27 @@ Other operating systems are not displayed in the boot menu anymore, unless Ubunt
 ### Cloud Images
 
 #### Vagrant
-* Jammy `vagrant` from `universe` does not support openssl3 upstream. This will cause users of vagrant on a Jammy host to receive OpenSSL errors on start. The box will still be booted, and `vagrant ssh` will operate, however `vagrant` functionality will be severely impacted. Connections between boxes will not operate normally. [bug report.](https://bugs.launchpad.net/ubuntu/+source/vagrant/+bug/1964025)
-* Vagrant < 2.216 will fail to launch due to SSH connection issues. `vagrant`, as provided in the Ubuntu archives, does not reach >= 2.2.16 until Jammy .  One workaround is to use an upstream version of `vagrant` on your system. [Upstream bug, already fixed.](https://github.com/hashicorp/vagrant/issues/11783).  The Cloud Team is also working on a more permanent solution: [Public cloud-images bug](https://bugs.launchpad.net/cloud-images/+bug/1969664)
+
+* `universse`에서 Jammy `vagrant`에서는 openssl3 업스트림을 지원하지 않습니다. 이로 인해서 Jammy 호스트의 vagrant 사용자는 시작시 OpenSSL 오류를 확인하게 됩니다. Box는 부팅이되고, `vagrant ssh`가 작동하지만, `vagrant` 기능은 심각한 영향을 받습니다. 그리하여 Box간 연결이 정상적으로 동작하지 않습니다. [버그 리포트](https://bugs.launchpad.net/ubuntu/+source/vagrant/+bug/1964025)
+* Vagrant 2.2.16 버전 이하에서는 SSH 연결 문제로 인해 실행되지 않습니다. 우분투 패키지 아카이브에 제공된 `vagrant`는 Jammy 때까지 2.2.16 이상 버전으로 반영되지 않았습니다. (역주: 220521일자 기준으로 [2.2.19 버전](https://packages.ubuntu.com/jammy/vagrant)으로 확인된다.) 한 가지 해결 방법은 시스템에서 `vagrant`를 업스트림 버전으로 사용하는 것이다. [업스트림에서는 버그가 수정되었습니다](https://github.com/hashicorp/vagrant/issues/11783). 클라우드 팀에서는 해당 문제를 수정하기위해서 노력하고 있습니다. [공개 클라우드 이미지 버그](https://bugs.launchpad.net/cloud-images/+bug/1969664)
 
 ### Raspberry Pi
 
-* The Raspberry Pi desktop images have switched to using the Full KMS graphics drivers. The official Raspberry Pi DSI display does not work with full KMS enabled. To enable the use of the Raspberry Pi DSI display, edit the `config.txt` file on your Raspberry Pi's hard drive and change the line `dtoverlay=vc4-fkms-v3d` to `dtoverlay=vc4-kms-v3d`
-* Currently, the USB ports on the official IO board for the Compute Module 4 are inoperative ([bug 1969689](https://launchpad.net/bugs/1969689))
-* On the desktop image, the Firefox snap can take some time (several minutes has been noted) to complete initialization after first login ([bug 1969529](https://launchpad.net/bugs/1969529))
-* The legacy camera stack (MMAL based) is no longer supported on `arm64`; [libcamera] is the supported method of using the Pi Camera Module on the `arm64` architecture (the boot-time configuration will automatically load overlays for detected modules)
+* 라즈베리 파이 데스크탑 이미지는 Full KMS 그래픽 드라이버를 사용하도록 변경되었습니다. 그러나 공식 라즈베리 파이 DSI 디스플레이는 Full KMS가 활성화된 상태에서는 동작하지 않습니다. 라즈베리 파이 DSI 디스플레이를 사용하도록 활성화시키려면, 라즈베리 파이의 하드 드라이브에서 `config.txt` 파일에서 `dtoverlay=vc4-fkms-v3d` 항목을 `dtoverlay=vc4-kms-v3d`으로 수정해야 합니다.
+* 현재 Compute Module 4용 공식 IO 보드의 USB 포트가 작동하지 않습니다.([버그](https://launchpad.net/bugs/1969689))
+* 데스크탑 이미지에서 Firefox snap은 최초 로그인후 초기화를 완료하는데 시간이 걸릴 수 있습니다. (해당 시간이 표시됨) ([버그](https://launchpad.net/bugs/1969529))
+* (MMAL 기반인) 레거시 카메라 스택은 `arm64`에서는 더이상 지원하지 않습니다. [libcamera]는 `arm64` 아키텍처에서 Pi 카메라 모듈을 사용할 수 있도록 도와주는 라이브러리입니다. (부팅 시간동안 감지된 모듈에 대한 오버레이를 자동으로 구성을 읽어들입니다.)
 
-Carried over from interim releases (these are changes are applicable from LTS->LTS):
+중간 릴리즈에서 이월됨 (변경사항은 LTS->LTS에서 적용될 수 있습니다.):
 
-* After initial user setup on the desktop image, several packages can still be autoremoved ([bug 1925265](https://launchpad.net/bugs/1925265)); run `sudo apt autoremove` to work around this
-* On the desktop image, the wrong audio output device is selected on each boot. A workaround is available in the bug report ([bug 1899962](https://launchpad.net/bugs/1899962))
-* Various kernel modules have been moved from the `linux-modules-raspi` package in order to reduce the initramfs size. If you find an application failing due to missing kernel modules, please try the following:
+* 데스크탑 이미지에서 초기 사용자 설정이후에도 여전히 여러 패키지가 자동 제거될 수 있습니다.([버그 1925265](https://launchpad.net/bugs/1925265)). 이 문제를 해결하려면 `sudo apt autoremove` 를 실행하면 됩니다.
+* 데스크탑 이미지에서 부팅할 때마다 잘못된 오디오 출력 장치가 선택될 수 있습니다. 해결 방법은 버그 리포트에서 확인하면됩니다. ([버그 1899962](https://launchpad.net/bugs/1899962))
+* initramfs 크기를 줄이기 위해 `linux-modules-raspi` 패키지에서 다양한 모듈이 분리되었습니다. 누락된 커널 모듈로 인해 애플리케이션이 실패하는 경우, 다음을 명령어를 사용하여 설치 하십시오.
   * `sudo apt install linux-modules-extra-raspi`
 
 ### s390x
 
-No known issues yet.
+알려진 이슈가 없습니다.
 
 # 공식 flavour
 
