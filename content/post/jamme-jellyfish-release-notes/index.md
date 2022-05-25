@@ -566,47 +566,47 @@ In addition, Ubuntu Server 22.04 LTS is the first Ubuntu release that comes with
 
 ### s390x
 
-Starting with Ubuntu Server 20.04 LTS (for IBM Z and LinuxONE), the minimal architectural level set was raised to z13 (and LinuxONE Rockhopper / Emperor) - this still applies to Ubuntu Server 22.04 LTS and support also includes all newer hardware that is in service as of today (22.04 release date). Support for additional future hardware might be added later.
-Ubuntu Server 22.04 LTS can be installed in an LPAR (classic or DPM mode), as IBM z/VM guest, as KVM virtual machine and in different container environments, such as LXD, docker or kubernetes.
+우분투 서버 20.04 LTS (IBM Z와 LinuxONE 지원)에서 부터, 최소 아키텍쳐 레벨 셋은 z13(그리고 LinuxONE Rockhopper / Emperor)로 상향 됐었습니다 - 이는 여전히 우분투 서버 22.04 LTS에 적용 돼 있고 지원 역시 현재(22.04 출시일) 서비스 되고 있는 모든 더 신형의 하드웨어를 포함합니다. 미래 하드웨어에 대한 추가적 지원은 차후에 추가 될 수 있습니다.
+우분투 서버 22.04 LTS는 LPAR (classic 또는 DPM 모드)에 IBM z/VM 게스트로, KVM 가상 머신으로 그리고 LXD, docker, kubernetes와 같은 서로 다른 컨테이너 환경으로 설치될 수 있습니다.
 
-IBM Z and LinuxONE / s390x-specific enhancements since 21.10 (partially not limited to s390x):
+21.10부터의 IBM Z와 LinuxONE / s390x 특정 (부분적으로 s390x 만이 아닌) 향상점:
 
-  * Like mentioned above, 22.04 LTS is the first release that picked up OpenSSL 3, to be precise v3.0.2 ([bug 1905022](https://bugs.launchpad.net/bugs/1905022)), this transition triggered for compatibility reasons ([bug 1959736](https://bugs.launchpad.net/bugs/1959736)) further updates, that largely ended up in the renewal of the entire s390x crypto stack, including:
-    * libica update to finally v4.0.1 ([bug 1959421](https://bugs.launchpad.net/bugs/1959421)), including extend statistics to reflect security measures ([bug 1959553](https://bugs.launchpad.net/bugs/1959553))
-    * openssl-ibmca update ([bug 1958419](https://bugs.launchpad.net/bugs/1958419)) to finally 2.2.2 to ensure compatibility with libica4 ([bug 1960004](https://bugs.launchpad.net/bugs/1960004)).
-    * opencryptoki update to v3.17.0+dfsg+20220202.b40982e (since the planned release date for 3.18 is post 22.04 GA) (Bug:1959419), including several (security) fixes and new features like in the key management tool (LP 1959577).
-    * with that cryptsetup was updated as well ([bug 1959427](https://bugs.launchpad.net/bugs/1959427))
-Further updates in the area of cryptography that are relevant for s390x are:
-    * the upgrade of libgcrypt(20) to latest v1.9.4
-    * in kernel crypto optimization of chacha20 now using a SIMD implementation ([bug 1853152](https://bugs.launchpad.net/bugs/1853152))
-    * zcrypt device driver update for adding exploitation of new IBM Z crypto hardware ([bug 1959547](https://bugs.launchpad.net/bugs/1959547))
-    * and finally the newly packaged IBM Z protected-key crypto library that provides interfaces for cryptographic primitives ([bug 1932522](https://bugs.launchpad.net/bugs/1932522))
+  * 위에서 언급했듯이 22.04 LTS는 OpenSSL 3, 정확히는 v3.0.2([버그 1905022](https://bugs.launchpad.net/bugs/1905022))를 차용한 첫번째 릴리즈이고 이 전환은 몇몇 호환성 문제([버그 1959736](https://bugs.launchpad.net/bugs/1959736)) 때문이며 그 업데이트는 다음 변화를 포함하여 전체 s390x 암호화 스택의 대규모 리뉴얼로 마무리 될 예정입니다:
+    * 마침내 libica가 v4.0.1 ([버그 1959421](https://bugs.launchpad.net/bugs/1959421))로 업데이트 됐고 이는 보안 검사([버그 1959553](https://bugs.launchpad.net/bugs/1959553))를 반영하기 위한 확장 통계를 포함합니다
+    * openssl-ibmca가 libica4와의 호환성을 위해 결국 2.2.2 ([버그 1958419](https://bugs.launchpad.net/bugs/1958419))로 업데이트 됐습니다 ([버그 1960004](https://bugs.launchpad.net/bugs/1960004)). 
+    * opencryptoki가 v3.17.0+dfsg+20220202.b40982efh로 업데이트 되었고 (3.18의 예정된 출시일이 22.04 GA로 공고 됐기 때문) (Bug:1959419) 이는 몇몇 (보안) 수정과 핵심 관리 도구(LP 1959577)에 있는 것과 같은 신기능 들을 포함합니다.
+    * 더불어 cryptsetup 또한 업데이트 됐습니다 ([버그 1959427](https://bugs.launchpad.net/bugs/1959427))
+s390x와 관련된 추가 업데이트는 다음입니다:
+    * libgcyrpt(20)의 최신 v1.9.4로의 업그레이드
+    * SIMD 구현을 사용하게 되는 chacha20의 커널 자체 최적화 ([버그 1853152](https://bugs.launchpad.net/bugs/1853152))
+    * 새로운 IBM Z 암호화 하드웨어 활용 추가를 위한 zcrypt 디바이스 드라이버 업데이트 ([버그 1959547](https://bugs.launchpad.net/bugs/1959547))
+    * 그리고 암호 기반을 위한 인터페이스를 제공하는 마침내 새롭게 패키징 된 IBM Z 보호키 암호화 라이브러리 ([버그 1932522](https://bugs.launchpad.net/bugs/1932522))
 
-  * Furthermore new network features were added, like Enhanced HSCI (HiperSockets Converged Interface) Multi-MAC support for enhancing KVM setups and z/OS interoperability (kernel LP: 1932137 and s390-tools LP: 1929721). And significant updates in the area of Shared Memory Communication (SMC), like EID (Enterprise ID) support (kernel LP: 1929060, s390-tools LP: 1929056), SMC statistics support ([bug 1959470](https://bugs.launchpad.net/bugs/1959470)) and SMC-R v2 support ([bug 1929035](https://bugs.launchpad.net/bugs/1929035)) - and with all that the smc-tools have been upgraded to latest v1.7.0 ([bug 1959428](https://bugs.launchpad.net/bugs/1959428)).
+  * 추가로 새로운 네트워크 기능들, 이를테면 KVM 설정 향상과 z/OS 상호 운용성을 위한 향상된 HSCI (HiperSockets Converged Interface) 멀티 MAC 지원 같은 기능이 추가되었습니다 (kernel LP: 1932137 그리고 s390-tools LP: 1929721). 그리고 공유 메모리 통신 분야의 중요한 업데이트 이를테면 EID (Enterprise ID) 지원 (kernel LP: 1929060, s390-tools LP: 1929056), SMC 통계 지원 ([버그 1959470](https://bugs.launchpad.net/bugs/1959470)) 그리고 SMC-R v2 지원 ([버그 1929035](https://bugs.launchpad.net/bugs/1929035)) - 그리고 smc-tools 와 함께 최신 v1.7.0로 업그레이드 됐습니다 ([버그 1959428](https://bugs.launchpad.net/bugs/1959428)).
 
-  * Several KVM and Secure Execution related new features landed too, like:
-    * enablement of storage key checking for intercepted instructions handled by KVM ([bug 1933176](https://bugs.launchpad.net/bugs/1933176)) and by user-space ([bug 1933179](https://bugs.launchpad.net/bugs/1933179))
-    * the 'access register mode' got enabled ([bug 1933178](https://bugs.launchpad.net/bugs/1933178))
-    * allowing long kernel command lines for QEMU ([bug 1959984](https://bugs.launchpad.net/bugs/1959984)) and for Secure Execution guests ([bug 1959985](https://bugs.launchpad.net/bugs/1959985)).
-    * enable guest interrupt support via GISA for Secure Execution guests ([bug 1959977](https://bugs.launchpad.net/bugs/1959977))
-    * support for Secure Execution guest dump encryption with customer keys ([bug 1959965](https://bugs.launchpad.net/bugs/1959965))
-    * and enablement of vfio-ccw and vfio-ap in virt-* tools, especially virt-manager ([bug 1959976](https://bugs.launchpad.net/bugs/1959976))
-    * In addition the KVM_CAP_S390_MEM_OP_EXTENSION capability was raised to 211 ([bug 1963901](https://bugs.launchpad.net/bugs/1963901)) and KVM got improved SIGP architectural compliance ([bug 1959735](https://bugs.launchpad.net/bugs/1959735)).
+  * 여러 새로운 기능과 연관된 KVM과 보안 실행 역시 안착했고 다음과 같습니다:
+    * KVM과 유저 공간에 의해 가로채진 명령어를 위한 스토리지 키 확인 활성화 ([버그 1933176](https://bugs.launchpad.net/bugs/1933176)) ([버그 1933179](https://bugs.launchpad.net/bugs/1933179))
+    * 활성된 'access-register mode' ([버그 1933178](https://bugs.launchpad.net/bugs/1933178))
+    * QEMU를 위한 긴 커널 명령줄 허용 ([버그 1959984](https://bugs.launchpad.net/bugs/1959984))과 보안 실행 게스트 ([버그 1959985](https://bugs.launchpad.net/bugs/1959985)).
+    * 보안 실행 게스트를 위한 GISA를 통해 지원되는 게스트 인터럽트 활성화 ([버그 1959977](https://bugs.launchpad.net/bugs/1959977))
+    * 사용자 키를 통한 보안 실행 게스트 덤프 암호화 지원 ([버그 1959965](https://bugs.launchpad.net/bugs/1959965))
+    * 그리고 virt-*tools, 특히 virt-manager에서 vfio-ccw와 vifio-ap 활성화 ([버그 1959976](https://bugs.launchpad.net/bugs/1959976))
+    * 추가로 KVM_CAP_S390_MEM_OP_EXTENSION 가용성이 211로 판올림 됐고 ([버그 1963901](https://bugs.launchpad.net/bugs/1963901)) KVM이 향상된 체계적 SIGP 컴플라이언스를 갖게 됐습니다 ([버그 1959735](https://bugs.launchpad.net/bugs/1959735)).
 
-  * The modernized tool-chain was needed in order to add support for new IBM Z hardware ([bug 1959379](https://bugs.launchpad.net/bugs/1959379)), and the 22.04 default gcc became v11.2 (12, 10 and 9 are in universe).
-Binutils were aligned to gdb ([bug 1959407](https://bugs.launchpad.net/bugs/1959407)) and updated to v2.38 ([bug 1959463](https://bugs.launchpad.net/bugs/1959463)), again for adding support for new hardware ([bug 1959408](https://bugs.launchpad.net/bugs/1959408)).
-And LLVM was updated as well for new hardware support ([bug 1959378](https://bugs.launchpad.net/bugs/1959378)) and to include further optimizations ([bug 1959406](https://bugs.launchpad.net/bugs/1959406)), but not only v13 is available, even v14 is the default.
+  * 새로운 IBM Z 하드웨어 지원을 위해 현대화된 툴체인이 필요 했고 ([버그 1959379](https://bugs.launchpad.net/bugs/1959379)), 22.04 기본 gcc가 v11.2가 됐습니다 (12, 10, 9는 universe에 있습니다).
+Binutils이 gdb에 할당 되었고 ([버그 1959407](https://bugs.launchpad.net/bugs/1959407)) v2.38로 ([버그 1959463](https://bugs.launchpad.net/bugs/1959463)), 또 다시 새로운 하드웨어 지원을 추가하기 위해 업데이트 됐습니다 ([버그 1959408](https://bugs.launchpad.net/bugs/1959408)).
+그리고 LLVM 역시 새로운 하드웨어 지원을 위해서 ([버그 1959378](https://bugs.launchpad.net/bugs/1959378)), 그리고 향상된 최적화를 포함하기 위해서 업데이트 되었는데 ([버그 1959406](https://bugs.launchpad.net/bugs/1959406)), v14가 기본이더라도 v13만 이용 가능한 것이 아닙니다.
 
-  * On top new hardware support was added to glibc ([bug 1959385](https://bugs.launchpad.net/bugs/1959385) and LP: 1959383) while glibc was upgraded to latest v2.35 ([bug 1959429](https://bugs.launchpad.net/bugs/1959429)), which contains HWCAP_S390_PCI_MIO and HWCAP_S390_SIE ([bug 1959462](https://bugs.launchpad.net/bugs/1959462)).
-The Perl Compatible Regular Expression Library PCRE2 was updated to v10.39 and includes improvements for s390x and full JIT performance ([bug 1959917](https://bugs.launchpad.net/bugs/1959917)).
-The 'Eigen3' algebra library contains further optimizations for s390x too ([bug 1884725](https://bugs.launchpad.net/bugs/1884725)) and the query capacity library and utility for extracting system information 'qclib' was raised to v2.3.0 ([bug 1959464](https://bugs.launchpad.net/bugs/1959464)).
-Finally a brand new low-level IBM Z Deep Neural Network Library (zDNN) library, that provides an interface for applications making use of Neural Network Processing Assist Facility (NNPA), got packaged and is now available ([bug 1959396](https://bugs.launchpad.net/bugs/1959396)).
+  * glibc로 최신 하드웨어 지원 추가가 ([버그 1959385](https://bugs.launchpad.net/bugs/1959385) 그리고 LP: 1959383) glibc가 최신 v2.35로 업그레이드 되면서 이루어졌고 ([버그 1959429](https://bugs.launchpad.net/bugs/1959429)), 이는 HWCAP_S390_PCI_MIO와 HWCAP_S390_SIE를 포함합니다 ([버그 1959462](https://bugs.launchpad.net/bugs/1959462)).
+Perl 호환되는 라이브러리 PCRE2가 v10.39로 업데이트 되었고 s390x와 full JIT 성능 향상을 위한 개선을 포함합니다 ([버그 1959917](https://bugs.launchpad.net/bugs/1959917)).
+'Eigen3' 대수학 라이브러리 역시 s390x를 위해 향상된 최적화를 포함하고 ([버그 1884725](https://bugs.launchpad.net/bugs/1884725)) 질의 용량 라이브러리이자 시스템 정보 추출 유틸리티인 'qclib'도 v2.3.0로 판올림 되었습니다 ([버그 1959464](https://bugs.launchpad.net/bugs/1959464)).
+마지막으로 애플리케이션에서 Nerual Network Processing Assist Facility (NNPA)를 사용케 하는 인터페이스를 제공하는 새로운 저수준 IBM Z Deep Neural Network Library (zDNN) 라이브러리가 패키징 됐고 현재 이용 가능합니다 ([버그 1959396](https://bugs.launchpad.net/bugs/1959396)).
 
-  * A core component of Ubuntu Server for IBM Z is the s390-tools package, which was upgraded to v2.2.0 ([bug 1959420](https://bugs.launchpad.net/bugs/1959420)) in alignment to jammy's kernel 5.15, and includes among other features now an environment block implementation ([bug 1959409](https://bugs.launchpad.net/bugs/1959409)), that is a persistent configuration information which is evaluated during boot without the need to rewrite IPL records, an option to auto-activate PCI devices for DPM system ([bug 1959537](https://bugs.launchpad.net/bugs/1959537)) and the new multipath re-IPL feature ([bug 1959546](https://bugs.launchpad.net/bugs/1959546)).
+  * IBM Z를 위한 우분투 서버의 핵심 컴포넌트는 s390-tools 패키지이고 이는 jammy의 5.15 커널 배치에 맞춰져 v2.2.0로 업그레이드 되었으며 ([버그 1959420](https://bugs.launchpad.net/bugs/1959420)), 이제 환경 블록과 함께 다른 기능을 포함하는데 ([버그 1959409](https://bugs.launchpad.net/bugs/1959409)), 이 컴포넌트는 다중 경로 re-IPL 기능([버그 1959546](https://bugs.launchpad.net/bugs/1959546)), DPM 시스템을 위해 PCI 장치를 자동 활성화 해주는 옵션인 IPL 레코드의 필요없이 부팅 중에 평가되는 영구적인 설정 정보입니다 ([버그 1959537](https://bugs.launchpad.net/bugs/1959537)).
 
-  * The kernel received several s390x improvements as well, like kernel based support for new IBM Z hardware ([bug 1960187](https://bugs.launchpad.net/bugs/1960187)), new CPU-MF Counters for new hardware ([bug 1960117](https://bugs.launchpad.net/bugs/1960117)), support for long kernel command lines on s390x ([bug 1960580](https://bugs.launchpad.net/bugs/1960580)), transparent PCI device recovery support ([bug 1959532](https://bugs.launchpad.net/bugs/1959532)), enhanced user information on HBA firmware ([bug 1959545](https://bugs.launchpad.net/bugs/1959545)) and as clean-up the deactivation of the CONFIG_QETH_OSX kernel config option ([bug 1959890](https://bugs.launchpad.net/bugs/1959890)).
-
-  * The service-call logical processor (SCLP) console interface driver (for 'Operating Systems Messages' line-mode and 'Integrated ASCII console' VT220) got two new debug features for logging relevant data for all sclp requests or just for failing sclp requests, which requires kernel ([bug 1960435](https://bugs.launchpad.net/bugs/1960435)) as well as s390-tools modifications ([bug 1960437](https://bugs.launchpad.net/bugs/1960437)).
+  * 커널 기반의 새로운 IBM Z 하드웨어 지원 ([버그 1960187](https://bugs.launchpad.net/bugs/1960187)), 새로운 하드웨어를 위한 새로운 CPU-MF 계수기([버그 1960117](https://bugs.launchpad.net/bugs/1960117)), s390x에서의 긴 커널 명령줄 지원 ([버그 1960580](https://bugs.launchpad.net/bugs/1960580)), 투명한 PCI 장치 복구 지원 ([버그 1959532](https://bugs.launchpad.net/bugs/1959532)), HBA 펌웨어에서의 향상된 유저 정보 ([버그 1959545](https://bugs.launchpad.net/bugs/1959545)) 그리고 CONFIG_QETH_OSX 커널 설정 옵션 비활성화의 삭제와 마찬가지로 커널이 몇몇 s390x 향상 역시 얻었습니다. 
+  
+  * 서비스 호출 논리 프로세서 (SCLP) 콘솔 인터페이스 드라이버 ('운영체제 메시지' 줄 모드와 '통합 ASCII 콘솔' VT220을 위함)가 모든 sclp 요청이나 그저 실패하는 sclp 요청을 로깅하기 위해서 두 가지 디버그 기능을 얻었고, 이는 커널을 ([버그 1960435](https://bugs.launchpad.net/bugs/1960435)) s390 도구 변경과 마찬가지로 필요로 합니다 ([버그 1960437](https://bugs.launchpad.net/bugs/1960437)).
 
 ### RISC-V
 
