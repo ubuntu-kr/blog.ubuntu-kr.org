@@ -66,92 +66,96 @@ ISO나 플래시 가능한 이미지 다운로드:
 
 우분투 데스크톱 및 우분투 서버의 오프라인 업그레이드 선택지는 없습니다. 공식 미러, 혹은 로컬에서 접근 가능한 미러와 연결 가능한지 미리 확인하고 위의 지시들을 따르길 바랍니다.
 
-# New features in 22.04 LTS
+# 22.04 LTS의 새로운 기능
 
-## Updated Packages
+## 업데이트 된 페키지
 
-## Linux kernel :penguin:
+## 리눅스 커널 :penguin:
 
-Ubuntu 22.04 LTS ships multiple optimized kernels on per-product basis:
+우분투 22.04 LTS는 제품에 따른 다수의 최적화된 커널을 제공합니다:
 
-* Ubuntu Desktop will automatically opt-into [v5.17](https://kernelnewbies.org/Linux_5.17) kernel on the latest generations of certified devices (`linux-oem-22.04`)
-* Ubuntu Desktop uses a rolling HWE kernel (`linux-hwe-22.04`) on all other generations of hardware. The rolling HWE kernel is based on the [v5.15](https://kernelnewbies.org/Linux_5.15) kernel for 22.04.0 and 22.04.1 point releases
-* Ubuntu Server defaults to a non-rolling LTS kernel v5.15 (`linux-generic`)
-* Ubuntu Cloud and Devices use optimized kernels in collaboration with partners (v5.15+ with additional backports and features)
+* 우분투 데스크톱에서 인증된 최신 세대 장치 (`linux-oem-22.04`)에 대해서 자동으로 [v5.17](https://kernelnewbies.org/Linux_5.17) 커널이 선택 됩니다.
 
-Additional optimized and certified kernel flavours will become available in Ubuntu 22.04 LTS in due course.
+* 우분투 데스크톱이 다른 세대의 하드웨어에서 롤링 HWE 커널 (`linux-hwe-22.04`)을 사용합니다. 22.04와 22.04.1 포인트 릴리즈에 대한 롤링 HWE 커널은  [v5.15](https://kernelnewbies.org/Linux_5.15) 커널에 기반합니다
+* 우분투 서버는 기본적으로 비롤링 LTS 커널인 v5.15 (`linux-generic`)에 맞춰집니다.
+* 우분투 Cloud와 Devices는 파트너사의 협력으로 최적화된 커널을 사용합니다 (추가 백포트와 기능이 있는 v5.15+)
 
-### NVIDIA drivers
 
-Ubuntu 22.04 LTS adds linux-restricted-modules of NVIDIA drivers on ARM64, in addition to the existing x86_64. Users on ARM64 can now use `ubuntu-drivers` tool to install and configure NVIDIA drivers from the Ubuntu Archive.
+추가적 최적화와 인증된 커널 flavour는 적기에 우분투 22.04 LTS에서 이용 가능할 예정입니다.
 
-### UDP disabled for NFS mounts
-Since Ubuntu 20.10 ("Groovy Gorilla"), the kernel option `CONFIG_NFS_DISABLE_UDP_SUPPORT=y` is set and this disables using UDP as the transport for NFS mounts, regardless of NFS version.
+### NVIDIA 드라이버
 
-In practice, if you try to use `udp`, you will get this error:
+우분투 22.04 LTS에 ARM64 NVIDIA 드라이버의 linux-restricted-modules가 현존 x86_64에 대해 추가 되었습니다. 이제 ARM64 사용자는 NVIDIA 드라이버의 설치 및 설정을 위해서 `ubuntu-drivers` 도구를 우분투 아카이브에서 사용 가능합니다.
+
+### UDP로의 NFS 마운트 비활성화
+우분투 20.10 ("Groovy Gorilla")부터 커널 옵션 `CONFIG_NFS_DISABLE_UDP_SUPPORT=y`가 설정 됐고 이는 NFS 버전에 상관없이 UDP가 NFS 마운트의 전송 프로토콜로 사용되는 것을 비활성화 합니다.
+
+실제로 `udp`를 사용하려고 하면 다음과 같은 오류를 얻을 겁니다:
 ```
 $ sudo mount f1:/storage /mnt -o udp
 mount.nfs: an incorrect mount option was specified
 ```
 
 
-## Toolchain Upgrades :hammer_and_wrench:
+## 툴체인 업그레이드 :hammer_and_wrench:
 
-GCC was updated to the 11.2.0 release, binutils to 2.38, and glibc to 2.35. Python :snake: now ships at version 3.10.4, Perl :camel: at version 5.34.0. LLVM now defaults to version 14. golang defaults to version 1.18.x. rustc defaults to version 1.58.
+GCC가 11.2.0로, binutils가 2.38로, glibc가 2.35로 업데이트 됐습니다. Python :snake:은 이제 3.10.4에서, Perl :camel:은 5.34.0에서 제공됩니다. 이제 LLVM은 기본적으로 14 버전에 맞춰집니다. golang은 기본적으로 1.18.x 버전에 맞춰집니다. rustc는 기본적으로 1.58 버전에 맞춰집니다.
 
-In addition to OpenJDK 11, OpenJDK 18 is now provided (but not used for package builds).
+OpenJDK 11에 더해 이제 OpenJDK 18도 제공됩니다 (그러나 패키지 빌드에는 사용되지 않습니다).
 
-Ruby :gem: was updated from v2.7.4 to v3.0.
+Ruby :gem:가 v2.7.4에서 v3.0로 업데이트 됐습니다.
 
 ## systemd v249.11
-The init system was updated to systemd v249, using a solid .11 patchlevel for the LTS. Please refer to the upstream [changelog](https://github.com/systemd/systemd/releases/tag/v249) for more information about the individual features. We've enabled the userspace OOMD service and are shipping the `systemd-oomd` package by default on the "Ubuntu Desktop" flavour, to avoid overloaded systems and the need of the kernel's OOM killer to kick in. The OOMD status can be checked using `oomctl`.
+init 시스템이 systemd v249로 업데이트 되었고 LTS를 위해 견고한 .11 패치 레벨이 사용됩니다. 각각 개별 기능에 대한 정보는 업스트림 [변경 로그](https://github.com/systemd/systemd/releases/tag/v249)를 참고 하길 바랍니다. 유저 스페이스 OODM 서비스를 활성화 했고 이는 "우분투 데스크톱" flavour에서 기본적으로 `systemd-oodm` 패키지를 제공하며, 이는 시스템 과부하와 자리 확보를 위한 커널의 OOM  killer의 요구를 피하기 위함입니다. OOMD 상태는 `oomctl`을 통해서 확인될 수 있습니다.
 
 ## OpenSSL 3.0
 
-We've upgraded the OpenSSL library to the new 3.0 version, which disables a lot of legacy algorithms by default, as detailed in their [migration guide](https://www.openssl.org/docs/manmaster/man7/migration_guide.html). In particular, certificates using SHA1 or MD5 as hash algorithms are now invalid under the default security level.
+OpenSSL 라이브러리를 새로운 3.0 버전으로 업그레이드 했고 이는 라이브러리의 [마이그레이션 가이드](https://www.openssl.org/docs/manmaster/man7/migration_guide.html)에 명시 되었듯 많은 레거시 알고리즘을 비활성화 합니다. 
+특히, SHA1이나 MD5를 해쉬 알고리즘을 이용한 인증들은 이제 기본 보안 수준에서 유효하지 않습니다.
 
-In addition to the upstream deprecations, please note that since Ubuntu 20.04 (Focal Fossa), the security level 2 (which is the default) disables the (D)TLS protocols below 1.2 (included).
+업스크림 지원중단과 더불어 우분투 20.04(Focal Fossa)부터 보안 수준 2(기본값)이 1.2(포함) 미만의 (D)TLS 프로토콜을 비활성화합니다.
 
-Since the new version has an API bump, third-party packages that depend on libssl1.1 will need to be rebuilt to instead depend on libssl3, as the older ABI isn't provided anymore.
 
-## Security Improvements :lock:
+새로운 버전에 API 판올림이 있기 때문에 libssl1.1에 의존하는 서드파티 패키지는 오래된 ABI가 더이상 제공되지 않음으로 그대신 libssl3에 의존하도록 다시 빌드 돼야 합니다.
 
-nftables is now the default backend for the firewall. All applications on the system must agree on whether they will use the legacy `xtables` backend or the newer `nftables` backend. [Bug 1968608](https://bugs.launchpad.net/bugs/1968608) provides some context that may be helpful. [Docker may not be ready for the new `nftables` backend](https://github.com/docker-snap/docker-snap/issues/68).
+## 보안 향상점 :lock:
 
-`ssh-rsa` is now [disabled by default in OpenSSH](https://www.openssh.com/txt/release-8.8). See [bug 1961833](https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/1961833) to learn how to selectively re-enable it if necessary.  If you are upgrading a system remotely over SSH, you should check that you are not relying on this to ensure that you will retain access after the upgrade. 
+이제 nftable가 방화벽을 위한 기본 백엔드입니다. 시스템의 모든 애플리케이션은 반드시 레거시 `xtables` 혹은 새로운 `nftables` 백엔드를 사용할 건지 합의해야 합니다. [버그 1968608](https://bugs.launchpad.net/bugs/1968608)가 유용할만한 몇몇 맥락을 제공합니다. [Docker는 새로운 `nftables` 백엔드를 위해 준비 되어있지 않을 수 있습니다](https://github.com/docker-snap/docker-snap/issues/68).
 
-`scp` offers a [`-s` command line option](http://manpages.ubuntu.com/manpages/jammy/en/man1/scp.1.html) to use [sftp mode rather than scp mode](https://www.openssh.com/txt/release-8.9) when handling remote filenames. This new, safer, behaviour will eventually become the default.
+이제 `ssh-rsa`가 [OpenSSH에서 기본적으로 비활성화 되었습니다](https://www.openssh.com/txt/release-8.8). 필요에 의해 선택적으로 다시 활성화 하는 방법을 알기 위해서는 [버그 1961833](https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/1961833)을 보십시오. 만약 SSH를 통해 원격으로 업그레이드 할 계획이라면 업그레이드 후의 접근 유지를 보장하기 위해서 이에 의존하지 않음을 확인하길 바랍니다.
 
-## Ubuntu Desktop
+`scp`가 원격 파일 이름을 다룰 때 [scp 모드 보다는 sftp를 사용](https://www.openssh.com/txt/release-8.9)하기 위해서 [`-s` 명령줄 옵션](http://manpages.ubuntu.com/manpages/jammy/en/man1/scp.1.html)을 제공합니다. 이 새롭고 더 안전한 동작은 결국 기본 설정이 될 겁니다.
 
-* Ubuntu now offers [10 color choices](https://discourse.ubuntu.com/t/yaru-accent-colors-are-coming-to-jammy/27200) each in dark and light styles
-* Firefox is now only provided in Ubuntu as a snap. Some benefits include
-  * Directly maintained by Mozilla
-  * More maintainable for the entire Ubuntu LTS lifecycle
-  * … Which means faster access to the newest Firefox versions
-  * Easily switch to a different Firefox flavor with snap channels including `esr/stable`, `latest/candidate`, `latest/beta`, and `latest/edge`
-  * Sandboxed for improved security hardening for this critical app
-* Desktop icons are shown in the bottom right by default but this can be changed through new settings added to the Appearance panel of the Settings app.
-* Also there are new settings to control the Dock look and behavior
-* Dock devices and filemanager integration has been improved
+## 우분투 데스크톱
+
+* 이제 우분투에서 [10가지의 색상 선택지를](https://discourse.ubuntu.com/t/yaru-accent-colors-are-coming-to-jammy/27200) 다크 모드와 라이트 모드로 제공합니다.
+* 이제 Firefox 는 우분투에서 Snap으로만 제공됩니다. 아래와 같은 장점이 있습니다
+  * Mozilla에서 직접 유지보수 
+  * 전체 우분투 LTS 수명주기 동안 유지보수 용이성 향상
+  * … 이는 최신 버전의 Firefox에 더 빠르게 접근할 수 있음을 의미합니다
+  * `esr/stable`, `latest/candidate`, `latest/beta`및 `latest/edge`를 포함한 다른 종류의 Firefox 로 쉽게 변경
+  * 중요한 앱인 Firefox의 보안 강화를 위한 샌드박스 처리
+* 데스크톱 아이콘은 기본적으로 우측 하단에 표시되지만 설정 앱의 모양 패널에 추가된 새로운 설정으로 변경할 수 있습니다.
+* 독의 모양과 동작을 바꿀 수 있는 새로운 설정도 있습니다
+* 독의 디바이스 및 파일 관리자 연동이 향상되었습니다
 
 ### GNOME :footprints:
 
-* GNOME has been updated to include new features and fixes from [GNOME 41](https://release.gnome.org/41/) and [GNOME 42](https://release.gnome.org/42/) 
-* Several apps are still at their 41 version numbers to provide a more time-tested experience for the LTS desktop by mostly avoiding libadwaita.
-* The new cross-desktop [dark style](https://discourse.ubuntu.com/t/ubuntu-22-04-lts-dark-style-changes/27206) preference is supported.
-* GNOME Shell and mutter have lots of performance improvements including the triple buffering patch.
-* The default session for most systems that don't have an Nvidia graphics card is now Wayland. If you need a non-Wayland session, you can choose the *Ubuntu on Xorg* session by clicking the gear button after selecting your name on the login screen.
-* Hardware with privacy screen support is now supported
-* RDP is now available for sharing your desktop remotely. Legacy VNC is still available, but it is strongly recommended to use RDP for better security, privacy, and performance. If you were previously using VNC, you'll need to manually re-enable desktop sharing in the Settings app and get your new login information.
+* GNOME을 [GNOME 41](https://release.gnome.org/41/)및 [GNOME 42](https://release.gnome.org/42/)의 새로운 기능과 수정사항을 포함하도록 업데이트했습니다
+* 여러 프로그램은 대부분 libadwaita를 피하여 LTS 데스크톱에 대해 더 검증된 경험을 제공하기 위해 여전히 41 버전대로 유지됩니다.
+* 데스크톱 전반에 걸친 [다크 스타일](https://discourse.ubuntu.com/t/ubuntu-22-04-lts-dark-style-changes/27206) 설정을 새로 지원합니다.
+* GNOME 셸과 Mutter에 트리플 버퍼링 패치를 비롯한 수많은 성능 개선이 있습니다.
+* 이제 Nvidia 그래픽 카드를 쓰지 않는 대부분의 시스템의 기본 세션은 Wayland 세션입니다. 비-Wayland 세션이 필요하신 경우, 로그인 화면에서 이름을 선택한 후 우측 하단의 톱니바퀴 아이콘을 클릭하여 *우분투 (Xorg)* 를 선택하실 수 있습니다.
+* 이제 사생활 보호 화면 지원이 있는 하드웨어를 지원합니다
+* 데스크톱 원격 공유에 RDP를 사용하실 수 있습니다. 기존의 VNC도 여전히 있으나, 더 나은 보안, 사생활 보호 및 성능을 위해 RDP를 사용 하시는 것을 강력히 권장합니다. 기존에 VNC를 사용해 오셨다면, 설정 앱 에서 데스크톱 공유를 수동으로 다시 켜고 새로 로그인 정보를 얻으셔야 할 겁니다. 
 
-### Updated Applications
+### 업데이트된 프로그램
 
 * Firefox 99 :fire::fox_face:
 * [LibreOffice 7.3](https://wiki.documentfoundation.org/ReleaseNotes/7.3) :books:
 * Thunderbird 91 :cloud_with_lightning::bird:
 
-### Updated Subsystems
+### 업데이트된 하위 시스템
 
 * [BlueZ 5.63](https://git.kernel.org/pub/scm/bluetooth/bluez.git/tree/ChangeLog?id=5.63)
 * [CUPS 2.4](https://github.com/OpenPrinting/cups/blob/v2.4.1/CHANGES.md)
@@ -167,119 +171,118 @@ nftables is now the default backend for the firewall. All applications on the sy
 
 ##### Corosync
 
-It was updated to version 3.16 which includes some new features:
+3.16 버전으로 업데이트 되면서 포함된 몇 가지 새로운 기능:
 
-* Support for changing crypto configuration during runtime. This includes turning cryptography on or off, changing *crypto_cipher* and *crypto_hash* and also changing of crypto key.
-* Default token timeout was changed from 1 seconds to 3 seconds.
-* Run *corosync -v* to get the list of supported crypto and compression models which can be used in corosync.conf
-* Cgroup v2 support.
+- 실행중(runtime)인 상태에서 암호화(crypto)와 관련된 설정을 변경 할 수 있습니다. 해당 변경사항에서 암호화 적용 또는 해제, *crypto_cipher* 및 *crypto_hash* 변경, 암호화 키 변경이 포함됩니다.
+- 기본 토큰(token)의 시간 제한이 1초에서 3초로 변경되었습니다.
+- *corosync -v* 명령어를 사용하여 coresync.conf에서 사용할 있는 암호화 및 압축 모델의 목록을 가져올 수 있습니다.
+- Cgroup v2를 지원합니다.
 
-For the complete list of changes please refer to the [upstream release notes](https://github.com/corosync/corosync/releases).
+변경 사항과 관련된 전체 목록은 [업스트림 릴리스 노트](https://github.com/corosync/corosync/releases)를 참고하십시오.
 
 ##### Pacemaker
 
-It was updated to version 2.1.2 which includes some new features:
+2.1.2 버전으로 업데이트 되면서 포함된 몇 가지 새로운 기능:
 
-* Add a new feature *priority-fencing-delay*. Optionally derive the priority of a node from the resource-priorities of the resources it is running.
-* Add *on-fail=demot*e and *no-quorum-policy=demote* recovery policies for promoted resources.
-* support for OCF Resource Agent API 1.1 standard.
-* Many improvements in *crm_mon* and *crm_resource*.
+- *priority-fencing-delay*가 새롭게 추가되었습니다. 실행 중인 상태의 리소스의 우선 순위에서 선택적으로 노드의 우선 순위를 도출 할 수 있습니다.
+- 승격된 자원(promoted resources)에 대한 *on-fail=demot*e 및 *no-quorum-policy=demote* 복구 정책을 추가하였습니다.
+- OCF Resource Agent API 1.1 표준을 지원합니다.
+- *crm_mon* 및 *crm_resource*가 많은 개선이 되었습니다.
 
-For the complete list of changes please refer to the [upstream release notes](https://github.com/ClusterLabs/pacemaker/releases).
+전체 변경 사항 목록은 [업스트림 릴리스 노트](https://github.com/ClusterLabs/pacemaker/releases)를 참고하십시오.
 
-A notable difference from the version in Ubuntu Focal 20.04 is that the default configuration file does not define the node name as node1 anymore, now the output of uname -n is used as the default node name.
+Ubuntu Focal 20.04 버전과 비교해서 주목할만한 차이점은 기본 구성 파일이 노드 이름을 node1로 정의하지 않고 uname -n의 출력을 기본 노드 이름으로 사용합니다.
 
 ##### Resource agents
 
-It was updated to version 4.7.0. Check the list of changes since Ubuntu Focal 20.04 [here](https://github.com/ClusterLabs/resource-agents/blob/main/ChangeLog#L95-L219).
+4.7.0 버전으로 업데이트 되었습니다. Ubuntu Focal 20.04 이후 변경 사항 목록은 [여기](https://github.com/ClusterLabs/resource-agents/blob/main/ChangeLog#L95-L219)에서 참고하십시오.
 
-The agents are now separated in two packages: resource-agents-base and resource-agents-extra. The resource-agents-base package contains the agents which are curated by the Ubuntu Server team, which means that automated tests are running in a continuous integration system to guarantee the quality of those agents. The resource-agents package is now a metapackage which depends on both resource-agents-base and resource-agents-extra. Please note that the resource-agents package will be removed in future releases; we recommend that you do not rely on its existence.
+에이전트(agents)는 이제 resource-agents-base 및 resource-agents-extra의 두 패키지로 분리됩니다. resource-agents-base 패키지는 Ubuntu Server 팀에서 선별한 에이전트가 포함되어 있습니다. 지속적 통합 시스템에서 자동화된 테스트가 진행되어 해당 에이전트의 품질을 보장합니다. resource-agents 패키지는 이제 resource-agents-base와 resource-agents-extra에 관련된 메타패키지입니다. resource-agents 패키지는 향후 릴리스에서 제거될 예정입니다. resource-agents에 의존하지 않는 것이 좋습니다.
 
 ##### Fence agents
 
-It was updated to version 4.7.1.
+4.7.1 버전으로 업데이트 되었습니다.
 
-The agents are now separated in two packages: fence-agents-base and fence-agents-extra. The fence-agents-base package contains the agents which are curated by the Ubuntu Server team, which means that automated tests are running in a continuous integration system to guarantee the quality of those agents. The fence-agents package is now a metapackage which depends on both fence-agents-base and fence-agents-extra. Please note that fence-agents will be removed in releases; we recommend that you do not rely on its existence.
+에이전트는 이제 두 개의 패키지(fence-agents-base 및 fence-agents-extra)로 분리됩니다. fence-agents-base 패키지에는 Ubuntu Server 팀에서 선별한 에이전트가 포함되어 있습니다. 지속적인 통합 시스템에서 자동화된 테스트가 진행되어 해당 에이전트의 품질을 보장합니다. fence-agents 패키지는 이제 fence-agents-base 및 fence-agents-extra에 관련된 메타 패키지 입니다. fence-agents는 제거될 예정입니다. fence-agents에 의존하지 않는 것이 좋습니다.
 
-#### Containers runtime
+#### 컨테이너 런타임
 
 ##### containerd
 
-It was updated to version 1.5.9. Some interesting changes are:
+1.5.9 버전으로 업데이트 되었습니다. 몇 가지 흥미로운 변경 사항은 다음과 같습니다.
 
-* Update pull to handle of non-https urls in descriptors
-* Install apparmor parser for arm64 and update seccomp to 2.5.1
-* Add support for *clone3* syscall to fix issue with certain images when seccomp is enabled
-* Add image config labels in CRI container creation
+* descriptors에서 non-https가 아닌 url을 처리하도록 pull을 업데이트를 하였습니다.
+* arm64용 apparmor 파서를 설치하고 seccomp를 2.5.1로 업데이트 하였습니다.
+* *clone3* syscall에 대한 지원을 추가하여 seccomp가 활성화된 경우 발생하는 특정 이미지의 문제를 수정하였습니다.
+* CRI 컨테이너 생성에 이미지 구성 레이블 추가하였습니다.
 
-For the complete list of changes please refer to the [upstream release page](https://github.com/containerd/containerd/releases).
+전체 변경 사항 목록은 [업스트림 릴리스 페이지](https://github.com/containerd/containerd/releases)를 참고하십시오.
 
 ##### runc
 
-It was updated to version 1.1.0. There are many improvements and bug fixes which can be found in the [upstream release page](https://github.com/opencontainers/runc/releases). Some deprecations and removals which might impact the upgrade are presented below:
+1.1.0 버전으로 업데이트 되었습니다. [업스트림 릴리스 페이지](https://github.com/opencontainers/runc/releases)에서 찾을 수 있는 많은 개선 사항 및 버그 수정 사항이 있습니다. 업그레이드에 영향을 줄 수 있는 일부 지원 중단 및 제거는 다음과 같습니다.
 
-Deprecation
+지원 중단
 
-* runc run/start now warns if a new container cgroup is non-empty or frozen; this warning will become an error in runc 1.2
+* runc run/start는 새 컨테이너 cgroup이 비어 있지 않거나 고정된 경우 경고합니다. 이 경고는 runc 1.2에서 오류가 됩니다.
 
-Removals
+제거
 
-* cgroup.GetHugePageSizes has been removed entirely, and been replaced with cgroup.HugePageSizes which is more efficient
-* intelrdt.GetIntelRdtPath has been removed. Users who were using this function to get the intelrdt root should use the new intelrdt.Root instead.
+* cgroup.GetHugePageSizes는 완전히 제거되었으며 더 효율적인 cgroup.HugePageSizes로 대체되었습니다.
+* intelrdt.GetIntelRdtPath가 제거되었습니다. intelrdt 루트를 얻기 위해 이 기능을 사용하던 사용자는 대신 새로운 intelrdt.Root를 사용해야 합니다.
 
 #### Ruby 3.0
 
-The default Ruby interpreter was updated to version 3.0, whose goal is performance, concurrency, and Typing. To have a broad overview about the cool features and improvements check out the [Ruby 3.0 Release Announcement](https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/).
+기본 Ruby 인터프리터는 3.0이며 성능, 동시성 및 타입 관련 기능이 업데이트 되었습니다. 멋진 기능과 개선 사항에 대한 광범위한 소개를 보려면 [Ruby 3.0 Release Announcement](https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/)를 참조하십시오.
 
-Users coming from previous Ubuntu releases ( Ubuntu Focal 20.04 onward) will be moving from Ruby 2.7 to 3.0. In this case the [Ruby 2.7 Release Announcement](https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/) might be useful as well. An important thing to keep in mind is that the following libraries are not bundled anymore in Ruby:
+* 이전 Ubuntu 릴리스(Ubuntu Focal 20.04 이상)를 사용했던 사용자는 Ruby 2.7에서 3.0으로 변경됩니다. 이 경우 [Ruby 2.7 Release Announcement](https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/)도 유용할 수 있습니다. 명심해야 할 중요한 점은 다음 라이브러리가 Ruby에서 더 이상 번들로 제공되지 않는다는 것입니다.
 
 * sdbm
 * webrick
 * net-telnet
 * xmlrpc
 
-If you need these libraries, please install them separately.
+이러한 라이브러리가 필요한 경우 별도로 설치하십시오.
 
-Please pay attention to the Other Notable Changes since 2.7 section in the Ruby 3.0 Release announcement when migrating your application to Ruby 3.0.
+애플리케이션을 Ruby 3.0으로 마이그레이션할 때 Ruby 3.0 Release Announcement의 2.7 이후 주요 변경 사항(Other notable changes since 2.7) 부분을 주의해서 참고하십시오.
 
-#### PHP now defaults to version 8.1.2
+#### PHP는 8.1.2 버전으로 기본 설정됩니다.
 
-PHP 8.1 contains many new features:  Enumerations allow defining custom types limited to a specific set of possible values, like using consts but with better type checking. Readonly properties prevent their value to be changed after initialization.  With first-class callable syntax, static analysis is easier to perform on PHP code, and allows creating anonymous functions such as Closures.  Intersection types allow specifying function parameters that must satisfy multiple type constraints; much like a union type expresses an A|B type relationship, intersection types allow expressing A&B types.  Many other new features, such as fibers, final class constraints, never return values, explicit octal numeral notation, use of new inside initializers, and more will allow writing tighter, more expressive PHP code.
+PHP 8.1에는 새로운 기능이 포함되어 있습니다. 열거형을 사용하면 const 사용과 같이 특정 집합으로 제한된 사용자 정의 타입을 정의할 수 있고 더 나은 타입 검사가 가능합니다. 읽기 전용 속성은 초기화 후에 값이 변경되는 것을 방지합니다. 일급 호출 가능 구문(first-class callable syntax)을 사용하면 PHP 코드에서 정적 분석을 더 쉽게 수행할 수 있으며 클로저와 같은 익명 함수를 생성할 수 있습니다. Intersection 타입을 사용하면 여러 타입 제약 조건을 충족해야 하는 함수 매개변수를 지정할 수 있습니다. Union 타입이 A|B 타입 관계를 표현하는 것처럼 Intersection 타입은 A&B 타입을 표현할 수 있습니다. fibers, final class constraints, never return values, 명시적 8진수 표기법, 새로운 inside initializers 사용 등과 같은 다양한 새로운 기능을 통해 더 강력하고 표현력 있는 PHP 코드를 작성할 수 있습니다.
 
-PHP 8.1 also received significant attention to performance, with a 23% speedup for the Symfony Demo test, and a 3.5% speedup for WordPress, as compared with PHP 8.0.  A few of the performance-related features included in PHP 8.1 include an inheritance cache, fast class name resolution, and various optimizations to timelib, ext/date, SPL file-system interators, serialize/unserialize, and several heavily used internal functions.
+PHP 8.1은 PHP 8.0과 비교하여 Symfony 데모 테스트에서 23%, WordPress에서 3.5% 속도 향상으로 성능에 상당한 관심을 받았습니다. PHP 8.1에 포함된 성능 관련 기능 중 inheritance cache, fast class name resolution, timelib, ext/date, SPL file-system interators, serialize/unserialize 및 많이 사용되는 여러 내부 기능에 대한 다양한 최적화가 포함됩니다.
 
-Users of PHP 7.4 should note that version 8 removes a [number of deprecated functionalities](https://wiki.php.net/rfc/deprecations_php_7_4) and when upgrading should be prepared to make the appropriate changes to their applications.
+PHP 7.4 사용자는 버전 PHP 8에서 [사용되지 않는 여러 기능(number of deprecated functionalities)](https://wiki.php.net/rfc/deprecations_php_7_4)을 참고하여 업그레이드할 때 응용 프로그램을 적절하게 변경할 수 있도록 준비해야 합니다.
 
 #### OpenLDAP 2.5.x series
 
-If you are updating from Ubuntu Focal 20.04, you will encounter a new major OpenLDAP release on Ubuntu Jammy 22.04: version 2.5.11.  This release brings several changes, new features and deprecations/removals. A non-exhaustive list of things to be aware of during the upgrade process is:
+Ubuntu Focal 20.04에서 Ubuntu Jammy 22.04으로 업그레이드 하는 경우 새로운 OpenLDAP 2.5.11 버전을 사용하게 됩니다. 해당 버전에선 몇 가지 변경 사항, 새로운 기능의 추가 그리고 지원 중단/제거된 기능 등이 있습니다. 업그레이드 프로세스 중에 알아야 할 사항의 목록은 다음과 같습니다.
 
-* The shell (`slapd-shell`), the BDB and the HDB backends have all been removed.
-* The `ppolicy` module now provides its own built-in schema. The external `ppolicy` schema has been removed.
-* The `nssov` module has been removed.
+* The shell (`slapd-shell`), BDB 및 HDB 백엔드가 모두 제거되었습니다.
+* `ppolicy` 모듈은 자체 내장 스키마를 제공합니다. 외부 `ppolicy` 스키마는 제거되었습니다.
+* `nssov` 모듈이 제거되었습니다.
 
-In certain situations, it is possible that the post-installation scripts will **not** be able to successfully migrate your current installation to new formats (e.g., when you are using an old backend like BDB/HDB). If this happens, you will be notified about the failure and the `slapd` server will **not** be (re)started; you will then have to take manual action in order to migrate your data and start the service. Please look at the [README.Debian ](https://git.launchpad.net/ubuntu/+source/openldap/tree/debian/slapd.README.Debian?h=ubuntu/impish-devel) file (under `/usr/share/doc/slapd/`) for more information.
+특정 상황에서, 설치 후 스크립트가 현재 설치를 새 형식으로 성공적으로 마이그레이션하지 **못할** 수도 있습니다(예: BDB/HDB와 같은 이전 백엔드를 사용하는 경우). 이런 일이 발생하면 실패에 대한 알림이 표시되고 `slapd` 서버가 (재)시작되지 **않습니다**. 데이터를 마이그레이션하고 서비스를 시작하기 위해 수동 조치를 취해야 합니다. [README.Debian ](https://git.launchpad.net/ubuntu/+source/openldap/tree/debian/slapd.README.Debian?h=ubuntu/impish-devel) 파일(`/usr/share/doc/slapd/` 아래)를 참조하십시오.
 
 #### BIND 9.18
 
-BIND 9 has been updated to [version 9.18.1](https://bind9.readthedocs.io/en/v9_18_1/notes.html). This new version includes
+BIND 9가 [version 9.18.1](https://bind9.readthedocs.io/en/v9_18_1/notes.html)로 업데이트되었습니다. 새 버전에는 다음이 포함됩니다.
 
-- Support for DNS over TLS (DoT) and DNS over HTTPS (DoH).
-- `named` now supports zone transfers over TLS (XFR-over-TLS, XoT) for both incoming and outgoing zone transfers.
-- `dig` is now able to send DoT queries.
+- DNS over TLS(DoT) 및 DNS over HTTPS(DoH)를 지원합니다.
+- `named`는 수신 및 발신 영역 전송(zone transfers)에 대해 TLS(XFR-over-TLS, XoT)를 통한 영역 전송을 지원합니다.
+- `dig`는 이제 DoT 쿼리를 보낼 수 있습니다.
 
-Users upgrading from previous versions should be aware of the following changes:
+이전 버전에서 업그레이드하는 사용자는 다음 변경 사항을 알고 있어야 합니다.
 
-- The binary files which are neither daemons nor administrative programs have been moved from `/usr/sbin` to `/usr/bin`.
-- Support for the map zone file format has been removed. Users relying on such zone file format should convert their zones to use the raw format and change configurations accordingly before upgrading.
-- Several obsolete, non-working configuration options have been removed and are now treated as configuration failures when present. A complete list of such configurations is available in the [upstream release notes](https://bind9.readthedocs.io/en/v9_18_1/notes.html#removed-features).
+- 데몬(daemon) 및 관리 프로그램이 아닌 바이너리 파일은 `/usr/sbin`에서 `/usr/bin`으로 이동되었습니다.
+- map zone 파일 형식에 대한 지원이 제거되었습니다. 이러한 zone 파일 형식은 업그레이드 전에 원시 형식(raw format)을 사용하도록 zone 파일을 변환하고 그에 따라 구성을 수정해야 합니다.
+- 사용되지 않고 작동하지 않는 여러 설정 옵션이 제거되었으며, 해당 설정 옵션이 존재할 때 설정 오류로 처리됩니다. 이러한 설정의 전체 목록은 [upstream release notes](https://bind9.readthedocs.io/en/v9_18_1/notes.html#removed-features)에서 확인할 수 있습니다.
 
-#### Apache has been updated to 2.4.52 from 2.4.48.
+#### Apache 2.4.48 버전에서 2.4.52 버전으로 업데이트
 
- - OpenSSL support is improved to support OpenSSL v3.  mod_ssl also received various refinements for outgoing connection behaviors, backwards compatibility, and wireshark logging.
- - mod_md adds support for ACME External Account Binding (EAB) along with a host of other enhancements and fixes.
- - Numerous fixes, including better hostname and UDS URI checking and handling, status code responses, and so on.
-
+ - OpenSSL에선 OpenSSL v3를 지원하도록 개선되었으며, mod_ssl 또한 외부 커넥션 (outgoing connection) 동작, 이전 버전과의 호환성, 그리고 wireshark 로깅에 대한 다양한 개선 사항이 지원되었습니다.
+ - mod_md는 기타 여러 개선 및 수정사항과 함께 ACME 외부 계정 바인딩(EAB)에 대한 지원을 추가합니다.
+ - 개선된 hostname과 UDS URI 검사 및 처리, 상태코드 응답 등을 포함한 수많은 수정사항이 있습니다.
 
 #### PostgreSQL 14
 
@@ -357,19 +360,20 @@ Samba was updated to 4.15.5, which brings some noteworthy changes. Please see th
 * `findsmb(1)` was removed
 * [glusterfs support enabled](https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1894618) in the Ubuntu packaging. This was possible because [glusterfs was promoted to Main](https://bugs.launchpad.net/ubuntu/+source/glusterfs/+bug/1950321) during the 22.04 LTS development cycle, which allowed us to enable the glusterfs vfs module. This module is now present in the `samba-vfs-modules` package.
 
-#### Quagga replaced with frr
-`quagga` was removed from Ubuntu 22.04 and replaced by FRRouting (`frr`, https://frrouting.org/).
+#### Quagga가 frr 로 대체됨
 
-#### Chrony time synchronization
+'quagga'는 Ubuntu 22.04에서 삭제 되었으며 FRRouting 으로 대체되었습니다. ('frr', https://frrouting.org/).
 
-Chrony has been updated to version 4.2 which includes
+#### Chrony 시간 동기화
 
- * Add support for AES-CMAC and hash functions in GnuTLS
- * Improve server interleaved mode to be more reliable and support multiple clients behind NAT
- * Add statistics about interleaved mode to serverstats report
- * Adds and enabled further hardening options to the chrony service
- * Allow reading timemaster created configurations
- * For more details read the upstream [release notes](https://chrony.tuxfamily.org/news.html)
+Chrony는 버전 4.2로 업데이트 되었으며 다음을 포함합니다
+
+ * GnuTLS에서 AES-CMAC 해쉬 함수 지원을 추가하였습니다
+ * 서버의 인터리브 모드가 조금 더 안정적으로 향상되었으며 NAT 뒤에 다중 클라이언트를 지원합니다
+ * Serverstats 보고서에 인터리브 모드에 대한 통계를 추가하였습니다
+ * Chrony 서비스에 추가적인 하드닝(Hardening) 옵션을 추가하고 활성화 하였습니다
+ * timemaster에서 생성한 구성을 읽는 것을 허용했습니다
+ * 더 자세한 내용은 업스트림 [릴리스 노트](https://chrony.tuxfamily.org/news.html)를 읽으십시오
 
 #### Virtualization
 
@@ -432,7 +436,7 @@ The new version 2.17.0 of openvswitch is in Ubuntu 22.04 and provides a general 
 
 The `swtpm` as well as `libtpms` package is now available and supported in Ubuntu 22.04.
 
-`swtpm` provides TPM emulators with different front-end interfaces to libtpms. TPM emulators provide socket interfaces (TCP/IP and unix) and the Linux CUSE interface for the creation of multiple native /dev/vtpm* devices..
+`swtpm` provides TPM emulators with different front-end interfaces to libtpms. TPM emulators provide socket interfaces (TCP/IP and unix) and the Linux CUSE interface for the creation of multiple native /dev/vtpm* devices.
 
 A common use case for `swtpm` is to use it as virtual TPM for virtual machine and container use cases.
 This is particular important for guest operating systems that consider TPM support mandatory.
@@ -440,131 +444,138 @@ This is particular important for guest operating systems that consider TPM suppo
 See the [upstream wiki](https://github.com/stefanberger/swtpm/wiki) for more details.
 
 #### Squid
-
-* The `squid` package links against the GnuTLS library.  If you would like to use OpenSSL, you can install the new `squid-openssl` package.
+ 
+* `squid` 패키지는 GnuTLS 라이브러리에 연결됩니다. OpenSSL을 사용하길 원하신다면, 새로운 `squid-openssl` 패키지를 설치 할 수 있습니다.
 
 #### cloud-init
-                                                                                
-Version 22.1 of cloud-init has been released to 22.04, 21.10, 20.04 and 18.04.
-                                                                                
-Notable features introduced since the last LTS release:
-                                                                                
- * Clouds and datasources
-   * Add LXD datasource in Jammy which reads dynamic instance data from LXD socket and applies config changes across reboot
-   * Added a native VMWare datasource
-   * OpenStack and ConfigDrive now support vendor_data2 config overrides
-   * Azure boot speed improvements, network config validation and SSH key handling
-   * GCE detected earlier in boot
- * Config Modules
-   * Add [opt-in hotplug network support via user-data](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#install-hotplug) for OpenStack and ConfigDrive
-   * Add deferred write_files config to emit files later in boot
- * Usability
-   * Schema validation of `#cloud-config` userdata to annotate specific errors in user-provided configuration
+
+cloud-init의 22.1 버전은 22.04, 21.10, 22.04 및 18.04에 릴리즈 되었습니다.
+
+마지막 LTS 릴리즈 이후 도입된 주목할만한 기능:
+
+ * Clouds 와 datasources
+   * LXD 소켓에서 동적 인스턴스 데이터를 읽어 재부팅 시에 구성 변경 사항을 적용하는 LXD datasource가 Jammy에 추가됨 
+
+   * 네이티브 VMWare datasource를 추가함
+   * 이제 오픈스택과 ConfigDrive에서 vendor_data2 구성 재정의를 지원함 
+   * Azure의 부팅 속도 개선, 네트워크 구성 유효성 검사 및 SSH 키 처리
+   * GCE는 부팅 초기에 감지됨
+ * Config 모듈
+   * 오픈스택과 ConfigDrive용 [사용자 데이터에 의한 옵트인 핫플러그 네트워크 지원](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#install-hotplug)이 추가됨
+
+   * 나중에 부팅할 때 파일을 내보내기 위해 지연된 write_files 구성 추가
+ * 사용성
+   * 사용자 제공 구성의 특정 오류에 주석을 달기 위한 `#cloud-config` 사용자 데이터의 스키마 유효성 검사
 
 #### ubuntu-advantage-tools
 
-Ubuntu-advantage-tools version 27.8 is released with Jammy.
+Jammy와 함께 Ubuntu-advantage-tools 버전 27.8 이 릴리즈됨.
 
-Notable improvements introduced in this cycle:
- * Service offerings:
-     * Ubuntu Pro and Ubuntu Pro FIPS images on Azure, GCP and AWS
-     * GCP support to add Ubuntu Advantage licenses to existing VMs
-     * AWS support for IPv6 IMDS
-     * CIS benchmarks packaged as part of Ubuntu Security Guide (USG)
- * Usability
-     * `ua security-status` provides a detailed view of available and applicable package updates provided by Ubuntu proper and Extended Security Maintenance channels
-     * Enable Desktop installer to validate and attach Ubuntu Advantage tokens
-     * Support machine-readable output JSON/YAML format for most commands
-     * Configurable auto attach behavior via `ua attach --attach-config`
-### Ubuntu Server Main Promotions
-For Ubuntu Server 22.04 LTS, the following source packages were promoted to main:
- * [wireguard](https://www.wireguard.com): fast, modern, secure kernel VPN tunnel
- * [glusterfs](https://www.gluster.org/): cluster file-system capable of scaling to several peta-bytes
- * [frr](https://www.frrouting.org/): suite of internet routing protocols (BGP, OSPF, IS-IS, ...)
+이번 사이클에 도입된 주목할 개선사항:
+ * 서비스 제공:
+     * Ubuntu Pro와 Ubuntu Pro FIPS 이미지는 Azure, GCP 그리고 AWS에 있음
+     * GCP에서 기존 VM에 Ubuntu Advantage 라이센스를 추가하는 것을 지원
+     * AWS는 IPv6 IMDS를 지원함
+     * CIS 벤치마크는 Ubuntu Security Guide (USG)의 일부로 패키지됨
+ * 사용성
+     * 'ua security-status'는 Ubuntu proper와 Extended Security Maintenance 채널에서 제공하는 사용 가능하고 적용 가능한 패키지 업데이트의 상세 보기를 제공
+     * Ubuntu Advantage 토큰을 확인하고 첨부하려면 데스크탑 설치 프로그램을 활성화하십시오.
+     * 대부분의 명령에 대해 기계 판독 가능한 출력 JSON/YAML 형식 지원
+     * `ua attach --attach-config`를 통해 구성 가능한 자동 연결 동작
 
-### LXD was updated to the new 5.0 LTS version
+### 우분투 서버 메인 패키지 승격
 
-5.0 LTS significantly steps up LXD’s abilities, especially when operating in clustered environments. In comparison to LXD 4.0, virtual machines are now effectively at feature parity with containers, and a lot of networking options, clustering, and project features were added.
+우분투 서버 22.04 LTS에서 다음 소스 패키지가 메인 페키지로 승격되었습니다:
+ * [wireguard](https://www.wireguard.com): 빠르고, 최신의 보안 커널 VPN 터널 패키지
+ * [glusterfs](https://www.gluster.org/): 페타 바이트로 확장 가능한 클러스터 파일 시스템
+ * [frr](https://www.frrouting.org/): 인터넷 라우팅 프로토콜 모음 (BGP, OSPF, IS-IS, ...)
 
-Some of the key changes include:
+### LXD가 새로운 5.0 LTS 버전으로 업데이트
 
-* **LXD virtual machines** now come with vTPM support as well as arbitrary PCI passthrough support. VMs can now be live-migrated and support some device hotplug and additional storage options.
-* **Networking** now includes OVN support combined with BGP, DNS, floating IP and hardware acceleration support.
-* **Projects** have grown a number of additional limits and restrictions, making it easy to safely grant access to various teams and limit their resource usage.
-* **LXD-migrate** has been reworked with support for both containers and VMs
-* **Cluster** users can now perform easy maintenance through cluster evacuation, group servers into target groups and get detailed instance metrics across entire clusters.
+5.0 LTS는 특히 클러스터 환경에서 작동할 때 LXD의 기능을 크게 향상시켰습니다. LXD 4.0과 비교하여 가상 머신은 이제 컨테이너와 동일한 기능을 제공하며, 많은 네트워킹 옵션, 클러스터링, 프로젝트 기능이 추가되었습니다.
 
-Additional details and a complete changelog can be found [here](https://discuss.linuxcontainers.org/t/lxd-5-0-lts-has-been-released/13723).
+주요 변경 사항은 다음과 같습니다:
+
+* **LXD 가상 머신**은 이제 vTPM 지원과 임의 PCI 패스스루(passthrough) 지원과 함께 제공합니다. 이제 VM은 라이브 마이그레이션을 할 수 있으며, 일부 장치의 핫플러그와 추가 스토리지 옵션을 지원합니다.
+* **네트워킹**에는 이제 BGP, DNS, 유동 IP, 하드웨어 가송 지원과 결합된 OVN을 지원합니다.
+* **프로젝트**에 추가할 수 있는 제한을 늘렸습니다. 그리고 다양한 팀에 안전하게 접근 권한을 부여하고 리소스 사용을 제안합니다.
+* **LXD-migrate**는 컨테이너와 VM 모두를 지원하도록 재작업 되었습니다.
+* **클러스터** 사용자는 클러스터 철수(evacuation)을 통해 손쉽게 유지 관리를 수행하고, 서버를 타켓 그룹으로 그룹화하고 전체 클러스터에서 자세한 인스턴스 메트릭을 얻을 수 있습니다.
+
+추가 세부 정부와 전체 변경 로그는 [여기](https://discuss.linuxcontainers.org/t/lxd-5-0-lts-has-been-released/13723)에서 찾을 수 있습니다.
 
 
 ### Ceph
 
-Ubuntu 22.04 includes the latest release candidate of the Ceph Quincy release.
+우분투 22.04에는 Ceph Quincy 릴리즈의 최신 릴리즈 후보가 포함되어있습니다.
 
-Ceph packages will be updated as a [stable release update](https://bugs.launchpad.net/ubuntu/+source/ceph/+bug/1968318) once Quincy is released by the Ceph community.
+Ceph 커뮤니티에서 Quincy를 출시하면 Ceph 패키지가 [안정 릴리즈 업데이트](https://bugs.launchpad.net/ubuntu/+source/ceph/+bug/1968318)로 업데이트됩니다.
 
-### OpenStack
+### 오픈스택
 
-Ubuntu 22.04 includes the latest OpenStack release, Yoga, including the following components:
+우분투 22.04에는 오픈스택 최신 릴리즈인 Yoga가 추가되어있으며, 다음 컴포넌트가 추가되어있습니다:
 
-* OpenStack Identity - Keystone
-* OpenStack Imaging - Glance
-* OpenStack Block Storage - Cinder
-* OpenStack Compute - Nova
-* OpenStack Networking - Neutron
-* OpenStack Telemetry - Ceilometer, Aodh, Gnocchi
-* OpenStack Orchestration - Heat
-* OpenStack Dashboard - Horizon
-* OpenStack Object Storage - Swift
-* OpenStack DNS - Designate
-* OpenStack Bare-metal - Ironic
-* OpenStack Filesystem - Manila
-* OpenStack Key Manager - Barbican
-* OpenStack Load Balancer - Octavia
-* OpenStack Instance HA - Masakari
+* 오픈스택 Identity - Keystone
+* 오픈스택 Imaging - Glance
+* 오픈스택 Block Storage - Cinder
+* 오픈스택 Compute - Nova
+* 오픈스택 Networking - Neutron
+* 오픈스택 Telemetry - Ceilometer, Aodh, Gnocchi
+* 오픈스택 Orchestration - Heat
+* 오픈스택 Dashboard - Horizon
+* 오픈스택 Object Storage - Swift
+* 오픈스택 DNS - Designate
+* 오픈스택 Bare-metal - Ironic
+* 오픈스택 Filesystem - Manila
+* 오픈스택 Key Manager - Barbican
+* 오픈스택 Load Balancer - Octavia
+* 오픈스택 Instance HA - Masakari
 
-Please refer to the [OpenStack Yoga release notes](https://releases.openstack.org/yoga/) for full details of this release of OpenStack.
+오픈스택 릴리즈에 대한 자세한 내용은 [오픈스택 Yoga 릴리즈 노트](https://releases.openstack.org/yoga/)를 참고하십시오.
 
-OpenStack Yoga is also provided via the [Ubuntu Cloud Archive](https://wiki.ubuntu.com/OpenStack/CloudArchive) for OpenStack Yoga for Ubuntu 20.04 LTS users.
+오픈스택 Yoga는 우분투 20.04 LTS 버전 사용자를 위해 [우분투 클라우드 아카이브](https://wiki.ubuntu.com/OpenStack/CloudArchive)를 통해서도 제공됩니다.
 
-WARNING: Upgrading an OpenStack deployment is a non-trivial process and care should be taken to plan and test upgrade procedures which will be specific to each OpenStack deployment.
+주의: 오픈스택 배포 업그레이드는 간단한 프로세스이나, 각 오픈소스 컨포넌트에 대한 업그레이드 절차를 계획하고 테스트를 하여 업그레이드시 문제점을 대비해야합니다.
 
-Make sure you read the [OpenStack Charm Release Notes](https://docs.openstack.org/charm-guide/latest) for more information about how to deploy and operate Ubuntu OpenStack using Juju.
+Juju를 사용하여 우분투 오픈스택을 배포하고 운영하는 방법에 대한 자세한 내용은 [오픈스택 Charm 릴리즈 노트](https://docs.openstack.org/charm-guide/latest)를 참고하십시오.
 
-### needrestart and unattended operations
+### needrestart와 사용자 간섭없이 작업
 
-[needrestart](https://discourse.ubuntu.com/t/needrestart-for-servers/21552) was first installed by default in Ubuntu 21.04 and continues to feature in Ubuntu 22.04. It helps ensure that services are correctly restarted when their dependencies receive security updates.
+[needrestart](https://discourse.ubuntu.com/t/needrestart-for-servers/21552)는 우분투 21.04에서 기본으로 처음 설치되었으며, 우분투 22.04에서 계속 사용이 가능합니다. 관련된 항목이 보안 업데이트가 필요할 때 서비스가 정상적으로 재시작하도록 도와줍니다.
 
-By default, needrestart will prompt after upgrading packages if restarts are determined to be required. To suppress this behaviour, you can set `DEBIAN_FRONTEND=noninteractive` as usual. needrestart will then fall back to "list only mode". It will be necessary to restart services afterwards, for example by rebooting or invoking `needrestart -ra`.
+기본 값은 다시 시작이 필요하다고 판단되면 패키지 업그레이드한 이후 필요에 따라 needrestart 화면이 표시됩니다. 이 동작을 피하려면 `DEBIAN_FRONTEND=nointeractive`로 설정할 수 있습니다. 설정 이후에는 needrestart "목록 전용 모드"로 대체됩니다. 재부팅 하거나 `needrestart -ra`를 호출하여 나중에 서비스를 다시 시작해야 합니다.
 
-## Platforms
+## 플랫폼
 
-### Cloud Images :cloud:
+### 클라우드 이미지 :cloud:
 
 #### AWS
-* AWS amd64 images use now a GPT partition table and setup a ESP partition to make it possible to use UEFI as boot mode.
+* 이제 AWS의 amd64 이미지는 UEFI를 부팅 모드로 사용하기 위해서 GPT 파티션 테이블과 ESP 파티션 설정을 사용합니다.
 
 #### Oracle
-* Jammy Minimal images are available for ARM64 servers on Oracle Cloud Infrastructure. Note that OCI releases images on a fixed cadence, and Jammy release to OCI will be slightly delayed.
+* Oracle Cloud Infrastructure에서 ARM64 서버를 위한 Jammy의 최소 이미지가 이용가능합니다. OCI가 이미지를 경직된 속도로 릴리즈 하기 때문에 OCI로의 Jammy 릴리즈가 살짝 늦어짐을 알아두길 바랍니다.
 
 ### Raspberry Pi :strawberry:
 
-* The first long-term service (LTS) release of the Ubuntu Desktop for Raspberry Pi
-* Support for several Pi-specific boards and tools have been added to the archive:
-  * All variants of the popular Pimoroni [Unicorn HAT](https://shop.pimoroni.com/products/unicorn-hat?variant=932565325) are now supported with packaging
-  * The official DSI touchscreen is now supported (however, see known issues below for a workaround regarding the desktop image)
-  * The [rpiboot](https://launchpad.net/ubuntu/+source/rpiboot) package contains the [rpiboot](https://github.com/raspberrypi/usbboot) utility for working with Raspberry Pi Compute Modules (and other Pi boot facilities)
-  * The [pyboard-rshell](https://launchpad.net/ubuntu/+source/pyboard-rshell) package contains the [rshell](https://pypi.org/project/rshell/) utility for working with micro-controller boards supporting MicroPython, including the Raspberry Pi Pico
-  * The [rpi-imager](https://launchpad.net/ubuntu/+source/rpi-imager) package contains the Raspberry Pi imager utility. The equivalent [snap package](https://snapcraft.io/rpi-imager) has also been updated to operate on all architectures (and bumped to the current version)
+* Raspberry Pi를 위한 우분투 데스크톱의 첫번째 장기 지원(LTS) 릴리즈
+* 여러 종류의 Pi 전용 보드 지원과 도구들이 아카이브에 추가 되었습니다:
+  * 인기있는 Pimoroni [Unicorn HAT](https://shop.pimoroni.com/products/unicorn-hat?variant=932565325)가 패키징과 함께 제공됩니다
+  * 이제 공식 DSI 터치스크린이 지원됩니다 (그러나 데스크톱 이미지에 대한 해결책을 위해 밑의 알려진 문제 부분을 보십시오)
+
+  * [rpiboot](https://launchpad.net/ubuntu/+source/rpiboot) 패키지가 Raspberry Pi 컴퓨트 모듈(그리고 Pi 부팅 기반)을 위한 [rpiboot](https://github.com/raspberrypi/usbboot) 유틸리티를 포함하게 됩니다
+  * [pyboard-rshell](https://launchpad.net/ubuntu/+source/pyboard-rshell) 패키지가 Raspberry Pi Pico를 비롯한 MicroPython을 지원하는 마이크로컨트롤러에서의 작업을 위해 [rshell](https://pypi.org/project/rshell/) 유틸리티를 포함하게 됩니다
+  * [rpi-imager](https://launchpad.net/ubuntu/+source/rpi-imager) 패키지가 Raspberry Pi imager를 포함합니다. 동일한 [snap 패키지](https://snapcraft.io/rpi-imager)가 모든 아키텍쳐에서 동작하도록 업데이트 되었습니다 (또한 현재 버전으로 판올림 되었습니다)
 
 ### ppc64el
 
-Starting with 22.04 LTS, Ubuntu Server for IBM POWER (ppc64el) is now compiled for Power9 processors using '--with-cpu=power9' ([bug 1930086](https://bugs.launchpad.net/bugs/1930086)).
-Thus Ubuntu Server 22.04 LTS will not run, install or even boot on Power8 systems anymore, due to the different instruction set requirements.
-Ubuntu Server 20.04 LTS can still be used for Power8 systems for several years - at least until end of base support in April 2025. Users running Ubuntu Server on Power8 today will be prevented from being upgraded to 22.04 LTS using ‘do-release-upgrade’, as this will obviously break such systems ([bug 1960255](https://bugs.launchpad.net/bugs/1960255)).
-In addition, Ubuntu Server 22.04 LTS is the first Ubuntu release that comes with official support for IBM Power10 systems.
+22.04 LTS부터, 이제 IBM POWER (ppc64el)를 위한 우분투 서버 이미지는 Power9 프로세서에 맞춰서 '--with-cpu=power9'을 사용해서 컴파일 됩니다 ([bug 1930086](https://bugs.launchpad.net/bugs/1930086)).
+때문에 상이한 명령어 셋 요구로 인해, 우분투 서버 22.04 LTS는 더이상 Power8 시스템에서 실행, 설치, 나아가 부팅까지도 불가능하게 됩니다. 
+우분투 서버 20.04 LTS를 여전히 Power8 시스템에서 몇년간 사용 할 수는 있습니다 - 최소한 기본 지원의 끝인 2025년 4월까지는 말입니다. Power8에서 우분투 서버를 돌리고 있는 사용자는 'do-release-upgrade'로 22.04 LTS 업그레이드 할 수 없게 되는데, 해당 방법이 시스템을 망가뜨리기 때문입니다 ([bug 1960255](https://bugs.launchpad.net/bugs/1960255)).
+
+추가로, 우분투 서버 22.04 LTS는 IBM Power10 시스템에 대한 공식 지원이 도입된 첫번째 우분투 릴리즈입니다.
 
 ### s390x
+
 
 우분투 서버 20.04 LTS (IBM Z와 LinuxONE 지원)에서 부터, 최소 아키텍쳐 레벨 셋은 z13(그리고 LinuxONE Rockhopper / Emperor)로 상향 됐었습니다 - 이는 여전히 우분투 서버 22.04 LTS에 적용 돼 있고 지원 역시 현재(22.04 출시일) 서비스 되고 있는 모든 더 신형의 하드웨어를 포함합니다. 미래 하드웨어에 대한 추가적 지원은 차후에 추가 될 수 있습니다.
 우분투 서버 22.04 LTS는 LPAR (classic 또는 DPM 모드)에 IBM z/VM 게스트로, KVM 가상 머신으로 그리고 LXD, docker, kubernetes와 같은 서로 다른 컨테이너 환경으로 설치될 수 있습니다.
@@ -608,6 +619,7 @@ Perl 호환되는 라이브러리 PCRE2가 v10.39로 업데이트 되었고 s390
   
   * 서비스 호출 논리 프로세서 (SCLP) 콘솔 인터페이스 드라이버 ('운영체제 메시지' 줄 모드와 '통합 ASCII 콘솔' VT220을 위함)가 모든 sclp 요청이나 그저 실패하는 sclp 요청을 로깅하기 위해서 두 가지 디버그 기능을 얻었고, 이는 커널을 ([버그 1960435](https://bugs.launchpad.net/bugs/1960435)) s390 도구 변경과 마찬가지로 필요로 합니다 ([버그 1960437](https://bugs.launchpad.net/bugs/1960437)).
 
+
 ### RISC-V
 
 Starting with 22.04 LTS, besides the standard device-specific preinstalled image, we now also provide a live installer image for the RISC-V architecture. This can be helpful when wanting to install Ubuntu on an NVMe drive on an Unmatched board, for instance.
@@ -616,96 +628,95 @@ Starting with 22.04 LTS, besides the standard device-specific preinstalled image
 
 Other operating systems are not displayed in the boot menu anymore, unless Ubuntu has been installed alongside another operating system. Once all other operating systems are removed from the machine, detection of other operating systems is disabled, and to re-enable if after installing another OS, you will have to delete `/boot/grub/grub.cfg` and immediately run `update-grub` again.
 
-# Known Issues
+# 알려진 이슈
 
-As is to be expected, with any release, there are some significant known bugs that users may run into with this release of Ubuntu. The ones we know about at this point (and some of the workarounds), are documented here so you don’t need to spend time reporting these bugs again:
+예상대로 모든 릴리즈에서도 발생하듯, 우분투 릴리즈에서 발생할 수 있는 몇가지 알려진 버그가 존재합니다. 이 시점에서 우리가 알고 있는 것(과 일부 해결 방법)이 문서화하였으며 여기에 적혀있는 버그에 많은 시간을 할애하지 않길 바랍니다.
+## 리눅스 커널
 
-## Linux kernel
+아직 없음.
 
-Nothing yet.
-
-## Security
-* OpenSSL 3.0.2 doesn't work with the [Turkish locale](https://launchpad.net/bugs/1968997).  To work around this issue until a fix is available, affected users are advised to set LC_CTYPE=C.UTF-8 in their environment for processes that use openssl (at a shell: `export LC_CTYPE=C.UTF-8`).  This will break capitalization of strings according to rules for the Turkish language, so is not recommended to be overridden at the system level.
-
-## System
-* systemd / journald now defaults to `zstd` compression and uses the “keyed hash” feature (upstream default as of v246). Therefore, journal files written on Ubuntu 22.04 (using systemd v249) cannot be opened using an older version of journal (i.e. from a 18.04/20.04/Core20 installation). This will fail with an error ([LP: #1953744](https://bugs.launchpad.net/subiquity/+bug/1953744), [forum.snapcraft.io](https://forum.snapcraft.io/t/accessing-journal-logs-from-22-04-hosts-when-using-older-base-snap/29627)):
+## 보안
+* OpenSSL 3.0.2 버전은 [터키 로케일](https://launchpad.net/bugs/1968997)에서 동작하지 않습니다. 수정 사항이 제공될 때까지 이 문제를 해결하려면 `LC_CTYPE=C.UTF-8`을 설정하여 openssl을 사용하는 것을 권해드립니다(셸: `export LC_CTYPE=C.UTF-8`). 하지만, 이렇게 설정하면 터키어 규칙에 따라 문자열의 대문자 사용이 중단되므로 시스템 수준에서 재정의하지 않는 것이 좋습니다.
+## 시스템
+* systemd / journald 에서는 이제 `zstd` 를 이용하여 압축하고, "keyed hash" 기능(v246 업스트림 기본값)을 사용합니다. 우분투 22.04 (systemd v249 사용)에서 작성된 저널 파일을 (18.04/20.04/Core20에 설치된) 오래된 버전에서는 열어 확인할 수 없습니다. 이 오류는 다음 메시지를 보여주고 실패합니다. ([LP: #1953744](https://bugs.launchpad.net/subiquity/+bug/1953744), [forum.snapcraft.io](https://forum.snapcraft.io/t/accessing-journal-logs-from-22-04-hosts-when-using-older-base-snap/29627)):
     ```
     Journal file xxx.journal has unknown incompatible flags 0xc
     Failed to open journal file xxx.journal: Protocol not supported
     ```
-* Users of grub-customizer could hit [a bug](https://pad.lv/1969353) in the late stage of the upgrade process leading to the final stage of the upgrade to fail (autoremoval of packages). A workaround is available [in the bug's comments](https://bugs.launchpad.net/ubuntu/+source/ubuntu-release-upgrader/+bug/1969353/comments/6).
+* grub-customizer 사용자는 업그레이드 프로세스의 마지막 단계에서 [해당 버그](https://pad.lv/1969353)에 도달하여 업그레이드 마지막 단계가 실패할 수 있습니다. (패키지 자동 제거됨) [버그 댓글](https://bugs.launchpad.net/ubuntu/+source/ubuntu-release-upgrader/+bug/1969353/comments/6)에 해결 방법이 있습니다.
 
-## Ubuntu Desktop
+## 우분투 데스크탑
 
-* The Ubuntu Desktop images can be slow to boot (taking up to 10 minutes) when booted from a USB drive on a BIOS system. The issue is being [investigated](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1922342), however once the system is installed this is not an issue.
-* The Ubuntu Desktop images can be very slow to boot (taking up to 30 minutes) when booted from optical media (DVD) on a a BIOS or UEFI system. This is due to an integrity checker being run against the installation media. A workaround (setting "fsck.mode=skip") is documented in [the relevant bug](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1930880).
-* A hang of the Ubuntu Desktop installer, Ubiquity, [has been observed](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1946828),  where it is scanning NTFS partitions to determine if they can be resized.  The symptom of this is a spinning ball cursor when attempting to continue past the installer 'Updates and other software' screen.  If this occurs, please reboot and try again.
-* The Firefox snap does not support the [NativeMessaging protocol](https://launchpad.net/bugs/1741074) yet but this feature is planned to be added soon. This means for instance that installing GNOME Shell extensions from Firefox won't work. As a workaround, you can try the `gnome-shell-extension-manager` app.
- * Brazilians (and others that need PKCS#11 smartcard support in Firefox) **should not upgrade to Jammy** until [pkcs#11 support is added to the firefox snap](https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1967632)
-* The GNOME Tweaks app no longer manages GNOME Shell extensions. You can install `gnome-shell-extension-manager` instead.
-* There isn't an option to use Wayland for systems with [Nvidia graphics drivers](https://launchpad.net/bugs/1968929).
-* To use AppImages, you'll first [need to run](https://launchpad.net/bugs/1965636) `sudo apt install libfuse2`
-* RDP (Remote Desktop) Sharing [appears on](https://launchpad.net/bugs/1969619) by default but it is not on and needs to be turned off and then turned on to enable.
-* An upgrade to Ubuntu 22.04 LTS can cause [a bad interaction between snapd and update-notifier](https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1969162) which can cause the upgrade to hang. The fix is currently in flight and upgrades will be enabled shortly.
+* 우분투 데스크탑 이미지에서 BIOS 시스템에서 USB 드라이브로 부팅할때 부팅 속도가 느려질 수 있습니다 (최대 10분 소요). 문제는 [조사중](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1922342)이지만 시스템이 설치되면 문제가 되지 않습니다.
+* 우분투 데스크탑 이미지에서 BIOS 또는 UEFI 시스템에서 DVD를 이용하여 부팅할때 부팅 속도가 느릴 수 있습니다 (최대 30분 소요). 이는 설치 미디어에 대한 무결성 검사를 하고 있기 때문입니다. 해결 방법("fsck.mode=skip" 설정)은 [관련 버그](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1930880)에 설명되어 있습니다.
+* 우분투 데스크탑 설치 프로그램인 Ubiquity가 멈추는 현상이 [확인되었습니다](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1946828). 이때는 NTFS 파티션의 크기가 재조정할 수 있는지 확인하기위해 스캔 중으로 보여집니다. 이 증상은 설치 프로그램 '업데이트 및 기타 소프트웨어' 화면을 지나 계속하려고 할때 회전하는 모양의 커서가 움직이는 것으로 확인할 수 있습니다. 해당 문제가 발생하면 재부팅하고 다시 시도하면 됩니다.
+* Firefox snap 에서는 아직 [NativeMessaging protocol](https://launchpad.net/bugs/1741074)을 지원하지 않지만 이 기능은 곧 추가될 예정입니다. Firefox를 통해 GNOME Shell 확장을 설치가 안된다는 것을 의미합니다. 해결 방법으로 `gnome-shell-extension-manager` 앱을 이용하면 됩니다.
+  * 브라질어 사용자(와 Firefox에서 PKCS#11 스마트 카드 지원이 필요한) 사용자는 **Jammy로 업그레이드하면 안됩니다**. [pkcs#11 support is added to the firefox snap](https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1967632)
+* GNOME Tweaks 앱에서 더이상 GNOME Shell 확장을 관리하지 않습니다. 대신 `gnome-shell-extension-manager` 를 통해서 설치할 수 있습니다.
+* [Nvidia graphics drivers](https://launchpad.net/bugs/1968929) 를 사용하는 시스템에는 Wayland를 사용하는 옵션이 없습니다.
+* AppImages를 사용하려면 먼저 `sudo apt install libfuse2` 를 [실행해야 합니다](https://launchpad.net/bugs/1965636).
+* RDP (Remote Desktop) 공유는 기본으로 [활성화되어 있는 것으로 표시](https://launchpad.net/bugs/1969619) 되지만 활성화 되어있지 않으니 비활성화한 다음 다시 활성화 해야합니다.
+* 우분투 22.04 LTS로 업그레이드 하면 [snapd와 update notifier 간 잘못된 상호 작용](https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1969162)이 발생하여 업그레이드가 무기한 대기할 수 있습니다. 수정 사항은 현재 진행중이며 곧 업그레이드를 진행할 예정입니다.
 
-## Ubuntu Server
+## 우분투 서버
 
-* Due to a [current issue with fallocate on zfs](https://bugs.launchpad.net/ubuntu/+source/zfs-linux/+bug/1969247), mysql fails to install on Jammy zfs systems 
+* [zfs의 fallocated 관련 문제](https://bugs.launchpad.net/ubuntu/+source/zfs-linux/+bug/1969247)로 인해 mysql이 Jammy zfs 시스템에서 설치되지 않습니다.
 
 ## Platforms
 
 ### Cloud Images
 
 #### Vagrant
-* Jammy `vagrant` from `universe` does not support openssl3 upstream. This will cause users of vagrant on a Jammy host to receive OpenSSL errors on start. The box will still be booted, and `vagrant ssh` will operate, however `vagrant` functionality will be severely impacted. Connections between boxes will not operate normally. [bug report.](https://bugs.launchpad.net/ubuntu/+source/vagrant/+bug/1964025)
-* Vagrant < 2.216 will fail to launch due to SSH connection issues. `vagrant`, as provided in the Ubuntu archives, does not reach >= 2.2.16 until Jammy .  One workaround is to use an upstream version of `vagrant` on your system. [Upstream bug, already fixed.](https://github.com/hashicorp/vagrant/issues/11783).  The Cloud Team is also working on a more permanent solution: [Public cloud-images bug](https://bugs.launchpad.net/cloud-images/+bug/1969664)
+
+* `universse`에서 Jammy `vagrant`에서는 openssl3 업스트림을 지원하지 않습니다. 이로 인해서 Jammy 호스트의 vagrant 사용자는 시작시 OpenSSL 오류를 확인하게 됩니다. Box는 부팅이되고, `vagrant ssh`가 작동하지만, `vagrant` 기능은 심각한 영향을 받습니다. 그리하여 Box간 연결이 정상적으로 동작하지 않습니다. [버그 리포트](https://bugs.launchpad.net/ubuntu/+source/vagrant/+bug/1964025)
+* Vagrant 2.2.16 버전 이하에서는 SSH 연결 문제로 인해 실행되지 않습니다. 우분투 패키지 아카이브에 제공된 `vagrant`는 Jammy 때까지 2.2.16 이상 버전으로 반영되지 않았습니다. (역주: 220521일자 기준으로 [2.2.19 버전](https://packages.ubuntu.com/jammy/vagrant)으로 확인된다.) 한 가지 해결 방법은 시스템에서 `vagrant`를 업스트림 버전으로 사용하는 것이다. [업스트림에서는 버그가 수정되었습니다](https://github.com/hashicorp/vagrant/issues/11783). 클라우드 팀에서는 해당 문제를 수정하기위해서 노력하고 있습니다. [공개 클라우드 이미지 버그](https://bugs.launchpad.net/cloud-images/+bug/1969664)
 
 ### Raspberry Pi
 
-* The Raspberry Pi desktop images have switched to using the Full KMS graphics drivers. The official Raspberry Pi DSI display does not work with full KMS enabled. To enable the use of the Raspberry Pi DSI display, edit the `config.txt` file on your Raspberry Pi's hard drive and change the line `dtoverlay=vc4-fkms-v3d` to `dtoverlay=vc4-kms-v3d`
-* Currently, the USB ports on the official IO board for the Compute Module 4 are inoperative ([bug 1969689](https://launchpad.net/bugs/1969689))
-* On the desktop image, the Firefox snap can take some time (several minutes has been noted) to complete initialization after first login ([bug 1969529](https://launchpad.net/bugs/1969529))
-* The legacy camera stack (MMAL based) is no longer supported on `arm64`; [libcamera] is the supported method of using the Pi Camera Module on the `arm64` architecture (the boot-time configuration will automatically load overlays for detected modules)
+* 라즈베리 파이 데스크탑 이미지는 Full KMS 그래픽 드라이버를 사용하도록 변경되었습니다. 그러나 공식 라즈베리 파이 DSI 디스플레이는 Full KMS가 활성화된 상태에서는 동작하지 않습니다. 라즈베리 파이 DSI 디스플레이를 사용하도록 활성화시키려면, 라즈베리 파이의 하드 드라이브에서 `config.txt` 파일에서 `dtoverlay=vc4-fkms-v3d` 항목을 `dtoverlay=vc4-kms-v3d`으로 수정해야 합니다.
+* 현재 Compute Module 4용 공식 IO 보드의 USB 포트가 작동하지 않습니다.([버그](https://launchpad.net/bugs/1969689))
+* 데스크탑 이미지에서 Firefox snap은 최초 로그인후 초기화를 완료하는데 시간이 걸릴 수 있습니다. (해당 시간이 표시됨) ([버그](https://launchpad.net/bugs/1969529))
+* (MMAL 기반인) 레거시 카메라 스택은 `arm64`에서는 더이상 지원하지 않습니다. [libcamera]는 `arm64` 아키텍처에서 Pi 카메라 모듈을 사용할 수 있도록 도와주는 라이브러리입니다. (부팅 시간동안 감지된 모듈에 대한 오버레이를 자동으로 구성을 읽어들입니다.)
 
-Carried over from interim releases (these are changes are applicable from LTS->LTS):
+중간 릴리즈에서 이월됨 (변경사항은 LTS->LTS에서 적용될 수 있습니다.):
 
-* After initial user setup on the desktop image, several packages can still be autoremoved ([bug 1925265](https://launchpad.net/bugs/1925265)); run `sudo apt autoremove` to work around this
-* On the desktop image, the wrong audio output device is selected on each boot. A workaround is available in the bug report ([bug 1899962](https://launchpad.net/bugs/1899962))
-* Various kernel modules have been moved from the `linux-modules-raspi` package in order to reduce the initramfs size. If you find an application failing due to missing kernel modules, please try the following:
+* 데스크탑 이미지에서 초기 사용자 설정이후에도 여전히 여러 패키지가 자동 제거될 수 있습니다.([버그 1925265](https://launchpad.net/bugs/1925265)). 이 문제를 해결하려면 `sudo apt autoremove` 를 실행하면 됩니다.
+* 데스크탑 이미지에서 부팅할 때마다 잘못된 오디오 출력 장치가 선택될 수 있습니다. 해결 방법은 버그 리포트에서 확인하면됩니다. ([버그 1899962](https://launchpad.net/bugs/1899962))
+* initramfs 크기를 줄이기 위해 `linux-modules-raspi` 패키지에서 다양한 모듈이 분리되었습니다. 누락된 커널 모듈로 인해 애플리케이션이 실패하는 경우, 다음을 명령어를 사용하여 설치 하십시오.
   * `sudo apt install linux-modules-extra-raspi`
 
 ### s390x
 
-No known issues yet.
+알려진 이슈가 없습니다.
 
-# Official flavours
+# 공식 flavour
 
-The release notes for the official flavours can be found at the following links:
+공식 flavour를 위한 릴리즈 노트는 아래 링크를 통해 찾아볼 수 있습니다:
 
-* [Kubuntu Release Notes](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/Kubuntu)
-* [Lubuntu Release Notes](https://discourse.lubuntu.me/t/lubuntu-22-04-lts-jammy-jellyfish-release-notes/3179)
-* [Ubuntu Budgie Release Notes for 21.10 upgraders](https://ubuntubudgie.org/2022/03/ubuntu-budgie-22-04-lts-release-notes/) & [Ubuntu Budgie Release Notes for 20.04 upgraders](https://ubuntubudgie.org/2022/04/ubuntu-22-04-release-notes-for-20-04-upgraders/)
-* [Ubuntu Kylin Release Notes](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/UbuntuKylin)
-* [Ubuntu MATE Release Notes](https://ubuntu-mate.org/blog/ubuntu-mate-jammy-jellyfish-release-notes/)
-* [Ubuntu Studio Release Notes](https://ubuntustudio.org/ubuntu-studio-22-04-lts-release-notes/)
-* [Xubuntu Release Notes](https://wiki.xubuntu.org/releases/22.04/release-notes)
+* [Kubuntu 릴리즈 노트](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/Kubuntu)
+* [Lubuntu 릴리즈 노트](https://discourse.lubuntu.me/t/lubuntu-22-04-lts-jammy-jellyfish-release-notes/3179)
+* [21.10에서 업그레이드하는 사용자를 위한 우분투 Budgie 릴리즈 노트](https://ubuntubudgie.org/2022/03/ubuntu-budgie-22-04-lts-release-notes/) & [20.04에서 업그레이드하는 사용자를 위한 우분투 Budgie 릴리즈 노트](https://ubuntubudgie.org/2022/04/ubuntu-22-04-release-notes-for-20-04-upgraders/)
+* [우분투 Kylin 릴리즈 노트](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/UbuntuKylin)
+* [우분투 MATE 릴리즈 노트](https://ubuntu-mate.org/blog/ubuntu-mate-jammy-jellyfish-release-notes/)
+* [우분투 Studio 릴리즈 노트](https://ubuntustudio.org/ubuntu-studio-22-04-lts-release-notes/)
+* [Xubuntu 릴리즈 노트](https://wiki.xubuntu.org/releases/22.04/release-notes)
 
-# More information
+# 더 알아보기
 
-## Reporting bugs
+## 버그 리포트
 
-Your comments, bug reports, patches and suggestions will help fix bugs and improve the quality of future releases. Please [report bugs using the tools provided](http://help.ubuntu.com/community/ReportingBugs). If you want to help out with bugs, the [Bug Squad](http://wiki.ubuntu.com/BugSquad) is always looking for help.
+여러분의 댓글, 버그 리포트, 패치 그리고 제안은 버그를 수정하고 추후 릴리즈의 질을 향상하는 것에 도움이 됩니다. [제공된 도구를 이용해서 버그 리포트](http://help.ubuntu.com/community/ReportingBugs)하는 것을 부탁드립니다. 만약 버그 수정에 참여하고 싶다면, [Bug Squad](http://wiki.ubuntu.com/BugSquad)은 항상 도움을 기다리고 있습니다.
 
-## Participate in Ubuntu
+## 우분투에 참여하기
 
-If you would like to help shape Ubuntu, take a look at the list of ways you can participate at:
+만약 우분투를 만드는 데 도움을 주고 싶다면, 참여하는 방법 목록을 다음에서 확인하십시오:
 
 * https://community.ubuntu.com/contribute
 
-## More about Ubuntu
+## 우분투 더 알아보기
 
-You can find out more about Ubuntu on the [Ubuntu website](https://www.ubuntu.com).
+[우분투 웹사이트](https://www.ubuntu.com)에서 우분투에 관한 더 많은 정보를 찾을 수 있습니다.
 
-To sign up for future Ubuntu development announcements, please subscribe to Ubuntu’s development announcement list at:
+향후 우분투 개발 소식을 보고 싶다면, 우분투의 개발 소식 목록을 다음에서 구독하십시오:
 
 * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce
