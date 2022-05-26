@@ -286,45 +286,49 @@ BIND 9가 [version 9.18.1](https://bind9.readthedocs.io/en/v9_18_1/notes.html)�
 
 #### PostgreSQL 14
 
-PostgreSQL has been updated to version 14.2.
+PostgreSQL이 버전 14.2로 업데이트되었습니다.
 
-This update contains many new features and enhancements, including:
+이 업데이트는 다음과 같이 많은 새로운 기능과 개선사항이 포함되어 있습니다.
 
-- Stored procedures can now return data via OUT parameters.
-- The SQL-standard SEARCH and CYCLE options for common table expressions have been implemented.
-- Subscripting can now be applied to any data type for which it is a useful notation, not only arrays. In this release, the jsonb and hstore types have gained subscripting operators.
-- Range types have been extended by adding multiranges, allowing representation of noncontiguous data ranges.
-- Numerous performance improvements have been made for parallel queries, heavily-concurrent workloads, partitioned tables, logical replication, and vacuuming.
-- B-tree index updates are managed more efficiently, reducing index bloat.
-- VACUUM automatically becomes more aggressive, and skips inessential cleanup, if the database starts to approach a transaction ID wraparound condition.
-- Extended statistics can now be collected on expressions, allowing better planning results for complex queries.
-- libpq now has the ability to pipeline multiple queries, which can boost throughput over high-latency connections.
+- 이제 저장 프로시저에서 OUT 파라미터를 통해 데이터를 반환할 수 있습니다.
+- 공통 테이블 표현식에 대한 SQL 표준 SEARCH 및 CYCLE 옵션이 구현되었습니다.
+- 첨자는 배열 뿐 아니라 유용한 표기법이 되는 모든 데이터 유형에 적용될 수 있습니다. 이번 릴리즈에서는 jsonb 및 hstore 유형에 첨자 연산자가 추가되었습니다.
+- 다중 범위를 추가함으로써 범위 유형이 확장되었으므로 비연속 데이터 범위를 표현을 할 수 있습니다.
+- 병렬 쿼리, 동시 작업이 많은 워크로드, 분할된 테이블, 논리적 복제 및 베큠(Vacuum)에 대한 다양한 성능이 향상되었습니다.
+- B-트리 인덱스 업데이트는 보다 효율적으로 관리하여 인덱스 팽창(index bloating)을 줄입니다.
+- 베큠(VACUUM)은 데이터베이스가 트랜잭션 ID 랩어라운드 조건에 도달하기 시작할 때, 자동으로 더 적극적으로 작동하며 불필요한 정리를 건너뜁니다.
+- 표현식에 대해 확장된 통계를 수집할 수 있으므로 복잡한 쿼리에 대해 더 나은 쿼리 플랜 결과를 얻을 수 있습니다.
+- libpq는 다수의 쿼리와 결과를 보내고 받을 때, 지연시간이 긴 조건에서 속도 향상을 할 수 있도록 다수 쿼리가 가능한 파이프라인 모드를 지원합니다.
 
-These and a long list of further enhancements as well as bug fixes can be found in the release notes of [v14](https://www.postgresql.org/docs/14/release-14.html), [v14.1](https://www.postgresql.org/docs/release/14.1/), and [v14.2](https://www.postgresql.org/docs/release/14.2/).
+
+이런 사항들과 버그 수정을 비롯한 장문의 추가 개선사항들은 릴리즈 노트 [v14](https://www.postgresql.org/docs/14/release-14.html),
+[v14.1](https://www.postgresql.org/docs/release/14.1/), 그리고 [v14.2](https://www.postgresql.org/docs/release/14.2/)에서 찾을 수 있습니다.
 
 #### Django 3.2.12
 
-Django was updated from the previous LTS version 2.2 to the new LTS version 3.2.
+Django는 이전 LTS 2.2 버전에서 새로운 LTS 3.2 버전으로 업데이트되었습니다.
 
-The update contains many new features and bug fixes such as:
+해당 업데이트는 다음과 같이 새로운 기능들과 버그 수정이 포함되어 있습니다.
 
-- Automatic AppConfig discovery
-- Type customization of auto-created primary keys
-- Functional indexes
-- Asynchronous views and middleware support
-- JSONField for all supported database backends
-- And various further major and minor features, see the see the [release notes](https://docs.djangoproject.com/en/4.0/releases/3.2/) for more
+- 자동 AppConfig 탐색
+- 자동 생성된 기본 키의 맞춤형 타입
+- 함수형 인덱스
+- 비동기식 뷰 및 미들웨어 지원
+- 지원되는 모든 데이터베이스 백엔드에 대한 JSONField
+- 그 외 다양한 주요 기능과 부가 기능에 대한 자세한 내용은 [릴리즈 노트](https://docs.djangoproject.com/en/4.0/releases/3.2/)를 참조하세요
 
-Users upgrading from previous versions should be aware of the following backwards incompatibilities:
+이전 버전에서 업그레이드하는 사용자는 다음과 같이 이전 버전과의 비호환성을 인지하고 있어야 합니다.
 
-Changes have been made to:
-- The Database backend API
+변경사항은 다음과 같습니다.
+- 데이터베이스 백엔드 API
 - django.contrib.admin
-- AbstractUser.first_name max_length - changed to 150
-- Model.save() when providing a default for the primary key
-- Along with various minor module changes 
+- AbstractUser.first_name max_length - 150으로 변경
+- 기본 키에 대한 기본값을 제공할 때 Model.save()
+- 다양한 부가 모듈 변경을 포함
 
-For additional information, especially since an upgrade would be from the former v2.2 LTS to v3.2 LTS do not only check the Django project release notes of [3.2](https://docs.djangoproject.com/en/4.0/releases/3.2/) but also [3.1](https://docs.djangoproject.com/en/4.0/releases/3.1) and [3.0](https://docs.djangoproject.com/en/4.0/releases/3.0) as well as the various minor releases included up to 3.2.12 that is in Ubuntu 22.04.
+
+추가적인 정보로, 이전 v2.2 LTS에서 Ubuntu 22.04의 v3.2 LTS로 업데이트 된 시점부터는 [3.2](https://docs.djangoproject.com/en/4.0/)의 Django 프로젝트 릴리즈 노트뿐 아니라, [3.1](https://docs.djangoproject.com/en/4.0/releases/3.1) 및 [3.0](https://docs.djangoproject.com/en/4.0/releases/3.0)과 3.2.12까지 포함된 다양한 부가 릴리즈까지 포함된 내용을 확인하십시오.
+
 
 #### MySQL 8.0
 
