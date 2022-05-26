@@ -355,7 +355,7 @@ Samba는 4.15.5로 업데이트되었는데, 이것은 몇 가지 주목할 만�
 * 많은 /etc/syslog/syslog.conf 매개 변수가 변경되었으며 일부는 제거되었습니다. 자세한 내용은 다음을 참고하십시오. [Upstream 릴리스 정보](https://www.samba.org/samba/history/samba-4.15.0.html) 
 * CTDB 패키지가 이 Ubuntu 22.04에 제공된 새 NFS 서버 버전과 함께 작동하도록 조정되었습니다.
 * `findsmb(1)` 제거되었습니다.
-* Ubuntu 패키징에서 [glusterfs 지원이 활성되었습니다.](https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1894618). 이는 22.04 LTS 개발 주기 동안 [glusterfs가 메인으로 승격되어](https://bugs.launchpad.net/ubuntu/+source/glusterfs/+bug/1950321), glusterfs vfs 모듈을 사용할 수 있었기 때문에 가능했습니다. 이 모듈은 이제 samba-vfs-modules 패키지에 있습니다.
+* Ubuntu 패키징에서 [glusterfs 지원이 활성되었습니다.](https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1894618). 이는 22.04 LTS 개발 주기 동안 [glusterfs가 메인으로 승격되어](https://bugs.launchpad.net/ubuntu/+source/glusterfs/+bug/1950321), glusterfs vfs 모듈을 사용할 수 있었기 때문에 가능했습니다. 이 모듈은 이제 samba-vfs-modules 패키지에 있습니다..
 
 #### Quagga replaced with frr
 `quagga` was removed from Ubuntu 22.04 and replaced by FRRouting (`frr`, https://frrouting.org/).
