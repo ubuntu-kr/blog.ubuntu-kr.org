@@ -325,11 +325,11 @@ For additional information, especially since an upgrade would be from the former
 
 #### MySQL 8.0
 
-MySQL은 Forcal Fossa와 Impish Indri와 같이 Jammy Jellyfish에서 8.0.28 버전으로 업데이트 되었습니다. 
+MySQL은 Focal Fossa와 Impish Indri와 같이 Jammy Jellyfish에서 8.0.28 버전으로 업데이트 되었습니다. 
 다음과 같은 새로운 기능이 포함되어 있습니다 :
 
 - audit_log_disable 시스템
-- 데이타 유형 업데이트
+- 데이타 타입 업데이트
 - CPU_TIME 기재 메트릭
 
 자세한 내용은 [8.0.28 upstream 릴리스 정보](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-28.html) 를 참조하십시오.
@@ -340,9 +340,9 @@ NFS 서버 및 클라이언트 패키지가 마침내 최신 업스트림 버전
 
 이제 모든 NFS 서비스는 /etc/nfs.conf 및 /etc/nfs.conf.d/*.conf 에서 INI-style의 구성 파일을 읽으며,  거기서 각 Section은 NFS 서비스의 하나의 데몬 또는 측면입니다. 이전 /etc/defaults/nfs-* 구성 파일은 여전히 남아 있지만 사용되지 않습니다.
 
-업그레이드 중에 /etc/default/nfs-* 파일이 변경되었음을 패키지가 감지하면 변환 스크립트가 실행됩니다.  이 스크립트는 /usr/share/sshare-common/nfsconvert.py이며 /etc/sshare-*에서 옵션을 읽고 /etc/sshare.conf.d/local.conf를 생성합니다. 여기서 /etc/sshare.conf의 기본값은 무시됩니다.
+업그레이드 중에 `/etc/default/nfs-*` 파일이 변경되었음을 패키지가 감지하면 변환 스크립트가 실행됩니다. 이 스크립트는 `/usr/share/sshare-common/nfsconvert.py`이며 `/etc/sshare-*`에서 옵션을 읽고 `/etc/sshare.conf.d/local.conf`를 생성합니다. 여기서 `/etc/sshare.conf`의 기본값은 무시됩니다.
 
-어떤 이유로든 변환 스크립트가 실패하면 패키지 설치 또는 업그레이드가 실패하고 이 문제를 해결해야 합니다. 이러한 상황이 발생하면, 부탁입니다.[Launchpad의 `nfs-utils`에 버그를 제출하십시오.]
+어떤 이유로든 변환 스크립트가 실패하면 패키지 설치 또는 업그레이드가 실패하고 이 문제를 해결해야 합니다. 이러한 상황이 발생하면, 부탁합니다.[Launchpad의 `nfs-utils`에 버그를 제출하십시오.]
 
 `nfsconf(8)`라는 새 도구를 사용하여 /etc/nfs.conf 및 /etc/nfs.conf.d/*conf의 구성 설정을 쿼리할 수 있습니다.
 
