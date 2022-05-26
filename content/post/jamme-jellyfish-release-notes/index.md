@@ -325,37 +325,37 @@ For additional information, especially since an upgrade would be from the former
 
 #### MySQL 8.0
 
-MySQL has been updated to version 8.0.28 in Jammy Jellyfish alongside Focal Fossa and Impish Indri.
-It contains new features such as:
+MySQL은 Forcal Fossa와 Impish Indri와 같이 Jammy Jellyfish에서 8.0.28 버전으로 업데이트 되었습니다. 
+다음과 같은 새로운 기능이 포함되어 있습니다 :
 
-- The audit_log_disable system
-- Data type updates
-- The CPU_TIME statement metric
+- audit_log_disable 시스템
+- 데이타 유형 업데이트
+- CPU_TIME 기재 메트릭
 
-See the [8.0.28 upstream release notes](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-28.html) for more information.
+자세한 내용은 [8.0.28 upstream 릴리스 정보](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-28.html) 를 참조하십시오.
 
 
 #### NFS server
-The NFS server and client packages have finally been updated to the latest upstream version.
+NFS 서버 및 클라이언트 패키지가 마침내 최신 업스트림 버전으로 업데이트되었습니다.
 
-All NFS services now read their configuration from `/etc/nfs.conf` and `/etc/nfs.conf.d/*.conf`, which is an INI-style configuration file, where each section is about one daemon or aspect of the NFS service. The old `/etc/defaults/nfs-*` configuration files are still left around, but are unused.
+이제 모든 NFS 서비스는 /etc/nfs.conf 및 /etc/nfs.conf.d/*.conf 에서 INI-style의 구성 파일을 읽으며,  거기서 각 Section은 NFS 서비스의 하나의 데몬 또는 측면입니다. 이전 /etc/defaults/nfs-* 구성 파일은 여전히 남아 있지만 사용되지 않습니다.
 
-During upgrade, a conversion script is run if the package detects that the `/etc/default/nfs-*` files have been changed. This script is `/usr/share/nfs-common/nfsconvert.py` and it will read the options from `/etc/defaults/nfs-*` and generate `/etc/nfs.conf.d/local.conf`, which overrides the defaults in `/etc/nfs.conf`.
+업그레이드 중에 /etc/default/nfs-* 파일이 변경되었음을 패키지가 감지하면 변환 스크립트가 실행됩니다.  이 스크립트는 /usr/share/sshare-common/nfsconvert.py이며 /etc/sshare-*에서 옵션을 읽고 /etc/sshare.conf.d/local.conf를 생성합니다. 여기서 /etc/sshare.conf의 기본값은 무시됩니다.
 
-If the conversion script fails for some reason, the package installation or upgrade will fail, and the issue will have to be resolved. Please [file a bug against `nfs-utils` in Launchpad](https://bugs.launchpad.net/ubuntu/+source/nfs-utils/+filebug) if you encounter such a scenario.
+어떤 이유로든 변환 스크립트가 실패하면 패키지 설치 또는 업그레이드가 실패하고 이 문제를 해결해야 합니다. 이러한 상황이 발생하면, 부탁입니다.[Launchpad의 `nfs-utils`에 버그를 제출하십시오.]
 
-A new tool called `nfsconf(8)` can be used to query the configuration settings of `/etc/nfs.conf` and `/etc/nfs.conf.d/*.conf`.
+`nfsconf(8)`라는 새 도구를 사용하여 /etc/nfs.conf 및 /etc/nfs.conf.d/*conf의 구성 설정을 쿼리할 수 있습니다.
 
 #### Samba server
-Samba was updated to 4.15.5, which brings some noteworthy changes. Please see the [upstream release notes for details](https://www.samba.org/samba/history/samba-4.15.0.html), but here are some highlights:
+Samba는 4.15.5로 업데이트되었는데, 이것은 몇 가지 주목할 만한 변화를 가져왔습니다. 다음을 참고하십시오 [upstream 릴리스 정보에 대한 상세](https://www.samba.org/samba/history/samba-4.15.0.html), 다음은 주요 내용입니다.:
 
-* The development SMB versions SMB2_22, SMB2_24 and SMB3_10 are no longer recognized. SMB2_22 and SMB2_24 should be replaced by SMB3_00, and SMB3_10 should be replaced by SMB3_11
-* server multi channel support is no longer experimental
-* command-line options in all CLI tooling are now using a common parser, and unknown options which might have been ignored in the past, will now be rejected. See the [upstream release notes](https://www.samba.org/samba/history/samba-4.15.0.html) for details.
-* many `/etc/samba/smb.conf` parameters were changed, some removed. Please see the [upstream release notes](https://www.samba.org/samba/history/samba-4.15.0.html) for details.
-* the CTDB package was adjusted to work with the new NFS server version shipped in this Ubuntu 22.04
-* `findsmb(1)` was removed
-* [glusterfs support enabled](https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1894618) in the Ubuntu packaging. This was possible because [glusterfs was promoted to Main](https://bugs.launchpad.net/ubuntu/+source/glusterfs/+bug/1950321) during the 22.04 LTS development cycle, which allowed us to enable the glusterfs vfs module. This module is now present in the `samba-vfs-modules` package.
+* SMB 버전 SMB2_22, SMB2_24 및 SMB3_10은 더 이상 인식되지 않습니다. SMB2_22 및 SMB2_24는 SMB3_00으로, SMB3_10은 SMB3_11로 대체해야 합니다.
+* 서버 다중 채널 지원은 더 이상 실험적이지 않음
+* 모든 CLI 도구의 명령줄 옵션은 이제 공통 Parser를 사용하고 있으며 과거에는 무시되었을 수 있는 알 수 없는 옵션은 이제 거부됩니다. 자세한 내용은 [Upstream 릴리스 정보](https://www.samba.org/samba/history/samba-4.15.0.html) 를 참조하십시오.
+* 많은 /etc/syslog/syslog.conf 매개 변수가 변경되었으며 일부는 제거되었습니다. 자세한 내용은 다음을 참고하십시오. [Upstream 릴리스 정보](https://www.samba.org/samba/history/samba-4.15.0.html) 
+* CTDB 패키지가 이 Ubuntu 22.04에 제공된 새 NFS 서버 버전과 함께 작동하도록 조정되었습니다.
+* `findsmb(1)` 제거되었습니다.
+* Ubuntu 패키징에서 [glusterfs 지원이 활성되었습니다.](https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1894618). 이는 22.04 LTS 개발 주기 동안 [glusterfs가 메인으로 승격되어](https://bugs.launchpad.net/ubuntu/+source/glusterfs/+bug/1950321), glusterfs vfs 모듈을 사용할 수 있었기 때문에 가능했습니다. 이 모듈은 이제 samba-vfs-modules 패키지에 있습니다.
 
 #### Quagga replaced with frr
 `quagga` was removed from Ubuntu 22.04 and replaced by FRRouting (`frr`, https://frrouting.org/).
