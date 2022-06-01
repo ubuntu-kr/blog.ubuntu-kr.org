@@ -401,7 +401,7 @@ libvirt 버전 v8.0.0은 일반 릴리스에 이어 이제 Ubunt 22.04에서 아
  * virtiofs를 위해 hotplug 및 hotunplug를 지원
  * virtio-mem `<memory/>` 모델을 도입
  * qemu: librbd 암호화를 지원
- * qemu: Add new API to inject a launch secret in a domain
+ * qemu: 새 API를 추가하여 도메인 안에 보안 실행을 삽입합니다.
  * 향상된 swtpm 통합 (더 자세히는 아래의 swtpm을 참고)
  * [Ubuntu 21.10](https://discourse.ubuntu.com/t/impish-indri-release-notes/21951)에 있던 버전 7.6 이후의 많은 추가 개선 및 수정 사항은 업스트림 [Changelogs](https://libvirt.org/news.html)를 참조하십시오.
 
