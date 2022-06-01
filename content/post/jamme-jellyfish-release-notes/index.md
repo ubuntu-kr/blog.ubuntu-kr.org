@@ -388,7 +388,7 @@ Qemu는 v6.2.0 버전으로 업데이트되어 많은 크고 작은 개선이 �
  * RISC-V 지원이 대규모로 개선되었습니다.
  * AMD 가상화 확장의 에뮬레이션을 위한 많은 수정사항이 있습니다.
  * Power10 지원이 개선되었습니다.
- * microvm build를 위한 기타 장치 (`virtio-gpu`, `vhost-user-gpu`, `virtio-input-host`, `vhost_user_input`)
+ * microvm build를 위한 더 많은 장치 (`virtio-gpu`, `vhost-user-gpu`, `virtio-input-host`, `vhost_user_input`)
  * 추가 드라이버 `qemu-block-extra`의 제거를 허용합니다.
  * 대부분의 공용 qemu 기능은 이제 별도의 모듈입니다.
  * s390x는 스토리지 키 에뮬레이션(예: 고정 주소 처리, TCG에 대한 지연 스토리지 키 활성화 등)이 개선되었습니다.
