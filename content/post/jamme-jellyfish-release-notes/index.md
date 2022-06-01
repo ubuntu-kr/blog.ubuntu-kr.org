@@ -379,73 +379,71 @@ Chrony는 버전 4.2로 업데이트 되었으며 다음을 포함합니다
  * timemaster에서 생성한 구성을 읽는 것을 허용했습니다
  * 더 자세한 내용은 업스트림 [릴리스 노트](https://chrony.tuxfamily.org/news.html)를 읽으십시오
 
-#### Virtualization
+#### 가상화
 
-As usual the release notes can only list a few bigger and more noteworthy changes and packages while
-underneath many more components have been updated as well. For an even more complete picture please
-have a look at the changelogs of packages and upstream releases of the respective components.
+언제나 그렇듯이 릴리즈 노트에는 더 크고 주목할 만한 몇 가지 변경이력과 패키지들만 나열할 수 있으며, 그 하위에서는 더 많은 구성요소도 업데이트 되었습니다. 더 자세한 내용은 패키지들의 변경이력과 해당 구성요소의 업스트림 릴리즈를 살펴보십시오.
 
 ##### qemu
 
-Qemu was updated to version v6.2.0 which brings many major and minor improvements. Among others this version includes:
+Qemu는 v6.2.0 버전으로 업데이트되어 많은 크고 작은 개선이 이루어졌습니다. 특히 이 버전에는 다음이 포함됩니다:
 
- * fuse3 based non-root way to [export image files](https://www.qemu.org/2021/08/22/fuse-blkexport/)
- * Jack support for low latency audio
- * Massively improved RISC-V support
- * Many fixes for the emulation of AMD virtualization extensions
- * Improved Power10 support
- * More devices for the microvm build (`virtio-gpu`, `vhost-user-gpu`, `virtio-input-host` and `vhost_user_input`)
- * Allow to remove the additional drivers of `qemu-block-extra`
- * Most common qemu features are now separate modules
- * s390x got improved storage key emulation (e.g. fixed address handling, lazy storage key enablement for TCG, ...)
- * See the upstream changelog for version [6.1](https://wiki.qemu.org/ChangeLog/6.1) and [6.2](https://wiki.qemu.org/ChangeLog/6.2) for an overview of the many further improvements. These also contain a list of suggested alternatives for removed, deprecated and incompatible features.
+ * fuse3를 기반으로하여 non-root 방법으로 [이미지 추출](https://www.qemu.org/2021/08/22/fuse-blkexport/)을 합니다.
+ * 저지연 오디오를 위하여 잭을 지원합니다.
+ * RISC-V 지원이 대규모로 개선되었습니다.
+ * AMD 가상화 확장의 에뮬레이션을 위한 많은 수정사항이 있습니다.
+ * Power10 지원이 개선되었습니다.
+ * microvm build를 위한 더 많은 장치 (`virtio-gpu`, `vhost-user-gpu`, `virtio-input-host`, `vhost_user_input`)
+ * `qemu-block-extra`의 추가 드라이버 제거를 허용합니다.
+ * 대부분의 공용 qemu 기능은 이제 별도의 모듈입니다.
+ * s390x는 스토리지 키 에뮬레이션(예: 고정 주소 처리, TCG에 대한 지연 스토리지 키 활성화 등)이 개선되었습니다.
+ * 더 많은 추가 개선 사항에 대한 개요는 버전 [6.1](https://wiki.qemu.org/ChangeLog/6.1) 및 [6.2](https://wiki.qemu.org/ChangeLog/6.2)에 대한 업스트림 변경 기록을 참조하십시오. 여기에는 제거되거나, 추천하지 않거나, 호환되지 않는 기능에 대한 제한된 대안 목록도 포함됩니다.
 
 ##### libvirt
 
-Following the regular releases of libvirt version v8.0.0 is now provided in Ubunt 22.04 which includes:
+libvirt 버전 v8.0.0은 일반 릴리스에 이어 이제 Ubunt 22.04에서 아래 기능이 제공됩니다:
 
- * Support hotplug and hotunplug for virtiofs
- * Introduce virtio-mem `<memory/>` model
- * qemu: Support librbd encryption
- * qemu: Add new API to inject a launch secret in a domain
- * enhanced swtpm integration (see swtpm below for more)
- * See the upstream [Changelogs](https://libvirt.org/news.html) for the many further improvements and fixes since version 7.6 that was in [Ubuntu 21.10](https://discourse.ubuntu.com/t/impish-indri-release-notes/21951).
+ * virtiofs를 위해 hotplug 및 hotunplug를 지원
+ * virtio-mem `<memory/>` 모델을 도입
+ * qemu: librbd 암호화를 지원
+ * qemu: 새 API를 추가하여 도메인 안에 보안 실행을 삽입합니다.
+ * 향상된 swtpm 통합 (더 자세히는 아래의 swtpm을 참고)
+ * [Ubuntu 21.10](https://discourse.ubuntu.com/t/impish-indri-release-notes/21951)에 있던 버전 7.6 이후의 많은 추가 개선 및 수정 사항은 업스트림 [Changelogs](https://libvirt.org/news.html)를 참조하십시오.
 
 ##### virt-manager
 
-The new version 4.0.0 of virt-manager is the most recent update after almost 1.5 years without a new upstream version) providing a list of new features:
+virt-manager의 새 버전 4.0.0은 가장 최신 업데이트(거의 1.5년 뒤 새 업스트림 버전이 없이)이고 아래 목록의 새로운 기능이 제공됩니다:
 
- * shared memory configuration in the UI
- * virtiofs filesystem driver UI option
- * enable a TPM by default when UEFI is used
- * Use cpu host-passthrough by default on qemu x86
- * use virtio-gpu video for most modern distros
- * More details can be found on the [news page](https://github.com/virt-manager/virt-manager/blob/main/NEWS.md) and individual commits on the [projects website](https://github.com/virt-manager/virt-manager)
+ * UI에서의 공유된 메모리 구성
+ * virtiofs 파일시스템 드라이버 UI 옵션
+ * UEFI가 사용될 때 기본값으로 TPM을 활성화
+ * qemu x86에서 기본값으로 cpu host-passthrough를 사용
+ * 대부분의 최신 배포판에서 virtio-gpu 비디오를 사용
+ * 더 자세한 내용은 [뉴스 페이지](https://github.com/virt-manager/virt(-manager/blob/main/NEWS.md), 개별 커밋은 [프로젝트 웹사이트](https://github.com/virt-manager/virt-manager)에서 확인할 수 있습니다.
 
 ##### dpdk
 
-Following the yearly flow of upstream DPDK LTS releases Ubuntu 22.04 contains the most recent DPDK LTS 21.11.
-That contains various new device drivers, fixes and optimizations. Even the rather huge [release notes](http://doc.dpdk.org/guides/rel_notes/release_21_11.html) is just about 21.11 itself. Compared to the former DPDK LTS 20.11 that shipped with Ubuntu 21.10 you'd also want to read the DPDK release notes of [21.02](http://doc.dpdk.org/guides/rel_notes/release_21_02.html), [21.05](http://doc.dpdk.org/guides/rel_notes/release_21_05.html) and [21.08](http://doc.dpdk.org/guides/rel_notes/release_21_08.html).
+업스트림 DPDK LTS 릴리스의 연간 흐름에 따라 Ubuntu 22.04에는 최신 DPDK LTS 21.11이 포함되어 있습니다.
+여기에는 다양한 새로운 장치 드라이버, 수정 사항 및 최적화가 포함되어 있습니다. 꽤 거대한 [릴리스 노트](http://doc.dpdk.org/guides/rel_notes/release_21_11.html)조차도 21.11 자체에 대한 것입니다. Ubuntu 21.10과 함께 제공되는 이전 DPDK LTS 20.11과 비교하여, 원한다면 [21.02](http://doc.dpdk.org/guides/rel_notes/release_21_02.html), [21.05](http://doc.dpdk.org/guides/rel_notes/release_21_05.html), [21.08](http://doc.dpdk.org/guides/rel_notes/release_21_08.html)의 DPDK 릴리스 노트도 읽을 수 있습니다.
 
 ##### openvswitch
 
-The new version 2.17.0 of openvswitch is in Ubuntu 22.04 and provides a general update including the following changes:
+Ubunt 22.04에는 openswitch의 새 버전 2.17.0이 일반 업데이트로 아래 기능을 포함하여 제공됩니다:
 
- * Various features that ease the use of a userspace datapath.
- * Performance improvements for the OVSDB and clustered OVSDB which is heavily used in OVN deployments.
- * Brings compatibility with DPDK 21.11 (see above).
- * [The OVS News](https://www.openvswitch.org/releases/NEWS-2.17.0.txt) page holds more details about the new version.
+ * 사용자 공간 데이터 경로의 사용을 용이하게 하는 다양한 기능.
+ * OVN 배포에서 많이 사용되는 OVSDB 및 클러스터된 OVSDB의 성능이 향상되었습니다.
+ * DPDK 21.11과의 호환성을 제공합니다(위를 참조).
+ * [The OVS News](https://www.openvswitch.org/releases/NEWS-2.17.0.txt) 페이지에는 새 버전에 대한 더 자세한 내용이 있습니다.
 
 ##### swtpm
 
-The `swtpm` as well as `libtpms` package is now available and supported in Ubuntu 22.04.
+Ubuntu 22.04에서 `swtpm` 패키지가 지원되어 이제 사용할 수 있습니다:
 
-`swtpm` provides TPM emulators with different front-end interfaces to libtpms. TPM emulators provide socket interfaces (TCP/IP and unix) and the Linux CUSE interface for the creation of multiple native /dev/vtpm* devices.
+`swtpm`은 libtpms에 대한 다양한 프런트엔드 인터페이스를 갖춘 TPM 에뮬레이터를 제공합니다. TPM 에뮬레이터는 소켓 인터페이스(TCP/IP 및 유닉스)와 여러 네이트브 /dev/vtpm* 장치 생성을 위한 Linux CUSE 인터페이스를 제공합니다.
 
-A common use case for `swtpm` is to use it as virtual TPM for virtual machine and container use cases.
-This is particular important for guest operating systems that consider TPM support mandatory.
+`swtpm`의 일반적인 사용 사례는 가상 머신 및 컨테이너 사용 사례의 가상 TPM으로 사용하는 것입니다.
+이것은 TPM 지원을 필수로 간주하는 게스트 운영체제에 특히 중요합니다.
 
-See the [upstream wiki](https://github.com/stefanberger/swtpm/wiki) for more details.
+더 자세한 내용은 [upstream wiki](https://github.com/stefanberger/swtpm/wiki)를 보십시오.
 
 #### Squid
  
