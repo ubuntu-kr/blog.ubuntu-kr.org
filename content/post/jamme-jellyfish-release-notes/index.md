@@ -385,7 +385,7 @@ Qemu는 v6.2.0 버전으로 업데이트되어 많은 크고 작은 개선이 �
 
  * fuse3를 기반으로하여 non-root 방법으로 [이미지 추출](https://www.qemu.org/2021/08/22/fuse-blkexport/)을 합니다.
  * 저지연 오디오를 위하여 잭을 지원합니다.
- * MRISC-V 지원이 대규모로 개선되었습니다.
+ * RISC-V 지원이 대규모로 개선되었습니다.
  * AMD 가상화 확장의 에뮬레이션을 위한 많은 수정사항이 있습니다.
  * Power10 지원이 개선되었습니다.
  * microvm build를 위한 기타 장치 (`virtio-gpu`, `vhost-user-gpu`, `virtio-input-host`, `vhost_user_input`)
