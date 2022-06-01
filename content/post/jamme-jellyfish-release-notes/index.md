@@ -342,7 +342,8 @@ NFS 서버 및 클라이언트 패키지가 마침내 최신 업스트림 버전
 
 업그레이드 중에 `/etc/default/nfs-*` 파일이 변경되었음을 패키지가 감지하면 변환 스크립트가 실행됩니다. 이 스크립트는 `/usr/share/nfs-common/nfsconvert.py`이며 `/etc/default/nfs-*`에서 옵션을 읽고 `/etc/nfs.conf.d/local.conf`를 생성 합니다. 여기서 `/etc/nfs.conf`의 기본값은 무시됩니다.
 
-어떤 이유로든 변환 스크립트가 실패하면 패키지 설치 또는 업그레이드가 실패하고 이 문제를 해결해야 합니다. 이러한 상황이 발생하면, 꼭 [Launchpad의 `nfs-utils`에 버그를 제출해주세요.]
+어떤 이유로든 변환 스크립트가 실패하면 패키지 설치 또는 업그레이드가 실패하고 이 문제를 해결해야 합니다. 이러한 상황이 발생하면, 꼭 [Launchpad의 `nfs-utils`에 버그를 제출해 주십시오.]
+
 
 `nfsconf(8)`라는 새 도구를 사용하여 /etc/nfs.conf 및 /etc/nfs.conf.d/*conf의 구성 설정을 쿼리할 수 있습니다.
 
