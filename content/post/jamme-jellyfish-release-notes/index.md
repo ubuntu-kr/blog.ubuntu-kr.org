@@ -622,11 +622,11 @@ Finally a brand new low-level IBM Z Deep Neural Network Library (zDNN) library, 
 
 ### RISC-V
 
-Starting with 22.04 LTS, besides the standard device-specific preinstalled image, we now also provide a live installer image for the RISC-V architecture. This can be helpful when wanting to install Ubuntu on an NVMe drive on an Unmatched board, for instance.
+22.04 LTS 부터, 표준 장치별로 있는 미리 설치된 이미지와 함께 이제 RISC-V 아키텍쳐를 위한 라이브 인스톨러 이미지 또한 제공됩니다. 한 예로, 이는 우분투를 Unmatched 보드의 NVMe 드라이브에 설치하려 할 때 유용할 수 있습니다.
 
 ### UEFI and BIOS boot
 
-Other operating systems are not displayed in the boot menu anymore, unless Ubuntu has been installed alongside another operating system. Once all other operating systems are removed from the machine, detection of other operating systems is disabled, and to re-enable if after installing another OS, you will have to delete `/boot/grub/grub.cfg` and immediately run `update-grub` again.
+우분투가 다른 운영체제과 함께 설치돼 있는 상황이 아니라면 이제 더이상 부팅 메뉴에 다른 운영체제가 표시되지 않습니다. 모든 자신 이외의 운영체제가 기기에서 삭제되면, 다른 운영체제 감지가 비활성화 되며, 다른 운영체제를 설치한 후 활성화하고 싶다면 `/boot/grub/grub.cfg` 를 삭제하고 바로 `update-grub` 을 실행해야만 할 겁니다.
 
 # 알려진 이슈
 
