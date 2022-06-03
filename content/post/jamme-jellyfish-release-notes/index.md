@@ -614,7 +614,7 @@ Finally a brand new low-level IBM Z Deep Neural Network Library (zDNN) library, 
 
 ### UEFI and BIOS boot
 
-우분투가 다른 운영체제과 함께 설치돼 있는 상황이 아니라면 이제 더이상 부팅 메뉴에 다른 운영체제가 표시되지 않습니다. 모든 자신 이외의 운영체제가 기기에서 삭제됨과 동시에 다른 운영체제 감지가 비활성화 됐으며 다른 운영체제를 설치한 후 활성화하고 싶다면 `/boot/grub/grub.cfg` 를 삭제하고 바로 `update-grub` 을 실행해야만 할 겁니다.
+우분투가 다른 운영체제과 함께 설치돼 있는 상황이 아니라면 이제 더이상 부팅 메뉴에 다른 운영체제가 표시되지 않습니다. 모든 자신 이외의 운영체제가 기기에서 삭제되면, 다른 운영체제 감지가 비활성화 되며, 다른 운영체제를 설치한 후 활성화하고 싶다면 `/boot/grub/grub.cfg` 를 삭제하고 바로 `update-grub` 을 실행해야만 할 겁니다.
 
 # Known Issues
 
