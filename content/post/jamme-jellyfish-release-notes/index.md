@@ -70,7 +70,7 @@ ISO나 플래시 가능한 이미지 다운로드:
 
 ## 업데이트 된 페키지
 
-## 리눅스 커널 :penguin:
+## 리눅스 커널 🐧
 
 우분투 22.04 LTS는 제품에 따른 다수의 최적화된 커널을 제공합니다:
 
@@ -97,7 +97,7 @@ mount.nfs: an incorrect mount option was specified
 ```
 
 
-## 툴체인 업그레이드 :hammer_and_wrench:
+## 툴체인 업그레이드 🛠️
 
 GCC가 11.2.0로, binutils가 2.38로, glibc가 2.35로 업데이트 됐습니다. Python :snake:은 이제 3.10.4에서, Perl :camel:은 5.34.0에서 제공됩니다. 이제 LLVM은 기본적으로 14 버전에 맞춰집니다. golang은 기본적으로 1.18.x 버전에 맞춰집니다. rustc는 기본적으로 1.58 버전에 맞춰집니다.
 
@@ -118,7 +118,7 @@ OpenSSL 라이브러리를 새로운 3.0 버전으로 업그레이드 했고 이
 
 새로운 버전에 API 판올림이 있기 때문에 libssl1.1에 의존하는 서드파티 패키지는 오래된 ABI가 더이상 제공되지 않음으로 그대신 libssl3에 의존하도록 다시 빌드 돼야 합니다.
 
-## 보안 향상점 :lock:
+## 보안 향상점 🔒
 
 이제 nftable가 방화벽을 위한 기본 백엔드입니다. 시스템의 모든 애플리케이션은 반드시 레거시 `xtables` 혹은 새로운 `nftables` 백엔드를 사용할 건지 합의해야 합니다. [버그 1968608](https://bugs.launchpad.net/bugs/1968608)가 유용할만한 몇몇 맥락을 제공합니다. [Docker는 새로운 `nftables` 백엔드를 위해 준비 되어있지 않을 수 있습니다](https://github.com/docker-snap/docker-snap/issues/68).
 
@@ -151,9 +151,9 @@ OpenSSL 라이브러리를 새로운 3.0 버전으로 업그레이드 했고 이
 
 ### 업데이트된 프로그램
 
-* Firefox 99 :fire::fox_face:
-* [LibreOffice 7.3](https://wiki.documentfoundation.org/ReleaseNotes/7.3) :books:
-* Thunderbird 91 :cloud_with_lightning::bird:
+* Firefox 99 🔥🦊
+* [LibreOffice 7.3](https://wiki.documentfoundation.org/ReleaseNotes/7.3) 📚
+* Thunderbird 91 🌩️🐦
 
 ### 업데이트된 하위 시스템
 
@@ -354,7 +354,7 @@ NFS 서버 및 클라이언트 패키지가 마침내 최신 업스트림 버전
 
 `nfsconf(8)`라는 새 도구를 사용하여 /etc/nfs.conf 및 /etc/nfs.conf.d/*conf의 구성 설정을 쿼리할 수 있습니다.
 
-#### Samba server
+#### Samba 서버
 Samba는 4.15.5로 업데이트되었는데, 이것은 몇 가지 주목할 만한 변화를 가져왔습니다. [자세한 사항은 업스트림 릴리즈 노트](https://www.samba.org/samba/history/samba-4.15.0.html)를 확인 하십시오, 다음은 주요 내용입니다:
 
 * 개발 SMB 버전 SMB2_22, SMB2_24 및 SMB3_10은 더 이상 인식되지 않습니다. SMB2_22 및 SMB2_24는 SMB3_00으로, SMB3_10은 SMB3_11로 대체해야 합니다.
@@ -550,7 +550,7 @@ Juju를 사용하여 우분투 오픈스택을 배포하고 운영하는 방법�
 
 ## 플랫폼
 
-### 클라우드 이미지 :cloud:
+### 클라우드 이미지 ☁️
 
 #### AWS
 * 이제 AWS의 amd64 이미지는 UEFI를 부팅 모드로 사용하기 위해서 GPT 파티션 테이블과 ESP 파티션 설정을 사용합니다.
@@ -558,7 +558,7 @@ Juju를 사용하여 우분투 오픈스택을 배포하고 운영하는 방법�
 #### Oracle
 * Oracle Cloud Infrastructure에서 ARM64 서버를 위한 Jammy의 최소 이미지가 이용가능합니다. OCI가 이미지를 경직된 속도로 릴리즈 하기 때문에 OCI로의 Jammy 릴리즈가 살짝 늦어짐을 알아두길 바랍니다.
 
-### Raspberry Pi :strawberry:
+### Raspberry Pi 🍓
 
 * Raspberry Pi를 위한 우분투 데스크톱의 첫번째 장기 지원(LTS) 릴리즈
 * 여러 종류의 Pi 전용 보드 지원과 도구들이 아카이브에 추가 되었습니다:
