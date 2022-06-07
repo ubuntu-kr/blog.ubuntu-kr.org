@@ -581,13 +581,13 @@ Juju를 사용하여 우분투 오픈스택을 배포하고 운영하는 방법�
 
 21.10부터의 IBM Z와 LinuxONE / s390x 특정 (부분적으로 s390x 만이 아닌) 향상점:
   * 위에서 언급했듯이 22.04 LTS는 OpenSSL 3, 정확히는 v3.0.2([버그 1905022](https://bugs.launchpad.net/bugs/1905022))를 차용한 첫번째 릴리즈이고 이 전환은 몇몇 호환성 문제([버그 1959736](https://bugs.launchpad.net/bugs/1959736)) 때문이며 그 업데이트는 다음 변화를 포함하여 전체 s390x 암호화 스택의 대규모 리뉴얼로 마무리 될 예정입니다:
-    * 마침내 libica가 v4.0.1 ([버그 1959421](https://bugs.launchpad.net/bugs/1959421))로 업데이트 됐고 이는 보안 검사([버그 1959553](https://bugs.launchpad.net/bugs/1959553))를 반영하기 위한 확장 통계를 포함합니다
+    * 마침내 libica가 v4.0.1 ([버그 1959421](https://bugs.launchpad.net/bugs/1959421))로 업데이트 됐고 이는 보안 조치([버그 1959553](https://bugs.launchpad.net/bugs/1959553))를 반영하기 위한 확장 통계를 포함합니다
     * openssl-ibmca가 libica4와의 호환성을 위해 결국 2.2.2 ([버그 1958419](https://bugs.launchpad.net/bugs/1958419))로 업데이트 됐습니다 ([버그 1960004](https://bugs.launchpad.net/bugs/1960004)). 
     * opencryptoki가 v3.17.0+dfsg+20220202.b40982efh로 업데이트 되었고 (3.18의 예정된 출시일이 22.04 GA로 공고 됐기 때문) (Bug:1959419) 이는 몇몇 (보안) 수정과 핵심 관리 도구(LP 1959577)에 있는 것과 같은 신기능 들을 포함합니다.
     * 더불어 cryptsetup 또한 업데이트 됐습니다 ([버그 1959427](https://bugs.launchpad.net/bugs/1959427))
-s390x와 관련된 추가 업데이트는 다음입니다:
+s390x와 관련된 암호화 관련 업데이트는 다음과 같습니다:
     * libgcyrpt(20)의 최신 v1.9.4로의 업그레이드
-    * SIMD 구현을 사용하게 되는 chacha20의 커널 자체 최적화 ([버그 1853152](https://bugs.launchpad.net/bugs/1853152))
+    * 이제 SIMD 구현을 사용하게 되는 chacha20 커널 자체 암호화 최적화 ([버그 1853152](https://bugs.launchpad.net/bugs/1853152))
     * 새로운 IBM Z 암호화 하드웨어 활용 추가를 위한 zcrypt 디바이스 드라이버 업데이트 ([버그 1959547](https://bugs.launchpad.net/bugs/1959547))
     * 그리고 암호 기반을 위한 인터페이스를 제공하는 마침내 새롭게 패키징 된 IBM Z 보호키 암호화 라이브러리 ([버그 1932522](https://bugs.launchpad.net/bugs/1932522))
 
@@ -596,7 +596,7 @@ s390x와 관련된 추가 업데이트는 다음입니다:
   * 여러 새로운 기능과 연관된 KVM과 보안 실행 역시 안착했고 다음과 같습니다:
     * KVM과 유저 공간에 의해 가로채진 명령어를 위한 스토리지 키 확인 활성화 ([버그 1933176](https://bugs.launchpad.net/bugs/1933176)) ([버그 1933179](https://bugs.launchpad.net/bugs/1933179))
     * 활성된 'access-register mode' ([버그 1933178](https://bugs.launchpad.net/bugs/1933178))
-    * QEMU를 위한 긴 커널 명령줄 허용 ([버그 1959984](https://bugs.launchpad.net/bugs/1959984))과 보안 실행 게스트 ([버그 1959985](https://bugs.launchpad.net/bugs/1959985)).
+    * QEMU ([버그 1959984](https://bugs.launchpad.net/bugs/1959984))와 Secure Execution guest ([버그 1959985](https://bugs.launchpad.net/bugs/1959985))를 위한 긴 명령줄.
     * 보안 실행 게스트를 위한 GISA를 통해 지원되는 게스트 인터럽트 활성화 ([버그 1959977](https://bugs.launchpad.net/bugs/1959977))
     * 사용자 키를 통한 보안 실행 게스트 덤프 암호화 지원 ([버그 1959965](https://bugs.launchpad.net/bugs/1959965))
     * 그리고 virt-*tools, 특히 virt-manager에서 vfio-ccw와 vifio-ap 활성화 ([버그 1959976](https://bugs.launchpad.net/bugs/1959976))
