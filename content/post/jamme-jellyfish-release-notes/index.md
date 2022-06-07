@@ -595,7 +595,7 @@ s390x와 관련된 암호화 관련 업데이트는 다음과 같습니다:
 
   * 여러 새로운 기능과 연관된 KVM과 보안 실행 역시 안착했고 다음과 같습니다:
     * KVM과 유저 공간에 의해 가로채진 명령어를 위한 스토리지 키 확인 활성화 ([버그 1933176](https://bugs.launchpad.net/bugs/1933176)) ([버그 1933179](https://bugs.launchpad.net/bugs/1933179))
-    * 활성된 'access-register mode' ([버그 1933178](https://bugs.launchpad.net/bugs/1933178))
+    * 'access-register mode'가 활성화됨 ([버그 1933178](https://bugs.launchpad.net/bugs/1933178))
     * QEMU ([버그 1959984](https://bugs.launchpad.net/bugs/1959984))와 Secure Execution guest ([버그 1959985](https://bugs.launchpad.net/bugs/1959985))를 위한 긴 명령줄.
     * 보안 실행 게스트를 위한 GISA를 통해 지원되는 게스트 인터럽트 활성화 ([버그 1959977](https://bugs.launchpad.net/bugs/1959977))
     * 사용자 키를 통한 보안 실행 게스트 덤프 암호화 지원 ([버그 1959965](https://bugs.launchpad.net/bugs/1959965))
