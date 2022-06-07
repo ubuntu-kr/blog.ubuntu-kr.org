@@ -580,7 +580,6 @@ Juju를 사용하여 우분투 오픈스택을 배포하고 운영하는 방법�
 우분투 서버 22.04 LTS는 LPAR (classic 또는 DPM 모드)에 IBM z/VM 게스트로, KVM 가상 머신으로 그리고 LXD, docker, kubernetes와 같은 서로 다른 컨테이너 환경으로 설치될 수 있습니다.
 
 21.10부터의 IBM Z와 LinuxONE / s390x 특정 (부분적으로 s390x 만이 아닌) 향상점:
-
   * 위에서 언급했듯이 22.04 LTS는 OpenSSL 3, 정확히는 v3.0.2([버그 1905022](https://bugs.launchpad.net/bugs/1905022))를 차용한 첫번째 릴리즈이고 이 전환은 몇몇 호환성 문제([버그 1959736](https://bugs.launchpad.net/bugs/1959736)) 때문이며 그 업데이트는 다음 변화를 포함하여 전체 s390x 암호화 스택의 대규모 리뉴얼로 마무리 될 예정입니다:
     * 마침내 libica가 v4.0.1 ([버그 1959421](https://bugs.launchpad.net/bugs/1959421))로 업데이트 됐고 이는 보안 검사([버그 1959553](https://bugs.launchpad.net/bugs/1959553))를 반영하기 위한 확장 통계를 포함합니다
     * openssl-ibmca가 libica4와의 호환성을 위해 결국 2.2.2 ([버그 1958419](https://bugs.launchpad.net/bugs/1958419))로 업데이트 됐습니다 ([버그 1960004](https://bugs.launchpad.net/bugs/1960004)). 
