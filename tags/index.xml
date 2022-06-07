@@ -6,7 +6,16 @@
     <description>Recent content in Tags on 우분투한국커뮤니티 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 28 Dec 2021 11:27:04 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Apr 2022 02:00:00 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>release-notes</title>
+      <link>https://blog.ubuntu-kr.org/tags/release-notes/</link>
+      <pubDate>Fri, 22 Apr 2022 02:00:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/tags/release-notes/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>year-in-review</title>
       <link>https://blog.ubuntu-kr.org/tags/year-in-review/</link>

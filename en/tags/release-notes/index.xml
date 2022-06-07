@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>release-notes on Ubuntu Korea Community Blog</title>
+    <link>https://blog.ubuntu-kr.org/en/tags/release-notes/</link>
+    <description>Recent content in release-notes on Ubuntu Korea Community Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 22 Apr 2022 02:00:00 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/en/tags/release-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu 22.04 LTS Jammy Jellyfish Release Notes</title>
+      <link>https://blog.ubuntu-kr.org/en/2022/04/22/jamme-jellyfish-release-notes/</link>
+      <pubDate>Fri, 22 Apr 2022 02:00:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/en/2022/04/22/jamme-jellyfish-release-notes/</guid>
+      <description>Jammy Jellyfish Release Notes Introduction These release notes for Ubuntu 22.04 LTS (Jammy Jellyfish) provide an overview of the release and document the known issues with Ubuntu and its flavours.
+Support lifespan Maintenance updates will be provided for 5 years until April 2027 for Ubuntu Desktop, Ubuntu Server, Ubuntu Cloud, and Ubuntu Core. All the remaining flavours will be supported for 3 years. Additional security support is available with ESM (Extended Security Maintenance).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,18 @@
     <description>Recent content on 우분투한국커뮤니티 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 28 Dec 2021 11:27:04 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Apr 2022 02:00:00 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>우분투 22.04 LTS Jammy Jellyfish 릴리즈 노트</title>
+      <link>https://blog.ubuntu-kr.org/2022/04/22/jamme-jellyfish-release-notes/</link>
+      <pubDate>Fri, 22 Apr 2022 02:00:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2022/04/22/jamme-jellyfish-release-notes/</guid>
+      <description>Jammy Jellyfish 릴리즈 노트 서문 우분투 22.04 LTS (Jammy Jellyfish)에 대한 본 릴리즈 노트에서는 릴리즈에 대한 개요와 우분투 및 flavour에서의 알려진 문제들의 문서를 제공합니다.
+지원 기간 우분투 데스크톱, 우분투 서버, 우분투 클라우드, 우분투 Core의 유지보수 업데이트는 2027 4월까지 5년 동안 제공되고, 나머지 모든 flavour에 대해서는 3년간 지원됩니다. 추가적 보안 업데이트는 ESM (Extended Security Maintenance).를 통해 지원됩니다.
+우분투 22.04 LTS 받기 우분투 22.04 다운로드 가까운 지역에서 이미지를 다운로드 할 수 있습니다.</description>
+    </item>
+    
     <item>
       <title>2021년 회고</title>
       <link>https://blog.ubuntu-kr.org/2021/12/28/2021-year-in-review/</link>

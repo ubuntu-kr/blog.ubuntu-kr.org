@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href='/img/favicon/apple-touch-icon.png'>
+    <link rel="icon" type="image/png" sizes="32x32" href='/img/favicon/favicon-32x32.png'>
+    <link rel="icon" type="image/png" sizes="16x16" href='/img/favicon/favicon-16x16.png'>
+    <title>Ubuntu 22.04 LTS Jammy Jellyfish Release Notes | Ubuntu Korea Community Blog</title>
+    
+    <meta property="og:site_name" content="Ubuntu Korea Community Blog" />
+    <meta property="og:title" content="Ubuntu 22.04 LTS Jammy Jellyfish Release Notes" />
+
+    
+    <link rel="stylesheet" href="https://blog.ubuntu-kr.org/sass/theme.min.f7730c1d6ba67d8d327e32c5d2be5258988132122b111361feba8dd214ecca19.css">
+</head><body><header id="navigation" class="p-navigation is-dark">
+  <div class="p-navigation__row">
+    <div class="p-navigation__banner">
+      <div class="p-navigation__tagged-logo" style="min-width: 6rem;">
+        <a class="p-navigation__link" href="/en">
+          <div class="p-navigation__logo-tag">
+            <img class="p-navigation__logo-icon" src="/img/UbuntuKrCircleWhite.svg" alt="">
+          </div>
+          <span class="p-navigation__logo-title">Blog</span>
+        </a>
+      </div>
+      <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+      <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+    </div>
+    <nav class="p-navigation__nav" aria-label="Example sub navigation">
+      <ul class="p-navigation__items">
+        
+          
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="/en/tags">Tags</a>
+          </li>
+          
+        
+          
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="/en/index.xml">Subscribe(RSS)</a>
+          </li>
+          
+        
+          
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="/en/contribute">Contributing to this blog</a>
+          </li>
+          
+        
+      </ul>
+     
+     <ul class="p-navigation__items">
+        <li class="p-navigation__item--dropdown-toggle" id="link-4">
+          <a class="p-navigation__link" aria-controls="account-menu">
+            🌏
+          </a>
+          <ul class="p-navigation__dropdown--right" id="account-menu" aria-hidden="true">
+            
+            
+            <li>
+              <a href="https://blog.ubuntu-kr.org/2022/04/22/jamme-jellyfish-release-notes/" class="p-navigation__dropdown-item">한국어</a>
+            </li>
+            
+            <li>
+              <a href="https://blog.ubuntu-kr.org/en/2022/04/22/jamme-jellyfish-release-notes/" class="p-navigation__dropdown-item">English</a>
+            </li>
+            
+            
+          </ul>
+        </li>
+        <li class="p-navigation__item--dropdown-toggle" id="link-4">
+          <a class="p-navigation__link" aria-controls="account-menu">
+            🔗
+          </a>
+          <ul class="p-navigation__dropdown--right" id="account-menu" aria-hidden="true">
+            
+            <li>
+              <a href="https://ubuntu-kr.org" class="p-navigation__dropdown-item">Homepage</a>
+            </li>
+            
+            <li>
+              <a href="https://forum.ubuntu-kr.org" class="p-navigation__dropdown-item">Forum</a>
+            </li>
+            
+            <li>
+              <a href="https://wiki.ubuntu-kr.org" class="p-navigation__dropdown-item">Wiki</a>
+            </li>
+            
+            <li>
+              <a href="https://ubuntu-kr.github.io/workshops/" class="p-navigation__dropdown-item">Tutorials</a>
+            </li>
+            
+            <li>
+              <a href="https://event.ubuntu-kr.org" class="p-navigation__dropdown-item">Events</a>
+            </li>
+            
+            <li>
+              <a href="https://ask.ubuntu-kr.org" class="p-navigation__dropdown-item">Ask Ubuntu KR</a>
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="content">
+
+
+<main>
+  <section class="p-strip--suru main-strip"
+    >
+      <div class="row">
+        
+        <div class="col-8 left-section">
+          <h1>Ubuntu 22.04 LTS Jammy Jellyfish Release Notes</h1>
+          <ul class="p-card__content p-inline-list--middot">
+            
+            <li class=" p-inline-list__item">
+              Ubuntu Korean Translators
+            </li>
+            
+          </ul>
+          <p><u class="timedisplay" style="text-decoration-style: dotted;">2022-04-22T02:00:00&#43;09:00</u></p>
+          <p></p>
+          
+            <a href="/en/tags/release-notes" class="tag">
+              <div class="p-chip">
+                <span class="p-chip__value">release-notes</span>
+              </div>
+            </a>
+            
+        </div>
+        
+      </div>
+  </section>
+  <section class="p-strip">
+  <div class="row">
+  <h1 id="jammy-jellyfish-release-notes">Jammy Jellyfish Release Notes</h1>
+<h1 id="introduction">Introduction</h1>
+<p>These release notes for <strong>Ubuntu 22.04 LTS</strong> (Jammy Jellyfish) provide an overview of the release and document the known issues with Ubuntu and its flavours.</p>
+<h2 id="support-lifespan">Support lifespan</h2>
+<p>Maintenance updates will be provided for 5 years until <a href="https://wiki.ubuntu.com/Releases">April 2027</a> for Ubuntu Desktop, Ubuntu Server, Ubuntu Cloud, and Ubuntu Core. All the remaining flavours will be supported for 3 years. Additional security support is available with <a href="https://ubuntu.com/security/esm">ESM (Extended Security Maintenance).</a></p>
+<h1 id="get-ubuntu-2204-lts">Get Ubuntu 22.04 LTS</h1>
+<h2 id="download-ubuntu-2204">Download Ubuntu 22.04</h2>
+<p>Images can be downloaded from a location near you.</p>
+<p>You can download ISOs and flashable images from:</p>
+<ul>
+<li><a href="http://releases.ubuntu.com/22.04/">Ubuntu Desktop and Server for 64-bit x86 (AMD64) </a></li>
+<li><a href="http://cdimage.ubuntu.com/ubuntu/releases/22.04/release/">Less Frequently Downloaded Ubuntu Images</a></li>
+<li><a href="http://cloud-images.ubuntu.com/daily/server/jammy/current/">Ubuntu Cloud Images</a></li>
+<li><a href="http://cdimage.ubuntu.com/lubuntu/releases/22.04/release/">Lubuntu</a></li>
+<li><a href="http://cdimage.ubuntu.com/kubuntu/releases/22.04/release/">Kubuntu</a></li>
+<li><a href="http://cdimage.ubuntu.com/ubuntu-budgie/releases/22.04/release/">Ubuntu Budgie</a></li>
+<li><a href="http://cdimage.ubuntu.com/ubuntukylin/releases/22.04/release/">Ubuntu Kylin</a></li>
+<li><a href="http://cdimage.ubuntu.com/ubuntu-mate/releases/22.04/release/">Ubuntu MATE</a></li>
+<li><a href="http://cdimage.ubuntu.com/ubuntustudio/releases/22.04/release/">Ubuntu Studio</a></li>
+<li><a href="http://cdimage.ubuntu.com/xubuntu/releases/22.04/release/">Xubuntu</a></li>
+</ul>
+<h1 id="upgrading-from-ubuntu-2110">Upgrading from Ubuntu 21.10</h1>
+<p><strong>Upgrades to 22.04 LTS are currently not enabled (due a bug with snapd and update-notifier) but will be in the next couple of days.</strong></p>
+<p>To upgrade on a desktop system:</p>
+<ul>
+<li>Open the &ldquo;Software &amp; Updates&rdquo; Setting in System Settings.</li>
+<li>Select the 3rd Tab called &ldquo;Updates&rdquo;.</li>
+<li>Set the &ldquo;Notify me of a new Ubuntu version&rdquo; dropdown menu to &ldquo;For any new version&rdquo;.</li>
+<li>Press <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+ <!-- raw HTML omitted -->F2<!-- raw HTML omitted --> and type in <code>update-manager -c</code> into the command box.
+<ul>
+<li>Update Manager should open up and tell you: <strong>&ldquo;New distribution release &lsquo;22.04&rsquo; is available.&rdquo;</strong></li>
+</ul>
+</li>
+<li>If not you can also use <code>/usr/lib/ubuntu-release-upgrader/check-new-release-gtk</code></li>
+<li>Click Upgrade and follow the on-screen instructions.</li>
+</ul>
+<p>To upgrade on a server system:</p>
+<ul>
+<li>Make sure the Prompt line in <code>/etc/update-manager/release-upgrades</code> is set to normal.</li>
+<li>Launch the upgrade tool with the command <code>sudo do-release-upgrade</code>.</li>
+<li>Follow the on-screen instructions.</li>
+</ul>
+<p>Note that the server upgrade will use GNU screen and automatically re-attach in case of dropped connection problems.</p>
+<p>There are no offline upgrade options for Ubuntu Desktop and Ubuntu Server. Please ensure you have network connectivity to one of the official mirrors or to a locally accessible mirror and follow the instructions above.</p>
+<h1 id="new-features-in-2204-lts">New features in 22.04 LTS</h1>
+<h2 id="updated-packages">Updated Packages</h2>
+<h2 id="linux-kernel-penguin">Linux kernel :penguin:</h2>
+<p>Ubuntu 22.04 LTS ships multiple optimized kernels on per-product basis:</p>
+<ul>
+<li>Ubuntu Desktop will automatically opt-into <a href="https://kernelnewbies.org/Linux_5.17">v5.17</a> kernel on the latest generations of certified devices (<code>linux-oem-22.04</code>)</li>
+<li>Ubuntu Desktop uses a rolling HWE kernel (<code>linux-hwe-22.04</code>) on all other generations of hardware. The rolling HWE kernel is based on the <a href="https://kernelnewbies.org/Linux_5.15">v5.15</a> kernel for 22.04.0 and 22.04.1 point releases</li>
+<li>Ubuntu Server defaults to a non-rolling LTS kernel v5.15 (<code>linux-generic</code>)</li>
+<li>Ubuntu Cloud and Devices use optimized kernels in collaboration with partners (v5.15+ with additional backports and features)</li>
+</ul>
+<p>Additional optimized and certified kernel flavours will become available in Ubuntu 22.04 LTS in due course.</p>
+<h3 id="nvidia-drivers">NVIDIA drivers</h3>
+<p>Ubuntu 22.04 LTS adds linux-restricted-modules of NVIDIA drivers on ARM64, in addition to the existing x86_64. Users on ARM64 can now use <code>ubuntu-drivers</code> tool to install and configure NVIDIA drivers from the Ubuntu Archive.</p>
+<h3 id="udp-disabled-for-nfs-mounts">UDP disabled for NFS mounts</h3>
+<p>Since Ubuntu 20.10 (&ldquo;Groovy Gorilla&rdquo;), the kernel option <code>CONFIG_NFS_DISABLE_UDP_SUPPORT=y</code> is set and this disables using UDP as the transport for NFS mounts, regardless of NFS version.</p>
+<p>In practice, if you try to use <code>udp</code>, you will get this error:</p>
+<pre tabindex="0"><code>$ sudo mount f1:/storage /mnt -o udp
+mount.nfs: an incorrect mount option was specified
+</code></pre><h2 id="toolchain-upgrades-hammer_and_wrench">Toolchain Upgrades :hammer_and_wrench:</h2>
+<p>GCC was updated to the 11.2.0 release, binutils to 2.38, and glibc to 2.35. Python :snake: now ships at version 3.10.4, Perl :camel: at version 5.34.0. LLVM now defaults to version 14. golang defaults to version 1.18.x. rustc defaults to version 1.58.</p>
+<p>In addition to OpenJDK 11, OpenJDK 18 is now provided (but not used for package builds).</p>
+<p>Ruby :gem: was updated from v2.7.4 to v3.0.</p>
+<h2 id="systemd-v24911">systemd v249.11</h2>
+<p>The init system was updated to systemd v249, using a solid .11 patchlevel for the LTS. Please refer to the upstream <a href="https://github.com/systemd/systemd/releases/tag/v249">changelog</a> for more information about the individual features. We&rsquo;ve enabled the userspace OOMD service and are shipping the <code>systemd-oomd</code> package by default on the &ldquo;Ubuntu Desktop&rdquo; flavour, to avoid overloaded systems and the need of the kernel&rsquo;s OOM killer to kick in. The OOMD status can be checked using <code>oomctl</code>.</p>
+<h2 id="openssl-30">OpenSSL 3.0</h2>
+<p>We&rsquo;ve upgraded the OpenSSL library to the new 3.0 version, which disables a lot of legacy algorithms by default, as detailed in their <a href="https://www.openssl.org/docs/manmaster/man7/migration_guide.html">migration guide</a>. In particular, certificates using SHA1 or MD5 as hash algorithms are now invalid under the default security level.</p>
+<p>In addition to the upstream deprecations, please note that since Ubuntu 20.04 (Focal Fossa), the security level 2 (which is the default) disables the (D)TLS protocols below 1.2 (included).</p>
+<p>Since the new version has an API bump, third-party packages that depend on libssl1.1 will need to be rebuilt to instead depend on libssl3, as the older ABI isn&rsquo;t provided anymore.</p>
+<h2 id="security-improvements-lock">Security Improvements :lock:</h2>
+<p>nftables is now the default backend for the firewall. All applications on the system must agree on whether they will use the legacy <code>xtables</code> backend or the newer <code>nftables</code> backend. <a href="https://bugs.launchpad.net/bugs/1968608">Bug 1968608</a> provides some context that may be helpful. <a href="https://github.com/docker-snap/docker-snap/issues/68">Docker may not be ready for the new <code>nftables</code> backend</a>.</p>
+<p><code>ssh-rsa</code> is now <a href="https://www.openssh.com/txt/release-8.8">disabled by default in OpenSSH</a>. See <a href="https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/1961833">bug 1961833</a> to learn how to selectively re-enable it if necessary.  If you are upgrading a system remotely over SSH, you should check that you are not relying on this to ensure that you will retain access after the upgrade.</p>
+<p><code>scp</code> offers a <a href="http://manpages.ubuntu.com/manpages/jammy/en/man1/scp.1.html"><code>-s</code> command line option</a> to use <a href="https://www.openssh.com/txt/release-8.9">sftp mode rather than scp mode</a> when handling remote filenames. This new, safer, behaviour will eventually become the default.</p>
+<h2 id="ubuntu-desktop">Ubuntu Desktop</h2>
+<ul>
+<li>Ubuntu now offers <a href="https://discourse.ubuntu.com/t/yaru-accent-colors-are-coming-to-jammy/27200">10 color choices</a> each in dark and light styles</li>
+<li>Firefox is now only provided in Ubuntu as a snap. Some benefits include
+<ul>
+<li>Directly maintained by Mozilla</li>
+<li>More maintainable for the entire Ubuntu LTS lifecycle</li>
+<li>… Which means faster access to the newest Firefox versions</li>
+<li>Easily switch to a different Firefox flavor with snap channels including <code>esr/stable</code>, <code>latest/candidate</code>, <code>latest/beta</code>, and <code>latest/edge</code></li>
+<li>Sandboxed for improved security hardening for this critical app</li>
+</ul>
+</li>
+<li>Desktop icons are shown in the bottom right by default but this can be changed through new settings added to the Appearance panel of the Settings app.</li>
+<li>Also there are new settings to control the Dock look and behavior</li>
+<li>Dock devices and filemanager integration has been improved</li>
+</ul>
+<h3 id="gnome-footprints">GNOME :footprints:</h3>
+<ul>
+<li>GNOME has been updated to include new features and fixes from <a href="https://release.gnome.org/41/">GNOME 41</a> and <a href="https://release.gnome.org/42/">GNOME 42</a></li>
+<li>Several apps are still at their 41 version numbers to provide a more time-tested experience for the LTS desktop by mostly avoiding libadwaita.</li>
+<li>The new cross-desktop <a href="https://discourse.ubuntu.com/t/ubuntu-22-04-lts-dark-style-changes/27206">dark style</a> preference is supported.</li>
+<li>GNOME Shell and mutter have lots of performance improvements including the triple buffering patch.</li>
+<li>The default session for most systems that don&rsquo;t have an Nvidia graphics card is now Wayland. If you need a non-Wayland session, you can choose the <em>Ubuntu on Xorg</em> session by clicking the gear button after selecting your name on the login screen.</li>
+<li>Hardware with privacy screen support is now supported</li>
+<li>RDP is now available for sharing your desktop remotely. Legacy VNC is still available, but it is strongly recommended to use RDP for better security, privacy, and performance. If you were previously using VNC, you&rsquo;ll need to manually re-enable desktop sharing in the Settings app and get your new login information.</li>
+</ul>
+<h3 id="updated-applications">Updated Applications</h3>
+<ul>
+<li>Firefox 99 :fire::fox_face:</li>
+<li><a href="https://wiki.documentfoundation.org/ReleaseNotes/7.3">LibreOffice 7.3</a> :books:</li>
+<li>Thunderbird 91 :cloud_with_lightning::bird:</li>
+</ul>
+<h3 id="updated-subsystems">Updated Subsystems</h3>
+<ul>
+<li><a href="https://git.kernel.org/pub/scm/bluetooth/bluez.git/tree/ChangeLog?id=5.63">BlueZ 5.63</a></li>
+<li><a href="https://github.com/OpenPrinting/cups/blob/v2.4.1/CHANGES.md">CUPS 2.4</a></li>
+<li><a href="https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/blob/nm-1-36/NEWS">NetworkManager 1.36</a></li>
+<li><a href="https://docs.mesa3d.org/relnotes/22.0.0.html">Mesa 22</a></li>
+<li><a href="https://gitlab.freedesktop.org/poppler/poppler/-/blob/poppler-22.02.0/NEWS">Poppler 22.02</a></li>
+<li><a href="https://www.freedesktop.org/wiki/Software/PulseAudio/Notes/16.0/">PulseAudio 16</a></li>
+<li><a href="https://github.com/flatpak/xdg-desktop-portal/blob/1.14.2/NEWS">xdg-desktop-portal 1.14</a></li>
+</ul>
+<h2 id="ubuntu-server">Ubuntu Server</h2>
+<h4 id="ubuntu-haclustering">Ubuntu HA/Clustering</h4>
+<h5 id="corosync">Corosync</h5>
+<p>It was updated to version 3.16 which includes some new features:</p>
+<ul>
+<li>Support for changing crypto configuration during runtime. This includes turning cryptography on or off, changing <em>crypto_cipher</em> and <em>crypto_hash</em> and also changing of crypto key.</li>
+<li>Default token timeout was changed from 1 seconds to 3 seconds.</li>
+<li>Run <em>corosync -v</em> to get the list of supported crypto and compression models which can be used in corosync.conf</li>
+<li>Cgroup v2 support.</li>
+</ul>
+<p>For the complete list of changes please refer to the <a href="https://github.com/corosync/corosync/releases">upstream release notes</a>.</p>
+<h5 id="pacemaker">Pacemaker</h5>
+<p>It was updated to version 2.1.2 which includes some new features:</p>
+<ul>
+<li>Add a new feature <em>priority-fencing-delay</em>. Optionally derive the priority of a node from the resource-priorities of the resources it is running.</li>
+<li>Add <em>on-fail=demot</em>e and <em>no-quorum-policy=demote</em> recovery policies for promoted resources.</li>
+<li>support for OCF Resource Agent API 1.1 standard.</li>
+<li>Many improvements in <em>crm_mon</em> and <em>crm_resource</em>.</li>
+</ul>
+<p>For the complete list of changes please refer to the <a href="https://github.com/ClusterLabs/pacemaker/releases">upstream release notes</a>.</p>
+<p>A notable difference from the version in Ubuntu Focal 20.04 is that the default configuration file does not define the node name as node1 anymore, now the output of uname -n is used as the default node name.</p>
+<h5 id="resource-agents">Resource agents</h5>
+<p>It was updated to version 4.7.0. Check the list of changes since Ubuntu Focal 20.04 <a href="https://github.com/ClusterLabs/resource-agents/blob/main/ChangeLog#L95-L219">here</a>.</p>
+<p>The agents are now separated in two packages: resource-agents-base and resource-agents-extra. The resource-agents-base package contains the agents which are curated by the Ubuntu Server team, which means that automated tests are running in a continuous integration system to guarantee the quality of those agents. The resource-agents package is now a metapackage which depends on both resource-agents-base and resource-agents-extra. Please note that the resource-agents package will be removed in future releases; we recommend that you do not rely on its existence.</p>
+<h5 id="fence-agents">Fence agents</h5>
+<p>It was updated to version 4.7.1.</p>
+<p>The agents are now separated in two packages: fence-agents-base and fence-agents-extra. The fence-agents-base package contains the agents which are curated by the Ubuntu Server team, which means that automated tests are running in a continuous integration system to guarantee the quality of those agents. The fence-agents package is now a metapackage which depends on both fence-agents-base and fence-agents-extra. Please note that fence-agents will be removed in releases; we recommend that you do not rely on its existence.</p>
+<h4 id="containers-runtime">Containers runtime</h4>
+<h5 id="containerd">containerd</h5>
+<p>It was updated to version 1.5.9. Some interesting changes are:</p>
+<ul>
+<li>Update pull to handle of non-https urls in descriptors</li>
+<li>Install apparmor parser for arm64 and update seccomp to 2.5.1</li>
+<li>Add support for <em>clone3</em> syscall to fix issue with certain images when seccomp is enabled</li>
+<li>Add image config labels in CRI container creation</li>
+</ul>
+<p>For the complete list of changes please refer to the <a href="https://github.com/containerd/containerd/releases">upstream release page</a>.</p>
+<h5 id="runc">runc</h5>
+<p>It was updated to version 1.1.0. There are many improvements and bug fixes which can be found in the <a href="https://github.com/opencontainers/runc/releases">upstream release page</a>. Some deprecations and removals which might impact the upgrade are presented below:</p>
+<p>Deprecation</p>
+<ul>
+<li>runc run/start now warns if a new container cgroup is non-empty or frozen; this warning will become an error in runc 1.2</li>
+</ul>
+<p>Removals</p>
+<ul>
+<li>cgroup.GetHugePageSizes has been removed entirely, and been replaced with cgroup.HugePageSizes which is more efficient</li>
+<li>intelrdt.GetIntelRdtPath has been removed. Users who were using this function to get the intelrdt root should use the new intelrdt.Root instead.</li>
+</ul>
+<h4 id="ruby-30">Ruby 3.0</h4>
+<p>The default Ruby interpreter was updated to version 3.0, whose goal is performance, concurrency, and Typing. To have a broad overview about the cool features and improvements check out the <a href="https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/">Ruby 3.0 Release Announcement</a>.</p>
+<p>Users coming from previous Ubuntu releases ( Ubuntu Focal 20.04 onward) will be moving from Ruby 2.7 to 3.0. In this case the <a href="https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/">Ruby 2.7 Release Announcement</a> might be useful as well. An important thing to keep in mind is that the following libraries are not bundled anymore in Ruby:</p>
+<ul>
+<li>sdbm</li>
+<li>webrick</li>
+<li>net-telnet</li>
+<li>xmlrpc</li>
+</ul>
+<p>If you need these libraries, please install them separately.</p>
+<p>Please pay attention to the Other Notable Changes since 2.7 section in the Ruby 3.0 Release announcement when migrating your application to Ruby 3.0.</p>
+<h4 id="php-now-defaults-to-version-812">PHP now defaults to version 8.1.2</h4>
+<p>PHP 8.1 contains many new features:  Enumerations allow defining custom types limited to a specific set of possible values, like using consts but with better type checking. Readonly properties prevent their value to be changed after initialization.  With first-class callable syntax, static analysis is easier to perform on PHP code, and allows creating anonymous functions such as Closures.  Intersection types allow specifying function parameters that must satisfy multiple type constraints; much like a union type expresses an A|B type relationship, intersection types allow expressing A&amp;B types.  Many other new features, such as fibers, final class constraints, never return values, explicit octal numeral notation, use of new inside initializers, and more will allow writing tighter, more expressive PHP code.</p>
+<p>PHP 8.1 also received significant attention to performance, with a 23% speedup for the Symfony Demo test, and a 3.5% speedup for WordPress, as compared with PHP 8.0.  A few of the performance-related features included in PHP 8.1 include an inheritance cache, fast class name resolution, and various optimizations to timelib, ext/date, SPL file-system interators, serialize/unserialize, and several heavily used internal functions.</p>
+<p>Users of PHP 7.4 should note that version 8 removes a <a href="https://wiki.php.net/rfc/deprecations_php_7_4">number of deprecated functionalities</a> and when upgrading should be prepared to make the appropriate changes to their applications.</p>
+<h4 id="openldap-25x-series">OpenLDAP 2.5.x series</h4>
+<p>If you are updating from Ubuntu Focal 20.04, you will encounter a new major OpenLDAP release on Ubuntu Jammy 22.04: version 2.5.11.  This release brings several changes, new features and deprecations/removals. A non-exhaustive list of things to be aware of during the upgrade process is:</p>
+<ul>
+<li>The shell (<code>slapd-shell</code>), the BDB and the HDB backends have all been removed.</li>
+<li>The <code>ppolicy</code> module now provides its own built-in schema. The external <code>ppolicy</code> schema has been removed.</li>
+<li>The <code>nssov</code> module has been removed.</li>
+</ul>
+<p>In certain situations, it is possible that the post-installation scripts will <strong>not</strong> be able to successfully migrate your current installation to new formats (e.g., when you are using an old backend like BDB/HDB). If this happens, you will be notified about the failure and the <code>slapd</code> server will <strong>not</strong> be (re)started; you will then have to take manual action in order to migrate your data and start the service. Please look at the <a href="https://git.launchpad.net/ubuntu/+source/openldap/tree/debian/slapd.README.Debian?h=ubuntu/impish-devel">README.Debian </a> file (under <code>/usr/share/doc/slapd/</code>) for more information.</p>
+<h4 id="bind-918">BIND 9.18</h4>
+<p>BIND 9 has been updated to <a href="https://bind9.readthedocs.io/en/v9_18_1/notes.html">version 9.18.1</a>. This new version includes</p>
+<ul>
+<li>Support for DNS over TLS (DoT) and DNS over HTTPS (DoH).</li>
+<li><code>named</code> now supports zone transfers over TLS (XFR-over-TLS, XoT) for both incoming and outgoing zone transfers.</li>
+<li><code>dig</code> is now able to send DoT queries.</li>
+</ul>
+<p>Users upgrading from previous versions should be aware of the following changes:</p>
+<ul>
+<li>The binary files which are neither daemons nor administrative programs have been moved from <code>/usr/sbin</code> to <code>/usr/bin</code>.</li>
+<li>Support for the map zone file format has been removed. Users relying on such zone file format should convert their zones to use the raw format and change configurations accordingly before upgrading.</li>
+<li>Several obsolete, non-working configuration options have been removed and are now treated as configuration failures when present. A complete list of such configurations is available in the <a href="https://bind9.readthedocs.io/en/v9_18_1/notes.html#removed-features">upstream release notes</a>.</li>
+</ul>
+<h4 id="apache-has-been-updated-to-2452-from-2448">Apache has been updated to 2.4.52 from 2.4.48.</h4>
+<ul>
+<li>OpenSSL support is improved to support OpenSSL v3.  mod_ssl also received various refinements for outgoing connection behaviors, backwards compatibility, and wireshark logging.</li>
+<li>mod_md adds support for ACME External Account Binding (EAB) along with a host of other enhancements and fixes.</li>
+<li>Numerous fixes, including better hostname and UDS URI checking and handling, status code responses, and so on.</li>
+</ul>
+<h4 id="postgresql-14">PostgreSQL 14</h4>
+<p>PostgreSQL has been updated to version 14.2.</p>
+<p>This update contains many new features and enhancements, including:</p>
+<ul>
+<li>Stored procedures can now return data via OUT parameters.</li>
+<li>The SQL-standard SEARCH and CYCLE options for common table expressions have been implemented.</li>
+<li>Subscripting can now be applied to any data type for which it is a useful notation, not only arrays. In this release, the jsonb and hstore types have gained subscripting operators.</li>
+<li>Range types have been extended by adding multiranges, allowing representation of noncontiguous data ranges.</li>
+<li>Numerous performance improvements have been made for parallel queries, heavily-concurrent workloads, partitioned tables, logical replication, and vacuuming.</li>
+<li>B-tree index updates are managed more efficiently, reducing index bloat.</li>
+<li>VACUUM automatically becomes more aggressive, and skips inessential cleanup, if the database starts to approach a transaction ID wraparound condition.</li>
+<li>Extended statistics can now be collected on expressions, allowing better planning results for complex queries.</li>
+<li>libpq now has the ability to pipeline multiple queries, which can boost throughput over high-latency connections.</li>
+</ul>
+<p>These and a long list of further enhancements as well as bug fixes can be found in the release notes of <a href="https://www.postgresql.org/docs/14/release-14.html">v14</a>, <a href="https://www.postgresql.org/docs/release/14.1/">v14.1</a>, and <a href="https://www.postgresql.org/docs/release/14.2/">v14.2</a>.</p>
+<h4 id="django-3212">Django 3.2.12</h4>
+<p>Django was updated from the previous LTS version 2.2 to the new LTS version 3.2.</p>
+<p>The update contains many new features and bug fixes such as:</p>
+<ul>
+<li>Automatic AppConfig discovery</li>
+<li>Type customization of auto-created primary keys</li>
+<li>Functional indexes</li>
+<li>Asynchronous views and middleware support</li>
+<li>JSONField for all supported database backends</li>
+<li>And various further major and minor features, see the see the <a href="https://docs.djangoproject.com/en/4.0/releases/3.2/">release notes</a> for more</li>
+</ul>
+<p>Users upgrading from previous versions should be aware of the following backwards incompatibilities:</p>
+<p>Changes have been made to:</p>
+<ul>
+<li>The Database backend API</li>
+<li>django.contrib.admin</li>
+<li>AbstractUser.first_name max_length - changed to 150</li>
+<li>Model.save() when providing a default for the primary key</li>
+<li>Along with various minor module changes</li>
+</ul>
+<p>For additional information, especially since an upgrade would be from the former v2.2 LTS to v3.2 LTS do not only check the Django project release notes of <a href="https://docs.djangoproject.com/en/4.0/releases/3.2/">3.2</a> but also <a href="https://docs.djangoproject.com/en/4.0/releases/3.1">3.1</a> and <a href="https://docs.djangoproject.com/en/4.0/releases/3.0">3.0</a> as well as the various minor releases included up to 3.2.12 that is in Ubuntu 22.04.</p>
+<h4 id="mysql-80">MySQL 8.0</h4>
+<p>MySQL has been updated to version 8.0.28 in Jammy Jellyfish alongside Focal Fossa and Impish Indri.
+It contains new features such as:</p>
+<ul>
+<li>The audit_log_disable system</li>
+<li>Data type updates</li>
+<li>The CPU_TIME statement metric</li>
+</ul>
+<p>See the <a href="https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-28.html">8.0.28 upstream release notes</a> for more information.</p>
+<h4 id="nfs-server">NFS server</h4>
+<p>The NFS server and client packages have finally been updated to the latest upstream version.</p>
+<p>All NFS services now read their configuration from <code>/etc/nfs.conf</code> and <code>/etc/nfs.conf.d/*.conf</code>, which is an INI-style configuration file, where each section is about one daemon or aspect of the NFS service. The old <code>/etc/defaults/nfs-*</code> configuration files are still left around, but are unused.</p>
+<p>During upgrade, a conversion script is run if the package detects that the <code>/etc/default/nfs-*</code> files have been changed. This script is <code>/usr/share/nfs-common/nfsconvert.py</code> and it will read the options from <code>/etc/defaults/nfs-*</code> and generate <code>/etc/nfs.conf.d/local.conf</code>, which overrides the defaults in <code>/etc/nfs.conf</code>.</p>
+<p>If the conversion script fails for some reason, the package installation or upgrade will fail, and the issue will have to be resolved. Please <a href="https://bugs.launchpad.net/ubuntu/+source/nfs-utils/+filebug">file a bug against <code>nfs-utils</code> in Launchpad</a> if you encounter such a scenario.</p>
+<p>A new tool called <code>nfsconf(8)</code> can be used to query the configuration settings of <code>/etc/nfs.conf</code> and <code>/etc/nfs.conf.d/*.conf</code>.</p>
+<h4 id="samba-server">Samba server</h4>
+<p>Samba was updated to 4.15.5, which brings some noteworthy changes. Please see the <a href="https://www.samba.org/samba/history/samba-4.15.0.html">upstream release notes for details</a>, but here are some highlights:</p>
+<ul>
+<li>The development SMB versions SMB2_22, SMB2_24 and SMB3_10 are no longer recognized. SMB2_22 and SMB2_24 should be replaced by SMB3_00, and SMB3_10 should be replaced by SMB3_11</li>
+<li>server multi channel support is no longer experimental</li>
+<li>command-line options in all CLI tooling are now using a common parser, and unknown options which might have been ignored in the past, will now be rejected. See the <a href="https://www.samba.org/samba/history/samba-4.15.0.html">upstream release notes</a> for details.</li>
+<li>many <code>/etc/samba/smb.conf</code> parameters were changed, some removed. Please see the <a href="https://www.samba.org/samba/history/samba-4.15.0.html">upstream release notes</a> for details.</li>
+<li>the CTDB package was adjusted to work with the new NFS server version shipped in this Ubuntu 22.04</li>
+<li><code>findsmb(1)</code> was removed</li>
+<li><a href="https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1894618">glusterfs support enabled</a> in the Ubuntu packaging. This was possible because <a href="https://bugs.launchpad.net/ubuntu/+source/glusterfs/+bug/1950321">glusterfs was promoted to Main</a> during the 22.04 LTS development cycle, which allowed us to enable the glusterfs vfs module. This module is now present in the <code>samba-vfs-modules</code> package.</li>
+</ul>
+<h4 id="quagga-replaced-with-frr">Quagga replaced with frr</h4>
+<p><code>quagga</code> was removed from Ubuntu 22.04 and replaced by FRRouting (<code>frr</code>, <a href="https://frrouting.org/)">https://frrouting.org/)</a>.</p>
+<h4 id="chrony-time-synchronization">Chrony time synchronization</h4>
+<p>Chrony has been updated to version 4.2 which includes</p>
+<ul>
+<li>Add support for AES-CMAC and hash functions in GnuTLS</li>
+<li>Improve server interleaved mode to be more reliable and support multiple clients behind NAT</li>
+<li>Add statistics about interleaved mode to serverstats report</li>
+<li>Adds and enabled further hardening options to the chrony service</li>
+<li>Allow reading timemaster created configurations</li>
+<li>For more details read the upstream <a href="https://chrony.tuxfamily.org/news.html">release notes</a></li>
+</ul>
+<h4 id="virtualization">Virtualization</h4>
+<p>As usual the release notes can only list a few bigger and more noteworthy changes and packages while
+underneath many more components have been updated as well. For an even more complete picture please
+have a look at the changelogs of packages and upstream releases of the respective components.</p>
+<h5 id="qemu">qemu</h5>
+<p>Qemu was updated to version v6.2.0 which brings many major and minor improvements. Among others this version includes:</p>
+<ul>
+<li>fuse3 based non-root way to <a href="https://www.qemu.org/2021/08/22/fuse-blkexport/">export image files</a></li>
+<li>Jack support for low latency audio</li>
+<li>Massively improved RISC-V support</li>
+<li>Many fixes for the emulation of AMD virtualization extensions</li>
+<li>Improved Power10 support</li>
+<li>More devices for the microvm build (<code>virtio-gpu</code>, <code>vhost-user-gpu</code>, <code>virtio-input-host</code> and <code>vhost_user_input</code>)</li>
+<li>Allow to remove the additional drivers of <code>qemu-block-extra</code></li>
+<li>Most common qemu features are now separate modules</li>
+<li>s390x got improved storage key emulation (e.g. fixed address handling, lazy storage key enablement for TCG, &hellip;)</li>
+<li>See the upstream changelog for version <a href="https://wiki.qemu.org/ChangeLog/6.1">6.1</a> and <a href="https://wiki.qemu.org/ChangeLog/6.2">6.2</a> for an overview of the many further improvements. These also contain a list of suggested alternatives for removed, deprecated and incompatible features.</li>
+</ul>
+<h5 id="libvirt">libvirt</h5>
+<p>Following the regular releases of libvirt version v8.0.0 is now provided in Ubunt 22.04 which includes:</p>
+<ul>
+<li>Support hotplug and hotunplug for virtiofs</li>
+<li>Introduce virtio-mem <code>&lt;memory/&gt;</code> model</li>
+<li>qemu: Support librbd encryption</li>
+<li>qemu: Add new API to inject a launch secret in a domain</li>
+<li>enhanced swtpm integration (see swtpm below for more)</li>
+<li>See the upstream <a href="https://libvirt.org/news.html">Changelogs</a> for the many further improvements and fixes since version 7.6 that was in <a href="https://discourse.ubuntu.com/t/impish-indri-release-notes/21951">Ubuntu 21.10</a>.</li>
+</ul>
+<h5 id="virt-manager">virt-manager</h5>
+<p>The new version 4.0.0 of virt-manager is the most recent update after almost 1.5 years without a new upstream version) providing a list of new features:</p>
+<ul>
+<li>shared memory configuration in the UI</li>
+<li>virtiofs filesystem driver UI option</li>
+<li>enable a TPM by default when UEFI is used</li>
+<li>Use cpu host-passthrough by default on qemu x86</li>
+<li>use virtio-gpu video for most modern distros</li>
+<li>More details can be found on the <a href="https://github.com/virt-manager/virt-manager/blob/main/NEWS.md">news page</a> and individual commits on the <a href="https://github.com/virt-manager/virt-manager">projects website</a></li>
+</ul>
+<h5 id="dpdk">dpdk</h5>
+<p>Following the yearly flow of upstream DPDK LTS releases Ubuntu 22.04 contains the most recent DPDK LTS 21.11.
+That contains various new device drivers, fixes and optimizations. Even the rather huge <a href="http://doc.dpdk.org/guides/rel_notes/release_21_11.html">release notes</a> is just about 21.11 itself. Compared to the former DPDK LTS 20.11 that shipped with Ubuntu 21.10 you&rsquo;d also want to read the DPDK release notes of <a href="http://doc.dpdk.org/guides/rel_notes/release_21_02.html">21.02</a>, <a href="http://doc.dpdk.org/guides/rel_notes/release_21_05.html">21.05</a> and <a href="http://doc.dpdk.org/guides/rel_notes/release_21_08.html">21.08</a>.</p>
+<h5 id="openvswitch">openvswitch</h5>
+<p>The new version 2.17.0 of openvswitch is in Ubuntu 22.04 and provides a general update including the following changes:</p>
+<ul>
+<li>Various features that ease the use of a userspace datapath.</li>
+<li>Performance improvements for the OVSDB and clustered OVSDB which is heavily used in OVN deployments.</li>
+<li>Brings compatibility with DPDK 21.11 (see above).</li>
+<li><a href="https://www.openvswitch.org/releases/NEWS-2.17.0.txt">The OVS News</a> page holds more details about the new version.</li>
+</ul>
+<h5 id="swtpm">swtpm</h5>
+<p>The <code>swtpm</code> as well as <code>libtpms</code> package is now available and supported in Ubuntu 22.04.</p>
+<p><code>swtpm</code> provides TPM emulators with different front-end interfaces to libtpms. TPM emulators provide socket interfaces (TCP/IP and unix) and the Linux CUSE interface for the creation of multiple native /dev/vtpm* devices..</p>
+<p>A common use case for <code>swtpm</code> is to use it as virtual TPM for virtual machine and container use cases.
+This is particular important for guest operating systems that consider TPM support mandatory.</p>
+<p>See the <a href="https://github.com/stefanberger/swtpm/wiki">upstream wiki</a> for more details.</p>
+<h4 id="squid">Squid</h4>
+<ul>
+<li>The <code>squid</code> package links against the GnuTLS library.  If you would like to use OpenSSL, you can install the new <code>squid-openssl</code> package.</li>
+</ul>
+<h4 id="cloud-init">cloud-init</h4>
+<p>Version 22.1 of cloud-init has been released to 22.04, 21.10, 20.04 and 18.04.</p>
+<p>Notable features introduced since the last LTS release:</p>
+<ul>
+<li>Clouds and datasources
+<ul>
+<li>Add LXD datasource in Jammy which reads dynamic instance data from LXD socket and applies config changes across reboot</li>
+<li>Added a native VMWare datasource</li>
+<li>OpenStack and ConfigDrive now support vendor_data2 config overrides</li>
+<li>Azure boot speed improvements, network config validation and SSH key handling</li>
+<li>GCE detected earlier in boot</li>
+</ul>
+</li>
+<li>Config Modules
+<ul>
+<li>Add <a href="https://cloudinit.readthedocs.io/en/latest/topics/modules.html#install-hotplug">opt-in hotplug network support via user-data</a> for OpenStack and ConfigDrive</li>
+<li>Add deferred write_files config to emit files later in boot</li>
+</ul>
+</li>
+<li>Usability
+<ul>
+<li>Schema validation of <code>#cloud-config</code> userdata to annotate specific errors in user-provided configuration</li>
+</ul>
+</li>
+</ul>
+<h4 id="ubuntu-advantage-tools">ubuntu-advantage-tools</h4>
+<p>Ubuntu-advantage-tools version 27.8 is released with Jammy.</p>
+<p>Notable improvements introduced in this cycle:</p>
+<ul>
+<li>Service offerings:
+<ul>
+<li>Ubuntu Pro and Ubuntu Pro FIPS images on Azure, GCP and AWS</li>
+<li>GCP support to add Ubuntu Advantage licenses to existing VMs</li>
+<li>AWS support for IPv6 IMDS</li>
+<li>CIS benchmarks packaged as part of Ubuntu Security Guide (USG)</li>
+</ul>
+</li>
+<li>Usability
+<ul>
+<li><code>ua security-status</code> provides a detailed view of available and applicable package updates provided by Ubuntu proper and Extended Security Maintenance channels</li>
+<li>Enable Desktop installer to validate and attach Ubuntu Advantage tokens</li>
+<li>Support machine-readable output JSON/YAML format for most commands</li>
+<li>Configurable auto attach behavior via <code>ua attach --attach-config</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="ubuntu-server-main-promotions">Ubuntu Server Main Promotions</h3>
+<p>For Ubuntu Server 22.04 LTS, the following source packages were promoted to main:</p>
+<ul>
+<li><a href="https://www.wireguard.com">wireguard</a>: fast, modern, secure kernel VPN tunnel</li>
+<li><a href="https://www.gluster.org/">glusterfs</a>: cluster file-system capable of scaling to several peta-bytes</li>
+<li><a href="https://www.frrouting.org/">frr</a>: suite of internet routing protocols (BGP, OSPF, IS-IS, &hellip;)</li>
+</ul>
+<h3 id="lxd-was-updated-to-the-new-50-lts-version">LXD was updated to the new 5.0 LTS version</h3>
+<p>5.0 LTS significantly steps up LXD’s abilities, especially when operating in clustered environments. In comparison to LXD 4.0, virtual machines are now effectively at feature parity with containers, and a lot of networking options, clustering, and project features were added.</p>
+<p>Some of the key changes include:</p>
+<ul>
+<li><strong>LXD virtual machines</strong> now come with vTPM support as well as arbitrary PCI passthrough support. VMs can now be live-migrated and support some device hotplug and additional storage options.</li>
+<li><strong>Networking</strong> now includes OVN support combined with BGP, DNS, floating IP and hardware acceleration support.</li>
+<li><strong>Projects</strong> have grown a number of additional limits and restrictions, making it easy to safely grant access to various teams and limit their resource usage.</li>
+<li><strong>LXD-migrate</strong> has been reworked with support for both containers and VMs</li>
+<li><strong>Cluster</strong> users can now perform easy maintenance through cluster evacuation, group servers into target groups and get detailed instance metrics across entire clusters.</li>
+</ul>
+<p>Additional details and a complete changelog can be found <a href="https://discuss.linuxcontainers.org/t/lxd-5-0-lts-has-been-released/13723">here</a>.</p>
+<h3 id="ceph">Ceph</h3>
+<p>Ubuntu 22.04 includes the latest release candidate of the Ceph Quincy release.</p>
+<p>Ceph packages will be updated as a <a href="https://bugs.launchpad.net/ubuntu/+source/ceph/+bug/1968318">stable release update</a> once Quincy is released by the Ceph community.</p>
+<h3 id="openstack">OpenStack</h3>
+<p>Ubuntu 22.04 includes the latest OpenStack release, Yoga, including the following components:</p>
+<ul>
+<li>OpenStack Identity - Keystone</li>
+<li>OpenStack Imaging - Glance</li>
+<li>OpenStack Block Storage - Cinder</li>
+<li>OpenStack Compute - Nova</li>
+<li>OpenStack Networking - Neutron</li>
+<li>OpenStack Telemetry - Ceilometer, Aodh, Gnocchi</li>
+<li>OpenStack Orchestration - Heat</li>
+<li>OpenStack Dashboard - Horizon</li>
+<li>OpenStack Object Storage - Swift</li>
+<li>OpenStack DNS - Designate</li>
+<li>OpenStack Bare-metal - Ironic</li>
+<li>OpenStack Filesystem - Manila</li>
+<li>OpenStack Key Manager - Barbican</li>
+<li>OpenStack Load Balancer - Octavia</li>
+<li>OpenStack Instance HA - Masakari</li>
+</ul>
+<p>Please refer to the <a href="https://releases.openstack.org/yoga/">OpenStack Yoga release notes</a> for full details of this release of OpenStack.</p>
+<p>OpenStack Yoga is also provided via the <a href="https://wiki.ubuntu.com/OpenStack/CloudArchive">Ubuntu Cloud Archive</a> for OpenStack Yoga for Ubuntu 20.04 LTS users.</p>
+<p>WARNING: Upgrading an OpenStack deployment is a non-trivial process and care should be taken to plan and test upgrade procedures which will be specific to each OpenStack deployment.</p>
+<p>Make sure you read the <a href="https://docs.openstack.org/charm-guide/latest">OpenStack Charm Release Notes</a> for more information about how to deploy and operate Ubuntu OpenStack using Juju.</p>
+<h3 id="needrestart-and-unattended-operations">needrestart and unattended operations</h3>
+<p><a href="https://discourse.ubuntu.com/t/needrestart-for-servers/21552">needrestart</a> was first installed by default in Ubuntu 21.04 and continues to feature in Ubuntu 22.04. It helps ensure that services are correctly restarted when their dependencies receive security updates.</p>
+<p>By default, needrestart will prompt after upgrading packages if restarts are determined to be required. To suppress this behaviour, you can set <code>DEBIAN_FRONTEND=noninteractive</code> as usual. needrestart will then fall back to &ldquo;list only mode&rdquo;. It will be necessary to restart services afterwards, for example by rebooting or invoking <code>needrestart -ra</code>.</p>
+<h2 id="platforms">Platforms</h2>
+<h3 id="cloud-images-cloud">Cloud Images :cloud:</h3>
+<h4 id="aws">AWS</h4>
+<ul>
+<li>AWS amd64 images use now a GPT partition table and setup a ESP partition to make it possible to use UEFI as boot mode.</li>
+</ul>
+<h4 id="oracle">Oracle</h4>
+<ul>
+<li>Jammy Minimal images are available for ARM64 servers on Oracle Cloud Infrastructure. Note that OCI releases images on a fixed cadence, and Jammy release to OCI will be slightly delayed.</li>
+</ul>
+<h3 id="raspberry-pi-strawberry">Raspberry Pi :strawberry:</h3>
+<ul>
+<li>The first long-term service (LTS) release of the Ubuntu Desktop for Raspberry Pi</li>
+<li>Support for several Pi-specific boards and tools have been added to the archive:
+<ul>
+<li>All variants of the popular Pimoroni <a href="https://shop.pimoroni.com/products/unicorn-hat?variant=932565325">Unicorn HAT</a> are now supported with packaging</li>
+<li>The official DSI touchscreen is now supported (however, see known issues below for a workaround regarding the desktop image)</li>
+<li>The <a href="https://launchpad.net/ubuntu/+source/rpiboot">rpiboot</a> package contains the <a href="https://github.com/raspberrypi/usbboot">rpiboot</a> utility for working with Raspberry Pi Compute Modules (and other Pi boot facilities)</li>
+<li>The <a href="https://launchpad.net/ubuntu/+source/pyboard-rshell">pyboard-rshell</a> package contains the <a href="https://pypi.org/project/rshell/">rshell</a> utility for working with micro-controller boards supporting MicroPython, including the Raspberry Pi Pico</li>
+<li>The <a href="https://launchpad.net/ubuntu/+source/rpi-imager">rpi-imager</a> package contains the Raspberry Pi imager utility. The equivalent <a href="https://snapcraft.io/rpi-imager">snap package</a> has also been updated to operate on all architectures (and bumped to the current version)</li>
+</ul>
+</li>
+</ul>
+<h3 id="ppc64el">ppc64el</h3>
+<p>Starting with 22.04 LTS, Ubuntu Server for IBM POWER (ppc64el) is now compiled for Power9 processors using &lsquo;&ndash;with-cpu=power9&rsquo; (<a href="https://bugs.launchpad.net/bugs/1930086">bug 1930086</a>).
+Thus Ubuntu Server 22.04 LTS will not run, install or even boot on Power8 systems anymore, due to the different instruction set requirements.
+Ubuntu Server 20.04 LTS can still be used for Power8 systems for several years - at least until end of base support in April 2025. Users running Ubuntu Server on Power8 today will be prevented from being upgraded to 22.04 LTS using ‘do-release-upgrade’, as this will obviously break such systems (<a href="https://bugs.launchpad.net/bugs/1960255">bug 1960255</a>).
+In addition, Ubuntu Server 22.04 LTS is the first Ubuntu release that comes with official support for IBM Power10 systems.</p>
+<h3 id="s390x">s390x</h3>
+<p>Starting with Ubuntu Server 20.04 LTS (for IBM Z and LinuxONE), the minimal architectural level set was raised to z13 (and LinuxONE Rockhopper / Emperor) - this still applies to Ubuntu Server 22.04 LTS and support also includes all newer hardware that is in service as of today (22.04 release date). Support for additional future hardware might be added later.
+Ubuntu Server 22.04 LTS can be installed in an LPAR (classic or DPM mode), as IBM z/VM guest, as KVM virtual machine and in different container environments, such as LXD, docker or kubernetes.</p>
+<p>IBM Z and LinuxONE / s390x-specific enhancements since 21.10 (partially not limited to s390x):</p>
+<ul>
+<li>
+<p>Like mentioned above, 22.04 LTS is the first release that picked up OpenSSL 3, to be precise v3.0.2 (<a href="https://bugs.launchpad.net/bugs/1905022">bug 1905022</a>), this transition triggered for compatibility reasons (<a href="https://bugs.launchpad.net/bugs/1959736">bug 1959736</a>) further updates, that largely ended up in the renewal of the entire s390x crypto stack, including:</p>
+<ul>
+<li>libica update to finally v4.0.1 (<a href="https://bugs.launchpad.net/bugs/1959421">bug 1959421</a>), including extend statistics to reflect security measures (<a href="https://bugs.launchpad.net/bugs/1959553">bug 1959553</a>)</li>
+<li>openssl-ibmca update (<a href="https://bugs.launchpad.net/bugs/1958419">bug 1958419</a>) to finally 2.2.2 to ensure compatibility with libica4 (<a href="https://bugs.launchpad.net/bugs/1960004">bug 1960004</a>).</li>
+<li>opencryptoki update to v3.17.0+dfsg+20220202.b40982e (since the planned release date for 3.18 is post 22.04 GA) (Bug:1959419), including several (security) fixes and new features like in the key management tool (LP 1959577).</li>
+<li>with that cryptsetup was updated as well (<a href="https://bugs.launchpad.net/bugs/1959427">bug 1959427</a>)
+Further updates in the area of cryptography that are relevant for s390x are:</li>
+<li>the upgrade of libgcrypt(20) to latest v1.9.4</li>
+<li>in kernel crypto optimization of chacha20 now using a SIMD implementation (<a href="https://bugs.launchpad.net/bugs/1853152">bug 1853152</a>)</li>
+<li>zcrypt device driver update for adding exploitation of new IBM Z crypto hardware (<a href="https://bugs.launchpad.net/bugs/1959547">bug 1959547</a>)</li>
+<li>and finally the newly packaged IBM Z protected-key crypto library that provides interfaces for cryptographic primitives (<a href="https://bugs.launchpad.net/bugs/1932522">bug 1932522</a>)</li>
+</ul>
+</li>
+<li>
+<p>Furthermore new network features were added, like Enhanced HSCI (HiperSockets Converged Interface) Multi-MAC support for enhancing KVM setups and z/OS interoperability (kernel LP: 1932137 and s390-tools LP: 1929721). And significant updates in the area of Shared Memory Communication (SMC), like EID (Enterprise ID) support (kernel LP: 1929060, s390-tools LP: 1929056), SMC statistics support (<a href="https://bugs.launchpad.net/bugs/1959470">bug 1959470</a>) and SMC-R v2 support (<a href="https://bugs.launchpad.net/bugs/1929035">bug 1929035</a>) - and with all that the smc-tools have been upgraded to latest v1.7.0 (<a href="https://bugs.launchpad.net/bugs/1959428">bug 1959428</a>).</p>
+</li>
+<li>
+<p>Several KVM and Secure Execution related new features landed too, like:</p>
+<ul>
+<li>enablement of storage key checking for intercepted instructions handled by KVM (<a href="https://bugs.launchpad.net/bugs/1933176">bug 1933176</a>) and by user-space (<a href="https://bugs.launchpad.net/bugs/1933179">bug 1933179</a>)</li>
+<li>the &lsquo;access register mode&rsquo; got enabled (<a href="https://bugs.launchpad.net/bugs/1933178">bug 1933178</a>)</li>
+<li>allowing long kernel command lines for QEMU (<a href="https://bugs.launchpad.net/bugs/1959984">bug 1959984</a>) and for Secure Execution guests (<a href="https://bugs.launchpad.net/bugs/1959985">bug 1959985</a>).</li>
+<li>enable guest interrupt support via GISA for Secure Execution guests (<a href="https://bugs.launchpad.net/bugs/1959977">bug 1959977</a>)</li>
+<li>support for Secure Execution guest dump encryption with customer keys (<a href="https://bugs.launchpad.net/bugs/1959965">bug 1959965</a>)</li>
+<li>and enablement of vfio-ccw and vfio-ap in virt-* tools, especially virt-manager (<a href="https://bugs.launchpad.net/bugs/1959976">bug 1959976</a>)</li>
+<li>In addition the KVM_CAP_S390_MEM_OP_EXTENSION capability was raised to 211 (<a href="https://bugs.launchpad.net/bugs/1963901">bug 1963901</a>) and KVM got improved SIGP architectural compliance (<a href="https://bugs.launchpad.net/bugs/1959735">bug 1959735</a>).</li>
+</ul>
+</li>
+<li>
+<p>The modernized tool-chain was needed in order to add support for new IBM Z hardware (<a href="https://bugs.launchpad.net/bugs/1959379">bug 1959379</a>), and the 22.04 default gcc became v11.2 (12, 10 and 9 are in universe).
+Binutils were aligned to gdb (<a href="https://bugs.launchpad.net/bugs/1959407">bug 1959407</a>) and updated to v2.38 (<a href="https://bugs.launchpad.net/bugs/1959463">bug 1959463</a>), again for adding support for new hardware (<a href="https://bugs.launchpad.net/bugs/1959408">bug 1959408</a>).
+And LLVM was updated as well for new hardware support (<a href="https://bugs.launchpad.net/bugs/1959378">bug 1959378</a>) and to include further optimizations (<a href="https://bugs.launchpad.net/bugs/1959406">bug 1959406</a>), but not only v13 is available, even v14 is the default.</p>
+</li>
+<li>
+<p>On top new hardware support was added to glibc (<a href="https://bugs.launchpad.net/bugs/1959385">bug 1959385</a> and LP: 1959383) while glibc was upgraded to latest v2.35 (<a href="https://bugs.launchpad.net/bugs/1959429">bug 1959429</a>), which contains HWCAP_S390_PCI_MIO and HWCAP_S390_SIE (<a href="https://bugs.launchpad.net/bugs/1959462">bug 1959462</a>).
+The Perl Compatible Regular Expression Library PCRE2 was updated to v10.39 and includes improvements for s390x and full JIT performance (<a href="https://bugs.launchpad.net/bugs/1959917">bug 1959917</a>).
+The &lsquo;Eigen3&rsquo; algebra library contains further optimizations for s390x too (<a href="https://bugs.launchpad.net/bugs/1884725">bug 1884725</a>) and the query capacity library and utility for extracting system information &lsquo;qclib&rsquo; was raised to v2.3.0 (<a href="https://bugs.launchpad.net/bugs/1959464">bug 1959464</a>).
+Finally a brand new low-level IBM Z Deep Neural Network Library (zDNN) library, that provides an interface for applications making use of Neural Network Processing Assist Facility (NNPA), got packaged and is now available (<a href="https://bugs.launchpad.net/bugs/1959396">bug 1959396</a>).</p>
+</li>
+<li>
+<p>A core component of Ubuntu Server for IBM Z is the s390-tools package, which was upgraded to v2.2.0 (<a href="https://bugs.launchpad.net/bugs/1959420">bug 1959420</a>) in alignment to jammy&rsquo;s kernel 5.15, and includes among other features now an environment block implementation (<a href="https://bugs.launchpad.net/bugs/1959409">bug 1959409</a>), that is a persistent configuration information which is evaluated during boot without the need to rewrite IPL records, an option to auto-activate PCI devices for DPM system (<a href="https://bugs.launchpad.net/bugs/1959537">bug 1959537</a>) and the new multipath re-IPL feature (<a href="https://bugs.launchpad.net/bugs/1959546">bug 1959546</a>).</p>
+</li>
+<li>
+<p>The kernel received several s390x improvements as well, like kernel based support for new IBM Z hardware (<a href="https://bugs.launchpad.net/bugs/1960187">bug 1960187</a>), new CPU-MF Counters for new hardware (<a href="https://bugs.launchpad.net/bugs/1960117">bug 1960117</a>), support for long kernel command lines on s390x (<a href="https://bugs.launchpad.net/bugs/1960580">bug 1960580</a>), transparent PCI device recovery support (<a href="https://bugs.launchpad.net/bugs/1959532">bug 1959532</a>), enhanced user information on HBA firmware (<a href="https://bugs.launchpad.net/bugs/1959545">bug 1959545</a>) and as clean-up the deactivation of the CONFIG_QETH_OSX kernel config option (<a href="https://bugs.launchpad.net/bugs/1959890">bug 1959890</a>).</p>
+</li>
+<li>
+<p>The service-call logical processor (SCLP) console interface driver (for &lsquo;Operating Systems Messages&rsquo; line-mode and &lsquo;Integrated ASCII console&rsquo; VT220) got two new debug features for logging relevant data for all sclp requests or just for failing sclp requests, which requires kernel (<a href="https://bugs.launchpad.net/bugs/1960435">bug 1960435</a>) as well as s390-tools modifications (<a href="https://bugs.launchpad.net/bugs/1960437">bug 1960437</a>).</p>
+</li>
+</ul>
+<h3 id="risc-v">RISC-V</h3>
+<p>Starting with 22.04 LTS, besides the standard device-specific preinstalled image, we now also provide a live installer image for the RISC-V architecture. This can be helpful when wanting to install Ubuntu on an NVMe drive on an Unmatched board, for instance.</p>
+<h3 id="uefi-and-bios-boot">UEFI and BIOS boot</h3>
+<p>Other operating systems are not displayed in the boot menu anymore, unless Ubuntu has been installed alongside another operating system. Once all other operating systems are removed from the machine, detection of other operating systems is disabled, and to re-enable if after installing another OS, you will have to delete <code>/boot/grub/grub.cfg</code> and immediately run <code>update-grub</code> again.</p>
+<h1 id="known-issues">Known Issues</h1>
+<p>As is to be expected, with any release, there are some significant known bugs that users may run into with this release of Ubuntu. The ones we know about at this point (and some of the workarounds), are documented here so you don’t need to spend time reporting these bugs again:</p>
+<h2 id="linux-kernel">Linux kernel</h2>
+<p>Nothing yet.</p>
+<h2 id="security">Security</h2>
+<ul>
+<li>OpenSSL 3.0.2 doesn&rsquo;t work with the <a href="https://launchpad.net/bugs/1968997">Turkish locale</a>.  To work around this issue until a fix is available, affected users are advised to set LC_CTYPE=C.UTF-8 in their environment for processes that use openssl (at a shell: <code>export LC_CTYPE=C.UTF-8</code>).  This will break capitalization of strings according to rules for the Turkish language, so is not recommended to be overridden at the system level.</li>
+</ul>
+<h2 id="system">System</h2>
+<ul>
+<li>systemd / journald now defaults to <code>zstd</code> compression and uses the “keyed hash” feature (upstream default as of v246). Therefore, journal files written on Ubuntu 22.04 (using systemd v249) cannot be opened using an older version of journal (i.e. from a 18.04/20.04/Core20 installation). This will fail with an error (<a href="https://bugs.launchpad.net/subiquity/+bug/1953744">LP: #1953744</a>, <a href="https://forum.snapcraft.io/t/accessing-journal-logs-from-22-04-hosts-when-using-older-base-snap/29627">forum.snapcraft.io</a>):
+<pre tabindex="0"><code>Journal file xxx.journal has unknown incompatible flags 0xc
+Failed to open journal file xxx.journal: Protocol not supported
+</code></pre></li>
+<li>Users of grub-customizer could hit <a href="https://pad.lv/1969353">a bug</a> in the late stage of the upgrade process leading to the final stage of the upgrade to fail (autoremoval of packages). A workaround is available <a href="https://bugs.launchpad.net/ubuntu/+source/ubuntu-release-upgrader/+bug/1969353/comments/6">in the bug&rsquo;s comments</a>.</li>
+</ul>
+<h2 id="ubuntu-desktop-1">Ubuntu Desktop</h2>
+<ul>
+<li>The Ubuntu Desktop images can be slow to boot (taking up to 10 minutes) when booted from a USB drive on a BIOS system. The issue is being <a href="https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1922342">investigated</a>, however once the system is installed this is not an issue.</li>
+<li>The Ubuntu Desktop images can be very slow to boot (taking up to 30 minutes) when booted from optical media (DVD) on a a BIOS or UEFI system. This is due to an integrity checker being run against the installation media. A workaround (setting &ldquo;fsck.mode=skip&rdquo;) is documented in <a href="https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1930880">the relevant bug</a>.</li>
+<li>A hang of the Ubuntu Desktop installer, Ubiquity, <a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1946828">has been observed</a>,  where it is scanning NTFS partitions to determine if they can be resized.  The symptom of this is a spinning ball cursor when attempting to continue past the installer &lsquo;Updates and other software&rsquo; screen.  If this occurs, please reboot and try again.</li>
+<li>The Firefox snap does not support the <a href="https://launchpad.net/bugs/1741074">NativeMessaging protocol</a> yet but this feature is planned to be added soon. This means for instance that installing GNOME Shell extensions from Firefox won&rsquo;t work. As a workaround, you can try the <code>gnome-shell-extension-manager</code> app.</li>
+<li>Brazilians (and others that need PKCS#11 smartcard support in Firefox) <strong>should not upgrade to Jammy</strong> until <a href="https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1967632">pkcs#11 support is added to the firefox snap</a></li>
+<li>The GNOME Tweaks app no longer manages GNOME Shell extensions. You can install <code>gnome-shell-extension-manager</code> instead.</li>
+<li>There isn&rsquo;t an option to use Wayland for systems with <a href="https://launchpad.net/bugs/1968929">Nvidia graphics drivers</a>.</li>
+<li>To use AppImages, you&rsquo;ll first <a href="https://launchpad.net/bugs/1965636">need to run</a> <code>sudo apt install libfuse2</code></li>
+<li>RDP (Remote Desktop) Sharing <a href="https://launchpad.net/bugs/1969619">appears on</a> by default but it is not on and needs to be turned off and then turned on to enable.</li>
+<li>An upgrade to Ubuntu 22.04 LTS can cause <a href="https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1969162">a bad interaction between snapd and update-notifier</a> which can cause the upgrade to hang. The fix is currently in flight and upgrades will be enabled shortly.</li>
+</ul>
+<h2 id="ubuntu-server-1">Ubuntu Server</h2>
+<ul>
+<li>Due to a <a href="https://bugs.launchpad.net/ubuntu/+source/zfs-linux/+bug/1969247">current issue with fallocate on zfs</a>, mysql fails to install on Jammy zfs systems</li>
+</ul>
+<h2 id="platforms-1">Platforms</h2>
+<h3 id="cloud-images">Cloud Images</h3>
+<h4 id="vagrant">Vagrant</h4>
+<ul>
+<li>Jammy <code>vagrant</code> from <code>universe</code> does not support openssl3 upstream. This will cause users of vagrant on a Jammy host to receive OpenSSL errors on start. The box will still be booted, and <code>vagrant ssh</code> will operate, however <code>vagrant</code> functionality will be severely impacted. Connections between boxes will not operate normally. <a href="https://bugs.launchpad.net/ubuntu/+source/vagrant/+bug/1964025">bug report.</a></li>
+<li>Vagrant &lt; 2.216 will fail to launch due to SSH connection issues. <code>vagrant</code>, as provided in the Ubuntu archives, does not reach &gt;= 2.2.16 until Jammy .  One workaround is to use an upstream version of <code>vagrant</code> on your system. <a href="https://github.com/hashicorp/vagrant/issues/11783">Upstream bug, already fixed.</a>.  The Cloud Team is also working on a more permanent solution: <a href="https://bugs.launchpad.net/cloud-images/+bug/1969664">Public cloud-images bug</a></li>
+</ul>
+<h3 id="raspberry-pi">Raspberry Pi</h3>
+<ul>
+<li>The Raspberry Pi desktop images have switched to using the Full KMS graphics drivers. The official Raspberry Pi DSI display does not work with full KMS enabled. To enable the use of the Raspberry Pi DSI display, edit the <code>config.txt</code> file on your Raspberry Pi&rsquo;s hard drive and change the line <code>dtoverlay=vc4-fkms-v3d</code> to <code>dtoverlay=vc4-kms-v3d</code></li>
+<li>Currently, the USB ports on the official IO board for the Compute Module 4 are inoperative (<a href="https://launchpad.net/bugs/1969689">bug 1969689</a>)</li>
+<li>On the desktop image, the Firefox snap can take some time (several minutes has been noted) to complete initialization after first login (<a href="https://launchpad.net/bugs/1969529">bug 1969529</a>)</li>
+<li>The legacy camera stack (MMAL based) is no longer supported on <code>arm64</code>; [libcamera] is the supported method of using the Pi Camera Module on the <code>arm64</code> architecture (the boot-time configuration will automatically load overlays for detected modules)</li>
+</ul>
+<p>Carried over from interim releases (these are changes are applicable from LTS-&gt;LTS):</p>
+<ul>
+<li>After initial user setup on the desktop image, several packages can still be autoremoved (<a href="https://launchpad.net/bugs/1925265">bug 1925265</a>); run <code>sudo apt autoremove</code> to work around this</li>
+<li>On the desktop image, the wrong audio output device is selected on each boot. A workaround is available in the bug report (<a href="https://launchpad.net/bugs/1899962">bug 1899962</a>)</li>
+<li>Various kernel modules have been moved from the <code>linux-modules-raspi</code> package in order to reduce the initramfs size. If you find an application failing due to missing kernel modules, please try the following:
+<ul>
+<li><code>sudo apt install linux-modules-extra-raspi</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="s390x-1">s390x</h3>
+<p>No known issues yet.</p>
+<h1 id="official-flavours">Official flavours</h1>
+<p>The release notes for the official flavours can be found at the following links:</p>
+<ul>
+<li><a href="https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/Kubuntu">Kubuntu Release Notes</a></li>
+<li><a href="https://discourse.lubuntu.me/t/lubuntu-22-04-lts-jammy-jellyfish-release-notes/3179">Lubuntu Release Notes</a></li>
+<li><a href="https://ubuntubudgie.org/2022/03/ubuntu-budgie-22-04-lts-release-notes/">Ubuntu Budgie Release Notes for 21.10 upgraders</a> &amp; <a href="https://ubuntubudgie.org/2022/04/ubuntu-22-04-release-notes-for-20-04-upgraders/">Ubuntu Budgie Release Notes for 20.04 upgraders</a></li>
+<li><a href="https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/UbuntuKylin">Ubuntu Kylin Release Notes</a></li>
+<li><a href="https://ubuntu-mate.org/blog/ubuntu-mate-jammy-jellyfish-release-notes/">Ubuntu MATE Release Notes</a></li>
+<li><a href="https://ubuntustudio.org/ubuntu-studio-22-04-lts-release-notes/">Ubuntu Studio Release Notes</a></li>
+<li><a href="https://wiki.xubuntu.org/releases/22.04/release-notes">Xubuntu Release Notes</a></li>
+</ul>
+<h1 id="more-information">More information</h1>
+<h2 id="reporting-bugs">Reporting bugs</h2>
+<p>Your comments, bug reports, patches and suggestions will help fix bugs and improve the quality of future releases. Please <a href="http://help.ubuntu.com/community/ReportingBugs">report bugs using the tools provided</a>. If you want to help out with bugs, the <a href="http://wiki.ubuntu.com/BugSquad">Bug Squad</a> is always looking for help.</p>
+<h2 id="participate-in-ubuntu">Participate in Ubuntu</h2>
+<p>If you would like to help shape Ubuntu, take a look at the list of ways you can participate at:</p>
+<ul>
+<li><a href="https://community.ubuntu.com/contribute">https://community.ubuntu.com/contribute</a></li>
+</ul>
+<h2 id="more-about-ubuntu">More about Ubuntu</h2>
+<p>You can find out more about Ubuntu on the <a href="https://www.ubuntu.com">Ubuntu website</a>.</p>
+<p>To sign up for future Ubuntu development announcements, please subscribe to Ubuntu’s development announcement list at:</p>
+<ul>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce">https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce</a></li>
+</ul>
+
+  </div>
+  </section>
+  <section class="p-strip--light">
+    <div class="row">
+      
+      <div class="col-12">
+        <div class="p-media-object">
+          <img src="https://launchpad.net/@@/team-logo" class="p-media-object__image is-round" alt="">
+          <div class="p-media-object__details">
+            <h3 class="p-media-object__title">
+              <a href="#">Ubuntu Korean Translators</a>
+            </h3>
+            <p class="p-media-object__content">.</p>
+            <ul class="p-inline-list--middot">
+              <li class="p-inline-list__item"><a href="mailto:ubuntu-l10n-ko@lists.ubuntu.com">Email</a></li>
+              <li class="p-inline-list__item"><a href="https://launchpad.net/~ubuntu-l10n-ko">Launchpad</a></li>
+              <li class="p-inline-list__item"><a href="https://github.com/ubuntu-kr">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      
+      <div class="col-12">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_config = function () {
+    this.page.url = "https://blog.ubuntu-kr.org/en/2022/04/22/jamme-jellyfish-release-notes/";  
+    this.page.identifier = "/en/2022/04/22/jamme-jellyfish-release-notes.html"; 
+};
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+    
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'ubuntu-kr-blog';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+      </div>
+   
+    </div>
+  </section>
+  <section class="p-strip">
+    <div class="row">
+      <footer class="p-article-pagination">
+        
+        <a class="p-article-pagination__link--previous" href="/en/contribute/">
+          <span class="p-article-pagination__label">Previous</span>
+          <span class="p-article-pagination__title">Contributing to this blog</span>
+        </a>
+        
+        
+      </footer>
+    </div>
+  </section>
+</main>
+
+        </div><section class="p-strip--accent">
+  <div class="row">
+    <div class="col-12">
+      <h2>Ubuntu Korea Community Blog</h2>
+      <ul class="p-inline-list--middot is-dark">
+        <li class="p-inline-list__item">
+          <a href="mailto:contact@ubuntu-kr.org">Contact with Organizers (Email)</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://fb.com/ubuntukorea">Facebook</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://twitter.com/UbuntuKrOrg">Twitter</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://www.youtube.com/user/UbuntuKorea">YouTube</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://github.com/ubuntu-kr">GitHub</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://launchpad.net/~ubuntu-ko">Launchpad</a>
+        </li>
+      </ul>
+      <p>© 2021 Ubuntu Korea Community (Ubuntu Korean LoCo Team). Except where otherwise noted, Website source code licensed under MIT, Contents licensed under CC BY-SA 4.0.  Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+      <a href="https://github.com/ubuntu-kr/blog.ubuntu-kr.org">Source code on GitHub</a>
+    </div>
+  </div><script type="text/javascript" src='/js/ubuntukr.js'></script>
+<script type="text/javascript" src='/js/timedisplay.js'></script>
+<script>
+
+let slides = document.getElementsByClassName("main-slide");
+let index = 0;
+let count = slides.length;
+function setSlideIndex(destination) {
+    index = destination % count;
+    index = index < 0 ? index * -1 : index;
+    for (let i = 0; i < count; i++) {
+        if(i == index) {
+            slides[i].style.display = "block";
+        } else {
+            slides[i].style.display = "none";
+        }
+    }
+}
+function nextSlide() {
+    setSlideIndex(index + 1);
+}
+function prevSlide() {
+    setSlideIndex(index - 1);
+}
+setSlideIndex(0);
+setInterval(nextSlide, 5000);
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-65961752-8', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script></body>
+</html>
