@@ -2,11 +2,11 @@
 ---
 layout: post
 date: 2022-04-22 02:00:00 +0900
-title: "Ubuntu 22.04 LTS Jammy Jellyfish Release Notes"
+title: "우분투 22.04 LTS Jammy Jellyfish 릴리즈 노트"
 tags:
  - release-notes
 authors:
-    - name: Ubuntu Korean Translators
+    - name: 우분투 한국어 번역팀
       bio: .
       email: ubuntu-l10n-ko@lists.ubuntu.com
       launchpad: ubuntu-l10n-ko
@@ -21,11 +21,11 @@ authors:
 
 ## 지원 기간
 
-우분투 데스크톱, 우분투 서버, 우분투 Cloud, 우분투 Core의 유지보수 업데이트는 [2027 4월](https://wiki.ubuntu.com/Releases)까지 5년 동안 제공되고, 나머지 모든 flavour에 대해서는 3년간 지원됩니다. 추가적 보안 업데이트는 [ESM (Extended Security Maintenance).](https://ubuntu.com/security/esm)를 통해 지원됩니다.
+우분투 데스크톱, 우분투 서버, 우분투 클라우드, 우분투 Core의 유지보수 업데이트는 [2027 4월](https://wiki.ubuntu.com/Releases)까지 5년 동안 제공되고, 나머지 모든 flavour에 대해서는 3년간 지원됩니다. 추가적 보안 업데이트는 [ESM (Extended Security Maintenance).](https://ubuntu.com/security/esm)를 통해 지원됩니다.
 
-# Ubuntu 22.04 LTS 받기
+# 우분투 22.04 LTS 받기
 
-## Ubuntu 22.04 다운로드
+## 우분투 22.04 다운로드
 
 가까운 지역에서 이미지를 다운로드 할 수 있습니다.
 
@@ -33,16 +33,16 @@ ISO나 플래시 가능한 이미지 다운로드:
 
   * [64 비트 x86 (AMD64) 우분투 데스크톱 및 서버](http://releases.ubuntu.com/22.04/)
   * [종종 다운로드 되는 우분투 이미지](http://cdimage.ubuntu.com/ubuntu/releases/22.04/release/)
-  * [우분투 Cloud 이미지](http://cloud-images.ubuntu.com/daily/server/jammy/current/)
-  * [Lubuntu](http://cdimage.ubuntu.com/lubuntu/releases/22.04/release/)
-  * [Kubuntu](http://cdimage.ubuntu.com/kubuntu/releases/22.04/release/)
+  * [우분투 클라우드 이미지](http://cloud-images.ubuntu.com/daily/server/jammy/current/)
+  * [루분투](http://cdimage.ubuntu.com/lubuntu/releases/22.04/release/)
+  * [쿠분투](http://cdimage.ubuntu.com/kubuntu/releases/22.04/release/)
   * [우분투 Budgie](http://cdimage.ubuntu.com/ubuntu-budgie/releases/22.04/release/)
   * [우분투 Kylin](http://cdimage.ubuntu.com/ubuntukylin/releases/22.04/release/)
   * [우분투 MATE](http://cdimage.ubuntu.com/ubuntu-mate/releases/22.04/release/)
-  * [우분투 Studio](http://cdimage.ubuntu.com/ubuntustudio/releases/22.04/release/)
-  * [Xubuntu](http://cdimage.ubuntu.com/xubuntu/releases/22.04/release/)
+  * [우분투 스튜디오](http://cdimage.ubuntu.com/ubuntustudio/releases/22.04/release/)
+  * [주분투](http://cdimage.ubuntu.com/xubuntu/releases/22.04/release/)
 
-# Ubuntu 21.10에서 업그레이드
+# 우분투 21.10에서 업그레이드
 
 **현재 22.04 LTS로의 업그레이드는 활성화 되어 있지 않지만 (snap, update-notifier의 버그로 인함) 수일 이내에 활성화 될 예정입니다.**
 
@@ -78,7 +78,7 @@ ISO나 플래시 가능한 이미지 다운로드:
 
 * 우분투 데스크톱이 다른 세대의 하드웨어에서 롤링 HWE 커널 (`linux-hwe-22.04`)을 사용합니다. 22.04와 22.04.1 포인트 릴리즈에 대한 롤링 HWE 커널은  [v5.15](https://kernelnewbies.org/Linux_5.15) 커널에 기반합니다
 * 우분투 서버는 기본적으로 비롤링 LTS 커널인 v5.15 (`linux-generic`)에 맞춰집니다.
-* 우분투 Cloud와 Devices는 파트너사의 협력으로 최적화된 커널을 사용합니다 (추가 백포트와 기능이 있는 v5.15+)
+* 우분투 클라우드와 디바이스에서 파트너사와의 협력으로 최적화된 커널을 사용합니다 (추가 백포트와 기능이 있는 v5.15+)
 
 
 추가적 최적화와 인증된 커널 flavour는 적기에 우분투 22.04 LTS에서 이용 가능할 예정입니다.
@@ -165,9 +165,9 @@ OpenSSL 라이브러리를 새로운 3.0 버전으로 업그레이드 했고 이
 * [PulseAudio 16](https://www.freedesktop.org/wiki/Software/PulseAudio/Notes/16.0/)
 * [xdg-desktop-portal 1.14](https://github.com/flatpak/xdg-desktop-portal/blob/1.14.2/NEWS)
 
-## Ubuntu Server
+## 우분투 서버
 
-#### Ubuntu HA/Clustering
+#### 우분투 HA/클러스터링
 
 ##### Corosync
 
@@ -178,7 +178,7 @@ OpenSSL 라이브러리를 새로운 3.0 버전으로 업그레이드 했고 이
 - *corosync -v* 명령어를 사용하여 coresync.conf에서 사용할 있는 암호화 및 압축 모델의 목록을 가져올 수 있습니다.
 - Cgroup v2를 지원합니다.
 
-변경 사항과 관련된 전체 목록은 [업스트림 릴리스 노트](https://github.com/corosync/corosync/releases)를 참고하십시오.
+변경 사항과 관련된 전체 목록은 [업스트림 릴리즈 노트](https://github.com/corosync/corosync/releases)를 참고하십시오.
 
 ##### Pacemaker
 
@@ -189,21 +189,21 @@ OpenSSL 라이브러리를 새로운 3.0 버전으로 업그레이드 했고 이
 - OCF Resource Agent API 1.1 표준을 지원합니다.
 - *crm_mon* 및 *crm_resource*가 많은 개선이 되었습니다.
 
-전체 변경 사항 목록은 [업스트림 릴리스 노트](https://github.com/ClusterLabs/pacemaker/releases)를 참고하십시오.
+전체 변경 사항 목록은 [업스트림 릴리즈 노트](https://github.com/ClusterLabs/pacemaker/releases)를 참고하십시오.
 
-Ubuntu Focal 20.04 버전과 비교해서 주목할만한 차이점은 기본 구성 파일이 노드 이름을 node1로 정의하지 않고 uname -n의 출력을 기본 노드 이름으로 사용합니다.
+우분투 Focal 20.04 버전과 비교해서 주목할만한 차이점은 기본 구성 파일이 노드 이름을 node1로 정의하지 않고 uname -n의 출력을 기본 노드 이름으로 사용합니다.
 
 ##### Resource agents
 
-4.7.0 버전으로 업데이트 되었습니다. Ubuntu Focal 20.04 이후 변경 사항 목록은 [여기](https://github.com/ClusterLabs/resource-agents/blob/main/ChangeLog#L95-L219)에서 참고하십시오.
+4.7.0 버전으로 업데이트 되었습니다. 우분투 Focal 20.04 이후 변경 사항 목록은 [여기](https://github.com/ClusterLabs/resource-agents/blob/main/ChangeLog#L95-L219)에서 참고하십시오.
 
-에이전트(agents)는 이제 resource-agents-base 및 resource-agents-extra의 두 패키지로 분리됩니다. resource-agents-base 패키지는 Ubuntu Server 팀에서 선별한 에이전트가 포함되어 있습니다. 지속적 통합 시스템에서 자동화된 테스트가 진행되어 해당 에이전트의 품질을 보장합니다. resource-agents 패키지는 이제 resource-agents-base와 resource-agents-extra에 관련된 메타패키지입니다. resource-agents 패키지는 향후 릴리스에서 제거될 예정입니다. resource-agents에 의존하지 않는 것이 좋습니다.
+에이전트(agents)는 이제 resource-agents-base 및 resource-agents-extra의 두 패키지로 분리됩니다. resource-agents-base 패키지는 우분투 서버 팀에서 선별한 에이전트가 포함되어 있습니다. 지속적 통합 시스템에서 자동화된 테스트가 진행되어 해당 에이전트의 품질을 보장합니다. resource-agents 패키지는 이제 resource-agents-base와 resource-agents-extra에 관련된 메타패키지입니다. resource-agents 패키지는 향후 릴리즈에서 제거될 예정입니다. resource-agents에 의존하지 않는 것이 좋습니다.
 
 ##### Fence agents
 
 4.7.1 버전으로 업데이트 되었습니다.
 
-에이전트는 이제 두 개의 패키지(fence-agents-base 및 fence-agents-extra)로 분리됩니다. fence-agents-base 패키지에는 Ubuntu Server 팀에서 선별한 에이전트가 포함되어 있습니다. 지속적인 통합 시스템에서 자동화된 테스트가 진행되어 해당 에이전트의 품질을 보장합니다. fence-agents 패키지는 이제 fence-agents-base 및 fence-agents-extra에 관련된 메타 패키지 입니다. fence-agents는 제거될 예정입니다. fence-agents에 의존하지 않는 것이 좋습니다.
+에이전트는 이제 두 개의 패키지(fence-agents-base 및 fence-agents-extra)로 분리됩니다. fence-agents-base 패키지에는 우분투 서버 팀에서 선별한 에이전트가 포함되어 있습니다. 지속적인 통합 시스템에서 자동화된 테스트가 진행되어 해당 에이전트의 품질을 보장합니다. fence-agents 패키지는 이제 fence-agents-base 및 fence-agents-extra에 관련된 메타 패키지 입니다. fence-agents는 제거될 예정입니다. fence-agents에 의존하지 않는 것이 좋습니다.
 
 #### 컨테이너 런타임
 
@@ -216,11 +216,11 @@ Ubuntu Focal 20.04 버전과 비교해서 주목할만한 차이점은 기본 �
 * *clone3* syscall에 대한 지원을 추가하여 seccomp가 활성화된 경우 발생하는 특정 이미지의 문제를 수정하였습니다.
 * CRI 컨테이너 생성에 이미지 구성 레이블 추가하였습니다.
 
-전체 변경 사항 목록은 [업스트림 릴리스 페이지](https://github.com/containerd/containerd/releases)를 참고하십시오.
+전체 변경 사항 목록은 [업스트림 릴리즈 페이지](https://github.com/containerd/containerd/releases)를 참고하십시오.
 
 ##### runc
 
-1.1.0 버전으로 업데이트 되었습니다. [업스트림 릴리스 페이지](https://github.com/opencontainers/runc/releases)에서 찾을 수 있는 많은 개선 사항 및 버그 수정 사항이 있습니다. 업그레이드에 영향을 줄 수 있는 일부 지원 중단 및 제거는 다음과 같습니다.
+1.1.0 버전으로 업데이트 되었습니다. [업스트림 릴리즈 페이지](https://github.com/opencontainers/runc/releases)에서 찾을 수 있는 많은 개선 사항 및 버그 수정 사항이 있습니다. 업그레이드에 영향을 줄 수 있는 일부 지원 중단 및 제거는 다음과 같습니다.
 
 지원 중단
 
@@ -235,7 +235,7 @@ Ubuntu Focal 20.04 버전과 비교해서 주목할만한 차이점은 기본 �
 
 기본 Ruby 인터프리터는 3.0이며 성능, 동시성 및 타입 관련 기능이 업데이트 되었습니다. 멋진 기능과 개선 사항에 대한 광범위한 소개를 보려면 [Ruby 3.0 Release Announcement](https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/)를 참조하십시오.
 
-* 이전 Ubuntu 릴리스(Ubuntu Focal 20.04 이상)를 사용했던 사용자는 Ruby 2.7에서 3.0으로 변경됩니다. 이 경우 [Ruby 2.7 Release Announcement](https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/)도 유용할 수 있습니다. 명심해야 할 중요한 점은 다음 라이브러리가 Ruby에서 더 이상 번들로 제공되지 않는다는 것입니다.
+* 이전 우분투 릴리즈(우분투 Focal 20.04 이상)를 사용했던 사용자는 Ruby 2.7에서 3.0으로 변경됩니다. 이 경우 [Ruby 2.7 Release Announcement](https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/)도 유용할 수 있습니다. 명심해야 할 중요한 점은 다음 라이브러리가 Ruby에서 더 이상 번들로 제공되지 않는다는 것입니다.
 
 * sdbm
 * webrick
@@ -256,7 +256,7 @@ PHP 7.4 사용자는 버전 PHP 8에서 [사용되지 않는 여러 기능(numbe
 
 #### OpenLDAP 2.5.x series
 
-Ubuntu Focal 20.04에서 Ubuntu Jammy 22.04으로 업그레이드 하는 경우 새로운 OpenLDAP 2.5.11 버전을 사용하게 됩니다. 해당 버전에선 몇 가지 변경 사항, 새로운 기능의 추가 그리고 지원 중단/제거된 기능 등이 있습니다. 업그레이드 프로세스 중에 알아야 할 사항의 목록은 다음과 같습니다.
+우분투 Focal 20.04에서 우분투 Jammy 22.04으로 업그레이드 하는 경우 새로운 OpenLDAP 2.5.11 버전을 사용하게 됩니다. 해당 버전에선 몇 가지 변경 사항, 새로운 기능의 추가 그리고 지원 중단/제거된 기능 등이 있습니다. 업그레이드 프로세스 중에 알아야 할 사항의 목록은 다음과 같습니다.
 
 * The shell (`slapd-shell`), BDB 및 HDB 백엔드가 모두 제거되었습니다.
 * `ppolicy` 모듈은 자체 내장 스키마를 제공합니다. 외부 `ppolicy` 스키마는 제거되었습니다.
@@ -327,7 +327,7 @@ Django는 이전 LTS 2.2 버전에서 새로운 LTS 3.2 버전으로 업데이�
 - 다양한 부가 모듈 변경을 포함
 
 
-추가적인 정보로, 이전 v2.2 LTS에서 Ubuntu 22.04의 v3.2 LTS로 업데이트 된 시점부터는 [3.2](https://docs.djangoproject.com/en/4.0/)의 Django 프로젝트 릴리즈 노트뿐 아니라, [3.1](https://docs.djangoproject.com/en/4.0/releases/3.1) 및 [3.0](https://docs.djangoproject.com/en/4.0/releases/3.0)과 3.2.12까지 포함된 다양한 부가 릴리즈까지 포함된 내용을 확인하십시오.
+추가적인 정보로, 이전 v2.2 LTS에서 우분투 22.04의 v3.2 LTS로 업데이트 된 시점부터는 [3.2](https://docs.djangoproject.com/en/4.0/)의 Django 프로젝트 릴리즈 노트뿐 아니라, [3.1](https://docs.djangoproject.com/en/4.0/releases/3.1) 및 [3.0](https://docs.djangoproject.com/en/4.0/releases/3.0)과 3.2.12까지 포함된 다양한 부가 릴리즈까지 포함된 내용을 확인하십시오.
 
 
 #### MySQL 8.0
@@ -339,7 +339,7 @@ MySQL은 Focal Fossa와 Impish Indri와 같이 Jammy Jellyfish에서 8.0.28 버�
 - 데이터 타입 업데이트
 - CPU_TIME 문 메트릭
 
-자세한 내용은 [8.0.28 upstream 릴리스 정보](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-28.html) 를 참조하십시오.
+자세한 내용은 [8.0.28 upstream 릴리즈 정보](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-28.html) 를 참조하십시오.
 
 
 #### NFS server
@@ -355,19 +355,19 @@ NFS 서버 및 클라이언트 패키지가 마침내 최신 업스트림 버전
 `nfsconf(8)`라는 새 도구를 사용하여 /etc/nfs.conf 및 /etc/nfs.conf.d/*conf의 구성 설정을 쿼리할 수 있습니다.
 
 #### Samba server
-Samba는 4.15.5로 업데이트되었는데, 이것은 몇 가지 주목할 만한 변화를 가져왔습니다. [자세한 사항은 upstream 릴리스 노트를](https://www.samba.org/samba/history/samba-4.15.0.html) 확인 하십시오, 다음은 주요 내용입니다.:
+Samba는 4.15.5로 업데이트되었는데, 이것은 몇 가지 주목할 만한 변화를 가져왔습니다. [자세한 사항은 upstream 릴리즈 노트를](https://www.samba.org/samba/history/samba-4.15.0.html) 확인 하십시오, 다음은 주요 내용입니다.:
 
 * 개발 SMB 버전 SMB2_22, SMB2_24 및 SMB3_10은 더 이상 인식되지 않습니다. SMB2_22 및 SMB2_24는 SMB3_00으로, SMB3_10은 SMB3_11로 대체해야 합니다.
 * 서버 다중 채널 지원은 더 이상 실험적 기능이 아닙니다.
-* 모든 CLI 도구의 명령줄 옵션은 이제 공통 Parser를 사용하고 있으며 과거에는 무시되었을 수 있는 알 수 없는 옵션은 이제 거부됩니다. 자세한 내용은 [Upstream 릴리스 정보](https://www.samba.org/samba/history/samba-4.15.0.html) 를 참조하십시오.
-* 많은 `/etc/syslog/syslog.conf` 매개 변수가 변경되었으며 일부는 제거되었습니다. [업스트림 릴리스 노트](https://www.samba.org/samba/history/samba-4.15.0.html)를 확인 해 주십시오.
-* CTDB 패키지가 이 Ubuntu 22.04에 제공된 새 NFS 서버 버전과 함께 작동하도록 조정되었습니다.
+* 모든 CLI 도구의 명령줄 옵션은 이제 공통 Parser를 사용하고 있으며 과거에는 무시되었을 수 있는 알 수 없는 옵션은 이제 거부됩니다. 자세한 내용은 [Upstream 릴리즈 정보](https://www.samba.org/samba/history/samba-4.15.0.html) 를 참조하십시오.
+* 많은 `/etc/syslog/syslog.conf` 매개 변수가 변경되었으며 일부는 제거되었습니다. [업스트림 릴리즈 노트](https://www.samba.org/samba/history/samba-4.15.0.html)를 확인 해 주십시오.
+* CTDB 패키지가 이 우분투 22.04에 제공된 새 NFS 서버 버전과 함께 작동하도록 조정되었습니다.
 * `findsmb(1)` 제거되었습니다.
-* Ubuntu 패키징에서 [glusterfs 지원이 활성되었습니다.](https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1894618). 이는 22.04 LTS 개발 주기 동안 [glusterfs가 메인으로 승격되어](https://bugs.launchpad.net/ubuntu/+source/glusterfs/+bug/1950321), glusterfs vfs 모듈을 사용할 수 있었기 때문에 가능했습니다. 이 모듈은 이제 samba-vfs-modules 패키지에 있습니다.
+* 우분투 패키징에서 [glusterfs 지원이 활성되었습니다.](https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1894618). 이는 22.04 LTS 개발 주기 동안 [glusterfs가 메인으로 승격되어](https://bugs.launchpad.net/ubuntu/+source/glusterfs/+bug/1950321), glusterfs vfs 모듈을 사용할 수 있었기 때문에 가능했습니다. 이 모듈은 이제 samba-vfs-modules 패키지에 있습니다.
 
 #### Quagga가 frr 로 대체됨
 
-'quagga'는 Ubuntu 22.04에서 삭제 되었으며 FRRouting 으로 대체되었습니다. ('frr', https://frrouting.org/).
+'quagga'는 우분투 22.04에서 삭제 되었으며 FRRouting 으로 대체되었습니다. ('frr', https://frrouting.org/).
 
 #### Chrony 시간 동기화
 
@@ -378,7 +378,7 @@ Chrony는 버전 4.2로 업데이트 되었으며 다음을 포함합니다
  * Serverstats 보고서에 인터리브 모드에 대한 통계를 추가하였습니다
  * Chrony 서비스에 추가적인 하드닝(Hardening) 옵션을 추가하고 활성화 하였습니다
  * timemaster에서 생성한 구성을 읽는 것을 허용했습니다
- * 더 자세한 내용은 업스트림 [릴리스 노트](https://chrony.tuxfamily.org/news.html)를 읽으십시오
+ * 더 자세한 내용은 업스트림 [릴리즈 노트](https://chrony.tuxfamily.org/news.html)를 읽으십시오
 
 #### 가상화
 
@@ -401,14 +401,14 @@ Qemu는 v6.2.0 버전으로 업데이트되어 많은 크고 작은 개선이 �
 
 ##### libvirt
 
-libvirt 버전 v8.0.0은 일반 릴리스에 이어 이제 Ubunt 22.04에서 아래 기능이 제공됩니다:
+libvirt 버전 v8.0.0은 일반 릴리즈에 이어 이제 Ubunt 22.04에서 아래 기능이 제공됩니다:
 
  * virtiofs를 위해 hotplug 및 hotunplug를 지원
  * virtio-mem `<memory/>` 모델을 도입
  * qemu: librbd 암호화를 지원
  * qemu: 새 API를 추가하여 도메인 안에 보안 실행을 삽입합니다.
  * 향상된 swtpm 통합 (더 자세히는 아래의 swtpm을 참고)
- * [Ubuntu 21.10](https://discourse.ubuntu.com/t/impish-indri-release-notes/21951)에 있던 버전 7.6 이후의 많은 추가 개선 및 수정 사항은 업스트림 [Changelogs](https://libvirt.org/news.html)를 참조하십시오.
+ * [우분투 21.10](https://discourse.ubuntu.com/t/impish-indri-release-notes/21951)에 있던 버전 7.6 이후의 많은 추가 개선 및 수정 사항은 업스트림 [Changelogs](https://libvirt.org/news.html)를 참조하십시오.
 
 ##### virt-manager
 
@@ -423,8 +423,8 @@ virt-manager의 새 버전 4.0.0은 가장 최신 업데이트(거의 1.5년 뒤
 
 ##### dpdk
 
-업스트림 DPDK LTS 릴리스의 연간 흐름에 따라 Ubuntu 22.04에는 최신 DPDK LTS 21.11이 포함되어 있습니다.
-여기에는 다양한 새로운 장치 드라이버, 수정 사항 및 최적화가 포함되어 있습니다. 꽤 거대한 [릴리스 노트](http://doc.dpdk.org/guides/rel_notes/release_21_11.html)조차도 21.11 자체에 대한 것입니다. Ubuntu 21.10과 함께 제공되는 이전 DPDK LTS 20.11과 비교하여, 원한다면 [21.02](http://doc.dpdk.org/guides/rel_notes/release_21_02.html), [21.05](http://doc.dpdk.org/guides/rel_notes/release_21_05.html), [21.08](http://doc.dpdk.org/guides/rel_notes/release_21_08.html)의 DPDK 릴리스 노트도 읽을 수 있습니다.
+업스트림 DPDK LTS 릴리즈의 연간 흐름에 따라 우분투 22.04에는 최신 DPDK LTS 21.11이 포함되어 있습니다.
+여기에는 다양한 새로운 장치 드라이버, 수정 사항 및 최적화가 포함되어 있습니다. 꽤 거대한 [릴리즈 노트](http://doc.dpdk.org/guides/rel_notes/release_21_11.html)조차도 21.11 자체에 대한 것입니다. 우분투 21.10과 함께 제공되는 이전 DPDK LTS 20.11과 비교하여, 원한다면 [21.02](http://doc.dpdk.org/guides/rel_notes/release_21_02.html), [21.05](http://doc.dpdk.org/guides/rel_notes/release_21_05.html), [21.08](http://doc.dpdk.org/guides/rel_notes/release_21_08.html)의 DPDK 릴리즈 노트도 읽을 수 있습니다.
 
 ##### openvswitch
 
@@ -437,7 +437,7 @@ Ubunt 22.04에는 openswitch의 새 버전 2.17.0이 일반 업데이트로 아�
 
 ##### swtpm
 
-Ubuntu 22.04에서 `swtpm` 패키지가 지원되어 이제 사용할 수 있습니다:
+우분투 22.04에서 `swtpm` 패키지가 지원되어 이제 사용할 수 있습니다:
 
 `swtpm`은 libtpms에 대한 다양한 프런트엔드 인터페이스를 갖춘 TPM 에뮬레이터를 제공합니다. TPM 에뮬레이터는 소켓 인터페이스(TCP/IP 및 유닉스)와 여러 네이트브 /dev/vtpm* 장치 생성을 위한 Linux CUSE 인터페이스를 제공합니다.
 
@@ -472,17 +472,17 @@ cloud-init의 22.1 버전은 22.04, 21.10, 22.04 및 18.04에 릴리즈 되었�
 
 #### ubuntu-advantage-tools
 
-Jammy와 함께 Ubuntu-advantage-tools 버전 27.8 이 릴리즈됨.
+Jammy와 함께 ubuntu-advantage-tools 버전 27.8 이 릴리즈됨.
 
 이번 사이클에 도입된 주목할 개선사항:
  * 서비스 제공:
-     * Ubuntu Pro와 Ubuntu Pro FIPS 이미지는 Azure, GCP 그리고 AWS에 있음
+     * 우분투 Pro와 우분투 Pro FIPS 이미지는 Azure, GCP 그리고 AWS에 있음
      * GCP에서 기존 VM에 Ubuntu Advantage 라이센스를 추가하는 것을 지원
      * AWS는 IPv6 IMDS를 지원함
      * CIS 벤치마크는 Ubuntu Security Guide (USG)의 일부로 패키지됨
  * 사용성
      * 'ua security-status'는 Ubuntu proper와 Extended Security Maintenance 채널에서 제공하는 사용 가능하고 적용 가능한 패키지 업데이트의 상세 보기를 제공
-     * Ubuntu Advantage 토큰을 확인하고 첨부하려면 데스크탑 설치 프로그램을 활성화하십시오.
+     * Ubuntu Advantage 토큰을 확인하고 첨부하려면 데스크톱 설치 프로그램을 활성화하십시오.
      * 대부분의 명령에 대해 기계 판독 가능한 출력 JSON/YAML 형식 지원
      * `ua attach --attach-config`를 통해 구성 가능한 자동 연결 동작
 
@@ -625,7 +625,7 @@ Perl 호환되는 라이브러리 PCRE2가 v10.39로 업데이트 되었고 s390
 
 22.04 LTS 부터, 표준 장치별로 있는 미리 설치된 이미지와 함께 이제 RISC-V 아키텍쳐를 위한 라이브 인스톨러 이미지 또한 제공됩니다. 한 예로, 이는 우분투를 Unmatched 보드의 NVMe 드라이브에 설치하려 할 때 유용할 수 있습니다.
 
-### UEFI and BIOS boot
+### UEFI 및 BIOS 부팅
 
 우분투가 다른 운영체제과 함께 설치돼 있는 상황이 아니라면 이제 더이상 부팅 메뉴에 다른 운영체제가 표시되지 않습니다. 모든 자신 이외의 운영체제가 기기에서 삭제되면, 다른 운영체제 감지가 비활성화 되며, 다른 운영체제를 설치한 후 활성화하고 싶다면 `/boot/grub/grub.cfg` 를 삭제하고 바로 `update-grub` 을 실행해야만 할 겁니다.
 
@@ -646,11 +646,11 @@ Perl 호환되는 라이브러리 PCRE2가 v10.39로 업데이트 되었고 s390
     ```
 * grub-customizer 사용자는 업그레이드 프로세스의 마지막 단계에서 [해당 버그](https://pad.lv/1969353)에 도달하여 업그레이드 마지막 단계가 실패할 수 있습니다. (패키지 자동 제거됨) [버그 댓글](https://bugs.launchpad.net/ubuntu/+source/ubuntu-release-upgrader/+bug/1969353/comments/6)에 해결 방법이 있습니다.
 
-## 우분투 데스크탑
+## 우분투 데스크톱
 
-* 우분투 데스크탑 이미지에서 BIOS 시스템에서 USB 드라이브로 부팅할때 부팅 속도가 느려질 수 있습니다 (최대 10분 소요). 문제는 [조사중](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1922342)이지만 시스템이 설치되면 문제가 되지 않습니다.
-* 우분투 데스크탑 이미지에서 BIOS 또는 UEFI 시스템에서 DVD를 이용하여 부팅할때 부팅 속도가 느릴 수 있습니다 (최대 30분 소요). 이는 설치 미디어에 대한 무결성 검사를 하고 있기 때문입니다. 해결 방법("fsck.mode=skip" 설정)은 [관련 버그](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1930880)에 설명되어 있습니다.
-* 우분투 데스크탑 설치 프로그램인 Ubiquity가 멈추는 현상이 [확인되었습니다](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1946828). 이때는 NTFS 파티션의 크기가 재조정할 수 있는지 확인하기위해 스캔 중으로 보여집니다. 이 증상은 설치 프로그램 '업데이트 및 기타 소프트웨어' 화면을 지나 계속하려고 할때 회전하는 모양의 커서가 움직이는 것으로 확인할 수 있습니다. 해당 문제가 발생하면 재부팅하고 다시 시도하면 됩니다.
+* 우분투 데스크톱 이미지에서 BIOS 시스템에서 USB 드라이브로 부팅할때 부팅 속도가 느려질 수 있습니다 (최대 10분 소요). 문제는 [조사중](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1922342)이지만 시스템이 설치되면 문제가 되지 않습니다.
+* 우분투 데스크톱 이미지에서 BIOS 또는 UEFI 시스템에서 DVD를 이용하여 부팅할때 부팅 속도가 느릴 수 있습니다 (최대 30분 소요). 이는 설치 미디어에 대한 무결성 검사를 하고 있기 때문입니다. 해결 방법("fsck.mode=skip" 설정)은 [관련 버그](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1930880)에 설명되어 있습니다.
+* 우분투 데스크톱 설치 프로그램인 Ubiquity가 멈추는 현상이 [확인되었습니다](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1946828). 이때는 NTFS 파티션의 크기가 재조정할 수 있는지 확인하기위해 스캔 중으로 보여집니다. 이 증상은 설치 프로그램 '업데이트 및 기타 소프트웨어' 화면을 지나 계속하려고 할때 회전하는 모양의 커서가 움직이는 것으로 확인할 수 있습니다. 해당 문제가 발생하면 재부팅하고 다시 시도하면 됩니다.
 * Firefox snap 에서는 아직 [NativeMessaging protocol](https://launchpad.net/bugs/1741074)을 지원하지 않지만 이 기능은 곧 추가될 예정입니다. Firefox를 통해 GNOME Shell 확장을 설치가 안된다는 것을 의미합니다. 해결 방법으로 `gnome-shell-extension-manager` 앱을 이용하면 됩니다.
   * 브라질어 사용자(와 Firefox에서 PKCS#11 스마트 카드 지원이 필요한) 사용자는 **Jammy로 업그레이드하면 안됩니다**. [pkcs#11 support is added to the firefox snap](https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1967632)
 * GNOME Tweaks 앱에서 더이상 GNOME Shell 확장을 관리하지 않습니다. 대신 `gnome-shell-extension-manager` 를 통해서 설치할 수 있습니다.
@@ -663,9 +663,9 @@ Perl 호환되는 라이브러리 PCRE2가 v10.39로 업데이트 되었고 s390
 
 * [zfs의 fallocated 관련 문제](https://bugs.launchpad.net/ubuntu/+source/zfs-linux/+bug/1969247)로 인해 mysql이 Jammy zfs 시스템에서 설치되지 않습니다.
 
-## Platforms
+## 플랫폼
 
-### Cloud Images
+### 클라우드 이미지
 
 #### Vagrant
 
@@ -674,15 +674,15 @@ Perl 호환되는 라이브러리 PCRE2가 v10.39로 업데이트 되었고 s390
 
 ### Raspberry Pi
 
-* 라즈베리 파이 데스크탑 이미지는 Full KMS 그래픽 드라이버를 사용하도록 변경되었습니다. 그러나 공식 라즈베리 파이 DSI 디스플레이는 Full KMS가 활성화된 상태에서는 동작하지 않습니다. 라즈베리 파이 DSI 디스플레이를 사용하도록 활성화시키려면, 라즈베리 파이의 하드 드라이브에서 `config.txt` 파일에서 `dtoverlay=vc4-fkms-v3d` 항목을 `dtoverlay=vc4-kms-v3d`으로 수정해야 합니다.
+* 라즈베리 파이 데스크톱 이미지는 Full KMS 그래픽 드라이버를 사용하도록 변경되었습니다. 그러나 공식 라즈베리 파이 DSI 디스플레이는 Full KMS가 활성화된 상태에서는 동작하지 않습니다. 라즈베리 파이 DSI 디스플레이를 사용하도록 활성화시키려면, 라즈베리 파이의 하드 드라이브에서 `config.txt` 파일에서 `dtoverlay=vc4-fkms-v3d` 항목을 `dtoverlay=vc4-kms-v3d`으로 수정해야 합니다.
 * 현재 Compute Module 4용 공식 IO 보드의 USB 포트가 작동하지 않습니다.([버그](https://launchpad.net/bugs/1969689))
-* 데스크탑 이미지에서 Firefox snap은 최초 로그인후 초기화를 완료하는데 시간이 걸릴 수 있습니다. (해당 시간이 표시됨) ([버그](https://launchpad.net/bugs/1969529))
+* 데스크톱 이미지에서 Firefox snap은 최초 로그인후 초기화를 완료하는데 시간이 걸릴 수 있습니다. (해당 시간이 표시됨) ([버그](https://launchpad.net/bugs/1969529))
 * (MMAL 기반인) 레거시 카메라 스택은 `arm64`에서는 더이상 지원하지 않습니다. [libcamera]는 `arm64` 아키텍처에서 Pi 카메라 모듈을 사용할 수 있도록 도와주는 라이브러리입니다. (부팅 시간동안 감지된 모듈에 대한 오버레이를 자동으로 구성을 읽어들입니다.)
 
 중간 릴리즈에서 이월됨 (변경사항은 LTS->LTS에서 적용될 수 있습니다.):
 
-* 데스크탑 이미지에서 초기 사용자 설정이후에도 여전히 여러 패키지가 자동 제거될 수 있습니다.([버그 1925265](https://launchpad.net/bugs/1925265)). 이 문제를 해결하려면 `sudo apt autoremove` 를 실행하면 됩니다.
-* 데스크탑 이미지에서 부팅할 때마다 잘못된 오디오 출력 장치가 선택될 수 있습니다. 해결 방법은 버그 리포트에서 확인하면됩니다. ([버그 1899962](https://launchpad.net/bugs/1899962))
+* 데스크톱 이미지에서 초기 사용자 설정이후에도 여전히 여러 패키지가 자동 제거될 수 있습니다.([버그 1925265](https://launchpad.net/bugs/1925265)). 이 문제를 해결하려면 `sudo apt autoremove` 를 실행하면 됩니다.
+* 데스크톱 이미지에서 부팅할 때마다 잘못된 오디오 출력 장치가 선택될 수 있습니다. 해결 방법은 버그 리포트에서 확인하면됩니다. ([버그 1899962](https://launchpad.net/bugs/1899962))
 * initramfs 크기를 줄이기 위해 `linux-modules-raspi` 패키지에서 다양한 모듈이 분리되었습니다. 누락된 커널 모듈로 인해 애플리케이션이 실패하는 경우, 다음을 명령어를 사용하여 설치 하십시오.
   * `sudo apt install linux-modules-extra-raspi`
 
@@ -694,13 +694,13 @@ Perl 호환되는 라이브러리 PCRE2가 v10.39로 업데이트 되었고 s390
 
 공식 flavour를 위한 릴리즈 노트는 아래 링크를 통해 찾아볼 수 있습니다:
 
-* [Kubuntu 릴리즈 노트](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/Kubuntu)
-* [Lubuntu 릴리즈 노트](https://discourse.lubuntu.me/t/lubuntu-22-04-lts-jammy-jellyfish-release-notes/3179)
+* [쿠분투 릴리즈 노트](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/Kubuntu)
+* [루분투 릴리즈 노트](https://discourse.lubuntu.me/t/lubuntu-22-04-lts-jammy-jellyfish-release-notes/3179)
 * [21.10에서 업그레이드하는 사용자를 위한 우분투 Budgie 릴리즈 노트](https://ubuntubudgie.org/2022/03/ubuntu-budgie-22-04-lts-release-notes/) & [20.04에서 업그레이드하는 사용자를 위한 우분투 Budgie 릴리즈 노트](https://ubuntubudgie.org/2022/04/ubuntu-22-04-release-notes-for-20-04-upgraders/)
 * [우분투 Kylin 릴리즈 노트](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/UbuntuKylin)
 * [우분투 MATE 릴리즈 노트](https://ubuntu-mate.org/blog/ubuntu-mate-jammy-jellyfish-release-notes/)
-* [우분투 Studio 릴리즈 노트](https://ubuntustudio.org/ubuntu-studio-22-04-lts-release-notes/)
-* [Xubuntu 릴리즈 노트](https://wiki.xubuntu.org/releases/22.04/release-notes)
+* [우분투 스튜디오 릴리즈 노트](https://ubuntustudio.org/ubuntu-studio-22-04-lts-release-notes/)
+* [주분투 릴리즈 노트](https://wiki.xubuntu.org/releases/22.04/release-notes)
 
 # 더 알아보기
 
@@ -721,3 +721,5 @@ Perl 호환되는 라이브러리 PCRE2가 v10.39로 업데이트 되었고 s390
 향후 우분투 개발 소식을 보고 싶다면, 우분투의 개발 소식 목록을 다음에서 구독하십시오:
 
 * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce
+
+> 본 게시물은 [Jammy Jellyfish Release Notes](https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668)를 우분투 한국어 번역팀에서 번역 한 것이며, 번역 검토에 [신민욱 님](https://github.com/minwook-shin), [한상곤 님](https://github.com/sigmadream), [한영빈 님](https://github.com/sukso96100), [김광연 님](https://github.com/onting)께서 참여 하셨으며, 번역에는 [한상곤 님](https://github.com/sigmadream), [한영빈 님](https://github.com/sukso96100), [김광연 님](https://github.com/onting), [방기연 님](https://github.com/GiyeonBang), [강성진 님](https://github.com/ujuc), [QuqqU 님](https://github.com/QuqqU), [neeks76 님](https://github.com/neeks76), [HaeyoonJo 님](https://github.com/HaeyoonJo)께서 참여 해 주셨습니다. 참여 해 주신 모든 분들께 감사 드립니다. [관련 GitHub Issue 확인하기](https://github.com/ubuntu-kr/blog.ubuntu-kr.org/issues/7)
