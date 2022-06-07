@@ -3,6 +3,7 @@
 layout: post
 date: 2022-04-22 02:00:00 +0900
 title: "Ubuntu 22.04 LTS Jammy Jellyfish Release Notes"
+image: jammy.jpg
 tags:
  - release-notes
 authors:

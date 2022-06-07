@@ -3,6 +3,7 @@
 layout: post
 date: 2022-04-22 02:00:00 +0900
 title: "우분투 22.04 LTS Jammy Jellyfish 릴리즈 노트"
+image: jammy.jpg
 tags:
  - release-notes
 authors:
