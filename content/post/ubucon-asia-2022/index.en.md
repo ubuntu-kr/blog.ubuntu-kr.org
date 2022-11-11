@@ -22,7 +22,7 @@ It is a place to share experiences and discussion around Ubuntu, as well as bein
 [There will be exciting Talks and Workshops with a wide range of topics!](https://2022.ubucon.asia/sessions/) From Cloud and Infrastructure, Desktop, Community, IoT to WSL topics and more! You will be able to hear diverse stories from Ubuntu people in Asia. There will also be BoF for informal discussion and Lightning talk sessions.
 
 ### Social events - exclusive to in-person
-That’s not all! We also have some social events for participants that would give you unforgettable memories!
+That’s not all! We also have some [social events](https://2022.ubucon.asia/social-events/) for participants that would give you unforgettable memories!
 
 - Conference Dinner on Day 1
   - Mingle with speakers and other community folks at a fancy party room at Hongdae! Also enjoy some tasty platters and other food with beverages together with other participants!
