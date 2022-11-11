@@ -1,5 +1,5 @@
 ---
-date: 2022-11-11T19:00:00+09:00
+date: 2022-11-11T17:00:00+09:00
 title: "Join us UbuCon Asia in-person in Seoul this November!"
 tags:
  - ubucon
