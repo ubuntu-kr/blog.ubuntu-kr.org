@@ -2,8 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.ubuntu-kr.org/en/2022/11/11/ubucon-asia-2022/</loc>
+    <lastmod>2022-11-11T19:00:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/2022/11/11/ubucon-asia-2022/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/2022/11/11/ubucon-asia-2022/"
+                />
+  </url><url>
     <loc>https://blog.ubuntu-kr.org/en/post/</loc>
-    <lastmod>2022-04-22T02:00:00+09:00</lastmod>
+    <lastmod>2022-11-11T19:00:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -13,6 +26,45 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://blog.ubuntu-kr.org/en/post/"
+                />
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/en/tags/</loc>
+    <lastmod>2022-11-11T19:00:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/tags/"
+                />
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/en/tags/ubucon/</loc>
+    <lastmod>2022-11-11T19:00:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/tags/ubucon/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/tags/ubucon/"
+                />
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/en/</loc>
+    <lastmod>2022-11-11T19:00:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/"
                 />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/en/tags/release-notes/</loc>
@@ -28,19 +80,6 @@
                 href="https://blog.ubuntu-kr.org/en/tags/release-notes/"
                 />
   </url><url>
-    <loc>https://blog.ubuntu-kr.org/en/tags/</loc>
-    <lastmod>2022-04-22T02:00:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.ubuntu-kr.org/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.ubuntu-kr.org/en/tags/"
-                />
-  </url><url>
     <loc>https://blog.ubuntu-kr.org/en/2022/04/22/jamme-jellyfish-release-notes/</loc>
     <lastmod>2022-04-22T02:00:00+09:00</lastmod>
     <xhtml:link
@@ -52,19 +91,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://blog.ubuntu-kr.org/en/2022/04/22/jamme-jellyfish-release-notes/"
-                />
-  </url><url>
-    <loc>https://blog.ubuntu-kr.org/en/</loc>
-    <lastmod>2022-04-22T02:00:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.ubuntu-kr.org/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.ubuntu-kr.org/en/"
                 />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/en/categories/</loc>
