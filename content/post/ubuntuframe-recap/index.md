@@ -1,6 +1,6 @@
 ---
 date: 2023-02-07T12:31:04+09:00
-title: "Ubuntu Frame 발표 내용 정리"
+title: "2021 Ubucon Asia에서의 Ubuntu Frame 워크숍"
 tags:
  - ubucon
  - iot
@@ -11,7 +11,7 @@ authors:
       launchpad: horary
       github: onting
       profile: profile.jpg # 프로필 이미지 URL
-image: cover.png # 커버 이미지 URL
+image: ubuntu-frame-logo.png
 draft: false # 글 초안 여부
 ---
 
@@ -30,6 +30,20 @@ draft: false # 글 초안 여부
 필요에 따라 [워크숍 슬라이드 파일](https://docs.google.com/presentation/d/1scBM6nhjr_amlooKgobwNzKSSdhIdW7i4rp9tW1bfQE/edit?usp=sharing)을 통해 요약된 내용을 확인하기 바랍니다.
 
 ## 우분투 Core & Frame
+
+### 1. Ubuntu Frame 소개
+Ubuntu Frame은 GUI 임베디드 및 IoT 시스템 개발을 위해 작년 10월 경에 출시 된 Canonical 사의 제품으로 Ubuntu Core와 함께 임베디드 개발에 활용 될 수 있습니다.
+Ubuntu Fram의 공식 설명을 보면 "다양한 임베디드 그래픽 디스플레이 구현을 위한 기반이며, wayland 기반의 단순한 Full-screen Shell을 제공해서 키오스크, 안내판 등에 활용될 수 있다."라고 설명되고 있습니다. 즉 아래 그림과 같은 단순히 회색 화면만 있는 창이 디스플레이를 점유하는 환경을 제공하는 것입니다.
+![Ubuntu Frame Screen Simulator](./ubuntu-frame-simulator.jpeg)
+
+Ubuntu Frame은 위와 같이 최소의 wayland compositor(display server)를 제공해서 GUI 앱과 통신할 수 있는 소캣을 제공하는데, 마우스, 키보드, 터치스크린 등의 다양한 I/O가 가능합니다.
+
+### 2. Ubuntu Core 소개
+
+### 3. Ubuntu Frame 살펴보기
+
+### 4. 요약 및 결론
+
 
 ## Electron 앱 패키징 및 배포
 
