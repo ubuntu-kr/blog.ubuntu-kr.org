@@ -90,10 +90,56 @@ Ubuntu Frame은 다음 3가지 설정 옵션을 제공합니다. ```snap set``` 
 이제 Ubuntu Frame에 대한 개념 설명을 마치고 실습을 해보겠습니다.
 
 ## 데스크톱 환경에서 실습하기
+Ubuntu Frame은 데스크톱, 가상환경, 물리기기에서 모두 실행이 가능합니다.
+이 중에서 데스크톱 환경에서는 기본적으로 ```daemon=false```로 설정이 돼 있기 때문에  ```ubuntu-frame```이 실행되면 화면 전체가 ```ubuntu-frame```로 점유 되기 보다는 데스크톱 환경에 스크린 시뮬레이터가 창 형태로 실행되서 개발과 패키징 도중에 앱을 실험 해보기 좋습니다.
+때문에 공식 문서의 [데스크톱 환경에서 Ubuntu Frame 실행하기](https://mir-server.io/docs/run-ubuntu-frame-on-your-desktop) 가이드를 먼저 따라해보면서 Ubuntu Frame에 대해 알아보겠습니다.
+
+우선 아래 명령어로 현재 세션에 설정된 wayland socket을 확인 해보겠습니다.
+```
+$ ls $XDG_RUNTIME_DIR/wayland*
+/run/user/1000/wayland-0  /run/user/1000/wayland-0.lock  
+```
+환경변수 ```$XDG_RUNTIME_DIR```은 현재 로그인 된 데스크톱 세션과 관련된 디렉토리로, 현재 로그인 된 유저와 관련된 파일들이 이곳에 위치하게 됩니다. 다시말해 위의 ```/run/user/*/wayland-0*``` 파일들은 현재 로그인 된 유저에 대해 설정된 wayland socket 파일들입니다.
+
+이제 Ubuntu Frame을 설치하고 실행해보겠습니다. 아래 명령어로 Ubuntu Frame을 설치합니다.
+```
+$ snap install ubuntu-frame
+```
+위 앱을 실행하면 해당 디스플레이 서버가 wayland socket을 생성해 GUI 앱을 붙여 보는 것이 가능합니다. 해당 소캣은 패키징 할 때 환경변수 ```$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY```로 설정되서 사용됩니다.
+
+이제 ```ubuntu-frame```을 실행하는데 아래와 같은 두 가지 방식이 존재합니다.
+* 현재 유저로 실행하기
+  - 이 방법으로 실행하면 ```ubuntu-frame```이 현재 유저가 실행시킨 프로세스가 되고 ```$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY``` 소캣의 소유자가 현재 유저가 됩니다. 실행 방법이 단순하기 때문에 패키징을 하지 않고 단순히 동일한 유저가 실행시킨 GUI 앱을 ```ubuntu-frame```에 붙여 볼 때 유용합니다.
+* root로 실행하기
+  - 이 방법은 ```ubuntu-frame```의 실제 실행 환경과 조금 더 유사하기 때문에 패키징 했을 때 환경을 시험해보기 좋습니다. ```ubuntu-frame```이 생성하는 wayland socket가 소유자가 root가 아니면 ```ubuntu-frame```과 통신하려는 프로세스의 소유자가 다르면(심지어 root라도) 접속할 수 없기 때문에 ```init```이 생성한 프로세스(이를테면 daemon)들과 통신하려면 root로 실행할 필요가 있습니다. 이 방법 현재 유저로 실행하는 것보다 조금 더 복잡합니다.
+
+여기에서는 현재 유저로 실행하는 것만 다루겠습니다. 아래 명령어로 실행하고 생성된 소켓을 확인합니다.
+```
+$ WAYLAND_DISPLAY=wayland-99 ubuntu-frame
+$ ls $XDG_RUNTIME_DIR/wayland*
+/run/user/1000/wayland-0       /run/user/1000/wayland-99
+/run/user/1000/wayland-0.lock  /run/user/1000/wayland-99.lock
+```
+위 명령어로 ```ubuntu-frame```을 환경변수 ```$WAYLAND_DISPLAY```를 넘겨줘서 실행한다는 의미입니다. 해당 명령어로 새로운 시뮬레이터 창이 생성되고 ```wayland-99``` 소캣을 생성한 것을 볼 수 있을 겁니다.
+
+저는 이것을 electron-quick-start 프로그램을 약간 수정한 프로그램으로 실험해보겠습니다.
+```
+$ git clone https://github.com/onting/electron-ubucon-asia.git
+$ cd electron-ubucon-asia
+$ npm install
+$ WAYLAND_DISPLAY=wayland-99 (npm start)
+```
 
 ## Electron 앱 패키징
+```
+$ git clone https://github.com/MirServer/iot-example-graphical-snap.git
+$ cd iot-example-graphical-snap
+$ git branch -a
+$ git checkout Electron-quick-start
+$ snapcraft
+```
 
 ## Ubuntu Core로 실습하기
 
 ## 회고와 정리
-
+여기까지가 작년 워크숍에서 다룬 내용입니다. 개인적으로 지난 행사는 평소 개인적 관심으로 조금씩 살펴본 Ubuntu Frame 내용을 정리하는 계기가 됐습니다. 행사 준비를 위해서 Ubuntu Frame 튜토리얼을 심화 단계까지 따라해보면서 Ubuntu Frame의 구조를 더 잘 이해할 수 있었고, snap packaging이 실제로 어떻게 이루어지는지를 실제로 볼 수 있었습니다. Ubuntu Core의 장점과 한계점 또한 정리해볼 수 있었습니다. 캐노니컬사의 임베디드 포트폴리오 전반을 살펴보면서 저는 해당 전략이 보안성, 재개발 비용, 유지보수성 면에서 우수해서 넓은 범위로 산업에서 적용될 여지가 충분하다고 느꼈습니다. 그러나 Ubuntu Core 근본적으로 snap 버그 등의 이유로 안정성 등이 현재 엄격한 시험대에 올라가 평가 받고 있는 상태라고 생각합니다. 그래서 가까운 미래의 사용자 경험이 평판에 매우 중요하다고 보여집니다. 덧붙여 Ubuntu Frame 또한 실제로 써보면 개념 만큼 개발이 간단하지는 않고 추가적으로 알아야 할 것들이 꽤나 있다는 것을 튜토리얼을 해보면서 느꼈습니다. 저는 앞으로 Ubuntu Core가 신뢰도를 위해서 어떤 행보를 보일지 또 한국 임베디드 산업에도 이런 기술이 정착할 수 있을지 흥미롭습니다.
