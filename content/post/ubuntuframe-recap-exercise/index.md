@@ -15,6 +15,13 @@ image: ubuntu-frame-logo.png
 draft: false
 ---
 
+## Table of Contents
+1. [Electron 앱 패키징](#electron-앱-패키징)
+2. [Ubuntu Core로 실습하기](#ubuntu-core로-실습하기)
+3. [회고와 정리](#회고와-정리)
+
+
+# 개요
 이번 글에선 전번 Ubuntu Frame 소개에 이어서 실습하는 과정을 소개하고자 합니다.
 
 ## 데스크톱 환경에서 실습하기
