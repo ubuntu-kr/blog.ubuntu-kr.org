@@ -102,7 +102,7 @@ dbus       LICENCE                                              snap       wrapp
 ```
 위와 같이 ```iot-example-graphical-snap_*_*_.snap``` snap 패키지 파일이 생성된 것을 확인할 수 있습니다.
 
-이제 ```snap/snapcraft.yaml``` 파일에서 레시피가 어떻게 구성돼있는지 확인하고 앞서 소개드린 ```electron-ubucon-asic``` 프로그램을 패키징 하는 것으로 바꿔보겠습니다.
+이제 ```snap/snapcraft.yaml``` 파일에서 레시피가 어떻게 구성돼있는지 확인하고 앞서 소개드린 ```electron-ubucon-asic``` 프로그램을 패키징 하는 것으로 바꿔보겠습니다. ```snap/snapcraft.yaml```파일을 열어보면 다양한 속성들이 존재합니다만 편의를 위해 ```parts``` 만 살펴보겠습니다. 각 속성에 대해 자세히 알기 위해선 [snapcraft.yaml 만들기](https://snapcraft.io/docs/creating-snapcraft-yaml) 가이드를 참고하십시오.
 
 ```yaml
 ...
@@ -143,7 +143,7 @@ parts:
 
 ...
 ```
-```snap/snapcraft.yaml```파일을 열어보면 다양한 속성들이 존재합니다만 편의를 위해 ```parts``` 만 살펴보겠습니다. 각 속성에 대해 자세히 알기 위해선 [snapcraft.yaml 만들기](https://snapcraft.io/docs/creating-snapcraft-yaml) 가이드를 참고하십시오.
+
 다시 돌아와, 우리가 바꿀 부분은 ```parts``` 속성의 ```electron-helloworld``` 부분입니다. ```parts```는 패키지를 구성하는 요소들을 의미하는데 앱, 라이브러리, 정적 에셋 등 다양한 요소들이 part로 기술 될 수 있고 part를 위한 빌드, 실행 환경, 의존성 등을 포함할 수 있습니다.
 기본적으로 snap 패키지는 가져오는 소스코드로 부터 자동적으로 빌드를 하려 시도하고 npm, cmake, autotools 등의 빌드 시스템 통합을 위해서 ```plugin``` 속성이 사용 될 수 있지만 위와 코드와 같이 ```override-build```를 통해서 직접 빌드 과정을 기술할 수 있습니다. 또한 ```stage-package```에 배포에 포함할 패키지를 기술해 의존성 패키지나 원격 접속을 위한 툴 등을 포함을 수 있습니다.
 
@@ -200,8 +200,8 @@ $ qemu-virgil --version
 이후 아래와 같이 Ubuntu Core 이미지를 다운로드 받고 실행합니다.
 ```
 $ wget https://cdimage.ubuntu.com/ubuntu-core/20/stable/current/ubuntu-core-20-amd64.img.xz
-$ unxz https://cdimage.ubuntu.com/ubuntu-core/20/stable/current/ubuntu-core-20-amd64.img.xz
-$ qemu-virgil -enable-kvm -m 512 -device virtio-vga,virgl=on\
+$ unxz ubuntu-core-20-amd64.img.xz
+$ qemu-virgil -enable-kvm -m 2048 -device virtio-vga,virgl=on\
  -display sdl,gl=on -netdev user,id=ethernet.0,hostfwd=tcp::10022-:22\
  -device rtl8139,netdev=ethernet.0\
  -drive file=/snap/qemu-virgil/current/usr/share/qemu/edk2-x86_64-code.fd,if=pflash,format=raw,unit=0,readonly=on\
@@ -215,6 +215,8 @@ $ ssh -p 10022 <your‑user>@localhost
 $ snap install ubuntu-frame
 $ snap install --dangerous *.snap
 ```
+![App on VM](./app-on-vm.png)
+설치 된 후 잠시 기다리면 다음과 같은 화면이 뜰 겁니다.
 
 ## 회고와 정리
 여기까지가 작년 워크숍에서 다룬 내용입니다. 개인적으로 지난 행사는 평소 개인적 관심으로 조금씩 살펴본 Ubuntu Frame 내용을 정리하는 계기가 됐습니다. 행사 준비를 위해서 Ubuntu Frame 튜토리얼을 심화 단계까지 따라해보면서 Ubuntu Frame의 구조를 더 잘 이해할 수 있었고, snap packaging이 실제로 어떻게 이루어지는지를 실제로 볼 수 있었습니다. Ubuntu Core의 장점과 한계점 또한 정리해볼 수 있었습니다. 캐노니컬사의 임베디드 포트폴리오 전반을 살펴보면서 저는 해당 전략이 보안성, 재개발 비용, 유지보수성 면에서 우수해서 넓은 범위로 산업에서 적용될 여지가 충분하다고 느꼈습니다.     
