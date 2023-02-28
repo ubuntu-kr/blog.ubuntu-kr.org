@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href='/img/favicon/apple-touch-icon.png'>
+    <link rel="icon" type="image/png" sizes="32x32" href='/img/favicon/favicon-32x32.png'>
+    <link rel="icon" type="image/png" sizes="16x16" href='/img/favicon/favicon-16x16.png'>
+    <title>Ubuntu Frame 처음 만나보기(실습) | 우분투한국커뮤니티 블로그</title>
+    
+    <meta property="og:site_name" content="우분투한국커뮤니티 블로그" />
+    <meta property="og:title" content="Ubuntu Frame 처음 만나보기(실습)" />
+
+    
+    <meta property="og:image" content='https://blog.ubuntu-kr.org/2023/02/22/ubuntuframe-recap-exercise/ubuntu-frame-logo.png' />
+    <meta property="og:image:secure_url" content='https://blog.ubuntu-kr.org/2023/02/22/ubuntuframe-recap-exercise/ubuntu-frame-logo.png' />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content='https://blog.ubuntu-kr.org/2023/02/22/ubuntuframe-recap-exercise/ubuntu-frame-logo.png' />
+
+    
+    <link rel="stylesheet" href="https://blog.ubuntu-kr.org/sass/theme.min.f7730c1d6ba67d8d327e32c5d2be5258988132122b111361feba8dd214ecca19.css">
+</head><body><header id="navigation" class="p-navigation is-dark">
+  <div class="p-navigation__row">
+    <div class="p-navigation__banner">
+      <div class="p-navigation__tagged-logo" style="min-width: 6rem;">
+        <a class="p-navigation__link" href="/">
+          <div class="p-navigation__logo-tag">
+            <img class="p-navigation__logo-icon" src="/img/UbuntuKrCircleWhite.svg" alt="">
+          </div>
+          <span class="p-navigation__logo-title">블로그</span>
+        </a>
+      </div>
+      <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+      <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+    </div>
+    <nav class="p-navigation__nav" aria-label="Example sub navigation">
+      <ul class="p-navigation__items">
+        
+          
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="/tags">태그</a>
+          </li>
+          
+        
+          
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="/index.xml">구독(RSS)</a>
+          </li>
+          
+        
+          
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="/contribute">블로그에 기고하기</a>
+          </li>
+          
+        
+      </ul>
+     
+     <ul class="p-navigation__items">
+        <li class="p-navigation__item--dropdown-toggle" id="link-4">
+          <a class="p-navigation__link" aria-controls="account-menu">
+            🌏
+          </a>
+          <ul class="p-navigation__dropdown--right" id="account-menu" aria-hidden="true">
+            
+            
+            <li>
+              <a href="https://blog.ubuntu-kr.org/2023/02/22/ubuntuframe-recap-exercise/" class="p-navigation__dropdown-item">📄 한국어</a>
+            </li>
+            
+            
+            <li>
+              <a href="https://blog.ubuntu-kr.org/" class="p-navigation__dropdown-item">🏠 한국어</a>
+            </li>
+            
+            <li>
+              <a href="https://blog.ubuntu-kr.org/en/" class="p-navigation__dropdown-item">🏠 English</a>
+            </li>
+            
+            
+          </ul>
+        </li>
+        <li class="p-navigation__item--dropdown-toggle" id="link-4">
+          <a class="p-navigation__link" aria-controls="account-menu">
+            🔗
+          </a>
+          <ul class="p-navigation__dropdown--right" id="account-menu" aria-hidden="true">
+            
+            <li>
+              <a href="https://ubuntu-kr.org" class="p-navigation__dropdown-item">홈페이지</a>
+            </li>
+            
+            <li>
+              <a href="https://forum.ubuntu-kr.org" class="p-navigation__dropdown-item">포럼</a>
+            </li>
+            
+            <li>
+              <a href="https://wiki.ubuntu-kr.org" class="p-navigation__dropdown-item">위키</a>
+            </li>
+            
+            <li>
+              <a href="https://ubuntu-kr.github.io/workshops/" class="p-navigation__dropdown-item">튜토리얼</a>
+            </li>
+            
+            <li>
+              <a href="https://event.ubuntu-kr.org" class="p-navigation__dropdown-item">행사</a>
+            </li>
+            
+            <li>
+              <a href="https://ask.ubuntu-kr.org" class="p-navigation__dropdown-item">Ask Ubuntu KR</a>
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="content">
+
+
+<main>
+  <section class="p-strip--image main-strip"
+    }
+    style="background-image:url('ubuntu-frame-logo.png'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+    >
+      <div class="row">
+        
+        <div class="col-6">
+          <div class="p-card--overlay">
+            <h2>Ubuntu Frame 처음 만나보기(실습)</h2>
+            <ul class="p-card__content p-inline-list--middot">
+              
+              <li class="p-inline-list__item">
+                김광연
+              </li>
+              
+            </ul>
+            <p><u class=" timedisplay" style="text-decoration-style: dotted;">2023-02-22T10:50:36&#43;09:00</u></p>
+            <p class="p-card__content"></p>
+            
+            <a href="/tags/ubucon" class="tag">
+              <div class="p-chip">
+                <span class="p-chip__value">ubucon</span>
+              </div>
+            </a>
+            
+            <a href="/tags/iot" class="tag">
+              <div class="p-chip">
+                <span class="p-chip__value">iot</span>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <section class="p-strip">
+  <div class="row">
+  <h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#%EA%B0%9C%EC%9A%94">개요</a></li>
+<li><a href="#electron-%EC%95%B1-%ED%8C%A8%ED%82%A4%EC%A7%95">Electron 앱 패키징</a></li>
+<li><a href="#ubuntu-core%EB%A1%9C-%EC%8B%A4%EC%8A%B5%ED%95%98%EA%B8%B0">Ubuntu Core로 실습하기</a></li>
+<li><a href="#%ED%9A%8C%EA%B3%A0%EC%99%80-%EC%A0%95%EB%A6%AC">회고와 정리</a></li>
+</ol>
+<h2 id="개요">개요</h2>
+<p>이번 글에선 전번 Ubuntu Frame 소개에 이어서 실습하는 과정을 소개하고자 합니다.
+이 글에선 우부콘 아시아 워크숍에서 처럼 데스크톱 환경에서 실험 해보고 앱을 패키징 한 뒤 실제 기기에서 실행해보는 과정까지 해보겠습니다.</p>
+<h2 id="데스크톱-환경에서-실습하기">데스크톱 환경에서 실습하기</h2>
+<p>Ubuntu Frame은 데스크톱, 가상환경, 물리기기에서 모두 실행이 가능합니다.
+이 중에서 데스크톱 환경에서는 기본적으로 <code>daemon=false</code>로 설정이 돼 있기 때문에  <code>ubuntu-frame</code>이 실행되면 화면 전체가 <code>ubuntu-frame</code>로 점유 되기 보다는 데스크톱 환경에 스크린 시뮬레이터가 창 형태로 실행되서 개발과 패키징 도중에 앱을 실험 해보기 좋습니다.
+때문에 공식 문서의 <a href="https://mir-server.io/docs/run-ubuntu-frame-on-your-desktop">데스크톱 환경에서 Ubuntu Frame 실행하기</a> 가이드를 먼저 따라해보면서 Ubuntu Frame에 대해 알아보겠습니다.</p>
+<p>우선 아래 명령어로 현재 세션에 설정된 wayland socket을 확인 해보겠습니다.</p>
+<pre tabindex="0"><code>$ ls $XDG_RUNTIME_DIR/wayland*
+/run/user/1000/wayland-0  /run/user/1000/wayland-0.lock  
+</code></pre><p>환경변수 <code>$XDG_RUNTIME_DIR</code>은 현재 로그인 된 데스크톱 세션과 관련된 디렉토리로, 현재 로그인 된 유저와 관련된 파일들이 이곳에 위치하게 됩니다. 다시말해 위의 <code>/run/user/*/wayland-0*</code> 파일들은 현재 로그인 된 유저에 대해 설정된 wayland socket 파일들입니다.</p>
+<p>이제 Ubuntu Frame을 설치하고 실행해보겠습니다. 아래 명령어로 Ubuntu Frame을 설치합니다.</p>
+<pre tabindex="0"><code>$ snap install ubuntu-frame
+</code></pre><p>위 앱을 실행하면 해당 디스플레이 서버가 wayland socket을 생성해 GUI 앱을 붙여 보는 것이 가능합니다. 해당 소캣은 패키징 할 때 환경변수 <code>$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY</code>로 설정되서 사용됩니다.</p>
+<p>이제 <code>ubuntu-frame</code>을 실행하는데 아래와 같은 두 가지 방식이 존재합니다.</p>
+<ul>
+<li>현재 유저로 실행하기
+<ul>
+<li>이 방법으로 실행하면 <code>ubuntu-frame</code>이 현재 유저가 실행시킨 프로세스가 되고 <code>$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY</code> 소캣의 소유자가 현재 유저가 됩니다. 실행 방법이 단순하기 때문에 패키징을 하지 않고 단순히 동일한 유저가 실행시킨 GUI 앱을 <code>ubuntu-frame</code>에 붙여 볼 때 유용합니다.</li>
+</ul>
+</li>
+<li>root로 실행하기
+<ul>
+<li>이 방법은 <code>ubuntu-frame</code>의 실제 실행 환경과 조금 더 유사하기 때문에 패키징 했을 때 환경을 시험해보기 좋습니다. <code>ubuntu-frame</code>이 생성하는 wayland socket가 소유자가 root가 아니면 <code>ubuntu-frame</code>과 통신하려는 프로세스의 소유자가 다르면(심지어 root라도) 접속할 수 없기 때문에 <code>init</code>이 생성한 프로세스(이를테면 daemon)들과 통신하려면 root로 실행할 필요가 있습니다. 이 방법은 현재 유저로 실행하는 것보다 조금 더 복잡합니다.</li>
+</ul>
+</li>
+</ul>
+<p>여기에서는 현재 유저로 실행하는 것만 다루겠습니다. 아래 명령어로 실행하고 생성된 소켓을 확인합니다.</p>
+<pre tabindex="0"><code>$ WAYLAND_DISPLAY=wayland-99 ubuntu-frame
+$ ls $XDG_RUNTIME_DIR/wayland*
+/run/user/1000/wayland-0       /run/user/1000/wayland-99
+/run/user/1000/wayland-0.lock  /run/user/1000/wayland-99.lock
+</code></pre><p>위 명령어로 <code>ubuntu-frame</code>을 환경변수 <code>$WAYLAND_DISPLAY</code>를 넘겨줘서 실행한다는 의미입니다. 해당 명령어로 새로운 시뮬레이터 창이 생성되고 <code>wayland-99</code> 소캣을 생성한 것을 볼 수 있을 겁니다.</p>
+<p>저는 이것을 electron-quick-start 프로그램을 약간 수정한 프로그램으로 실험해보겠습니다. 다음 명령어로 해당 프로그램을 실행해봅시다.</p>
+<pre tabindex="0"><code>$ git clone https://github.com/onting/electron-ubucon-asia.git
+$ cd electron-ubucon-asia
+$ npm install
+$ npm start
+</code></pre><p><img src="./electron-quick-start.png" alt="elctron-quick-start">
+위와 같은 프로그램을 이제 <code>ubuntu-frame</code>에 다음과 같은 명령어로 붙입니다.</p>
+<pre tabindex="0"><code>export WAYLAND_DISPLAY=wayland-99
+npm start -- --enable-features=UseOzonePlatform --ozone-platform=wayland
+</code></pre><p>그러면 다음과 같이 스크린 시뮬레이터에 앱이 붙은 것을 볼 수 있을 겁니다.
+<img src="./electron-attach.png" alt="electron app attach"></p>
+<p>다음은 이 앱을 Ubuntu Frame을 위해서 snap 앱으로 패키징하는 과정입니다.</p>
+<h2 id="electron-앱-패키징">Electron 앱 패키징</h2>
+<p>이제 공식 문서의 <a href="https://mir-server.io/docs/packaging-a-flutter-application-as-an-iot-gui">Electron 앱 패키징 하기</a>를 따라해보겠습니다. 이 과정에서는 Electron 위에서 다루었던 앱을 <a href="https://github.com/MirServer/iot-example-graphical-snap"><code>iot-example-graphical-snap</code></a> 코드를 활용해서 Ubuntu Frame을 위한 snap 패키징을 하는 것을 다룹니다.</p>
+<p>우선 <code>iot-example-graphical-snap</code>을 다운로드 받고 사용 가능한 예시들을 보겠습니다.</p>
+<pre tabindex="0"><code>$ git clone https://github.com/MirServer/iot-example-graphical-snap.git
+$ cd iot-example-graphical-snap
+$ git branch -a
+* master
+remotes/origin/GTK3-mastermind
+remotes/origin/HEAD -&gt; origin/master
+remotes/origin/Qt5-bomber
+remotes/origin/SDL2-neverputt
+remotes/origin/master
+</code></pre><p>위와 같이 브렌치들을 살펴보면 GTK3, SDL2-neverputt 등 다양한 예시를 제공한다는 것을 알 수 있습니다. 다음 명령어로 기본 Electron 패키징 예시를 실행해보겠습니다.</p>
+<pre tabindex="0"><code>$ git checkout Electron-quick-start
+$ snapcraft
+$ ls
+bors.toml  iot-example-graphical-snap_0+git.f5b57f7_amd64.snap  README.md  wayland-launch
+dbus       LICENCE                                              snap       wrapper
+</code></pre><p>위와 같이 <code>iot-example-graphical-snap_*_*_.snap</code> snap 패키지 파일이 생성된 것을 확인할 수 있습니다.</p>
+<p>이제 <code>snap/snapcraft.yaml</code> 파일에서 레시피가 어떻게 구성돼있는지 확인하고 앞서 소개드린 <code>electron-ubucon-asic</code> 프로그램을 패키징 하는 것으로 바꿔보겠습니다. <code>snap/snapcraft.yaml</code>파일을 열어보면 다양한 속성들이 존재합니다만 편의를 위해 <code>parts</code> 만 살펴보겠습니다. 각 속성에 대해 자세히 알기 위해선 <a href="https://snapcraft.io/docs/creating-snapcraft-yaml">snapcraft.yaml 만들기</a> 가이드를 참고하십시오.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">parts</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">electron-helloworld</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">nil</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">source</span>: <span style="color:#ae81ff">https://github.com/electron/electron-quick-start.git</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build-environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">PATH</span>: <span style="color:#e6db74">&#34;$PATH:$SNAPCRAFT_PART_BUILD/node_modules/.bin&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">override-build</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      set +u # core20 base does not allow unbound variables !
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # workaround for build.snapcraft.io builds
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # https://bugs.launchpad.net/bugs/1886861
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      if [ -n &#34;$http_proxy&#34; ]; then
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        export ELECTRON_GET_USE_PROXY=1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        export GLOBAL_AGENT_HTTP_PROXY=&#34;${http_proxy}&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        export GLOBAL_AGENT_HTTPS_PROXY=&#34;${http_proxy}&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      fi
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # Replace the default app with the Mir website
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      sed --in-place &#34;s!loadFile(&#39;index.html&#39;)!loadURL(&#39;https://mir-server.io&#39;)!&#34; main.js
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      npm install --unsafe-perm true electron-packager
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      electron-packager . --overwrite --platform=linux \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          --output=release-build --prune=true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      cp -a ./electron-quick-start-linux-* $SNAPCRAFT_PART_INSTALL/electron-helloworld
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      chmod a+rx $SNAPCRAFT_PART_INSTALL/electron-helloworld</span>      
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">stage-packages</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">libnspr4</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">libnss3</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">libatk-bridge2.0-0</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">libcups2</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">libgtk-3-0</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">libasound2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build-snaps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">node/16/stable</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>다시 돌아와, 우리가 바꿀 부분은 <code>parts</code> 속성의 <code>electron-helloworld</code> 부분입니다. <code>parts</code>는 패키지를 구성하는 요소들을 의미하는데 앱, 라이브러리, 정적 에셋 등 다양한 요소들이 part로 기술 될 수 있고 part를 위한 빌드, 실행 환경, 의존성 등을 포함할 수 있습니다.
+기본적으로 snap 패키지는 가져오는 소스코드로 부터 자동적으로 빌드를 하려 시도하고 npm, cmake, autotools 등의 빌드 시스템 통합을 위해서 <code>plugin</code> 속성이 사용 될 수 있지만 위와 코드와 같이 <code>override-build</code>를 통해서 직접 빌드 과정을 기술할 수 있습니다. 또한 <code>stage-package</code>에 배포에 포함할 패키지를 기술해 의존성 패키지나 원격 접속을 위한 툴 등을 포함을 수 있습니다.</p>
+<p>다음과 같이 레시피를 수정합니다.</p>
+<ol>
+<li>현재 <code>override-build</code>는  <code>sed --in-place &quot;s!loadFile('index.html')!loadURL('https://mir-server.io')!&quot; main.js</code>와 같이 <code>index.html</code>을 렌더링하는 대신 mir-server 홈페이지를 불러오도록 바꾸는 부분이 있는데 앱 변경 반영을 위해서 지워줍니다.</li>
+<li><code>source</code> 부분에 <code>https://github.com/onting/electron-ubucon-asia.git</code>을 넣어줍니다.</li>
+<li><code>stage-packages</code>에 현재 패키지에 한글 폰트를 포함시키기 위해서 나눔폰트를 추가해줍니다. 패키지명은 현재 시스템이 apt인지 yum인지에 따라서 패키지명을 적어주면 되고 우분투 기준으로는 <code>fonts-nanum</code>, <code>fonts-nanum-coding</code>, <code>fonts-nanum-extra</code>를 추가하면 됩니다.</li>
+</ol>
+<p>그리고 다음과 같이 확인해봅니다.</p>
+<pre tabindex="0"><code>$ rm *.snap
+$ snapcraft
+$ snap install --dangerous *.snap
+$ snap run iot-example-graphical-snap
+</code></pre><p>이는 다음과 같은 오류를 발생할 수 있습니다.</p>
+<pre tabindex="0"><code>WARNING: wayland interface not connected! Please run: /snap/iot-example-graphical-snap/current/bin/setup.sh
+[231190:0624/162014.069287:ERROR:wayland_connection.cc(209)] Failed to connect to Wayland display
+[231190:0624/162014.069317:ERROR:ozone_platform_wayland.cc(226)] Failed to initialize Wayland platform
+[231190:0624/162014.069322:ERROR:env.cc(226)] The platform failed to initialize.  Exiting.
+The futex facility returned an unexpected error code.
+</code></pre><p>이는 snap confinement에 의한 오류로 앱이 실행되는데 필요한 인터페이스들이 연결되지 않아서 발생합니다. 이를 해결하기 위한 스크립드 또한 제공되기에 다음과 같이 실행해 해결합니다.</p>
+<pre tabindex="0"><code>$ /snap/iot-example-graphical-snap/current/bin/setup.sh
+$ snap run iot-example-graphical-snap
+</code></pre><p>이제 다음과 같은 창이 뜰 겁니다.
+<img src="./snapped-electron-app.png" alt="snapped electron app">
+위 화면이 배포됐을 때 화면이라 보면 됩니다.</p>
+<h2 id="ubuntu-core로-실습하기">Ubuntu Core로 실습하기</h2>
+<p>이제 Ubuntu Core 시스템 위에 전 단계에서 패키징한 패키지를 설치해 실행하는 것을 해보겠습니다.
+이 과정을 위해서는 <a href="https://login.launchpad.net/">Ubuntu One 계정</a>에 ssh 공개키가 등록되어 있어야 합니다.
+키 등록을 위한 과정은 launchpad의 <a href="https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair">ssh 키 쌍 생성</a> 가이드를 참고하십시오.</p>
+<p>우선 패키지를 해당 기기로 쉽게 옮기고 설치하기 위해서 다음 명령어로 Snap Store에서 앱을 빌드합니다.</p>
+<pre tabindex="0"><code>$ snapcraft remote-build
+$ ls *.snap
+iot-example-graphical-snap_0+git.f5b57f7-dirty_amd64.snap  iot-example-graphical-snap_0+git.f5b57f7-dirty_armhf.snap
+iot-example-graphical-snap_0+git.f5b57f7-dirty_arm64.snap
+</code></pre><p>이 명령어는 Snap Store의 인프라로 해당 레시피에 기술되어있는 모든 아키텍쳐로 빌드를 해줍니다. 다만 서버로 전송되는 모든 데이터는 공개될 수 있음을 주의해야 합니다.</p>
+<p>다음으로 Ubuntu Core 이미지를 실행하는데 편의를 위해 이 글에선 QEMU로 진행하겠습니다. 자세한 내용을 위해선 <a href="https://mir-server.io/docs/run-ubuntu-frame-in-a-virtual-machine">가상머신에 Ubuntu Frame 실행하기</a> 가이드를 참고하십시오.
+아래와 같이 QEMU를 설치합니다.</p>
+<pre tabindex="0"><code>$ sudo snap install qemu-virgil
+$ sudo snap install connect qemu-virgil:kvm
+$ qemu-virgil --version
+</code></pre><p>이후 아래와 같이 Ubuntu Core 이미지를 다운로드 받고 실행합니다.</p>
+<pre tabindex="0"><code>$ wget https://cdimage.ubuntu.com/ubuntu-core/20/stable/current/ubuntu-core-20-amd64.img.xz
+$ unxz ubuntu-core-20-amd64.img.xz
+$ qemu-virgil -enable-kvm -m 2048 -device virtio-vga,virgl=on\
+ -display sdl,gl=on -netdev user,id=ethernet.0,hostfwd=tcp::10022-:22\
+ -device rtl8139,netdev=ethernet.0\
+ -drive file=/snap/qemu-virgil/current/usr/share/qemu/edk2-x86_64-code.fd,if=pflash,format=raw,unit=0,readonly=on\
+ ./ubuntu-core-20-amd64.img
+</code></pre><p>창이 실행 된 후 Ubuntu One 계정을 넣어서 초기화 합니다.
+이후 다음 명령어로 패키지 파일을 옮기고 접속해 설치합니다.</p>
+<pre tabindex="0"><code>$ scp -P 10022 *_amd64.snap &lt;your-user&gt;@localhost:~
+$ ssh -p 10022 &lt;your‑user&gt;@localhost
+$ snap install ubuntu-frame
+$ snap install --dangerous *.snap
+</code></pre><p><img src="./app-on-vm.png" alt="App on VM">
+설치 된 후 잠시 기다리면 다음과 같은 화면이 뜰 겁니다.</p>
+<h2 id="회고와-정리">회고와 정리</h2>
+<p>여기까지가 작년 워크숍에서 다룬 내용입니다. 개인적으로 지난 행사는 평소 개인적 관심으로 조금씩 살펴본 Ubuntu Frame 내용을 정리하는 계기가 됐습니다. 행사 준비를 위해서 Ubuntu Frame 튜토리얼을 심화 단계까지 따라해보면서 Ubuntu Frame의 구조를 더 잘 이해할 수 있었고, snap packaging이 실제로 어떻게 이루어지는지를 실제로 볼 수 있었습니다. Ubuntu Core의 장점과 한계점 또한 정리해볼 수 있었습니다. 캐노니컬사의 임베디드 포트폴리오 전반을 살펴보면서 저는 해당 전략이 보안성, 재개발 비용, 유지보수성 면에서 우수해서 넓은 범위로 산업에서 적용될 여지가 충분하다고 느꼈습니다.  <br>
+그러나 Ubuntu Core 근본적으로 snap 버그 등의 이유로 안정성 등이 현재 엄격한 시험대에 올라가 평가 받고 있는 상태라고 생각합니다. 그래서 가까운 미래의 사용자 경험이 평판에 매우 중요하다고 보여집니다. 덧붙여 Ubuntu Frame 또한 실제로 써보면 개념 만큼 개발이 간단하지는 않고 추가적으로 알아야 할 것들이 꽤나 있다는 것을 튜토리얼을 해보면서 느꼈습니다. 저는 앞으로 Ubuntu Core가 신뢰도를 위해서 어떤 행보를 보일지 또 한국 임베디드 산업에도 이런 기술이 정착할 수 있을지 흥미롭습니다.</p>
+
+  </div>
+  </section>
+  <section class="p-strip--light">
+    <div class="row">
+      
+      <div class="col-12">
+        <div class="p-media-object">
+          <img src="profile.jpg" class="p-media-object__image is-round" alt="">
+          <div class="p-media-object__details">
+            <h3 class="p-media-object__title">
+              <a href="#">김광연</a>
+            </h3>
+            <p class="p-media-object__content">Ubuntu Korea Community</p>
+            <ul class="p-inline-list--middot">
+              <li class="p-inline-list__item"><a href="mailto:ghemool123@gmail.com">Email</a></li>
+              <li class="p-inline-list__item"><a href="https://launchpad.net/~horary">Launchpad</a></li>
+              <li class="p-inline-list__item"><a href="https://github.com/onting">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      
+      <div class="col-12">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_config = function () {
+    this.page.url = "https://blog.ubuntu-kr.org/2023/02/22/ubuntuframe-recap-exercise/";  
+    this.page.identifier = "/2023/02/22/ubuntuframe-recap-exercise.html"; 
+};
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+    
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'ubuntu-kr-blog';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+      </div>
+   
+    </div>
+  </section>
+  <section class="p-strip">
+    <div class="row">
+      <footer class="p-article-pagination">
+        
+        <a class="p-article-pagination__link--previous" href="/2023/02/07/ubuntuframe-recap/">
+          <span class="p-article-pagination__label">이전</span>
+          <span class="p-article-pagination__title">Ubuntu Frame 처음 만나보기</span>
+        </a>
+        
+        
+      </footer>
+    </div>
+  </section>
+</main>
+
+        </div><section class="p-strip--accent">
+  <div class="row">
+    <div class="col-12">
+      <h2>우분투한국커뮤니티 블로그</h2>
+      <ul class="p-inline-list--middot is-dark">
+        <li class="p-inline-list__item">
+          <a href="mailto:contact@ubuntu-kr.org">운영진과 연락하기(이메일)</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://fb.com/ubuntukorea">Facebook</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://twitter.com/UbuntuKrOrg">Twitter</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://www.youtube.com/user/UbuntuKorea">YouTube</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://github.com/ubuntu-kr">GitHub</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://launchpad.net/~ubuntu-ko">Launchpad</a>
+        </li>
+      </ul>
+      <p>© 2021 우분투 한국 커뮤니티 (우분투 한국 로컬 커뮤니티 팀). 별도 고지가 있는 경우를 제외하고, 웹 사이트 소스코드는 MIT, 웹 사이트의 컨텐츠는 CC BY-SA 4.0 라이선스로 이용 가능합니다. Ubuntu 및 Canonical 은 Canonical Ltd. 의 등록 상표입니다.</p>
+      <a href="https://github.com/ubuntu-kr/blog.ubuntu-kr.org">GitHub에서 소스코드 보기</a>
+    </div>
+  </div><script type="text/javascript" src='/js/ubuntukr.js'></script>
+<script type="text/javascript" src='/js/timedisplay.js'></script>
+<script>
+
+let slides = document.getElementsByClassName("main-slide");
+let index = 0;
+let count = slides.length;
+function setSlideIndex(destination) {
+    index = destination % count;
+    index = index < 0 ? index * -1 : index;
+    for (let i = 0; i < count; i++) {
+        if(i == index) {
+            slides[i].style.display = "block";
+        } else {
+            slides[i].style.display = "none";
+        }
+    }
+}
+function nextSlide() {
+    setSlideIndex(index + 1);
+}
+function prevSlide() {
+    setSlideIndex(index - 1);
+}
+setSlideIndex(0);
+setInterval(nextSlide, 5000);
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-65961752-8', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script></body>
+</html>

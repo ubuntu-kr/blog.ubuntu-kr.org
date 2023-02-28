@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ubucon on 우분투한국커뮤니티 블로그</title>
-    <link>https://blog.ubuntu-kr.org/tags/ubucon/</link>
-    <description>Recent content in ubucon on 우분투한국커뮤니티 블로그</description>
+    <title>iot on 우분투한국커뮤니티 블로그</title>
+    <link>https://blog.ubuntu-kr.org/tags/iot/</link>
+    <description>Recent content in iot on 우분투한국커뮤니티 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 22 Feb 2023 10:50:36 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/tags/ubucon/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2023 10:50:36 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/tags/iot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu Frame 처음 만나보기(실습)</title>
       <link>https://blog.ubuntu-kr.org/2023/02/22/ubuntuframe-recap-exercise/</link>
@@ -24,17 +24,6 @@
       
       <guid>https://blog.ubuntu-kr.org/2023/02/07/ubuntuframe-recap/</guid>
       <description>Table of Contents  서론 우분투 Core &amp;amp; Frame  Ubuntu Frame이란? Ubuntu Core 소개 Ubuntu Frame 살펴보기   요약 및 결론  서론 수년 전인가 부터 임베디드와 IoT가 4차 산업혁명이라는 말로 강조 되기 시작했습니다. 사실 임베디드 시스템은 훨씬 예전 부터 우리 생활에 밀접하게 자리 잡아 있었지만 딥러닝의 등장으로 전에 불가능했던 수많은 앱들이 앞으로 실현 가능할 것이라 보고 앞으로는 edge 기기들 증가하고 통신의 중요성이 화두가 될 것이라 보는 것이죠. 그러나 이런 전망에도 불구하고 저는 임베디드의 기반 시스템 개발 부분은 앱 개발 만큼 논의가 활발히 이루어 지지 않는다고 느낍니다.</description>
-    </item>
-    
-    <item>
-      <title>11월 말, 서울에서 열리는 UbuCon Asia 에 참석하세요!</title>
-      <link>https://blog.ubuntu-kr.org/2022/11/11/ubucon-asia-2022/</link>
-      <pubDate>Fri, 11 Nov 2022 17:00:00 +0900</pubDate>
-      
-      <guid>https://blog.ubuntu-kr.org/2022/11/11/ubucon-asia-2022/</guid>
-      <description>UbuCon Asia(우부콘 아시아)는 아시아 지역 수백명의 Ubuntu 사용자와 개발자, 기여자와 애호가 및 관심있는 사람들을 한 자리에 모으는 아시아 지역 Ubuntu 커뮤니티 행사 입니다.
-Ubuntu에 대한 경험을 공유하고 논의하기 위한 곳이자, Ubuntu와 다른 오픈소스 커뮤니티가 즐길 수 있는 축제의 장 이기도 합니다.
-왜 대면으로 참석해야 할까요? 클라우드와 인프라, 데스크톱, 커뮤니티, 사물인터넷 부터 WSL 등 다양한 주제에 대한 강연과 워크샵이 준비되어 있습니다! 아시아 지역의 다양한 Ubuntu 커뮤니티 사람들로부터 다양한 이야기도 전해 들으실 수 있습니다.</description>
     </item>
     
   </channel>

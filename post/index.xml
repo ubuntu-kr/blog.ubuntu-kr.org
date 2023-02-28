@@ -6,7 +6,26 @@
     <description>Recent content in Posts on 우분투한국커뮤니티 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 11 Nov 2022 17:00:00 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2023 10:50:36 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu Frame 처음 만나보기(실습)</title>
+      <link>https://blog.ubuntu-kr.org/2023/02/22/ubuntuframe-recap-exercise/</link>
+      <pubDate>Wed, 22 Feb 2023 10:50:36 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2023/02/22/ubuntuframe-recap-exercise/</guid>
+      <description>Table of Contents  개요 Electron 앱 패키징 Ubuntu Core로 실습하기 회고와 정리  개요 이번 글에선 전번 Ubuntu Frame 소개에 이어서 실습하는 과정을 소개하고자 합니다. 이 글에선 우부콘 아시아 워크숍에서 처럼 데스크톱 환경에서 실험 해보고 앱을 패키징 한 뒤 실제 기기에서 실행해보는 과정까지 해보겠습니다.
+데스크톱 환경에서 실습하기 Ubuntu Frame은 데스크톱, 가상환경, 물리기기에서 모두 실행이 가능합니다. 이 중에서 데스크톱 환경에서는 기본적으로 daemon=false로 설정이 돼 있기 때문에 ubuntu-frame이 실행되면 화면 전체가 ubuntu-frame로 점유 되기 보다는 데스크톱 환경에 스크린 시뮬레이터가 창 형태로 실행되서 개발과 패키징 도중에 앱을 실험 해보기 좋습니다.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu Frame 처음 만나보기</title>
+      <link>https://blog.ubuntu-kr.org/2023/02/07/ubuntuframe-recap/</link>
+      <pubDate>Tue, 07 Feb 2023 12:31:04 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2023/02/07/ubuntuframe-recap/</guid>
+      <description>Table of Contents  서론 우분투 Core &amp;amp; Frame  Ubuntu Frame이란? Ubuntu Core 소개 Ubuntu Frame 살펴보기   요약 및 결론  서론 수년 전인가 부터 임베디드와 IoT가 4차 산업혁명이라는 말로 강조 되기 시작했습니다. 사실 임베디드 시스템은 훨씬 예전 부터 우리 생활에 밀접하게 자리 잡아 있었지만 딥러닝의 등장으로 전에 불가능했던 수많은 앱들이 앞으로 실현 가능할 것이라 보고 앞으로는 edge 기기들 증가하고 통신의 중요성이 화두가 될 것이라 보는 것이죠. 그러나 이런 전망에도 불구하고 저는 임베디드의 기반 시스템 개발 부분은 앱 개발 만큼 논의가 활발히 이루어 지지 않는다고 느낍니다.</description>
+    </item>
+    
     <item>
       <title>11월 말, 서울에서 열리는 UbuCon Asia 에 참석하세요!</title>
       <link>https://blog.ubuntu-kr.org/2022/11/11/ubucon-asia-2022/</link>
