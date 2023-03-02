@@ -204,12 +204,12 @@ $ ls $XDG_RUNTIME_DIR/wayland*
 $ cd electron-ubucon-asia
 $ npm install
 $ npm start
-</code></pre><p><img src="./electron-quick-start.png" alt="elctron-quick-start">
-위와 같은 프로그램을 이제 <code>ubuntu-frame</code>에 다음과 같은 명령어로 붙입니다.</p>
+</code></pre><p><img src="./electron-quick-start.png" alt="elctron-quick-start"></p>
+<p>위와 같은 프로그램을 이제 <code>ubuntu-frame</code>에 다음과 같은 명령어로 붙입니다.</p>
 <pre tabindex="0"><code>export WAYLAND_DISPLAY=wayland-99
 npm start -- --enable-features=UseOzonePlatform --ozone-platform=wayland
-</code></pre><p>그러면 다음과 같이 스크린 시뮬레이터에 앱이 붙은 것을 볼 수 있을 겁니다.
-<img src="./electron-attach.png" alt="electron app attach"></p>
+</code></pre><p>그러면 다음과 같이 스크린 시뮬레이터에 앱이 붙은 것을 볼 수 있을 겁니다.</p>
+<p><img src="./electron-attach.png" alt="electron app attach"></p>
 <p>다음은 이 앱을 Ubuntu Frame을 위해서 snap 앱으로 패키징하는 과정입니다.</p>
 <h2 id="electron-앱-패키징">Electron 앱 패키징</h2>
 <p>이제 공식 문서의 <a href="https://mir-server.io/docs/packaging-a-flutter-application-as-an-iot-gui">Electron 앱 패키징 하기</a>를 따라해보겠습니다. 이 과정에서는 Electron 위에서 다루었던 앱을 <a href="https://github.com/MirServer/iot-example-graphical-snap"><code>iot-example-graphical-snap</code></a> 코드를 활용해서 Ubuntu Frame을 위한 snap 패키징을 하는 것을 다룹니다.</p>
