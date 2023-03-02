@@ -66,13 +66,16 @@ $ cd electron-ubucon-asia
 $ npm install
 $ npm start
 ```
+
 ![elctron-quick-start](./electron-quick-start.png)
+
 위와 같은 프로그램을 이제 ```ubuntu-frame```에 다음과 같은 명령어로 붙입니다.
 ```
 export WAYLAND_DISPLAY=wayland-99
 npm start -- --enable-features=UseOzonePlatform --ozone-platform=wayland
 ```
 그러면 다음과 같이 스크린 시뮬레이터에 앱이 붙은 것을 볼 수 있을 겁니다.
+
 ![electron app attach](./electron-attach.png)
 
 다음은 이 앱을 Ubuntu Frame을 위해서 snap 앱으로 패키징하는 과정입니다.
