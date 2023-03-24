@@ -1,18 +1,20 @@
 {{ $pag := $.Paginator }}
 {{ if gt $pag.TotalPages 1 -}}
-<ol class="p-pagination">
+<nav class="p-pagination" aria-label="Pagination">
+  <ol class="p-pagination__items">
+
   {{ with $pag.First -}}
-  <li class="p-pagination__item">
+   <li class="p-pagination__item">
     <a class="p-pagination__link--previous" 
         href="{{ .URL }}" title="Previous page">
-        <i class="p-icon--contextual-menu">First page</i>
+        <i class="p-icon--chevron-down">First page</i>
     </a>
   </li>
   {{ end -}}
-  <li class="p-pagination__item">
+   <li class="p-pagination__item">
     <a class="p-pagination__link--previous {{ if not $pag.HasPrev }} is-disabled{{ end }}" 
         {{ if $pag.HasPrev }}href="{{ $pag.Prev.URL }}"{{ end }} title="Previous page">
-        <i class="p-icon--contextual-menu">Previous page</i>
+        <i class="p-icon--chevron-down">Previous page</i>
     </a>
   </li>
   {{- $ellipsed := false -}}
@@ -30,7 +32,7 @@
     {{- $ellipsed = true -}}
   {{- end -}}
   {{- if $showNumber }}
-  <li class="p-pagination__item">
+   <li class="p-pagination__item">
     <a class="p-pagination__link {{ if eq . $pag }} is-active{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
   </li>
   {{- else if $shouldEllipse }}
@@ -39,14 +41,14 @@
   </li>
   {{- end -}}
   {{- end }}
-  <li class="p-pagination__item">
+   <li class="p-pagination__item">
     <a class="p-pagination__link--next {{ if not $pag.HasNext }} is-disabled{{ end }}"
         {{ if $pag.HasNext }}href="{{ $pag.Next.URL }}"{{ end }} title="Next page">
         <i class="p-icon--contextual-menu">Next page</i>
     </a>
   </li>
   {{- with $pag.Last }}
-  <li class="p-pagination__item">
+   <li class="p-pagination__item">
     <a class="p-pagination__link--next"
         href="{{ .URL }}" title="Last page">
         <i class="p-icon--contextual-menu">Next page</i>
@@ -54,4 +56,5 @@
   </li>
   {{- end }}
 </ol>
+</nav>
 {{ end }}
