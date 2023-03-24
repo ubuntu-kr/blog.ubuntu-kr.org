@@ -777,14 +777,18 @@ Failed to open journal file xxx.journal: Protocol not supported
       
       <div class="col-12">
         <div id='discourse-comments'></div>
+<meta name='discourse-username' content='DISCOURSE_USERNAME'>
 
 <script type="text/javascript">
-  window.DiscourseEmbed = { discourseUrl: 'https:\/\/discourse.ubuntu-kr.org',
-                     discourseEmbedUrl: 'https:\/\/blog.ubuntu-kr.org\/en\/2022\/04\/22\/jamme-jellyfish-release-notes\/' };
+  DiscourseEmbed = {
+    discourseUrl: 'https:\/\/discourse.ubuntu-kr.org',
+    discourseEmbedUrl: 'https:\/\/blog.ubuntu-kr.org\/en\/2022\/04\/22\/jamme-jellyfish-release-notes\/',
+    
+  };
 
   (function() {
     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-    d.src = window.DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
   })();
 </script>
