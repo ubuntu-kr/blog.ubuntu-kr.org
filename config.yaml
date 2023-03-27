@@ -57,7 +57,7 @@ languages:
       - identifier: forum
         name: 포럼
         weight: 2
-        url: https://forum.ubuntu-kr.org
+        url: https://discourse.ubuntu-kr.org
       - identifier: wiki
         name: 위키
         weight: 3
@@ -111,7 +111,7 @@ languages:
       - identifier: forum
         name: Forum
         weight: 2
-        url: https://forum.ubuntu-kr.org
+        url: https://discourse.ubuntu-kr.org
       - identifier: wiki
         name: Wiki
         weight: 3
