@@ -7,6 +7,7 @@ tags:
  - UbuntuFest
  - daejeon
  - report
+forum_username: Kimuj
 authors:
     - name: 김어진
       bio: 우분투한국커뮤니티 대전팀

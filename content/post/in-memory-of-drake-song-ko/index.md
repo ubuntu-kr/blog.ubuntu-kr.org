@@ -4,6 +4,7 @@ date: 2020-01-22 07:49:00 +0900
 title: "별세하신 송현도님을 추모하며"
 tags:
  - memorial
+forum_username: sukso96100
 authors:
     - name: 한영빈
       bio: 우분투한국커뮤니티 전임 대표(4대, 2017~2018)

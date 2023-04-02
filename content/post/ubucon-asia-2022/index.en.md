@@ -3,6 +3,7 @@ date: 2022-11-11T17:00:00+09:00
 title: "Join us UbuCon Asia in-person in Seoul this November!"
 tags:
  - ubucon
+forum_username: sukso96100
 authors:
     - name: Youngbin Han
       bio: Leader, Ubuntu Korea Community(2017~2018, 2021~)

@@ -4,6 +4,7 @@ title: "Ubuntu Frame 처음 만나보기"
 tags:
  - ubucon
  - iot
+forum_username: onting
 authors:
     - name: 김광연
       bio: Ubuntu Korea Community

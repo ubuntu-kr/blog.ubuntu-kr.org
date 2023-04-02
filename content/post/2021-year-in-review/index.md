@@ -3,6 +3,7 @@ date: 2021-12-28T11:27:04+09:00
 title: "2021년 회고"
 tags:
  - year-in-review
+forum_username: sukso96100
 authors:
     - name: 한영빈
       bio: 우분투한국커뮤니티 대표(2017~2018, 2021~)

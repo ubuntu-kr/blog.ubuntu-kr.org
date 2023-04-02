@@ -8,6 +8,7 @@ tags:
  - daejeon
  - busan
  - report
+forum_username: sukso96100
 authors:
     - name: Youngbin Han
       bio: Ubuntu Korea Community - Leader (2017~2018)

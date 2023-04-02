@@ -3,6 +3,7 @@ date: 2022-11-11T17:00:00+09:00
 title: "11월 말, 서울에서 열리는 UbuCon Asia 에 참석하세요!"
 tags:
  - ubucon
+forum_username: sukso96100
 authors:
     - name: 한영빈
       bio: 우분투한국커뮤니티 대표(2017~2018, 2021~)

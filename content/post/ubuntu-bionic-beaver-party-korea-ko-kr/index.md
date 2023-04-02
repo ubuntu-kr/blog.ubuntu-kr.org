@@ -8,6 +8,7 @@ tags:
  - daejeon
  - busan
  - report
+forum_username: sukso96100
 authors:
     - name: 한영빈
       bio: 우분투한국커뮤니티 대표(2017~2018)

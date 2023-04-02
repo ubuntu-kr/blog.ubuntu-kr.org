@@ -8,6 +8,7 @@ tags:
  - hanjp
  - gnome-kr
  - report
+forum_username: sukso96100
 authors:
     - name: Youngbin Han
       bio: Leader of the Ubuntu Korea Community(Ubuntu Korea LoCo Team)(2017~2018) / Hanjp-IM Project Member

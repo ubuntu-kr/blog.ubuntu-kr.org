@@ -11,6 +11,7 @@ authors:
       launchpad: hello # Launchpad Username
       github: hello # GitHub Username
       profile: profile.jpg # 프로필 이미지 URL
+forum_username: system # 대표 저자의 discourse.ubuntu-kr.org 아이디 입력
 image: cover.png # 커버 이미지 URL
 draft: false # 글 초안 여부
 ---

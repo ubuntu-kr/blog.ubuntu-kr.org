@@ -6,6 +6,7 @@ title: "우분투 22.04 LTS Jammy Jellyfish 릴리즈 노트"
 image: jammy.jpg
 tags:
  - release-notes
+forum_username: sukso96100
 authors:
     - name: 우분투 한국어 번역팀
       bio: .

@@ -1,4 +1,7 @@
 <div id='discourse-comments'></div>
+{{with .Params.forum_username }}
+<meta name='discourse-username' content='{{.}}'>
+{{end}}
 
 <script type="text/javascript">
   DiscourseEmbed = {

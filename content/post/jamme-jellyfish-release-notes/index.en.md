@@ -6,6 +6,7 @@ title: "Ubuntu 22.04 LTS Jammy Jellyfish Release Notes"
 image: jammy.jpg
 tags:
  - release-notes
+forum_username: system
 authors:
     - name: Ubuntu Korean Translators
       bio: .

@@ -7,6 +7,7 @@ tags:
  - UbuntuFest
  - daejeon
  - report
+forum_username: Kimuj
 authors:
     - name: Eojin Kim
       bio: Ubuntu Korea Community Daejeon Team
