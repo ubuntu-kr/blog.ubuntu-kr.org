@@ -95,7 +95,7 @@ Hackclub 이라는 고등학생 개발자로 주로 구성된 커뮤니티이자
 
 지난 Ubuntu Summit 때는 몇일 더 머물면서 체코 여행도 조금씩 하곤 했는데, 이번 FOSSASIA 때는 숙박비 부담으로 그러지 못해서 개인적으로 조금 아쉽네요. 하지만 국내 다양한 오픈소스 커뮤니티 운영진 분들과 함께 행사에 참석할 수 있어서 정말 즐거운 시간이였고, 또 FOSSASIA 에서 다시만나 반가운 분들도 뵙고 새로운 분들도 만나 함께할 수 있어 더 좋은 시간이였습니다.
 
-좋은 행사를 준비해 주시고 또 저를 비롯한 한국 커뮤니티 운영진 분들을 초대 해 주신 Hong Phuc Dang 님, Mario Behling 님 및 FOSSASIA 팀에 감사 드립니다. 또한 제가 이번 행사 참석을 위해  Ubuntu Donations Funding 을 통해 신청한 여행 경비 지원 요청을 승인 해 주신 Canonical 의 Philipp Kewisch, Mauro Gaspari, Claire Newman 님께도 감사 드립니다.
+좋은 행사를 준비해 주시고 또 저를 비롯한 한국 커뮤니티 운영진 분들을 초대 해 주신 Hong Phuc Dang 님, Mario Behling 님 및 FOSSASIA 팀에 감사 드립니다. 또한 제가 이번 행사 참석을 위해  [Ubuntu Donations Funding](https://discourse.ubuntu.com/t/ubuntu-donations-funding/29) 을 통해 신청한 여행 경비 지원 요청을 승인 해 주신 Canonical 의 Philipp Kewisch, Mauro Gaspari, Claire Newman 님께도 감사 드립니다.
 
 마지막으로, FOSSASIA 에서 한국 커뮤니티 부스를 차리는데 참여해 주신 각 커뮤니티의 운영진 분들과 한국에서 응원 해 주신 분들께도 감사 드립니다. 앞으로 열리는 다양한 행사에서도 기회가 될 때 또 함께 할 수 있다면 즐거운 시간이 될 것 같습니다. 
 

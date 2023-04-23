@@ -97,7 +97,7 @@ Since I've been trying out VisionFive2 which is an RISC-V SBC, I also wanted to 
 
 In last Ubuntu Summit, I stayed in Prague few more days to travel the city. But I couldn't do similar thing since stayig in Singapore was very expensive. But I could join FOSSASIA with folks from various Korean open source community and had great time. And was also glad to met folks I've met before or for the first time.
 
-Thank you Hong Phuc Dang, Mario Behling and the FOSSASIA team for organizing the event and inviting the Korean community. I would also like to thank Philipp Kewisch, Mauro Gaspari and Claire Newman from Canonical who approved my travel grant request that I've submitted with Ubuntu Donations Funding.
+Thank you Hong Phuc Dang, Mario Behling and the FOSSASIA team for organizing the event and inviting the Korean community. I would also like to thank Philipp Kewisch, Mauro Gaspari and Claire Newman from Canonical who approved my travel grant request that I've submitted with [Ubuntu Donations Funding.](https://discourse.ubuntu.com/t/ubuntu-donations-funding/29)
 
 Lastly, Thanks a lot to organizers from diverse community in Korea for joining the team to setup the booth and also people who encouraged our team in Korea. I belive It would be a lot of fun once again, If we can make thing togather on future events. 
 
