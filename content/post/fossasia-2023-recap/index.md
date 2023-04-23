@@ -53,7 +53,9 @@ draft: false
 ![](booth3.jpg)
 ![](booth4.jpg)
 
-부스 운영하면서 다른 행사에서 뵈었던 분들을 오랜만에 뵙기도 했고, 온라인으로만 만났던 분들을 또 현장에서 만날 수 있어 반가웠고, 이야기도 나눌수 있어 좋았습니다. 몇년간 UbuCon Asia 를 함께 준비했던 Ubuntu Malaysia 운영진으로 활동하시는 Khairul님과 jipang님 그리고 Raspberry Pi Japan 에서 활동하시는 Masafumi님 다시 만나뵙게 되어 반가웠고, 서울에서 열린 UbuCon Asia 에서 또 뵈었던 Naruhiko님과 Tristan님과도 만나서 대회를 나눌 수 있었습니다. LibreOffice, Debian, GrafanaLabs, ONLYOFFICE, COSCUP, Oracle, ExpressVPN 등 다른 부스에 방문해서 이야기를 나누기도 했습니다. Debian 부스에서는 DebConf18 때 만났던 Raju 님 잠깐 만날수 있어 또 반가웠고, COSCUP 부스는 방문 하는걸 잊고 있다가 철수 직전에 방문했다 보니 많은 예기를 나누진 못해서 조금 아쉬웠습니다. 그래도 서로 간단한 소개나 기념품 교환 정도는 할 수 있어 좋았습니다, Ubuntu Korea 에서 왔다고 하니 Singing 님과 앞서 연락 했던 것을 전달 받으셨었는지 언급 해 주시면서 COSCUP 에서도 발표나 부스 운영 해 보는것을 제안 해 주기도 하셨습니다.
+부스 운영하면서 다른 행사에서 뵈었던 분들을 오랜만에 뵙기도 했고, 온라인으로만 만났던 분들을 또 현장에서 만날 수 있어 반가웠고, 이야기도 나눌수 있어 좋았습니다. 몇년간 UbuCon Asia 를 함께 준비했던 Ubuntu Malaysia 운영진으로 활동하시는 Khairul님과 jipang님 그리고 Raspberry Pi Japan 에서 활동하시는 Masafumi님 다시 만나뵙게 되어 반가웠고, 서울에서 열린 UbuCon Asia 에서 또 뵈었던 Naruhiko님과 Tristan님과도 만나서 대회를 나눌 수 있었습니다. LibreOffice, Debian, GrafanaLabs, ONLYOFFICE, COSCUP, Oracle, ExpressVPN 등 다른 부스에 방문해서 이야기를 나누기도 했습니다.
+
+Debian 부스에서는 DebConf18 때 만났던 Raju 님 잠깐 만날수 있어 또 반가웠고, COSCUP 부스는 방문 하는걸 잊고 있다가 철수 직전에 방문했다 보니 많은 예기를 나누진 못해서 조금 아쉬웠습니다. 그래도 서로 간단한 소개나 기념품 교환 정도는 할 수 있어 좋았습니다, Ubuntu Korea 에서 왔다고 하니 Singing 님과 앞서 연락 했던 것을 전달 받으셨었는지 언급 해 주시면서 COSCUP 에서도 발표나 부스 운영 해 보는것을 제안 해 주기도 하셨습니다.
 
 ![](talk1.jpg)
 ![](talk2.jpg)
@@ -74,7 +76,7 @@ FOSSASIA 처럼 전세계 다양한 사람이 모이는 행사에 참여하면 �
 
 ### [How FOSS has empowered the robotics world: RMF in Singapore](https://www.youtube.com/live/X-wQyW5-O6U?feature=share&t=1285)
 ![](ros.jpg)
-로봇 개발에 사용되는 소프트웨어인 ROS, Gazebo, Open RMF 에 대해서 알 수 있었던 세션이였습니다. 키노트 바로 이후에 진행된 세션 이기도 했었고, 개인적으로 최근 로보틱스에 쓰는 툴인 ROS와 함께 우분투가 자주 언급 되곤 해서 ROS 가 무엇인이 궁금해서 들었던 세션 이기도 합니다. ROS 로봇 소프트웨어 개발을 효율적으로 할 수 있게 해 주는 오픈소스 도구임을 알 수 있었고, ROS 로 개발된 로봇의 사례 등에 대해서도 알 수 있었습니다. 로봇 시뮬레이션에 쓰이는 Gazebo, 실제 물리적 환경에 따라 움직이는 로봇을 개발할 때 사용하는 Open-RMF 등에 대해서도 알 수 있는 시간이였습니다.
+로봇 개발에 사용되는 소프트웨어인 ROS, Gazebo, Open RMF 에 대해서 알 수 있었던 세션이였습니다. 키노트 바로 이후에 진행된 세션 이기도 했었고, 개인적으로 최근 로보틱스에 쓰는 툴인 ROS와 함께 우분투가 자주 언급 되곤 해서 ROS 가 무엇인이 궁금해서 들었던 세션 이기도 합니다. ROS가 로봇 소프트웨어 개발을 효율적으로 할 수 있게 해 주는 오픈소스 도구임을 알 수 있었고, ROS 로 개발된 로봇의 사례 등에 대해서도 알 수 있었습니다. 로봇 시뮬레이션에 쓰이는 Gazebo, 실제 물리적 환경에 따라 움직이는 로봇을 개발할 때 사용하는 Open-RMF 등에 대해서도 알 수 있는 시간이였습니다.
 
 ### [FluxCD with Helm Controller + Cluster API: Managing workload on multiple Kubernetes Cluster](https://www.youtube.com/live/MUUXlKlYm9w?feature=share&t=10739)
 ![](k8s_fluxcd.jpg)
