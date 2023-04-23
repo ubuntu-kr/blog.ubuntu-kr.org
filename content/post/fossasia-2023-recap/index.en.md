@@ -75,7 +75,7 @@ When participate in events where various people from all over the world gather j
 
 As I mentioned, I rarely participated in the session this time, but that didn't mean I couldn't attend at all. To mention some talks or workshops i enjoyed, I could mention those sessions below. 
 
-### ### [How FOSS has empowered the robotics world: RMF in Singapore](https://www.youtube.com/live/X-wQyW5-O6U?feature=share&t=1285)
+### [How FOSS has empowered the robotics world: RMF in Singapore](https://www.youtube.com/live/X-wQyW5-O6U?feature=share&t=1285)
 ![](ros.jpg)
 
 It was a talk about ROS, Gazebo and Open RMP a software for working with robotics. I joined this talks since it was scheduled right after the keynote and intrested to learn a bit about ROS since it's frequently mentioned with Ubuntu. I could know that ROS is a set of open source toolkit for working with robotics efficiently, Gazebo is for simulations and Open RMP is for integrating robot with physical spaces where robot can contact with doors, tables, people walking by and more.
