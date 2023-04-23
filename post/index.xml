@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 우분투한국커뮤니티 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 22 Feb 2023 10:50:36 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Apr 2023 10:50:36 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FOSSASIA Summit 2023에 다녀와서</title>
+      <link>https://blog.ubuntu-kr.org/2023/04/23/fossasia-2023-recap/</link>
+      <pubDate>Sun, 23 Apr 2023 10:50:36 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2023/04/23/fossasia-2023-recap/</guid>
+      <description>싱가포르에서 열린 FOSSASIA Summit 2023! 최근 몇년간 코로나 19로 인해 온라인으로 열리다가 올해는 오래간만에 오프라인으로 행사가 개최되었습니다. 저는 작년 온라인 행사에서 오거나이저로 참여하여, 마케팅 팀과 비디오 팀에서 활동 했었는데요. 올해 FOSSASIA 행사에는 오거나이저로 참여하지는 못했습니다. 왜냐하면 올해 FOSSASIA 팀이 만들어질 때 저는 한국에서 열리는 UbuCon Asia 2022 행사 몇주 앞두고 정신 없을 정도로 바빠서 팀이 만들어 지고 있는것도 몰랐던거 같네요. 대신 올해는 FOSSASIA를 총괄 하시는 Hong Phuc 님으로부터 한국 커뮤니티 부스를 운영해 보는 것에 대해 제안을 받고, 처음으로 해외 커뮤니티 행사에서 부스를 차려서 운영을 해 보게 되었습니다.</description>
+    </item>
+    
     <item>
       <title>Ubuntu Frame 처음 만나보기(실습)</title>
       <link>https://blog.ubuntu-kr.org/2023/02/22/ubuntuframe-recap-exercise/</link>

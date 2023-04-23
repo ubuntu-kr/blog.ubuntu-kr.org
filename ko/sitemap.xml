@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.ubuntu-kr.org/tags/iot/</loc>
-    <lastmod>2023-02-22T10:50:36+09:00</lastmod>
+    <loc>https://blog.ubuntu-kr.org/tags/fossasia/</loc>
+    <lastmod>2023-04-23T10:50:36+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/2023/04/23/fossasia-2023-recap/</loc>
+    <lastmod>2023-04-23T10:50:36+09:00</lastmod>
   </url><url>
     <loc>https://blog.ubuntu-kr.org/post/</loc>
-    <lastmod>2023-02-22T10:50:36+09:00</lastmod>
+    <lastmod>2023-04-23T10:50:36+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,8 +21,14 @@
                 href="https://blog.ubuntu-kr.org/post/"
                 />
   </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/recap/</loc>
+    <lastmod>2023-04-23T10:50:36+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/report/</loc>
+    <lastmod>2023-04-23T10:50:36+09:00</lastmod>
+  </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/</loc>
-    <lastmod>2023-02-22T10:50:36+09:00</lastmod>
+    <lastmod>2023-04-23T10:50:36+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,6 +39,22 @@
                 hreflang="ko"
                 href="https://blog.ubuntu-kr.org/tags/"
                 />
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/</loc>
+    <lastmod>2023-04-23T10:50:36+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/"
+                />
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/iot/</loc>
+    <lastmod>2023-02-22T10:50:36+09:00</lastmod>
   </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/ubucon/</loc>
     <lastmod>2023-02-22T10:50:36+09:00</lastmod>
@@ -46,19 +71,6 @@
   </url><url>
     <loc>https://blog.ubuntu-kr.org/2023/02/22/ubuntuframe-recap-exercise/</loc>
     <lastmod>2023-02-22T10:50:36+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.ubuntu-kr.org/</loc>
-    <lastmod>2023-02-22T10:50:36+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.ubuntu-kr.org/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.ubuntu-kr.org/"
-                />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/2023/02/07/ubuntuframe-recap/</loc>
     <lastmod>2023-02-07T12:31:04+09:00</lastmod>
@@ -118,9 +130,6 @@
     <lastmod>2018-06-25T21:49:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/event/</loc>
-    <lastmod>2018-06-25T21:49:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.ubuntu-kr.org/tags/report/</loc>
     <lastmod>2018-06-25T21:49:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.ubuntu-kr.org/2018/06/25/ubuntu-fest-en/</loc>
