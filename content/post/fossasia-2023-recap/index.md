@@ -100,3 +100,10 @@ Hackclub 이라는 고등학생 개발자로 주로 구성된 커뮤니티이자
 마지막으로, FOSSASIA 에서 한국 커뮤니티 부스를 차리는데 참여해 주신 각 커뮤니티의 운영진 분들과 한국에서 응원 해 주신 분들께도 감사 드립니다. 앞으로 열리는 다양한 행사에서도 기회가 될 때 또 함께 할 수 있다면 즐거운 시간이 될 것 같습니다. 
 
 ![](team2.jpg)
+
+## 한국 커뮤니티 부스에 참여한 각 커뮤니티에 대해 더 알아보기
+
+- 우분투한국커뮤니티 - https://ubuntu-kr.org
+- C++ Korea - github.com/CppKorea
+- Women Who Code Seoul - womenwhocode.com/seoul
+- 클라우드 유랑단 - https://bandwagon.cloud

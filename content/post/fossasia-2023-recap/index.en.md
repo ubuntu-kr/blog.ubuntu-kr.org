@@ -102,3 +102,10 @@ Thank you Hong Phuc Dang, Mario Behling and the FOSSASIA team for organizing the
 Lastly, Thanks a lot to organizers from diverse community in Korea for joining the team to setup the booth and also people who encouraged our team in Korea. I belive It would be a lot of fun once again, If we can make thing togather on future events. 
 
 ![](team2.jpg)
+
+## Learn more about the communities joined the Korean community booth
+
+- Ubuntu Korea Community - https://ubuntu-kr.org
+- C++ Korea - github.com/CppKorea
+- Women Who Code Seoul - womenwhocode.com/seoul
+- Cloud Bandwagon - https://bandwagon.cloud
