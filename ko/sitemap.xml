@@ -4,9 +4,29 @@
   <url>
     <loc>https://blog.ubuntu-kr.org/tags/fossasia/</loc>
     <lastmod>2023-04-23T10:50:36+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/tags/fossasia/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/tags/fossasia/"
+                />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/2023/04/23/fossasia-2023-recap/</loc>
     <lastmod>2023-04-23T10:50:36+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/2023/04/23/fossasia-2023-recap/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/2023/04/23/fossasia-2023-recap/"
+                />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/post/</loc>
     <lastmod>2023-04-23T10:50:36+09:00</lastmod>
@@ -23,9 +43,29 @@
   </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/recap/</loc>
     <lastmod>2023-04-23T10:50:36+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/tags/recap/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/tags/recap/"
+                />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/report/</loc>
     <lastmod>2023-04-23T10:50:36+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/tags/report/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/tags/report/"
+                />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/</loc>
     <lastmod>2023-04-23T10:50:36+09:00</lastmod>
