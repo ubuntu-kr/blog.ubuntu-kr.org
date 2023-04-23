@@ -104,6 +104,6 @@ Hackclub 이라는 고등학생 개발자로 주로 구성된 커뮤니티이자
 ## 한국 커뮤니티 부스에 참여한 각 커뮤니티에 대해 더 알아보기
 
 - 우분투한국커뮤니티 - https://ubuntu-kr.org
-- C++ Korea - github.com/CppKorea
-- Women Who Code Seoul - womenwhocode.com/seoul
+- C++ Korea - https://github.com/CppKorea
+- Women Who Code Seoul - https://womenwhocode.com/seoul
 - 클라우드 유랑단 - https://bandwagon.cloud

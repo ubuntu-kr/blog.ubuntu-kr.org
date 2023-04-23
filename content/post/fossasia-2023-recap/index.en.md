@@ -12,7 +12,7 @@ authors:
       email: ybhan@ubuntu.com
       launchpad: ybhan
       github: sukso96100
-      profile: profile.jpg
+      profile: https://avatars2.githubusercontent.com/u/1916739?s=460&v=4
 image: team.jpg
 draft: false
 ---
@@ -106,6 +106,6 @@ Lastly, Thanks a lot to organizers from diverse community in Korea for joining t
 ## Learn more about the communities joined the Korean community booth
 
 - Ubuntu Korea Community - https://ubuntu-kr.org
-- C++ Korea - github.com/CppKorea
-- Women Who Code Seoul - womenwhocode.com/seoul
+- C++ Korea - https://github.com/CppKorea
+- Women Who Code Seoul - https://womenwhocode.com/seoul
 - Cloud Bandwagon - https://bandwagon.cloud
