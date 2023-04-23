@@ -12,7 +12,7 @@ authors:
       email: ybhan@ubuntu.com
       launchpad: ybhan
       github: sukso96100
-      profile: profile.jpg
+      profile: https://avatars2.githubusercontent.com/u/1916739?s=460&v=4
 image: team.jpg
 draft: false
 ---
