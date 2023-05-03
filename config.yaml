@@ -70,10 +70,7 @@ languages:
         name: 행사
         weight: 5
         url: https://event.ubuntu-kr.org
-      - identifier: ask
-        name: Ask Ubuntu KR 
-        weight: 6
-        url: https://ask.ubuntu-kr.org
+      
   en:
     languageName: English
     title: Ubuntu Korea Community Blog
@@ -124,7 +121,3 @@ languages:
         name: Events
         weight: 5
         url: https://event.ubuntu-kr.org
-      - identifier: ask
-        name: Ask Ubuntu KR 
-        weight: 6
-        url: https://ask.ubuntu-kr.org
