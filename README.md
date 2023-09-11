@@ -3,6 +3,12 @@
 
 The new Blog of Ubuntu Korea Community. Built with [Hugo](https://gohugo.io) and vanillaframework.io
 
+## How to Contribute?
+
+기고 방법은 아래 링크에 기재되어 있습니다.
+
+<https://blog.ubuntu-kr.org/contribute/>
+
 ## License
 MIT License (See `LICENSE`)
 
