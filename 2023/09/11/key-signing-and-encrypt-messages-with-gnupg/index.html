@@ -302,7 +302,7 @@ gpg --list-key &lt;경택님의 GPG 핑거프린트 값&gt;
 암호화가 안된 공개키 형태가 됩니다.</li>
 </ul>
 </li>
-<li>(작성 후, 암호화하여 경택님만 읽을 수 있는) 메시지가 담긴 파일: <code>letter</code></li>
+<li><code>letter</code> : (작성 후, 암호화하여 경택님만 읽을 수 있는) 메시지가 담긴 파일</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 경택님의 공개키에 제(로컬 서명자) 서명을 추가합니다. </span>
 </span></span><span style="display:flex;"><span>gpg --local-user &lt;로컬 서명자의 핑거프린트 값&gt; --sign-key &lt;경택님의 핑거프린트 값&gt;
