@@ -114,7 +114,8 @@ GnuPG(이하, GPG)는 비대칭키 암호화 기법을 사용합니다.
 - `signedkey.msg` 서명에 쓰인 키의 버전 정보를 가지고 있고,  
 - `msg.asc`는 `-----PGP MESSAGE-----` 블록을 가지고 있습니다.  
   즉, 경택님의 공개키로 **암호화된 메시지**라는 것을 알 수 있습니다.  
-  이 파일들은 아래 단계 중 6단계에서 다뤄질 것입니다.
+  이 파일들은 아래 단계 중 `(3) 상대방이 서명해준 내 공개키 적용하기
+` 에서 다뤄질 것입니다.
 
   ![confirm_downloaded_attachment](./images/downloaded_attachment.jpg)
 
@@ -130,19 +131,19 @@ GnuPG(이하, GPG)는 비대칭키 암호화 기법을 사용합니다.
   GPG키는 **40자의 16진수를 핑거프린트 값**을 갖습니다.  
   키 ID는 보통 핑거프린트 40자 중 뒤의 16자리, `0x<16-Digit-Hex-Code>` 로 표현됩니다.  
 
-   ```bash키
-   # receive public key from keyserver
-   gpg --keyserver keyserver.ubuntu.com --recv-keys <경택님의 GPG 핑거프린트 값>
+```bash키
+# receive public key from keyserver
+gpg --keyserver keyserver.ubuntu.com --recv-keys <경택님의 GPG 핑거프린트 값>
 
-   # 이후에, 키를 제대로 내려받았는지 확인합니다.
+# 이후에, 키를 제대로 내려받았는지 확인합니다.
 
-   # 방법1: 모든 키 조회
-   gpg --list-keys
-   # 방법2: 내려받은 키만 조회
-   gpg --list-key <경택님의 GPG 핑거프린트 값>
-   ```
+# 방법1: 모든 키 조회
+gpg --list-keys
+# 방법2: 내려받은 키만 조회
+gpg --list-key <경택님의 GPG 핑거프린트 값>
+```
 
-   ![recv_pubkeys](./images/recv_key_from_keyserver.jpg)
+![recv_pubkeys](./images/recv_key_from_keyserver.jpg)
 
 4. 제 노트북에서 두 가지의 파일을 준비하고, 이를 함께 암호화 해보겠습니다.  
    - `yukinet_origin.asc` : 제 서명을 추가한 경택님의 공개키  
@@ -150,77 +151,77 @@ GnuPG(이하, GPG)는 비대칭키 암호화 기법을 사용합니다.
        암호화가 안된 공개키 형태가 됩니다.
    - `letter` : (작성 후, 암호화하여 경택님만 읽을 수 있는) 메시지가 담긴 파일  
 
-    ```bash
-    # 경택님의 공개키에 제(로컬 서명자) 서명을 추가합니다. 
-    gpg --local-user <로컬 서명자의 핑거프린트 값> --sign-key <경택님의 핑거프린트 값>
+```bash
+# 경택님의 공개키에 제(로컬 서명자) 서명을 추가합니다. 
+gpg --local-user <로컬 서명자의 핑거프린트 값> --sign-key <경택님의 핑거프린트 값>
 
-    # 서명 대상이 제대로 되었는지 확인하고, `y`를 입력하여 진행합니다.
-    ```
+# 서명 대상이 제대로 되었는지 확인하고, `y`를 입력하여 진행합니다.
+```
 
-    ![key_signing](./images/keysiging-to-pubkey.jpg)
+![key_signing](./images/keysiging-to-pubkey.jpg)
 
-    ```bash
-    # 서명이 제대로 되었는지 확인합니다.
-    # 이 때, 해당 공개키에 로컬 서명자의 서명이 추가되면 성공
-    gpg --list-sigs <경택님의 핑거프린트 값>
-    ```
+```bash
+# 서명이 제대로 되었는지 확인합니다.
+# 이 때, 해당 공개키에 로컬 서명자의 서명이 추가되면 성공
+gpg --list-sigs <경택님의 핑거프린트 값>
+```
 
-    ![confirm_key_signing](./images/confirm_well_signed.jpg)
+![confirm_key_signing](./images/confirm_well_signed.jpg)
 
-    ```bash
-    # 새로운 서명이 첨부된 경택님의 공개키를 내보냅니다. (yukinet_signed.asc)
-    gpg --armor --output <공개키 블럭을 저장할 텍스트파일이름> --export <경택님의 핑거프린트 값> 
+```bash
+# 새로운 서명이 첨부된 경택님의 공개키를 내보냅니다. (yukinet_signed.asc)
+gpg --armor --output <공개키 블럭을 저장할 텍스트파일이름> --export <경택님의 핑거프린트 값> 
 
-    # 메시지를 작성해봅니다. (letter)
-    # 예시와 같이 stdin으로 작성해도 되고, 
-    # nano/vim/vscode 등의 에디터를 사용해도 됩니다.
-    cat << EOF > letter // 이 줄 먼저 입력하고 Enter
-    > lorem ipsum blablabla Yuki Network LTD!
-    > Presentation GamSaHapNiDa!
-    >
-    > 다음에도 봐요!
-    >
-    > EOF
-    ```
+# 메시지를 작성해봅니다. (letter)
+# 예시와 같이 stdin으로 작성해도 되고, 
+# nano/vim/vscode 등의 에디터를 사용해도 됩니다.
+cat << EOF > letter // 이 줄 먼저 입력하고 Enter
+> lorem ipsum blablabla Yuki Network LTD!
+> Presentation GamSaHapNiDa!
+>
+> 다음에도 봐요!
+>
+> EOF
+```
 
-    ![pubkey and letter](./images/export_pubkey_add_msg.jpg)
+![pubkey and letter](./images/export_pubkey_add_msg.jpg)
 
 5. 이 두 파일을 하나로 합치고, 경택님의 공개키로 암호화를 한 후, 웹메일에 유첨하여 보내겠습니다.  
    - 메일을 받은 경택님은 제가 보낸 메일에 첨부된 암호화된 msg파일을 받아,  
      키서버 갱신 절차를 진행할 것입니다.  
   
-   ```bash
-   # 두 파일을 하나로 합칩니다. 
-   
-   # 방법1: append
-   #`letter` 파일의 기존 메시지 바로 뒤에 공개키 블럭을 추가합니다.
-   cat yukinet_signed.asc >> letter
+```bash
+# 두 파일을 하나로 합칩니다. 
 
-   # 방법2: write(overwrite)
-   # 둘 다 출력하고 새로운 파일을 만듭니다.  
-   cat letter yukinet_signed.asc > letter_with_signedKey  
-   
-   # 제대로 합쳐졌는지 확인해봅니다.
-   # 방법2 를 했을 경우에는 `cat letter_with_signedKey`
-   cat letter
-   ```
+# 방법1: append
+#`letter` 파일의 기존 메시지 바로 뒤에 공개키 블럭을 추가합니다.
+cat yukinet_signed.asc >> letter
 
-   ![merge letter and key](./images/merge_key_letter.jpg)
+# 방법2: write(overwrite)
+# 둘 다 출력하고 새로운 파일을 만듭니다.  
+cat letter yukinet_signed.asc > letter_with_signedKey  
 
-   ```bash
-   # 이 파일을 경택님의 공개키로 암호화합니다. 
-   # `-r`은 `--recipient`의 약자입니다.
-   cat letter | gpg --encrypt --armor -r <경택님의 핑거프린트 값> --output yukinet-signedBy-mscho.asc
+# 제대로 합쳐졌는지 확인해봅니다.
+# 방법2 를 했을 경우에는 `cat letter_with_signedKey`
+cat letter
+```
 
-   # 암호화가 잘 되었는지 확인합니다.
-   cat yukinet-signedBy-mscho.asc
-   ```
-  
-   ![encrypt_letter](./images/encrypt_msg.jpg)
+![merge letter and key](./images/merge_key_letter.jpg)
 
-   웹메일에 유첨하여 보냅니다.
+```bash
+# 이 파일을 경택님의 공개키로 암호화합니다. 
+# `-r`은 `--recipient`의 약자입니다.
+cat letter | gpg --encrypt --armor -r <경택님의 핑거프린트 값> --output yukinet-signedBy-mscho.asc
 
-   ![send_mail](./images/send_mail.jpg)
+# 암호화가 잘 되었는지 확인합니다.
+cat yukinet-signedBy-mscho.asc
+```
+
+![encrypt_letter](./images/encrypt_msg.jpg)
+
+- 이후, 웹메일에 유첨하여 보냅니다.
+
+![send_mail](./images/send_mail.jpg)
 
 ### (3) 상대방이 서명해준 내 공개키 적용하기
 
@@ -233,27 +234,27 @@ GnuPG(이하, GPG)는 비대칭키 암호화 기법을 사용합니다.
   `-----PGP PUBLIC KEY BLOCK-----` 의 블럭을 가집니다.  
   이때는 단순히 아래 명령어를 통해, 전달받은 키를 로컬에 등록하면 됩니다.
 
-   ```bash
-   gpg --import <전달받은 공개키 블럭이 담긴 텍스트파일>
-   ```
+```bash
+gpg --import <전달받은 공개키 블럭이 담긴 텍스트파일>
+```
 
 - 받은 텍스트 파일이 **암호화** 된 경우  
   `-----PGP MESSAGE-----` 블럭을 가집니다.  
   이때는 복호화(decryption)를 하고, 파이프로 로컬에 등록합니다.  
 
-   ```bash
-   # (optional) 복호화 결과만 출력하여 확인
-   gpg --decrypt <전달받은 암호화된 텍스트파일>
-   
-   # 복호화 결과를 파이프로 로컬에 등록
-   # 이때 `-----PGP PUBLIC KEY BLOCK-----` 의 블럭을 인지하여 등록합니다.
-   gpg --decrypt <전달받은 암호화된 텍스트파일> | gpg --import
+```bash
+# (optional) 복호화 결과만 출력하여 확인
+gpg --decrypt <전달받은 암호화된 텍스트파일>
 
-   # (optional) 로컬에 제대로 등록되었는지 확인합니다
-   gpg --list-sig <로컬에 등록된 본인 핑거프린트 값>
-   # OR `모든 키 조회`
-   gpg --list-keys 
-   ```
+# 복호화 결과를 파이프로 로컬에 등록
+# 이때 `-----PGP PUBLIC KEY BLOCK-----` 의 블럭을 인지하여 등록합니다.
+gpg --decrypt <전달받은 암호화된 텍스트파일> | gpg --import
+
+# (optional) 로컬에 제대로 등록되었는지 확인합니다
+gpg --list-sig <로컬에 등록된 본인 핑거프린트 값>
+# OR `모든 키 조회`
+gpg --list-sigs 
+```
 
    ![decrypt_attachment](./images/decrypt_attachment.jpg)
 
