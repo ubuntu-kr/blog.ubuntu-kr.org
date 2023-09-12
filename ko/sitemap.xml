@@ -2,6 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.ubuntu-kr.org/tags/cryptography/</loc>
+    <lastmod>2023-09-11T21:35:55+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/gnupg/</loc>
+    <lastmod>2023-09-11T21:35:55+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/gpg/</loc>
+    <lastmod>2023-09-11T21:35:55+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/2023/09/11/key-signing-and-encrypt-messages-with-gnupg/</loc>
+    <lastmod>2023-09-11T21:35:55+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/pgp/</loc>
+    <lastmod>2023-09-11T21:35:55+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/post/</loc>
+    <lastmod>2023-09-11T21:35:55+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/post/"
+                />
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/</loc>
+    <lastmod>2023-09-11T21:35:55+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/tags/"
+                />
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/</loc>
+    <lastmod>2023-09-11T21:35:55+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/"
+                />
+  </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/fossasia/</loc>
     <lastmod>2023-04-23T10:50:36+09:00</lastmod>
     <xhtml:link
@@ -28,19 +82,6 @@
                 href="https://blog.ubuntu-kr.org/2023/04/23/fossasia-2023-recap/"
                 />
   </url><url>
-    <loc>https://blog.ubuntu-kr.org/post/</loc>
-    <lastmod>2023-04-23T10:50:36+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.ubuntu-kr.org/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.ubuntu-kr.org/post/"
-                />
-  </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/recap/</loc>
     <lastmod>2023-04-23T10:50:36+09:00</lastmod>
     <xhtml:link
@@ -65,32 +106,6 @@
                 rel="alternate"
                 hreflang="ko"
                 href="https://blog.ubuntu-kr.org/tags/report/"
-                />
-  </url><url>
-    <loc>https://blog.ubuntu-kr.org/tags/</loc>
-    <lastmod>2023-04-23T10:50:36+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.ubuntu-kr.org/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.ubuntu-kr.org/tags/"
-                />
-  </url><url>
-    <loc>https://blog.ubuntu-kr.org/</loc>
-    <lastmod>2023-04-23T10:50:36+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.ubuntu-kr.org/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.ubuntu-kr.org/"
                 />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/iot/</loc>

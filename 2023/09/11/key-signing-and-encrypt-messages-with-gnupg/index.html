@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href='/img/favicon/apple-touch-icon.png'>
+    <link rel="icon" type="image/png" sizes="32x32" href='/img/favicon/favicon-32x32.png'>
+    <link rel="icon" type="image/png" sizes="16x16" href='/img/favicon/favicon-16x16.png'>
+    <title>GPG로 구현해보는 메시지 암호화와 키사이닝 | 우분투한국커뮤니티 블로그</title>
+    
+    <meta property="og:site_name" content="우분투한국커뮤니티 블로그" />
+    <meta property="og:title" content="GPG로 구현해보는 메시지 암호화와 키사이닝" />
+
+    
+    <meta property="og:image" content='https://blog.ubuntu-kr.org/2023/09/11/key-signing-and-encrypt-messages-with-gnupg/keysigning.jpg' />
+    <meta property="og:image:secure_url" content='https://blog.ubuntu-kr.org/2023/09/11/key-signing-and-encrypt-messages-with-gnupg/keysigning.jpg' />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content='https://blog.ubuntu-kr.org/2023/09/11/key-signing-and-encrypt-messages-with-gnupg/keysigning.jpg' />
+
+    
+    <link rel="stylesheet" href="https://blog.ubuntu-kr.org/sass/theme.min.828cf38923c487948bdf4c012b8b81e3defb05304085be7423d7c8f06a39c556.css">
+</head><body><header id="navigation" class="p-navigation is-dark">
+  <div class="p-navigation__row">
+    <div class="p-navigation__banner">
+      <div class="p-navigation__tagged-logo" style="min-width: 6rem;">
+        <a class="p-navigation__link" href="/">
+          <div class="p-navigation__logo-tag">
+            <img class="p-navigation__logo-icon" src="/img/UbuntuKrCircleWhite.svg" alt="">
+          </div>
+          <span class="p-navigation__logo-title">블로그</span>
+        </a>
+      </div>
+      <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+      <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+    </div>
+    <nav class="p-navigation__nav" aria-label="Example sub navigation">
+      <ul class="p-navigation__items">
+        
+          
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="/tags">태그</a>
+          </li>
+          
+        
+          
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="/index.xml">구독(RSS)</a>
+          </li>
+          
+        
+          
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="/contribute">블로그에 기고하기</a>
+          </li>
+          
+        
+      </ul>
+     
+     <ul class="p-navigation__items">
+        <li class="p-navigation__item--dropdown-toggle" id="link-4">
+          <a class="p-navigation__link" aria-controls="account-menu">
+            🌏
+          </a>
+          <ul class="p-navigation__dropdown--right" id="account-menu" aria-hidden="true">
+            
+            
+            <li>
+              <a href="https://blog.ubuntu-kr.org/2023/09/11/key-signing-and-encrypt-messages-with-gnupg/" class="p-navigation__dropdown-item">📄 한국어</a>
+            </li>
+            
+            
+            <li>
+              <a href="https://blog.ubuntu-kr.org/" class="p-navigation__dropdown-item">🏠 한국어</a>
+            </li>
+            
+            <li>
+              <a href="https://blog.ubuntu-kr.org/en/" class="p-navigation__dropdown-item">🏠 English</a>
+            </li>
+            
+            
+          </ul>
+        </li>
+        <li class="p-navigation__item--dropdown-toggle" id="link-4">
+          <a class="p-navigation__link" aria-controls="account-menu">
+            🔗
+          </a>
+          <ul class="p-navigation__dropdown--right" id="account-menu" aria-hidden="true">
+            
+            <li>
+              <a href="https://ubuntu-kr.org" class="p-navigation__dropdown-item">홈페이지</a>
+            </li>
+            
+            <li>
+              <a href="https://discourse.ubuntu-kr.org" class="p-navigation__dropdown-item">포럼</a>
+            </li>
+            
+            <li>
+              <a href="https://wiki.ubuntu-kr.org" class="p-navigation__dropdown-item">위키</a>
+            </li>
+            
+            <li>
+              <a href="https://ubuntu-kr.github.io/workshops/" class="p-navigation__dropdown-item">튜토리얼</a>
+            </li>
+            
+            <li>
+              <a href="https://event.ubuntu-kr.org" class="p-navigation__dropdown-item">행사</a>
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="content">
+
+
+<main>
+  <section class="p-strip--image main-strip"
+    }
+    style="background-image:url('keysigning.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+    >
+      <div class="row">
+        
+        <div class="col-6">
+          <div class="p-card--overlay">
+            <h2>GPG로 구현해보는 메시지 암호화와 키사이닝</h2>
+            <ul class="p-card__content p-inline-list--middot">
+              
+              <li class="p-inline-list__item">
+                조민성
+              </li>
+              
+            </ul>
+            <p><u class=" timedisplay" style="text-decoration-style: dotted;">2023-09-11T21:35:55&#43;09:00</u></p>
+            <p class="p-card__content"></p>
+            
+            <a href="/tags/gnupg" class="tag">
+              <div class="p-chip">
+                <span class="p-chip__value">GnuPG</span>
+              </div>
+            </a>
+            
+            <a href="/tags/gpg" class="tag">
+              <div class="p-chip">
+                <span class="p-chip__value">GPG</span>
+              </div>
+            </a>
+            
+            <a href="/tags/pgp" class="tag">
+              <div class="p-chip">
+                <span class="p-chip__value">PGP</span>
+              </div>
+            </a>
+            
+            <a href="/tags/cryptography" class="tag">
+              <div class="p-chip">
+                <span class="p-chip__value">cryptography</span>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <section class="p-strip">
+  <div class="row">
+  <p>지난 주에 모두의 관심 덕택에 UbuCon Korea 2023이 성황리에 개최되었습니다.<br>
+감사드립니다. (__)</p>
+<p><a href="https://discourse.ubuntu-kr.org/t/ubucon-korea-2023-151/49073">[Discourse/UbuCon Korea 2023이 151명의 참석자와 함께 성공적으로 종료 되었습니다!]</a></p>
+<p>이번 행사에서는 Key Signing Party도 진행하였는데요.</p>
+<p>GPG 명령어 만으로 서로의 키에 서명하여 이메일로 전달하고,<br>
+서명이 담긴 키를 키서버에 업로드 하는 방법을 알아보도록 하겠습니다.</p>
+<h2 id="1-시작하기에-앞서">1. 시작하기에 앞서</h2>
+<ol>
+<li>
+<p><strong>[⚠️CAUTION⚠️]</strong><br>
+<code>Key Signing[서명]</code> (이하, 키사이닝) 을 할 때에는,<br>
+키사이닝 파티 행사나 다른 계기를 통해,<br>
+서명하는 본인이 상대방의 신원을 직접 확인한 상태에서 키사이닝을 진행해야 합니다.<br>
+신원 확인 없이 무조건적으로 키사이닝을 진행하면<br>
+<strong>본인과 상대방의 키에 대한 신뢰도가 크게 저하될 위험</strong>이 있습니다.</p>
+</li>
+<li>
+<p>비대칭키 및 GnuPG가 익숙하지 않은, 그리고 SMTP가 아닌<br>
+기존 웹메일로 서명한 공개키와 메시지를 함께 전송하실 분들을 대상으로 작성되었습니다.<br>
+참고로, 비대칭키에 대한 설명은 <a href="https://opentutorials.org/module/5250/29715">Opentutorials(동영상)</a>나 <a href="https://raonctf.com/essential/study/web/asymmetric_key">RAON CTF(글)</a>의 내용이 더 상세합니다.</p>
+</li>
+<li>
+<p>Alternatives<br>
+(1) <code>caff</code> 및 <code>sigining-party</code> 패키지, 혹은<br>
+(2) <code>pius</code> 패키지로도 서명이 가능합니다.<br>
+Ubuntu/Debian 계열에서는 이 두 가지 방법을 모두 지원합니다. :)<br>
+해당 내용은 <a href="https://events.canonical.com/event/32/contributions/310/">UCK23/KSP</a>의 <code>KSP세션.pdf</code> 슬라이드에서도 참고할 수 있습니다.</p>
+</li>
+</ol>
+<h2 id="2-특이점이-온-교환일기로-알아보는-비대칭키를-통한-메시지-암호화">2. &lsquo;특이점이 온 교환일기&rsquo;로 알아보는 비대칭키를 통한 메시지 암호화</h2>
+<ul>
+<li>이미 ssh키 등 비대칭키에 익숙하신 분들은 다음 step으로 넘어가도 무방합니다.</li>
+</ul>
+<p>GnuPG(이하, GPG)는 비대칭키 암호화 기법을 사용합니다.
+자물쇠가 달린 교환일기를 예로 들어보겠습니다.</p>
+<h3 id="1-갑자기-교환일기">(1) 갑자기 교환일기?</h3>
+<p><img src="./images/diary.png" alt="exchange_diary"><br>
+(네, 알고 계신 그거 맞습니다)</p>
+<p>이 교환일기는 보통의 교환일기보다 특이한데요,<br>
+(1) 삽지가 없고 (2) 두 종류의 열쇠가 있습니다.</p>
+<ul>
+<li>빈 교환일기: 그림과 달리 삽지(종이)가 없는 앞뒤표지와 자물쇠만 있다고 생각해봅시다.<br>
+암호화를 위한 ASCII-armor 형식 그 자체를 비유하고 싶은데, 마땅치가 않군요.</li>
+<li>비밀키: 일기장의 주인이 가지고 있는 열쇠. 일기장의 <code>만능키</code><br>
+일기장을 잠그고(암호화), 열(복호화) 수 있습니다.<br>
+일기장의 주인임을 인증하는 역할을 하기에,<br>
+다른 사람의 손에 쥐어주면 안됩니다.</li>
+<li>공개키: 일기장의 주인이 다른 사람들에게 나눠주는 열쇠.<br>
+빈 일기장에 메시지를 적은 삽지를 끼우고,<br>
+잠그는(암호화) 역할만 할 수 있습니다.<br>
+이 공개키 만으로는 일기장의 주인임을 인증할 수 없습니다.</li>
+</ul>
+<h3 id="2-교환일기를-써봅시다">(2) 교환일기를 써봅시다</h3>
+<ol>
+<li>Blue와 Green 이라는 사람이 있고, 둘은 <del>특이점이 온</del> 교환일기를 쓰고 싶어합니다.</li>
+<li>각자, 열쇠 한 벌(key pair)을 준비합니다.
+<ul>
+<li>Blue는 Blue 자신을 증명할 비밀키와 Green에게 줄 공개키를 준비합니다.</li>
+<li>Green도 Green 자신을 증명할 비밀키와 Blue에게 줄 공개키를 준비합니다.</li>
+</ul>
+</li>
+<li>공개키를 교환합니다.
+<ul>
+<li>Blue는 Green에게 Blue의 공개키를,<br>
+Green은 Blue에게 Green의 공개키를 줍니다.</li>
+</ul>
+</li>
+<li><strong>Blue</strong>는 Green의 빈 일기장에 끼울 삽지(새로운 텍스트파일)를 준비하고,<br>
+전하고 싶은 메시지를 적습니다.</li>
+<li><strong>Blue</strong>는 Green에게서 받은 공개키를 이용해서,<br>
+작성한 삽지를 빈 일기장에 끼우고 잠급니다(암호화).<br>
+한번 잠근 Green의 일기장은,<br>
+<strong>Blue</strong>가 가진 Green의 공개키만으로는 다시는 열 수 없습니다.<br>
+오직 Green이 가진 비밀키로만 Green의 일기를 열 수 있습니다.</li>
+<li><strong>Green</strong>이 Blue가 잠근 본인의 일기를 받았습니다.<br>
+<strong>Green</strong>은 가지고 있던 본인의 비밀키로 자신의 일기를 열어 내용을 확인합니다.</li>
+<li><strong>Blue</strong> 또한 4 ~ 5 의 과정을 진행합니다.</li>
+</ol>
+<h2 id="3-gpg-키사이닝">3. GPG 키사이닝</h2>
+<p>위의 예시를 실제 GPG 명령어로 옮겨봅시다.</p>
+<ul>
+<li>과정 속에서 암호를 입력하라는 란이 있는데, GPG 비밀키의 암호를 입력하면 됩니다.</li>
+</ul>
+<h3 id="1-youve-got-mail">(1) You&rsquo;ve got mail!</h3>
+<p>어라, 이미 &lsquo;서명을 해놨으니 (어서) 서명을 해달라는&rsquo; 메일이 와있군요.</p>
+<p><img src="./images/you've_got_mail.jpg" alt="you&amp;rsquo;ve got mail"></p>
+<p>한번 이걸로 해봅시다.</p>
+<p><a href="https://www.peeringdb.com/net/33182">Yuki Network Ltd.</a>의 김경택님께서 <code>signedkey.msg</code>와 <code>msg.asc</code>를 첨부파일로 보내주셨습니다.</p>
+<p>각 파일을 열어보니,</p>
+<ul>
+<li>
+<p><code>signedkey.msg</code> 서명에 쓰인 키의 버전 정보를 가지고 있고,</p>
+</li>
+<li>
+<p><code>msg.asc</code>는 <code>-----PGP MESSAGE-----</code> 블록을 가지고 있습니다.<br>
+즉, 경택님의 공개키로 <strong>암호화된 메시지</strong>라는 것을 알 수 있습니다.<br>
+이 파일들은 아래 단계 중 6단계에서 다뤄질 것입니다.</p>
+<p><img src="./images/downloaded_attachment.jpg" alt="confirm_downloaded_attachment"></p>
+</li>
+</ul>
+<p>제가 먼저 서명해서 보내고, 메일로 받은 경택님의 서명이 담긴 파일은 그 이후에 다루도록 하겠습니다.</p>
+<h3 id="2-로컬-서명자의-서명하기">(2) 로컬 서명자의 서명하기</h3>
+<ol>
+<li>
+<p>이미 키사이닝 파티에서 서로 신원 증명을 하여,<br>
+서로 서명한 공개키를 주고 받기로 했습니다. (Cross-Signed)</p>
+</li>
+<li>
+<p>둘은 사전에 <a href="http://keyserver.ubuntu.com/">Ubuntu keyserver</a>에 공개키를 게시하였습니다.</p>
+</li>
+<li>
+<p>제가 경택님의 공개키를 받도록 하겠습니다.(교환)<br>
+GPG 핑거프린트를 파티에서 확인하였고, Ubuntu keyserver에서 받기로 하였습니다.<br>
+GPG키는 <strong>40자의 16진수를 핑거프린트 값</strong>을 갖습니다.<br>
+키 ID는 보통 핑거프린트 40자 중 뒤의 16자리, <code>0x&lt;16-Digit-Hex-Code&gt;</code> 로 표현됩니다.</p>
+<pre tabindex="0"><code class="language-bash키" data-lang="bash키"># receive public key from keyserver
+gpg --keyserver keyserver.ubuntu.com --recv-keys &lt;경택님의 GPG 핑거프린트 값&gt;
+
+# 이후에, 키를 제대로 내려받았는지 확인합니다.
+
+# 방법1: 모든 키 조회
+gpg --list-keys
+# 방법2: 내려받은 키만 조회
+gpg --list-key &lt;경택님의 GPG 핑거프린트 값&gt;
+</code></pre><p><img src="./images/recv_key_from_keyserver.jpg" alt="recv_pubkeys"></p>
+</li>
+<li>
+<p>제 노트북에서 두 가지의 파일을 준비하고, 이를 함께 암호화 해보겠습니다.</p>
+<ul>
+<li><code>yukinet_origin.asc</code> : 제 서명을 추가한 경택님의 공개키
+<ul>
+<li>이 파일은 <code>-----PGP PUBLIC KEY BLOCK-----</code> 블록을 가진,<br>
+암호화가 안된 공개키 형태가 됩니다.</li>
+</ul>
+</li>
+<li>(작성 후, 암호화하여 경택님만 읽을 수 있는) 메시지가 담긴 파일: <code>letter</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 경택님의 공개키에 제(로컬 서명자) 서명을 추가합니다. </span>
+</span></span><span style="display:flex;"><span>gpg --local-user &lt;로컬 서명자의 핑거프린트 값&gt; --sign-key &lt;경택님의 핑거프린트 값&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 서명 대상이 제대로 되었는지 확인하고, `y`를 입력하여 진행합니다.</span>
+</span></span></code></pre></div><p><img src="./images/keysiging-to-pubkey.jpg" alt="key_signing"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 서명이 제대로 되었는지 확인합니다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 이 때, 해당 공개키에 로컬 서명자의 서명이 추가되면 성공</span>
+</span></span><span style="display:flex;"><span>gpg --list-sigs &lt;경택님의 핑거프린트 값&gt;
+</span></span></code></pre></div><p><img src="./images/confirm_well_signed.jpg" alt="confirm_key_signing"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 새로운 서명이 첨부된 경택님의 공개키를 내보냅니다. (yukinet_signed.asc)</span>
+</span></span><span style="display:flex;"><span>gpg --armor --output &lt;공개키 블럭을 저장할 텍스트파일이름&gt; --export &lt;경택님의 핑거프린트 값&gt; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 메시지를 작성해봅니다. (letter)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 예시와 같이 stdin으로 작성해도 되고, </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># nano/vim/vscode 등의 에디터를 사용해도 됩니다.</span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt; letter // 이 줄 먼저 입력하고 Enter
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; lorem ipsum blablabla Yuki Network LTD!
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; Presentation GamSaHapNiDa!
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; 다음에도 봐요!
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; EOF</span>
+</span></span></code></pre></div><p><img src="./images/export_pubkey_add_msg.jpg" alt="pubkey and letter"></p>
+</li>
+<li>
+<p>이 두 파일을 하나로 합치고, 경택님의 공개키로 암호화를 한 후, 웹메일에 유첨하여 보내겠습니다.</p>
+<ul>
+<li>메일을 받은 경택님은 제가 보낸 메일에 첨부된 암호화된 msg파일을 받아,<br>
+키서버 갱신 절차를 진행할 것입니다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 두 파일을 하나로 합칩니다. </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 방법1: append</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#`letter` 파일의 기존 메시지 바로 뒤에 공개키 블럭을 추가합니다.</span>
+</span></span><span style="display:flex;"><span>cat yukinet_signed.asc &gt;&gt; letter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 방법2: write(overwrite)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 둘 다 출력하고 새로운 파일을 만듭니다.  </span>
+</span></span><span style="display:flex;"><span>cat letter yukinet_signed.asc &gt; letter_with_signedKey  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 제대로 합쳐졌는지 확인해봅니다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 방법2 를 했을 경우에는 `cat letter_with_signedKey`</span>
+</span></span><span style="display:flex;"><span>cat letter
+</span></span></code></pre></div><p><img src="./images/merge_key_letter.jpg" alt="merge letter and key"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 이 파일을 경택님의 공개키로 암호화합니다. </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># `-r`은 `--recipient`의 약자입니다.</span>
+</span></span><span style="display:flex;"><span>cat letter | gpg --encrypt --armor -r &lt;경택님의 핑거프린트 값&gt; --output yukinet-signedBy-mscho.asc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 암호화가 잘 되었는지 확인합니다.</span>
+</span></span><span style="display:flex;"><span>cat yukinet-signedBy-mscho.asc
+</span></span></code></pre></div><p><img src="./images/encrypt_msg.jpg" alt="encrypt_letter"></p>
+<p>웹메일에 유첨하여 보냅니다.</p>
+<p><img src="./images/send_mail.jpg" alt="send_mail"></p>
+</li>
+</ol>
+<h3 id="3-상대방이-서명해준-내-공개키-적용하기">(3) 상대방이 서명해준 내 공개키 적용하기</h3>
+<ul>
+<li>진행하기에 앞서 상대방의 공개키도 로컬에 저장되어 있어야합니다.</li>
+</ul>
+<p>전송은 끝났으니, 이제 경택님이 메일로 보내준,<br>
+(경택님의 서명이 적용된) 제 공개키를 복호화(decryption)하고 키서버에 올리도록 하겠습니다.</p>
+<ul>
+<li>
+<p>받은 텍스트 파일이 암호화 되지 않은 경우<br>
+<code>-----PGP PUBLIC KEY BLOCK-----</code> 의 블럭을 가집니다.<br>
+이때는 단순히 아래 명령어를 통해, 전달받은 키를 로컬에 등록하면 됩니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --import &lt;전달받은 공개키 블럭이 담긴 텍스트파일&gt;
+</span></span></code></pre></div></li>
+<li>
+<p>받은 텍스트 파일이 <strong>암호화</strong> 된 경우<br>
+<code>-----PGP MESSAGE-----</code> 블럭을 가집니다.<br>
+이때는 복호화(decryption)를 하고, 파이프로 로컬에 등록합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># (optional) 복호화 결과만 출력하여 확인</span>
+</span></span><span style="display:flex;"><span>gpg --decrypt &lt;전달받은 암호화된 텍스트파일&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 복호화 결과를 파이프로 로컬에 등록</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 이때 `-----PGP PUBLIC KEY BLOCK-----` 의 블럭을 인지하여 등록합니다.</span>
+</span></span><span style="display:flex;"><span>gpg --decrypt &lt;전달받은 암호화된 텍스트파일&gt; | gpg --import
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (optional) 로컬에 제대로 등록되었는지 확인합니다</span>
+</span></span><span style="display:flex;"><span>gpg --list-sig &lt;로컬에 등록된 본인 핑거프린트 값&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR `모든 키 조회`</span>
+</span></span><span style="display:flex;"><span>gpg --list-keys 
+</span></span></code></pre></div><p><img src="./images/decrypt_attachment.jpg" alt="decrypt_attachment"></p>
+</li>
+</ul>
+<h3 id="4-우분투-키서버에-업로드">(4) 우분투 키서버에 업로드</h3>
+<p>마지막으로 키를 업로드하면 성공입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 키서버에 업로드</span>
+</span></span><span style="display:flex;"><span>gpg --keyserver keyserver.ubuntu.com --send-keys &lt;로컬에 등록된 본인 핑거프린트 값&gt;
+</span></span></code></pre></div><p><img src="./images/upload_signed_key.jpg" alt="upload_key_to_keyserver"></p>
+<ul>
+<li>키서버 페이지에 본인의 핑거프린트를 입력하면, 내 키에 서명해준 서명자들을 확인할 수 있습니다.</li>
+</ul>
+<p><img src="./images/keyserver.jpg" alt="keyserver"></p>
+<h3 id="faq-서명할-분의-이메일이-여러-개인-경우">(FAQ) 서명할 분의 이메일이 여러 개인 경우</h3>
+<p>이 경우에는 GPG console을 통해 해결할 수 있습니다.</p>
+<ul>
+<li>
+<p>아래 예제를 통해,<br>
+총 3개의 이메일 중에서 먼저 2개를 서명하고, 남은 하나를 마저 서명해보겠습니다.</p>
+</li>
+<li>
+<p>처음에 interative 질의로 y를 누르면 모든 이메일 주소에 서명을 진행합니다.<br>
+이는 앞서 <code>(2) 로컬 서명자의 서명하기</code> 과정과 동일하므르,<br>
+N을 선택하여 이메일을 선택할 gpg console에 진입합니다.</p>
+</li>
+<li>
+<p>먼저 숫자 2를 입력하여, (2)의 이메일 <code>xxxx.moe</code>를 선택했습니다.<br>
+이후에 숫자 3을 입력하여, (3)의 이메일 <code>yyyy.org</code>를 선택했습니다.<br>
+선택한 이메일들은 <code>*</code>로 표시됩니다.</p>
+<p><img src="./images/signing_multi_emails_1.jpg" alt="select second and third email"></p>
+</li>
+<li>
+<p>잘 선택되었는지 확인하고, 맞으면 <code>sign</code>을 입력하고, (아니면 Ctrl+C로 종료합니다)<br>
+이어서 <code>y</code>를 입력하여 서명을 진행합니다. <code>save</code>를 입력하면 저장됩니다.</p>
+<p><img src="./images/signing_multi_emails_2.jpg" alt="select second and third email"></p>
+</li>
+<li>
+<p><code>gpg --list-sigs</code>를 통해, 두 개만 서명되었음을 확인할 수 있습니다.</p>
+<p><img src="./images/check_sigined_2_emails_by_me.jpg" alt="check signed emails"></p>
+</li>
+<li>
+<p>서명이 안된 (1)의 이메일도 서명을 진행하면 됩니다. 서명 진입 시,<br>
+이미 서명된 두 이메일 주소 (1), (2)는 <code>unknown -&gt; full</code>로 상태가 변경되었음을 알 수 있습니다.</p>
+<p><img src="./images/email_addr_total_3_signed_2.jpg" alt="changed status"></p>
+</li>
+<li>
+<p>세 이메일 주소 모두 로컬 서명이 완료되었습니다.</p>
+<p><img src="./images/signed_all_email_addr.jpg" alt="all signed"></p>
+</li>
+</ul>
+<h2 id="4-마치며">4. 마치며</h2>
+<ul>
+<li>
+<p>이번 글에서는 GPG 명령어를 통해,<br>
+서명자의 공개키에 서명하고,<br>
+서명된 공개키를 암호화하여 메시지를 전달하는 방법을 알아보았습니다.</p>
+</li>
+<li>
+<p>본래라면, <a href="https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">MIME type(RFC1341)</a>을 통해 메타데이터를 주입하여야 하겠지만,<br>
+이해를 위해 간이 메시지를 작성하여 암호화하는 방법을 알아보았습니다.</p>
+</li>
+</ul>
+<h3 id="어디에-gpg가-쓰이나요">&lsquo;어디에 GPG가 쓰이나요?&rsquo;</h3>
+<ul>
+<li><a href="https://launchpad.net/">Launchpad</a>에서는
+CoC(Code of Conduct/행동지침) 서명방법의 기본값을 GPG서명으로 하고 있습니다.
+<ul>
+<li><a href="https://launchpad.net/~ubuntu-ko">우분투한국커뮤니티 Launchpad</a>에서도 이를 확인하고 있습니다. :)</li>
+</ul>
+</li>
+<li>GitHub에서도 이메일의 <code>검증(Verified)</code>에도 사용된다고 합니다.<br>
+<a href="https://www.44bits.io/ko/post/add-signing-key-to-git-commit-by-gpg">44bits</a>를 참고하면 도움이 될 것 같습니다.</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://opentutorials.org/module/5250/29715">Opentutorials/양방향 암호화 방식</a></li>
+<li><a href="https://raonctf.com/essential/study/web/asymmetric_key">RAON CTF/비대칭키 암호 알고리즘</a></li>
+<li><a href="https://events.canonical.com/event/32/contributions/310/">UCK23/KSP</a></li>
+<li><a href="https://www.44bits.io/ko/post/add-signing-key-to-git-commit-by-gpg">44bits/GPG(GNU PG)를 이용해 git 커밋에 서명하는 방법</a></li>
+</ul>
+
+  </div>
+  </section>
+  <section class="p-strip--light">
+    <div class="row">
+      
+      <div class="col-12">
+        <div class="p-media-object">
+          <img src="profile_mscho.jpg" class="p-media-object__image is-round" alt="">
+          <div class="p-media-object__details">
+            <h3 class="p-media-object__title">
+              <a href="#">조민성</a>
+            </h3>
+            <p class="p-media-object__content">우분투한국커뮤니티 운영진. 유용한 굿즈 제안 환영합니다. :)</p>
+            <ul class="p-inline-list--middot">
+              <li class="p-inline-list__item"><a href="mailto:mscho7969@ubuntu.com">Email</a></li>
+              <li class="p-inline-list__item"><a href="https://launchpad.net/~mscho7969">Launchpad</a></li>
+              <li class="p-inline-list__item"><a href="https://github.com/kkumtree">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      
+      <div class="col-12">
+        <div id='discourse-comments'></div>
+
+<meta name='discourse-username' content='mscho7969'>
+
+
+<script type="text/javascript">
+  DiscourseEmbed = {
+    discourseUrl: "https://discourse.ubuntu-kr.org/",
+    discourseEmbedUrl: "https://blog.ubuntu-kr.org/2023/09/11/key-signing-and-encrypt-messages-with-gnupg/",
+    
+  };
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
+      </div>
+   
+    </div>
+  </section>
+  <section class="p-strip">
+    <div class="row">
+      <footer class="p-article-pagination">
+        
+        <a class="p-article-pagination__link--previous" href="/2023/04/23/fossasia-2023-recap/">
+          <span class="p-article-pagination__label">이전</span>
+          <span class="p-article-pagination__title">FOSSASIA Summit 2023에 다녀와서</span>
+        </a>
+        
+        
+      </footer>
+    </div>
+  </section>
+</main>
+
+        </div><section class="p-strip--accent">
+  <div class="row">
+    <div class="col-12">
+      <h2>우분투한국커뮤니티 블로그</h2>
+      <ul class="p-inline-list--middot is-dark">
+        <li class="p-inline-list__item">
+          <a href="mailto:contact@ubuntu-kr.org">운영진과 연락하기(이메일)</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://fb.com/ubuntukorea">Facebook</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://twitter.com/UbuntuKrOrg">Twitter</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://www.youtube.com/user/UbuntuKorea">YouTube</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://github.com/ubuntu-kr">GitHub</a>
+        </li>
+        <li class="p-inline-list__item">
+          <a href="https://launchpad.net/~ubuntu-ko">Launchpad</a>
+        </li>
+      </ul>
+      <p>© 2021 우분투 한국 커뮤니티 (우분투 한국 로컬 커뮤니티 팀). 별도 고지가 있는 경우를 제외하고, 웹 사이트 소스코드는 MIT, 웹 사이트의 컨텐츠는 CC BY-SA 4.0 라이선스로 이용 가능합니다. Ubuntu 및 Canonical 은 Canonical Ltd. 의 등록 상표입니다.</p>
+      <a href="https://github.com/ubuntu-kr/blog.ubuntu-kr.org">GitHub에서 소스코드 보기</a>
+    </div>
+  </div><script type="text/javascript" src='/js/ubuntukr.js'></script>
+<script type="text/javascript" src='/js/timedisplay.js'></script>
+<script>
+
+let slides = document.getElementsByClassName("main-slide");
+let index = 0;
+let count = slides.length;
+function setSlideIndex(destination) {
+    index = destination % count;
+    index = index < 0 ? index * -1 : index;
+    for (let i = 0; i < count; i++) {
+        if(i == index) {
+            slides[i].style.display = "block";
+        } else {
+            slides[i].style.display = "none";
+        }
+    }
+}
+function nextSlide() {
+    setSlideIndex(index + 1);
+}
+function prevSlide() {
+    setSlideIndex(index - 1);
+}
+setSlideIndex(0);
+setInterval(nextSlide, 5000);
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-65961752-8', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script></body>
+</html>

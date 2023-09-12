@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GnuPG on 우분투한국커뮤니티 블로그</title>
+    <link>https://blog.ubuntu-kr.org/tags/gnupg/</link>
+    <description>Recent content in GnuPG on 우분투한국커뮤니티 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 11 Sep 2023 21:35:55 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/tags/gnupg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPG로 구현해보는 메시지 암호화와 키사이닝</title>
+      <link>https://blog.ubuntu-kr.org/2023/09/11/key-signing-and-encrypt-messages-with-gnupg/</link>
+      <pubDate>Mon, 11 Sep 2023 21:35:55 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2023/09/11/key-signing-and-encrypt-messages-with-gnupg/</guid>
+      <description>지난 주에 모두의 관심 덕택에 UbuCon Korea 2023이 성황리에 개최되었습니다.
+감사드립니다. (__)
+[Discourse/UbuCon Korea 2023이 151명의 참석자와 함께 성공적으로 종료 되었습니다!]
+이번 행사에서는 Key Signing Party도 진행하였는데요.
+GPG 명령어 만으로 서로의 키에 서명하여 이메일로 전달하고,
+서명이 담긴 키를 키서버에 업로드 하는 방법을 알아보도록 하겠습니다.
+1. 시작하기에 앞서   [⚠️CAUTION⚠️]
+Key Signing[서명] (이하, 키사이닝) 을 할 때에는,
+키사이닝 파티 행사나 다른 계기를 통해,
+서명하는 본인이 상대방의 신원을 직접 확인한 상태에서 키사이닝을 진행해야 합니다.</description>
+    </item>
+    
+  </channel>
+</rss>
