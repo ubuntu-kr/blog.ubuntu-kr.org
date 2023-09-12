@@ -263,25 +263,21 @@ Green은 Blue에게 Green의 공개키를 줍니다.</li>
 <li>
 <p><code>msg.asc</code>는 <code>-----PGP MESSAGE-----</code> 블록을 가지고 있습니다.<br>
 즉, 경택님의 공개키로 <strong>암호화된 메시지</strong>라는 것을 알 수 있습니다.<br>
-이 파일들은 아래 단계 중 6단계에서 다뤄질 것입니다.</p>
+이 파일들은 아래 단계 중 <code>(3) 상대방이 서명해준 내 공개키 적용하기 </code> 에서 다뤄질 것입니다.</p>
 <p><img src="./images/downloaded_attachment.jpg" alt="confirm_downloaded_attachment"></p>
 </li>
 </ul>
 <p>제가 먼저 서명해서 보내고, 메일로 받은 경택님의 서명이 담긴 파일은 그 이후에 다루도록 하겠습니다.</p>
 <h3 id="2-로컬-서명자의-서명하기">(2) 로컬 서명자의 서명하기</h3>
 <ol>
-<li>
-<p>이미 키사이닝 파티에서 서로 신원 증명을 하여,<br>
-서로 서명한 공개키를 주고 받기로 했습니다. (Cross-Signed)</p>
-</li>
-<li>
-<p>둘은 사전에 <a href="http://keyserver.ubuntu.com/">Ubuntu keyserver</a>에 공개키를 게시하였습니다.</p>
-</li>
-<li>
-<p>제가 경택님의 공개키를 받도록 하겠습니다.(교환)<br>
+<li>이미 키사이닝 파티에서 서로 신원 증명을 하여,<br>
+서로 서명한 공개키를 주고 받기로 했습니다. (Cross-Signed)</li>
+<li>둘은 사전에 <a href="http://keyserver.ubuntu.com/">Ubuntu keyserver</a>에 공개키를 게시하였습니다.</li>
+<li>제가 경택님의 공개키를 받도록 하겠습니다.(교환)<br>
 GPG 핑거프린트를 파티에서 확인하였고, Ubuntu keyserver에서 받기로 하였습니다.<br>
 GPG키는 <strong>40자의 16진수를 핑거프린트 값</strong>을 갖습니다.<br>
-키 ID는 보통 핑거프린트 40자 중 뒤의 16자리, <code>0x&lt;16-Digit-Hex-Code&gt;</code> 로 표현됩니다.</p>
+키 ID는 보통 핑거프린트 40자 중 뒤의 16자리, <code>0x&lt;16-Digit-Hex-Code&gt;</code> 로 표현됩니다.</li>
+</ol>
 <pre tabindex="0"><code class="language-bash키" data-lang="bash키"># receive public key from keyserver
 gpg --keyserver keyserver.ubuntu.com --recv-keys &lt;경택님의 GPG 핑거프린트 값&gt;
 
@@ -292,9 +288,8 @@ gpg --list-keys
 # 방법2: 내려받은 키만 조회
 gpg --list-key &lt;경택님의 GPG 핑거프린트 값&gt;
 </code></pre><p><img src="./images/recv_key_from_keyserver.jpg" alt="recv_pubkeys"></p>
-</li>
-<li>
-<p>제 노트북에서 두 가지의 파일을 준비하고, 이를 함께 암호화 해보겠습니다.</p>
+<ol start="4">
+<li>제 노트북에서 두 가지의 파일을 준비하고, 이를 함께 암호화 해보겠습니다.
 <ul>
 <li><code>yukinet_origin.asc</code> : 제 서명을 추가한 경택님의 공개키
 <ul>
@@ -304,6 +299,8 @@ gpg --list-key &lt;경택님의 GPG 핑거프린트 값&gt;
 </li>
 <li><code>letter</code> : (작성 후, 암호화하여 경택님만 읽을 수 있는) 메시지가 담긴 파일</li>
 </ul>
+</li>
+</ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 경택님의 공개키에 제(로컬 서명자) 서명을 추가합니다. </span>
 </span></span><span style="display:flex;"><span>gpg --local-user &lt;로컬 서명자의 핑거프린트 값&gt; --sign-key &lt;경택님의 핑거프린트 값&gt;
 </span></span><span style="display:flex;"><span>
@@ -327,13 +324,14 @@ gpg --list-key &lt;경택님의 GPG 핑거프린트 값&gt;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; EOF</span>
 </span></span></code></pre></div><p><img src="./images/export_pubkey_add_msg.jpg" alt="pubkey and letter"></p>
-</li>
-<li>
-<p>이 두 파일을 하나로 합치고, 경택님의 공개키로 암호화를 한 후, 웹메일에 유첨하여 보내겠습니다.</p>
+<ol start="5">
+<li>이 두 파일을 하나로 합치고, 경택님의 공개키로 암호화를 한 후, 웹메일에 유첨하여 보내겠습니다.
 <ul>
 <li>메일을 받은 경택님은 제가 보낸 메일에 첨부된 암호화된 msg파일을 받아,<br>
 키서버 갱신 절차를 진행할 것입니다.</li>
 </ul>
+</li>
+</ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 두 파일을 하나로 합칩니다. </span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 방법1: append</span>
@@ -355,10 +353,10 @@ gpg --list-key &lt;경택님의 GPG 핑거프린트 값&gt;
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 암호화가 잘 되었는지 확인합니다.</span>
 </span></span><span style="display:flex;"><span>cat yukinet-signedBy-mscho.asc
 </span></span></code></pre></div><p><img src="./images/encrypt_msg.jpg" alt="encrypt_letter"></p>
-<p>웹메일에 유첨하여 보냅니다.</p>
+<ul>
+<li>이후, 웹메일에 유첨하여 보냅니다.</li>
+</ul>
 <p><img src="./images/send_mail.jpg" alt="send_mail"></p>
-</li>
-</ol>
 <h3 id="3-상대방이-서명해준-내-공개키-적용하기">(3) 상대방이 서명해준 내 공개키 적용하기</h3>
 <ul>
 <li>진행하기에 앞서 상대방의 공개키도 로컬에 저장되어 있어야합니다.</li>
@@ -366,16 +364,16 @@ gpg --list-key &lt;경택님의 GPG 핑거프린트 값&gt;
 <p>전송은 끝났으니, 이제 경택님이 메일로 보내준,<br>
 (경택님의 서명이 적용된) 제 공개키를 복호화(decryption)하고 키서버에 올리도록 하겠습니다.</p>
 <ul>
-<li>
-<p>받은 텍스트 파일이 암호화 되지 않은 경우<br>
+<li>받은 텍스트 파일이 암호화 되지 않은 경우<br>
 <code>-----PGP PUBLIC KEY BLOCK-----</code> 의 블럭을 가집니다.<br>
-이때는 단순히 아래 명령어를 통해, 전달받은 키를 로컬에 등록하면 됩니다.</p>
+이때는 단순히 아래 명령어를 통해, 전달받은 키를 로컬에 등록하면 됩니다.</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --import &lt;전달받은 공개키 블럭이 담긴 텍스트파일&gt;
-</span></span></code></pre></div></li>
-<li>
-<p>받은 텍스트 파일이 <strong>암호화</strong> 된 경우<br>
+</span></span></code></pre></div><ul>
+<li>받은 텍스트 파일이 <strong>암호화</strong> 된 경우<br>
 <code>-----PGP MESSAGE-----</code> 블럭을 가집니다.<br>
-이때는 복호화(decryption)를 하고, 파이프로 로컬에 등록합니다.</p>
+이때는 복호화(decryption)를 하고, 파이프로 로컬에 등록합니다.</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># (optional) 복호화 결과만 출력하여 확인</span>
 </span></span><span style="display:flex;"><span>gpg --decrypt &lt;전달받은 암호화된 텍스트파일&gt;
 </span></span><span style="display:flex;"><span>
@@ -386,10 +384,8 @@ gpg --list-key &lt;경택님의 GPG 핑거프린트 값&gt;
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># (optional) 로컬에 제대로 등록되었는지 확인합니다</span>
 </span></span><span style="display:flex;"><span>gpg --list-sig &lt;로컬에 등록된 본인 핑거프린트 값&gt;
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># OR `모든 키 조회`</span>
-</span></span><span style="display:flex;"><span>gpg --list-keys 
+</span></span><span style="display:flex;"><span>gpg --list-sigs 
 </span></span></code></pre></div><p><img src="./images/decrypt_attachment.jpg" alt="decrypt_attachment"></p>
-</li>
-</ul>
 <h3 id="4-우분투-키서버에-업로드">(4) 우분투 키서버에 업로드</h3>
 <p>마지막으로 키를 업로드하면 성공입니다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 키서버에 업로드</span>
