@@ -56,6 +56,16 @@
   </url><url>
     <loc>https://blog.ubuntu-kr.org/2023/11/01/louca23/</loc>
     <lastmod>2023-11-01T17:00:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/2023/11/01/louca23/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/2023/11/01/louca23/"
+                />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/cryptography/</loc>
     <lastmod>2023-09-11T21:35:55+09:00</lastmod>
