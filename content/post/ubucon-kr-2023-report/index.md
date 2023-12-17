@@ -1,6 +1,6 @@
 ---
 date: 2023-12-17T15:00:00+09:00
-title: "UbuCon Korea 2023 행사 보고서"
+title: "UbuCon Korea 2023 행사 운영 보고서"
 tags:
  - ubucon
  - report
