@@ -51,6 +51,9 @@ draft: false # 글 초안 여부
 올해는 행사 규모를 축소 한 대신, 작년 UbuCon Asia를 개최하며 아쉬웠던 부분을 개선하기 위해 많은 노력을 기울였습니다. 참석자분들이 사진을 촬영할 수 있는 포토월 개선, 지난 해 제공하지 못한 케이터링 또한 참가자 대상으로 제공 되었으며. 행사에 참석하는 모든 사람들을 위한 안전을 위해 주최자 책임보험 및 준비위원과 자원봉사자 대상 여행자보험 가입도 진행 되었습니다.  
 
 ![](./photowall.jpg)
+![](./canonicalbooth.JPG)
+![](./osckoreabooth.JPG)
+![](./cloudmtbooth.JPG)
 
 2021~2022년에 UbuCon Asia에 참여했던 [Canonical](https://ubuntu.com/), [Microsoft Korea](https://azure.microsoft.com/ko-kr/solutions/linux-on-azure/ubuntu/), [정보통신산업진흥원](https://oss.kr), [클라우드메이트](https://cloudmt.co.kr/), [그로메트릭](http://www.grometric.kr/) 등 많은 후원사에서 감사하게도 올해 UbuCon Korea 에도 다시 한번 후원사로 참여 해 주셨습니다. 새롭게 후원사로 참여 해 주신 [OSC Korea](https://www.osckorea.com/)와 [이벤터스](https://event-us.kr/) 측에서도 UbuCon Korea의 성공적인 개최를 위해 많은 힘을 써 주셨습니다. 행사 개최에 많은 도움을 주신 후원사측에 다시한번 감사 드립니다.
 
