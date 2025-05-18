@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.ubuntu-kr.org/tags/podcast/</loc>
+    <lastmod>2025-05-18T23:50:00+09:00</lastmod>
+  </url><url>
     <loc>https://blog.ubuntu-kr.org/post/</loc>
-    <lastmod>2023-12-17T15:00:00+09:00</lastmod>
+    <lastmod>2025-05-18T23:50:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,6 +16,41 @@
                 rel="alternate"
                 hreflang="ko"
                 href="https://blog.ubuntu-kr.org/post/"
+                />
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/</loc>
+    <lastmod>2025-05-18T23:50:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/tags/"
+                />
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/2025/05/18/uwn-890-ai-podcast/</loc>
+    <lastmod>2025-05-18T23:50:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/uwn/</loc>
+    <lastmod>2025-05-18T23:50:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/uwn-ai-podcast/</loc>
+    <lastmod>2025-05-18T23:50:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/</loc>
+    <lastmod>2025-05-18T23:50:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.ubuntu-kr.org/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.ubuntu-kr.org/"
                 />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/report/</loc>
@@ -26,19 +64,6 @@
                 rel="alternate"
                 hreflang="ko"
                 href="https://blog.ubuntu-kr.org/tags/report/"
-                />
-  </url><url>
-    <loc>https://blog.ubuntu-kr.org/tags/</loc>
-    <lastmod>2023-12-17T15:00:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.ubuntu-kr.org/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.ubuntu-kr.org/tags/"
                 />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/ubucon/</loc>
@@ -56,19 +81,6 @@
   </url><url>
     <loc>https://blog.ubuntu-kr.org/2023/12/17/ubucon-kr-2023-report/</loc>
     <lastmod>2023-12-17T15:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.ubuntu-kr.org/</loc>
-    <lastmod>2023-12-17T15:00:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.ubuntu-kr.org/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.ubuntu-kr.org/"
-                />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/2023/11/01/louca23/</loc>
     <lastmod>2023-11-01T17:00:00+09:00</lastmod>
