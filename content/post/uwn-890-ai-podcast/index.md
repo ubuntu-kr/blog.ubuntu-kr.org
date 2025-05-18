@@ -8,7 +8,7 @@ tags:
 forum_username: sukso96100
 authors:
     - name: 한영빈
-      bio: 우분투한국커뮤니티 대표(2017~2018, 2021~2023)
+      bio: Ubuntu LoCo Council (2024-2025), 우분투한국커뮤니티 운영진
       email: ybhan@ubuntu.com
       launchpad: ybhan
       github: sukso96100
