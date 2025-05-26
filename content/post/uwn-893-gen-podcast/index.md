@@ -1,6 +1,6 @@
 ---
 date: 2025-05-27T08:50:00+09:00
-title: "Ubuntu Weekly Newsletter 893 | Ubuntu Kora Generated Podcast"
+title: "Ubuntu Weekly Newsletter 893 | Ubuntu Korea Generated Podcast"
 tags:
  - uwn
  - generated-podcast
