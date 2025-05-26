@@ -17,7 +17,7 @@ image: cover.png
 draft: false
 ---
 
-{{< youtube r9NdMWl-jw >}}
+{{< youtube sr9NdMWl-jw >}}
 
 YouTube 링크: https://youtu.be/sr9NdMWl-jw
 
