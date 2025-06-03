@@ -17,9 +17,9 @@ image: cover.png
 draft: false
 ---
 
-{{< youtube At5-ly6WtMCmi9Il >}}
+{{< youtube fZL6y45vvaE >}}
 
-YouTube 링크: https://youtu.be/fZL6y45vvaE?si=At5-ly6WtMCmi9Il
+YouTube 링크: https://www.youtube.com/watch?v=fZL6y45vvaE
 
 Ubuntu Weekly Newsletter 894를 NotebookLM 등 생성형 AI를 활용해 만든 팟캐스트 입니다.   
 
