@@ -2,14 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.ubuntu-kr.org/2025/07/23/crafting-your-software-gen-podcast/</loc>
+    <lastmod>2025-07-23T01:50:00+09:00</lastmod>
+  </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/generated-podcast/</loc>
-    <lastmod>2025-06-03T12:50:00+09:00</lastmod>
+    <lastmod>2025-07-23T01:50:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/packaging/</loc>
+    <lastmod>2025-07-23T01:50:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/podcast/</loc>
-    <lastmod>2025-06-03T12:50:00+09:00</lastmod>
+    <lastmod>2025-07-23T01:50:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.ubuntu-kr.org/post/</loc>
-    <lastmod>2025-06-03T12:50:00+09:00</lastmod>
+    <lastmod>2025-07-23T01:50:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -22,7 +28,7 @@
                 />
   </url><url>
     <loc>https://blog.ubuntu-kr.org/tags/</loc>
-    <lastmod>2025-06-03T12:50:00+09:00</lastmod>
+    <lastmod>2025-07-23T01:50:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -34,14 +40,8 @@
                 href="https://blog.ubuntu-kr.org/tags/"
                 />
   </url><url>
-    <loc>https://blog.ubuntu-kr.org/2025/06/03/uwn-894-gen-podcast/</loc>
-    <lastmod>2025-06-03T12:50:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.ubuntu-kr.org/tags/uwn/</loc>
-    <lastmod>2025-06-03T12:50:00+09:00</lastmod>
-  </url><url>
     <loc>https://blog.ubuntu-kr.org/</loc>
-    <lastmod>2025-06-03T12:50:00+09:00</lastmod>
+    <lastmod>2025-07-23T01:50:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -52,6 +52,12 @@
                 hreflang="ko"
                 href="https://blog.ubuntu-kr.org/"
                 />
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/2025/06/03/uwn-894-gen-podcast/</loc>
+    <lastmod>2025-06-03T12:50:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.ubuntu-kr.org/tags/uwn/</loc>
+    <lastmod>2025-06-03T12:50:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.ubuntu-kr.org/2025/05/27/uwn-893-gen-podcast/</loc>
     <lastmod>2025-05-27T08:50:00+09:00</lastmod>

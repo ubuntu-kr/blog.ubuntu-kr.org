@@ -6,7 +6,19 @@
     <description>Recent content in Posts on 우분투한국커뮤니티 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 03 Jun 2025 12:50:00 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Jul 2025 01:50:00 +0900</lastBuildDate><atom:link href="https://blog.ubuntu-kr.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crafting Your Software | Ubuntu Korea Generated Podcast</title>
+      <link>https://blog.ubuntu-kr.org/2025/07/23/crafting-your-software-gen-podcast/</link>
+      <pubDate>Wed, 23 Jul 2025 01:50:00 +0900</pubDate>
+      
+      <guid>https://blog.ubuntu-kr.org/2025/07/23/crafting-your-software-gen-podcast/</guid>
+      <description>YouTube 링크: https://www.youtube.com/watch?v=U3TmerGFuAA
+Ubuntu Discourse에 Jon Seager님이 작성하신 &amp;ldquo;Crafting Your Software&amp;rdquo; 포스팅을 바탕으로 생성한 팟캐스트 입니다.
+Canonical에서 개발한 다양한 패키지 빌드 도구 (craft 재품군) - Snapcraft, Rockcraft, Charmcraft, Debcraft, Imagecraft 등 이 어떻게 작동하고 내부는 어떻게 구성되어 있는지 또 어떻게 활용할 수 있는지에 대한 내용을 주로 다룹니다.
+해당 포스팅 원문은 아래 링크에서 확인이 가능합니다. https://discourse.ubuntu.com/t/crafting-your-software/64809</description>
+    </item>
+    
     <item>
       <title>Ubuntu Weekly Newsletter 894 | Ubuntu Korea Generated Podcast</title>
       <link>https://blog.ubuntu-kr.org/2025/06/03/uwn-894-gen-podcast/</link>
